@@ -3,12 +3,11 @@ import path from 'path';
 import { Tweet } from 'react-tweet';
 
 type Props = {
-  params: {
+  params: Promise<{
     year: string;
     month: string;
     day: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
+  }>;
 };
 
 interface Like {

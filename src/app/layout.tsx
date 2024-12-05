@@ -31,7 +31,7 @@ interface DateInfo {
 }
 
 // getAllDatesをcacheで最適化
-export const getAllDates = cache(async (): Promise<DateInfo[]> => {
+const getAllDates = cache(async (): Promise<DateInfo[]> => {
   const contentDir = path.join(process.cwd(), 'src/content/likes');
 
   // 再帰的にJSONファイルを見つける関数
