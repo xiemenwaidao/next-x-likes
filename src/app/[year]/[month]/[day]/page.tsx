@@ -8,6 +8,7 @@ type Props = {
     month: string;
     day: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
 interface Like {
