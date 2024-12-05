@@ -1,6 +1,8 @@
+import { getTweet } from '@/lib/get-tweet';
 import { promises as fs } from 'fs';
 import path from 'path';
-import { Tweet } from 'react-tweet';
+import { Suspense } from 'react';
+import { EmbeddedTweet, TweetNotFound, TweetSkeleton } from 'react-tweet';
 
 type Props = {
   params: Promise<{
@@ -93,10 +95,22 @@ export default async function DayPage({ params }: Props) {
         {content.body.map(
           (tweet) =>
             tweet.tweet_id && (
-              <Tweet id={tweet.tweet_id} key={tweet.tweet_id} />
+              <Suspense key={tweet.tweet_id} fallback={<TweetSkeleton />}>
+                <TweetComponent id={tweet.tweet_id} />
+              </Suspense>
             ),
         )}
       </div>
     </div>
   );
+}
+
+async function TweetComponent({ id }: { id: string }) {
+  try {
+    const tweet = await getTweet(id);
+    return tweet ? <EmbeddedTweet tweet={tweet} /> : <TweetNotFound />;
+  } catch (error) {
+    console.error('Error rendering tweet:', error);
+    return <TweetNotFound error={error as Error} />;
+  }
 }
