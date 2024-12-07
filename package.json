@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dl:json": "tsx -r dotenv/config src/scripts/sync-x-likes.ts",
-    "conv:json": "tsx src/scripts/likes-processor.ts"
+    "json:dl": "tsx -r dotenv/config src/scripts/sync-x-likes.ts",
+    "json:conv": "tsx src/scripts/likes-processor.ts",
+    "json:fetch-tweet": "tsx src/scripts/insert-tweet-to-json.ts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",

@@ -1,3 +1,5 @@
+import { Tweet } from 'react-tweet/api';
+
 export interface Like {
   text: string;
   username: string;
@@ -8,4 +10,11 @@ export interface Like {
   liked_at: string;
   source: 'ifttt';
   tweet_id?: string;
+  react_tweet_data?: Tweet;
+  private: boolean;
+  notfound: boolean;
+}
+
+export interface DayJson {
+  body: Like[];
 }

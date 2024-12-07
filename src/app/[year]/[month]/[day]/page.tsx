@@ -1,8 +1,13 @@
-import { getTweet } from '@/lib/get-tweet';
+import { DayJson } from '@/types/like';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { Suspense } from 'react';
-import { EmbeddedTweet, TweetNotFound, TweetSkeleton } from 'react-tweet';
+import {
+  EmbeddedTweet,
+  Tweet,
+  TweetNotFound,
+  TweetSkeleton,
+} from 'react-tweet';
 
 type Props = {
   params: Promise<{
@@ -11,22 +16,6 @@ type Props = {
     day: string;
   }>;
 };
-
-interface Like {
-  text: string;
-  username: string;
-  tweet_url: string;
-  first_link: string;
-  created_at: string;
-  embed_code?: string;
-  liked_at: string;
-  source: 'ifttt';
-  tweet_id?: string;
-}
-
-interface DayJson {
-  body: Like[];
-}
 
 // 静的パスを生成する関数
 export async function generateStaticParams() {
@@ -94,23 +83,30 @@ export default async function DayPage({ params }: Props) {
         </h1>
         {content.body.map(
           (tweet) =>
-            tweet.tweet_id && (
+            tweet.tweet_id &&
+            (tweet.private || tweet.notfound ? (
+              <TweetNotFound />
+            ) : (
               <Suspense key={tweet.tweet_id} fallback={<TweetSkeleton />}>
-                <TweetComponent id={tweet.tweet_id} />
+                {tweet.react_tweet_data ? (
+                  <EmbeddedTweet tweet={tweet.react_tweet_data} />
+                ) : (
+                  <Tweet id={tweet.tweet_id} />
+                )}
               </Suspense>
-            ),
+            )),
         )}
       </div>
     </div>
   );
 }
 
-async function TweetComponent({ id }: { id: string }) {
-  try {
-    const tweet = await getTweet(id);
-    return tweet ? <EmbeddedTweet tweet={tweet} /> : <TweetNotFound />;
-  } catch (error) {
-    console.error('Error rendering tweet:', error);
-    return <TweetNotFound error={error as Error} />;
-  }
-}
+// async function TweetComponent({ id }: { id: string }) {
+//   try {
+//     const tweet = await getTweet(id);
+//     return tweet ? <EmbeddedTweet tweet={tweet} /> : <TweetNotFound />;
+//   } catch (error) {
+//     console.error('Error rendering tweet:', error);
+//     return <TweetNotFound error={error as Error} />;
+//   }
+// }
