@@ -12,8 +12,8 @@
     "json:fetch-tweet": "tsx src/scripts/insert-tweet-to-json.ts"
   },
   "dependencies": {
+    "@radix-ui/react-popover": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
-    "@upstash/redis": "^1.34.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",

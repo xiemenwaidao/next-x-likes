@@ -85,13 +85,16 @@ export default async function DayPage({ params }: Props) {
           (tweet) =>
             tweet.tweet_id &&
             (tweet.private || tweet.notfound ? (
-              <TweetNotFound />
+              <TweetNotFound key={tweet.tweet_id} />
             ) : (
               <Suspense key={tweet.tweet_id} fallback={<TweetSkeleton />}>
                 {tweet.react_tweet_data ? (
-                  <EmbeddedTweet tweet={tweet.react_tweet_data} />
+                  <EmbeddedTweet
+                    tweet={tweet.react_tweet_data}
+                    key={tweet.tweet_id}
+                  />
                 ) : (
-                  <Tweet id={tweet.tweet_id} />
+                  <Tweet id={tweet.tweet_id} key={tweet.tweet_id} />
                 )}
               </Suspense>
             )),

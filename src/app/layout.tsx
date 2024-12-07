@@ -6,6 +6,13 @@ import { ViewTransitions } from 'next-view-transitions';
 import path from 'path';
 import { readdir } from 'fs/promises';
 import { cache } from 'react';
+import { CircleHelp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -98,6 +105,21 @@ export default async function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <div className="container mx-auto min-h-svh">
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="fixed top-4 right-4"
+                >
+                  <CircleHelp />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-fit">
+                <div className="text-center text-xs">いいねの備忘録</div>
+              </PopoverContent>
+            </Popover>
+
             <div className="">
               <CalendarPicker allDates={allDates} />
               {children}
