@@ -61,7 +61,7 @@ async function getContentData(year: string, month: string, day: string) {
     return JSON.parse(fileContent);
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      throw new Error(`Content not found for ${year}/${month}/${day}`);
+      return null;
     }
     throw error;
   }
@@ -71,9 +71,6 @@ export default async function DayPage({ params }: Props) {
   const { year, month, day } = await Promise.resolve(params);
 
   const content: DayJson = await getContentData(year, month, day);
-  if (!content) {
-    return <div>No Data (ง ˙ω˙)ว</div>;
-  }
 
   return (
     <div className="pt-8">
@@ -81,7 +78,7 @@ export default async function DayPage({ params }: Props) {
         <h1 className="text-center sticky top-16 z-50 mix-blend-difference">
           liked on: {year}/{month}/{day}
         </h1>
-        {content.body.map(
+        {content?.body.map(
           (tweet) =>
             tweet.tweet_id &&
             (tweet.private || tweet.notfound ? (
@@ -99,17 +96,11 @@ export default async function DayPage({ params }: Props) {
               </Suspense>
             )),
         )}
+
+        {content === null && (
+          <div className="text-center">No (ง ˙ω˙)ว Data</div>
+        )}
       </div>
     </div>
   );
 }
-
-// async function TweetComponent({ id }: { id: string }) {
-//   try {
-//     const tweet = await getTweet(id);
-//     return tweet ? <EmbeddedTweet tweet={tweet} /> : <TweetNotFound />;
-//   } catch (error) {
-//     console.error('Error rendering tweet:', error);
-//     return <TweetNotFound error={error as Error} />;
-//   }
-// }
