@@ -76,8 +76,8 @@ export function CalendarPicker({ allDates }: { allDates: DateInfo[] }) {
 
   return (
     <div
-      className={`flex items-center justify-center ${
-        isRootPath ? 'h-svh' : 'pt-20'
+      className={`flex items-center justify-center  ${
+        isRootPath ? 'h-full' : ''
       }`}
     >
       <Calendar

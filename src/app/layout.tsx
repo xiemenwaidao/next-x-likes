@@ -7,6 +7,7 @@ import path from 'path';
 import { readdir } from 'fs/promises';
 import { cache } from 'react';
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -98,12 +99,13 @@ export default async function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <Header />
-          <div className="container mx-auto min-h-svh px-4">
-            <div className="">
+          <div className="grid grid-rows-[auto_1fr_auto] grid-cols-[100%] min-h-svh">
+            <Header />
+            <main className="container mx-auto px-4 py-4">
               <CalendarPicker allDates={allDates} />
               {children}
-            </div>
+            </main>
+            <Footer />
           </div>
         </body>
       </html>
