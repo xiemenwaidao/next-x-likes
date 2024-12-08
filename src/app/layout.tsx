@@ -6,13 +6,7 @@ import { ViewTransitions } from 'next-view-transitions';
 import path from 'path';
 import { readdir } from 'fs/promises';
 import { cache } from 'react';
-import { CircleHelp } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
+import { Header } from '@/components/header';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -26,7 +20,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: '點贊紀錄｜好吧我聽你的',
+  title: '集讚館｜好吧我聽你的',
   description:
     'Xでいいねした投稿を後で見返すためのサイトです。いいねいいねそれいいね。',
 };
@@ -104,22 +98,8 @@ export default async function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <div className="container mx-auto min-h-svh">
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="fixed top-4 right-4"
-                >
-                  <CircleHelp />
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-fit">
-                <div className="text-center text-xs">いいねの備忘録</div>
-              </PopoverContent>
-            </Popover>
-
+          <Header />
+          <div className="container mx-auto min-h-svh px-4">
             <div className="">
               <CalendarPicker allDates={allDates} />
               {children}
