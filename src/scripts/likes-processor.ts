@@ -36,24 +36,6 @@ export async function processAndGenerateContent() {
 
     // 年月ごとのデータを処理
     const yearMonths = readdirSync(dataDir);
-    const processedData: Record<
-      string,
-      {
-        months: Record<
-          string,
-          {
-            days: Record<
-              string,
-              {
-                tweets: {
-                  [key: number]: Like;
-                }[];
-              }
-            >;
-          }
-        >;
-      }
-    > = {};
 
     for (const yearMonth of yearMonths) {
       const files = readdirSync(join(dataDir, yearMonth));
@@ -109,7 +91,7 @@ export async function processAndGenerateContent() {
 
           // jsonに同一idが存在するか否か
           if (dayJson.body.some((tweet) => tweet.tweet_id === tweetId)) {
-            console.log(`ID重複:${tweetId}`);
+            // console.log(`ID重複:${tweetId}`);
             continue;
           }
 
@@ -125,7 +107,7 @@ export async function processAndGenerateContent() {
             dayContent,
           );
 
-          console.log(`追記:${tweetId}`);
+          // console.log(`追記:${tweetId}`);
           continue;
         } catch {
           // ファイルが存在しない
@@ -138,26 +120,9 @@ export async function processAndGenerateContent() {
             dayContent,
           );
 
-          console.log(`新規作成:${tweetId}`);
+          // console.log(`新規作成:${tweetId}`);
           continue;
         }
-
-        // データ構造を初期化
-        if (!processedData[year]) {
-          processedData[year] = { months: {} };
-        }
-        if (!processedData[year].months[month]) {
-          processedData[year].months[month] = { days: {} };
-        }
-        if (!processedData[year].months[month].days[day]) {
-          processedData[year].months[month].days[day] = { tweets: [] };
-        }
-
-        // ツイートIDを追加
-        // processedData[year].months[month].days[day].tweets.push({
-        //   [tweetId]: data,
-        // });
-        // processedData[year].months[month].days[day].tweets[tweetId] = data;
       }
     }
 

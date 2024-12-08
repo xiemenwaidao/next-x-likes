@@ -8,6 +8,10 @@ export async function insertTweetDataToJson() {
 
   const years = readdirSync(dirPath);
 
+  let skipCount = 0;
+  let notFoundCount = 0;
+  let fetchedCount = 0;
+
   for (const year of years) {
     const yearDirPath = join(dirPath, year);
     const months = readdirSync(yearDirPath);
@@ -29,13 +33,13 @@ export async function insertTweetDataToJson() {
         for (const like of likes) {
           if (like.react_tweet_data) {
             newLikeList.push(like);
-            console.log(`skip:${like.tweet_id}`);
+            skipCount++;
             continue;
           }
 
-          if (!like.tweet_id) {
+          if (!like.tweet_id || like.private || like.notfound) {
             newLikeList.push(like);
-            console.log(`tweet_id not found:${like.tweet_id}`);
+            notFoundCount++;
             continue;
           }
 
@@ -44,6 +48,7 @@ export async function insertTweetDataToJson() {
           like.private = tombstone ? true : false;
           like.notfound = notFound ? true : false;
           newLikeList.push(like);
+          fetchedCount++;
         }
 
         // sort
@@ -58,6 +63,10 @@ export async function insertTweetDataToJson() {
       }
     }
   }
+
+  console.log(`skip count:${skipCount}`);
+  console.log(`not found count:${notFoundCount}`);
+  console.log(`fetched count:${fetchedCount}`);
 }
 
 insertTweetDataToJson();

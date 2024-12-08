@@ -63,7 +63,9 @@ const getNowDate = () => {
  * DateからYYYYMM形式の文字列を生成
  */
 const createYearMonthString = (date: Date) => {
-  return date.toISOString().slice(0, 4) + date.toISOString().slice(5, 7);
+  // return date.toISOString().slice(0, 4) + date.toISOString().slice(5, 7);
+
+  return `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}`;
 };
 
 async function getLastSyncTime() {
@@ -81,6 +83,7 @@ async function getLastSyncTime() {
 
     return parsedDate;
   } catch {
+    console.log('最終更新日時保存ファイルの読み取り失敗');
     return getNowDate();
   }
 }
@@ -97,9 +100,11 @@ function getYearMonthsBetween(startDate: Date) {
   workingDate.setDate(1);
 
   const currentYM = createYearMonthString(currentDate);
+  // console.log(`currentYM:${currentYM}`);
 
   while (true) {
     const workingYM = createYearMonthString(workingDate);
+    // console.log(`workingYM:${workingYM}`);
     results.push(workingYM);
 
     // 同じであればループを抜ける
@@ -116,6 +121,7 @@ function getYearMonthsBetween(startDate: Date) {
 
 async function downloadNewFiles() {
   const lastSyncTime = await getLastSyncTime();
+  console.log(`lastSyncTime:${lastSyncTime.toISOString()}`);
 
   // 現在の年月までのフォルダを対象とする
   const prefixList = getYearMonthsBetween(lastSyncTime);
