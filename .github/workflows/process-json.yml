@@ -7,35 +7,35 @@ on:
 
 jobs:
   process-json:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # 明示的にバージョンを指定
     permissions:
       contents: write # リポジトリへの書き込み権限
 
     steps:
-      - name: Checkout repository
+      - name: '📝 Checkout repository'
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: '📦 Setup Node.js'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install pnpm
+      - name: '📦 Install pnpm'
         uses: pnpm/action-setup@v2
         with:
           version: 8
 
-      - name: Configure AWS Credentials
+      - name: '📦 Install dependencies'
+        run: pnpm install --frozen-lockfile
+
+      - name: '⛈️ Configure AWS Credentials'
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Download JSON from S3
+      - name: '🕒 Download JSON from S3'
         run: pnpm json:dl
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -43,13 +43,13 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
 
-      - name: Convert JSON
+      - name: '🗄️ Convert JSON'
         run: pnpm json:conv
 
-      - name: Fetch and insert tweets
+      - name: '🥳 Fetch and insert tweets'
         run: pnpm json:fetch-tweet
 
-      - name: Commit and push if changed
+      - name: '🧀 Commit and push if changed'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
