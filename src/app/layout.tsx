@@ -24,6 +24,8 @@ export const metadata: Metadata = {
   title: '集讚館｜好吧我聽你的',
   description:
     'Xでいいねした投稿を後で見返すためのサイトです。いいねいいねそれいいね。',
+
+  // icon
   icons: {
     icon: [
       { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
@@ -35,6 +37,23 @@ export const metadata: Metadata = {
   manifest: '/favicon/site.webmanifest',
   appleWebApp: {
     title: '集讚館｜好吧我聽你的',
+  },
+
+  // og
+  openGraph: {
+    title: '集讚館｜好吧我聽你的',
+    description:
+      'Xでいいねした投稿を後で見返すためのサイトです。いいねいいねそれいいね。',
+    siteName: '集讚館｜好吧我聽你的',
+    url: 'https://likes.haobawotingnide.xyz/',
+    images: [
+      {
+        url: '/og-image.png', // publicディレクトリからの相対パス
+        width: 1200,
+        height: 630,
+        alt: '集讚館',
+      },
+    ],
   },
 };
 
