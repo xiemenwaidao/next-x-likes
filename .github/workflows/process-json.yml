@@ -28,7 +28,7 @@ jobs:
           cache: 'pnpm'
 
       - name: '📦 Install dependencies'
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: '⛈️ Configure AWS Credentials'
         uses: aws-actions/configure-aws-credentials@v4
