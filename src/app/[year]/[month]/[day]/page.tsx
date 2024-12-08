@@ -71,6 +71,9 @@ export default async function DayPage({ params }: Props) {
   const { year, month, day } = await Promise.resolve(params);
 
   const content: DayJson = await getContentData(year, month, day);
+  // if (!content) {
+  //   return notFound();
+  // }
 
   return (
     <div className="pt-8">
@@ -98,7 +101,9 @@ export default async function DayPage({ params }: Props) {
         )}
 
         {content === null && (
-          <div className="text-center">No (ง ˙ω˙)ว Data</div>
+          <div className="text-center italic text-lg underline underline-offset-8">
+            Not Found : (ง ˙ω˙)ว{' '}
+          </div>
         )}
       </div>
     </div>
