@@ -43,7 +43,11 @@ export function CalendarPicker({ allDates }: { allDates: DateInfo[] }) {
       // 無効な日付の場合はセットしない
       if (!isNaN(dateFromUrl.getTime())) {
         setSelectedDate(dateFromUrl);
+      } else {
+        setSelectedDate(undefined);
       }
+    } else {
+      setSelectedDate(undefined);
     }
   }, [params.year, params.month, params.day, setSelectedDate]);
 
