@@ -26,7 +26,11 @@ export const Header = () => {
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-fit">
-              <div className="text-center text-xs">いいねの備忘録</div>
+              <div className="text-xs">
+                <p>いいねの備忘録。</p>
+                <p>毎朝5時過ぎに自動更新。</p>
+                <p>たまに手動更新するかも。</p>
+              </div>
             </PopoverContent>
           </Popover>
         </div>
