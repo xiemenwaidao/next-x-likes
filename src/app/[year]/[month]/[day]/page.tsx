@@ -76,7 +76,7 @@ export default async function DayPage({ params }: Props) {
   // }
 
   return (
-    <div className="pt-8">
+    <div className="">
       <div className="w-full max-w-md mx-auto space-y-4 p-0">
         <h1 className="text-center sticky top-6 z-50 mix-blend-overlay italic w-fit mx-auto">
           liked on: {year}/{month}/{day}
