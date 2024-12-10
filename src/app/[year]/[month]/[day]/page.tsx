@@ -77,10 +77,14 @@ export default async function DayPage({ params }: Props) {
 
   return (
     <div className="">
-      <div className="w-full max-w-md mx-auto space-y-4 p-0">
+      <div className="w-full max-w-md mx-auto space-y-4 py-4 p-0 relative">
+        {/* mix-blend-overlay text-yellow-300 */}
         <h1 className="text-center sticky top-6 z-50 mix-blend-overlay italic w-fit mx-auto">
           liked on: {year}/{month}/{day}
         </h1>
+        <div className="text-center absolute -top-0 left-0 right-0 italic w-fit mx-auto mt-0">
+          liked on: {year}/{month}/{day}
+        </div>
         {content?.body.map(
           (tweet) =>
             tweet.tweet_id &&
