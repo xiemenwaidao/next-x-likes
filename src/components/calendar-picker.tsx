@@ -2,6 +2,7 @@
 
 import { Calendar } from '@/components/ui/calendar';
 import { useCalendarStore } from '@/store/calendar-store';
+import { toZonedTime } from 'date-fns-tz';
 import { useTransitionRouter } from 'next-view-transitions';
 import { useParams, usePathname } from 'next/navigation';
 import { useCallback, useEffect, useMemo } from 'react';
@@ -111,7 +112,7 @@ export function CalendarPicker({ allDates }: { allDates: DateInfo[] }) {
             );
           return firstDate;
         }, [allDates])}
-        toDate={new Date()}
+        toDate={toZonedTime(new Date(), 'Asia/Tokyo')}
       />
     </div>
   );
