@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { LogoSVG } from './logo-svg';
+import { ReactNode } from 'react';
 
-export const Footer = () => {
+export const Footer = ({ children }: { children: ReactNode }) => {
   return (
     <footer>
+      {children}
       {/* (ง ˙ω˙)ว */}
       <div className="text-center py-8">
         <Link href="/">

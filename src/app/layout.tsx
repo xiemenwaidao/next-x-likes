@@ -138,7 +138,9 @@ export default async function RootLayout({
               <CalendarPicker allDates={allDates} />
               {children}
             </main>
-            <Footer />
+            <Footer>
+              <CalendarPicker allDates={allDates} isFooter />
+            </Footer>
           </div>
         </body>
       </html>
