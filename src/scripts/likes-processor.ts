@@ -3,6 +3,8 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'fs';
 import type { DayJson, Like } from '../types/like';
 import { getTweetIdFromUrl } from '../lib/tweet-helper';
 import { promises as fs } from 'fs';
+import { parseISO } from 'date-fns';
+import { toZonedTime } from 'date-fns-tz';
 
 // function splitDateString(dateStr: string) {
 //   // 入力が6桁の文字列であることを確認
@@ -70,15 +72,11 @@ export async function processAndGenerateContent() {
         //   data.data = tweet;
         // }
 
-        const date = new Date(data.liked_at);
-        const year = date.getFullYear().toString();
-        const month = (date.getMonth() + 1).toString().padStart(2, '0');
-        const day = date.getDate().toString().padStart(2, '0');
-
-        // const dayJsonPath = join(contentDir, year, month, `${day}.json`);
-        // const json = JSON.parse(
-        //   readFileSync(join(contentDir, year, month, `${day}.json`), 'utf-8'),
-        // );
+        const date = parseISO(data.liked_at + 'Z');
+        const jpDate = toZonedTime(date, 'Asia/Tokyo');
+        const year = jpDate.getFullYear().toString();
+        const month = (jpDate.getMonth() + 1).toString().padStart(2, '0');
+        const day = jpDate.getDate().toString().padStart(2, '0');
 
         // json存在チェック
         const dayJsonPath = join(contentDir, year, month, `${day}.json`);
@@ -125,47 +123,6 @@ export async function processAndGenerateContent() {
         }
       }
     }
-
-    // いいねした日付降順で並び替え
-
-    // return console.log(processedData);
-
-    // 年ごとのMarkdownファイルを生成
-    // Object.entries(processedData).forEach(([year, yearData]) => {
-    //   Object.entries(yearData.months).forEach(([month, monthData]) => {
-    //     Object.entries(monthData.days).forEach(([day, dayData]) => {
-    //       const dayContentArray: Like[] = [];
-
-    //       Object.entries(dayData).forEach(([, tweetDataArray]) => {
-    //         tweetDataArray.map((tweetData) => {
-    //           Object.entries(tweetData).forEach(([, tweetDetailData]) => {
-    //             dayContentArray.push(tweetDetailData);
-    //           });
-    //         });
-    //       });
-
-    //       dayContentArray.sort(
-    //         (a, b) =>
-    //           new Date(b.liked_at).getTime() - new Date(a.liked_at).getTime(),
-    //       );
-
-    //       const dayContent = JSON.stringify({ body: dayContentArray });
-    //       const dayContentSaveDir = join(contentDir, year, month);
-    //       mkdirSync(dayContentSaveDir, { recursive: true });
-    //       writeFileSync(join(dayContentSaveDir, `${day}.json`), dayContent);
-    //     });
-    //   });
-
-    //   return;
-
-    //   const content = JSON.stringify({
-    //     year: parseInt(year),
-    //     data: yearData,
-    //     createdAt: new Date().toISOString(),
-    //   });
-
-    //   writeFileSync(join(contentDir, `${year}.json`), content);
-    // });
 
     console.log('Content generation completed successfully!');
   } catch (error) {
