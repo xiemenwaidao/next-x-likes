@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 
 export const Footer = ({ children }: { children: ReactNode }) => {
   return (
-    <footer>
+    <footer className="px-4">
       {children}
       {/* (ง ˙ω˙)ว */}
       <div className="text-center py-8">
