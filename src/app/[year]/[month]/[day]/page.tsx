@@ -17,6 +17,9 @@ type Props = {
   }>;
 };
 
+// export const dynamic = 'force-static';
+// export const revalidate = false;
+
 // 静的パスを生成する関数
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'src', 'content', 'likes');

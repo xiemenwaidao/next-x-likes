@@ -9,6 +9,7 @@ import { cache } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { SiteAnnounce } from '@/components/site-announce';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -135,6 +136,7 @@ export default async function RootLayout({
           <div className="grid grid-rows-[auto_1fr_auto] grid-cols-[100%] min-h-svh">
             <Header />
             <main className="container mx-auto px-4 py-4">
+              <SiteAnnounce />
               <CalendarPicker allDates={allDates} />
               {children}
             </main>
