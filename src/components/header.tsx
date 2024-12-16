@@ -11,7 +11,7 @@ import Link from 'next/link';
 export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-gray-900/50 border-b border-gray-700/30">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[28rem] mx-auto px-4">
         <div className="flex items-center h-16">
           <h1 className="flex-none">
             <Link href="/">

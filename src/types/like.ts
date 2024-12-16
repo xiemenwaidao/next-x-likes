@@ -18,3 +18,9 @@ export interface Like {
 export interface DayJson {
   body: Like[];
 }
+
+export interface DateInfo {
+  year: string;
+  month: string;
+  day: string;
+}

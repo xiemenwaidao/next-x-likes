@@ -9,7 +9,7 @@ import { cache } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { SiteAnnounce } from '@/components/site-announce';
+import { Main } from '@/components/Main';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -135,11 +135,7 @@ export default async function RootLayout({
           <GoogleAnalytics gaId={process.env.GOOGLE_TAG_ID!} />
           <div className="grid grid-rows-[auto_1fr_auto] grid-cols-[100%] min-h-svh">
             <Header />
-            <main className="container mx-auto px-4 py-4">
-              <SiteAnnounce />
-              <CalendarPicker allDates={allDates} />
-              {children}
-            </main>
+            <Main allDates={allDates}>{children}</Main>
             <Footer>
               <CalendarPicker allDates={allDates} isFooter />
             </Footer>

@@ -2,16 +2,11 @@
 
 import { Calendar } from '@/components/ui/calendar';
 import { useCalendarStore } from '@/store/calendar-store';
+import { DateInfo } from '@/types/like';
 import { toZonedTime } from 'date-fns-tz';
 import { useTransitionRouter } from 'next-view-transitions';
 import { useParams, usePathname } from 'next/navigation';
 import { useCallback, useEffect, useMemo } from 'react';
-
-interface DateInfo {
-  year: string;
-  month: string;
-  day: string;
-}
 
 export function CalendarPicker({
   allDates,
@@ -87,7 +82,7 @@ export function CalendarPicker({
 
   return (
     <div
-      className={`flex items-center justify-center  ${
+      className={`flex items-center justify-center ${
         isRootPath ? 'h-full' : ''
       } ${isRootPath && isFooter ? 'hidden' : ''}`}
     >
