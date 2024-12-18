@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { DayJson } from '@/types/like';
 import { promises as fs } from 'fs';
 import path from 'path';
