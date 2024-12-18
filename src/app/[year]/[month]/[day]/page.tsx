@@ -2,12 +2,7 @@ import { DayJson } from '@/types/like';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { Suspense } from 'react';
-import {
-  EmbeddedTweet,
-  Tweet,
-  TweetNotFound,
-  TweetSkeleton,
-} from 'react-tweet';
+import { EmbeddedTweet, TweetNotFound, TweetSkeleton } from 'react-tweet';
 
 type Props = {
   params: Promise<{
@@ -101,7 +96,8 @@ export default async function DayPage({ params }: Props) {
                     key={tweet.tweet_id}
                   />
                 ) : (
-                  <Tweet id={tweet.tweet_id} key={tweet.tweet_id} />
+                  // <Tweet id={tweet.tweet_id} key={tweet.tweet_id} />
+                  <TweetNotFound key={tweet.tweet_id} />
                 )}
               </Suspense>
             )),
