@@ -1,6 +1,7 @@
 export const dynamic = 'force-static';
 export const revalidate = false;
 
+import { CustomTweet } from '@/components/custom-tweet';
 import { DayJson } from '@/types/like';
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -88,22 +89,15 @@ export default async function DayPage({ params }: Props) {
         </div>
         {content?.body.map(
           (tweet) =>
-            tweet.tweet_id &&
-            (tweet.private || tweet.notfound ? (
-              <TweetNotFound key={tweet.tweet_id} />
-            ) : (
-              <Suspense key={tweet.tweet_id} fallback={<TweetSkeleton />}>
-                {tweet.react_tweet_data ? (
-                  <EmbeddedTweet
-                    tweet={tweet.react_tweet_data}
-                    key={tweet.tweet_id}
-                  />
-                ) : (
-                  // <Tweet id={tweet.tweet_id} key={tweet.tweet_id} />
-                  <TweetNotFound key={tweet.tweet_id} />
-                )}
-              </Suspense>
-            )),
+            tweet.tweet_id && (
+              <CustomTweet
+                key={tweet.tweet_id}
+                tweetData={tweet.react_tweet_data}
+                tweetId={tweet.tweet_id}
+                isPrivate={tweet.private}
+                isNotFound={tweet.notfound}
+              />
+            ),
         )}
 
         {content === null && (
