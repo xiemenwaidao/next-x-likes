@@ -5,8 +5,6 @@ import { CustomTweet } from '@/components/custom-tweet';
 import { DayJson } from '@/types/like';
 import { promises as fs } from 'fs';
 import path from 'path';
-import { Suspense } from 'react';
-import { EmbeddedTweet, TweetNotFound, TweetSkeleton } from 'react-tweet';
 
 type Props = {
   params: Promise<{

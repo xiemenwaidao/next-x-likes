@@ -2,9 +2,10 @@
 
 import { EmbeddedTweet, TweetNotFound, TweetSkeleton } from 'react-tweet';
 import { Suspense } from 'react';
+import { Tweet } from 'react-tweet/api';
 
 type TweetProps = {
-  tweetData: any; // react-tweetのデータ型に応じて適切な型を設定
+  tweetData: Tweet | undefined; // react-tweetのデータ型に応じて適切な型を設定
   tweetId: string;
   isPrivate: boolean;
   isNotFound: boolean;
@@ -22,7 +23,11 @@ export const CustomTweet = ({
 
   return (
     <Suspense fallback={<TweetSkeleton />}>
-      {tweetData ? <EmbeddedTweet tweet={tweetData} /> : <TweetNotFound />}
+      {tweetData ? (
+        <EmbeddedTweet tweet={tweetData} key={tweetId} />
+      ) : (
+        <TweetNotFound />
+      )}
     </Suspense>
   );
 };
