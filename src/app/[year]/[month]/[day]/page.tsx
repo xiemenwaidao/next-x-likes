@@ -1,4 +1,5 @@
 export const dynamic = 'force-static';
+export const revalidate = false;
 
 import { DayJson } from '@/types/like';
 import { promises as fs } from 'fs';
