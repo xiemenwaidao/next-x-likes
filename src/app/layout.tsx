@@ -26,7 +26,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: '集讚館｜好吧我聽你的',
+  title: '集讚館',
   description:
     'Xでいいねした投稿を後で見返すためのサイトです。いいねいいねそれいいね。',
 
@@ -41,16 +41,16 @@ export const metadata: Metadata = {
   },
   manifest: '/favicon/site.webmanifest',
   appleWebApp: {
-    title: '集讚館｜好吧我聽你的',
+    title: '集讚館',
   },
 
   // og
   openGraph: {
-    title: '集讚館｜好吧我聽你的',
+    title: '集讚館',
     description:
       'Xでいいねした投稿を後で見返すためのサイトです。いいねいいねそれいいね。',
-    siteName: '集讚館｜好吧我聽你的',
-    url: 'https://likes.haobawotingnide.xyz/',
+    siteName: '集讚館',
+    url: 'https://z.xiemen.me/',
     images: [
       {
         url: '/og-image.png', // publicディレクトリからの相対パス
