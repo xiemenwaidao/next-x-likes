@@ -29,7 +29,7 @@ export const Header = () => {
               <div className="text-xs">
                 <p>いいねの備忘録。</p>
                 <p>毎朝5時過ぎに自動更新。</p>
-                <p>たまに手動更新するかも。</p>
+                {/* <p>たまに手動更新するかも。</p> */}
               </div>
             </PopoverContent>
           </Popover>
