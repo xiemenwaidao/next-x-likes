@@ -4,7 +4,6 @@ export const revalidate = false;
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { CalendarPicker } from '@/components/calendar-picker';
 import { ViewTransitions } from 'next-view-transitions';
 import path from 'path';
 import { readdir } from 'fs/promises';
@@ -13,6 +12,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Main } from '@/components/Main';
+import { ScrollTopButton } from '@/components/scroll-top-button';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -140,7 +140,8 @@ export default async function RootLayout({
             <Header />
             <Main allDates={allDates}>{children}</Main>
             <Footer>
-              <CalendarPicker allDates={allDates} isFooter />
+              {/* <CalendarPicker allDates={allDates} isFooter /> */}
+              <ScrollTopButton />
             </Footer>
           </div>
         </body>
