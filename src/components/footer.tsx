@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { LogoSVG } from './logo-svg';
 import { ReactNode } from 'react';
 
-export const Footer = ({ children }: { children: ReactNode }) => {
+export const Footer = ({ children }: { children?: ReactNode }) => {
   return (
     <footer className="px-4">
       {children}
