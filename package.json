@@ -10,6 +10,7 @@
     "json:dl": "tsx -r dotenv/config src/scripts/sync-x-likes.ts",
     "json:conv": "tsx src/scripts/likes-processor.ts",
     "json:fetch-tweet": "tsx src/scripts/insert-tweet-to-json.ts",
+    "json:build-index": "tsx src/scripts/build-tweet-index.ts",
     "prepare": "husky"
   },
   "dependencies": {

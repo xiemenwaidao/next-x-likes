@@ -19,6 +19,7 @@ pnpm lint         # Run Next.js linter
 pnpm json:dl             # Sync new likes from AWS S3
 pnpm json:conv           # Process raw data into daily collections
 pnpm json:fetch-tweet    # Enrich with full tweet data from X API
+pnpm json:build-index    # Build tweet ID index for /tweet/<id> routes
 
 # Git Commits
 pnpm commit       # Create standardized commit with gitmoji
@@ -55,7 +56,8 @@ To update the site with new liked tweets:
 1. Run `pnpm json:dl` to sync from S3
 2. Run `pnpm json:conv` to process into daily files
 3. Run `pnpm json:fetch-tweet` to enrich with tweet data
-4. Run `pnpm build` to regenerate static pages
+4. Run `pnpm json:build-index` to create tweet ID index for individual tweet pages
+5. Run `pnpm build` to regenerate static pages
 
 ## Environment Variables
 

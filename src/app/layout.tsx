@@ -11,7 +11,7 @@ import { cache } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { Main } from '@/components/Main';
+import { Main } from '@/components/main';
 import { ScrollTopButton } from '@/components/scroll-top-button';
 
 const geistSans = localFont({
