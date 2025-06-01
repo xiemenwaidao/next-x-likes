@@ -59,6 +59,40 @@ const getNowDate = () => {
   return new Date(Date.now() - 24 * 60 * 60 * 1000);
 };
 
+// tweet-index.jsonを読み込んで、既にいいねしたツイートのIDを取得
+async function getExistingTweetIds(): Promise<Set<string>> {
+  const indexPath = join(process.cwd(), 'src', 'content', 'tweet-index.json');
+  try {
+    const data = await fs.readFile(indexPath, 'utf8');
+    const index = JSON.parse(data);
+    return new Set(Object.keys(index));
+  } catch {
+    console.log('tweet-index.json not found, treating as empty');
+    return new Set();
+  }
+}
+
+// 既存のtweets_v2ファイルからツイートIDを取得
+async function getExistingRawTweetIds(): Promise<Set<string>> {
+  const tweetsV2Dir = join(process.cwd(), ...SaveJsonBaseDirPathList, 'tweets_v2');
+  const existingIds = new Set<string>();
+  
+  try {
+    const files = await fs.readdir(tweetsV2Dir);
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        // ファイル名がツイートIDになっている
+        const tweetId = file.replace('.json', '');
+        existingIds.add(tweetId);
+      }
+    }
+  } catch {
+    console.log('tweets_v2 directory not found, treating as empty');
+  }
+  
+  return existingIds;
+}
+
 async function getLastSyncTime() {
   const syncFilePath = join(process.cwd(), ...lastSyncSavePathList);
   try {
@@ -82,6 +116,12 @@ async function getLastSyncTime() {
 async function downloadNewFiles() {
   const lastSyncTime = await getLastSyncTime();
   console.log(`lastSyncTime:${lastSyncTime.toISOString()}`);
+
+  // 既存のツイートIDを取得
+  console.log('Loading existing tweet data...');
+  const existingTweetIds = await getExistingTweetIds();
+  const existingRawTweetIds = await getExistingRawTweetIds();
+  console.log(`Found ${existingTweetIds.size} tweets in index, ${existingRawTweetIds.size} in raw files`);
 
   try {
     console.log(`Checking for files in: ${s3bucketMainDir}`);
@@ -120,12 +160,23 @@ async function downloadNewFiles() {
     // カウンター
     let downloadedCount = 0;
     let skippedCount = 0;
+    let duplicateCount = 0;
 
     for (const file of newFiles) {
       const fileName = basename(file.Key!);
       const filePath = join(tweetsV2Dir, fileName);
+      
+      // ファイル名からツイートIDを抽出（.json拡張子を除去）
+      const tweetId = fileName.replace('.json', '');
 
-      // ファイルの存在チェック
+      // 既にいいねしたツイートかチェック
+      if (existingTweetIds.has(tweetId) || existingRawTweetIds.has(tweetId)) {
+        console.log(`Skipped: ${fileName} (Already liked tweet)`);
+        duplicateCount++;
+        continue;
+      }
+
+      // ファイルの存在チェック（念のため）
       try {
         await fs.access(filePath);
         console.log(`Skipped: ${fileName} (File already exists)`);
@@ -158,7 +209,8 @@ async function downloadNewFiles() {
     console.log('\nDownload Summary:');
     console.log(`Total files processed: ${newFiles.length}`);
     console.log(`Downloaded: ${downloadedCount}`);
-    console.log(`Skipped: ${skippedCount}`);
+    console.log(`Skipped (file exists): ${skippedCount}`);
+    console.log(`Skipped (already liked): ${duplicateCount}`);
 
     // 最終同期日時を更新
     try {
