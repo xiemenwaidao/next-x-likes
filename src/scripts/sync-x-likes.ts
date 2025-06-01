@@ -42,8 +42,8 @@ const lastSyncSavePathList = ['src', 'scripts', 'last-sync.txt'];
 // jsonの保存先ディレクトリ
 const SaveJsonBaseDirPathList = ['src', 'assets', 'data', 'x', 'likes'];
 
-// bucket名/tweets/202411
-const s3bucketMainDir = 'tweets';
+// bucket名/tweets_v2
+const s3bucketMainDir = 'tweets_v2';
 
 // S3 接続情報設定
 const s3Client = new S3Client({
@@ -57,15 +57,6 @@ const s3Client = new S3Client({
 const getNowDate = () => {
   // return new Date('2024-01-01T00:00:00Z'); // 仮
   return new Date(Date.now() - 24 * 60 * 60 * 1000);
-};
-
-/**
- * DateからYYYYMM形式の文字列を生成
- */
-const createYearMonthString = (date: Date) => {
-  // return date.toISOString().slice(0, 4) + date.toISOString().slice(5, 7);
-
-  return `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}`;
 };
 
 async function getLastSyncTime() {
@@ -87,124 +78,89 @@ async function getLastSyncTime() {
     return getNowDate();
   }
 }
-/**
- *
- * @param {Date} startDate
- */
-function getYearMonthsBetween(startDate: Date) {
-  const results: string[] = [];
-  const currentDate = new Date();
-  const workingDate = new Date(startDate);
-
-  // 開始日を月初めに設定
-  workingDate.setDate(1);
-
-  const currentYM = createYearMonthString(currentDate);
-  // console.log(`currentYM:${currentYM}`);
-
-  while (true) {
-    const workingYM = createYearMonthString(workingDate);
-    // console.log(`workingYM:${workingYM}`);
-    results.push(workingYM);
-
-    // 同じであればループを抜ける
-    if (workingYM === currentYM) {
-      break;
-    }
-
-    // 次の月へ
-    workingDate.setMonth(workingDate.getMonth() + 1);
-  }
-
-  return results;
-}
 
 async function downloadNewFiles() {
   const lastSyncTime = await getLastSyncTime();
   console.log(`lastSyncTime:${lastSyncTime.toISOString()}`);
 
-  // 現在の年月までのフォルダを対象とする
-  const prefixList = getYearMonthsBetween(lastSyncTime);
+  try {
+    console.log(`Checking for files in: ${s3bucketMainDir}`);
+    console.log(`Looking for files modified after: ${lastSyncTime}`);
 
-  // return console.log(prefixList);
+    // tweets_v2ディレクトリ全体をリストアップ
+    const listCommand = new ListObjectsV2Command({
+      Bucket: process.env.AWS_BUCKET_NAME,
+      Prefix: s3bucketMainDir,
+    });
 
-  for (const prefix of prefixList) {
-    try {
-      console.log(`Checking for files in prefix: ${prefix}`);
-      console.log(`Looking for files modified after: ${lastSyncTime}`);
+    const { Contents = [] } = await s3Client.send(listCommand);
 
-      const listCommand = new ListObjectsV2Command({
-        Bucket: process.env.AWS_BUCKET_NAME,
-        Prefix: `${s3bucketMainDir}/${prefix}`,
-      });
+    console.log(`Found ${Contents.length} total files`);
 
-      const { Contents = [] } = await s3Client.send(listCommand);
+    // 最終同期日時より新しいファイルをフィルタリング
+    const newFiles = Contents.filter(
+      (file) => new Date(file.LastModified!) > lastSyncTime,
+    );
 
-      console.log(`Found ${Contents.length} total files`);
+    console.log(`Found ${newFiles.length} new files to download`);
 
-      const newFiles = Contents.filter(
-        (file) => new Date(file.LastModified!) > lastSyncTime,
-      );
-
-      console.log(`Found ${newFiles.length} new files to download`);
-
-      if (newFiles.length === 0) continue;
-
-      // ベースとなるデータディレクトリを作成
-      const baseDir = join(process.cwd(), ...SaveJsonBaseDirPathList);
-      await fs.mkdir(baseDir, { recursive: true });
-
-      // 年月ディレクトリを作成
-      const yearMonthDir = join(baseDir, prefix);
-      await fs.mkdir(yearMonthDir, { recursive: true });
-
-      // カウンター
-      let downloadedCount = 0;
-      let skippedCount = 0;
-
-      for (const file of newFiles) {
-        const fileName = basename(file.Key!);
-        const filePath = join(yearMonthDir, fileName);
-
-        // ファイルの存在チェック
-        try {
-          await fs.access(filePath);
-          console.log(`Skipped: ${prefix}/${fileName} (File already exists)`);
-          skippedCount++;
-          continue; // 既存のファイルはスキップ
-        } catch {
-          // ファイルが存在しない場合は処理を続行
-        }
-
-        const getCommand = new GetObjectCommand({
-          Bucket: process.env.AWS_BUCKET_NAME,
-          Key: file.Key,
-        });
-
-        const response = await s3Client.send(getCommand);
-        const content = await response.Body?.transformToString();
-
-        if (content) {
-          await fs.writeFile(filePath, content);
-
-          console.log(
-            `Downloaded: ${prefix}/${fileName} (Modified: ${file.LastModified})`,
-          );
-
-          downloadedCount++;
-        }
-      }
-
-      // 処理結果のサマリーを表示
-      console.log('\nDownload Summary:');
-      console.log(`Total files processed: ${newFiles.length}`);
-      console.log(`Downloaded: ${downloadedCount}`);
-      console.log(`Skipped: ${skippedCount}`);
-    } catch (error) {
-      console.error('Error:', error);
-      process.exit(1);
+    if (newFiles.length === 0) {
+      console.log('No new files to download');
+      return;
     }
 
+    // ベースとなるデータディレクトリを作成
+    const baseDir = join(process.cwd(), ...SaveJsonBaseDirPathList);
+    await fs.mkdir(baseDir, { recursive: true });
+
+    // tweets_v2ディレクトリを作成
+    const tweetsV2Dir = join(baseDir, 'tweets_v2');
+    await fs.mkdir(tweetsV2Dir, { recursive: true });
+
+    // カウンター
+    let downloadedCount = 0;
+    let skippedCount = 0;
+
+    for (const file of newFiles) {
+      const fileName = basename(file.Key!);
+      const filePath = join(tweetsV2Dir, fileName);
+
+      // ファイルの存在チェック
+      try {
+        await fs.access(filePath);
+        console.log(`Skipped: ${fileName} (File already exists)`);
+        skippedCount++;
+        continue; // 既存のファイルはスキップ
+      } catch {
+        // ファイルが存在しない場合は処理を続行
+      }
+
+      const getCommand = new GetObjectCommand({
+        Bucket: process.env.AWS_BUCKET_NAME,
+        Key: file.Key,
+      });
+
+      const response = await s3Client.send(getCommand);
+      const content = await response.Body?.transformToString();
+
+      if (content) {
+        await fs.writeFile(filePath, content);
+
+        console.log(
+          `Downloaded: ${fileName} (Modified: ${file.LastModified})`,
+        );
+
+        downloadedCount++;
+      }
+    }
+
+    // 処理結果のサマリーを表示
+    console.log('\nDownload Summary:');
+    console.log(`Total files processed: ${newFiles.length}`);
+    console.log(`Downloaded: ${downloadedCount}`);
+    console.log(`Skipped: ${skippedCount}`);
+
+    // 最終同期日時を更新
     try {
       await fs.writeFile(
         join(process.cwd(), ...lastSyncSavePathList),
@@ -214,6 +170,9 @@ async function downloadNewFiles() {
       console.error('Error updating last sync time:', error);
       process.exit(1);
     }
+  } catch (error) {
+    console.error('Error:', error);
+    process.exit(1);
   }
 }
 
