@@ -20,6 +20,7 @@ pnpm json:dl             # Sync new likes from AWS S3
 pnpm json:conv           # Process raw data into daily collections
 pnpm json:fetch-tweet    # Enrich with full tweet data from X API
 pnpm json:build-index    # Build tweet ID index for /tweet/<id> routes
+pnpm json:build-search   # Build search index for full-text search
 
 # Git Commits
 pnpm commit       # Create standardized commit with gitmoji
@@ -43,6 +44,7 @@ pnpm commit       # Create standardized commit with gitmoji
 - **CalendarPicker**: Interactive calendar using Zustand for state management
 - **CustomTweet**: Renders tweets using react-tweet library
 - **Main**: Layout wrapper that includes the calendar
+- **SearchBox**: Full-text search with real-time suggestions as you type
 
 ### Important Considerations
 - All pages use static generation with `force-static` and `revalidate: false`
@@ -57,7 +59,7 @@ To update the site with new liked tweets:
 2. Run `pnpm json:conv` to process into daily files
 3. Run `pnpm json:fetch-tweet` to enrich with tweet data
 4. Run `pnpm json:build-index` to create tweet ID index for individual tweet pages
-5. Run `pnpm build` to regenerate static pages
+5. Run `pnpm build` to regenerate static pages (includes search index generation)
 
 ## Environment Variables
 

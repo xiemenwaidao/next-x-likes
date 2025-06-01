@@ -7,6 +7,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import Link from 'next/link';
+import { SearchBox } from './search';
 
 export const Header = () => {
   return (
@@ -19,6 +20,7 @@ export const Header = () => {
             </Link>
           </h1>
           <div className="grow"></div>
+          <SearchBox />
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="ghost" size="icon" className="flex-none">
