@@ -159,7 +159,7 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
                 ref: inputRef,
                 placeholder: 'ツイートを検索...',
                 className:
-                  'flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-sm sm:text-base min-w-0',
+                  'flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-base min-w-0',
                 autoFocus: true,
                 // IME対応のイベントハンドラー（issue #1452の解決策）
                 onChange: getOnChangeWithCompositionSupport({}),
