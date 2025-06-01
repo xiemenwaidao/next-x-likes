@@ -28,7 +28,7 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
   
   // IME対応のchangeハンドラー（issue #1452の解決策）
   const getOnChangeWithCompositionSupport = useCallback(
-    ({ onChangeProp }: { onChangeProp?: (event: any) => void }) =>
+    ({ onChangeProp }: { onChangeProp?: (event: React.ChangeEvent<HTMLInputElement> | React.CompositionEvent<HTMLInputElement>) => void }) =>
     (event: React.ChangeEvent<HTMLInputElement> | React.CompositionEvent<HTMLInputElement>) => {
       // 入力値を常に更新（IMEの表示用）
       setInputValue(event.currentTarget.value);
@@ -114,7 +114,7 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
         return queries.every((q) => matchesKanaVariations(searchText, q));
       })
       .slice(0, 10);
-  }, [inputValue, searchIndex]);
+  }, [inputValue, searchIndex, matchesKanaVariations]);
 
   // IME対応版 (issue #1452の解決策)
   const {
