@@ -113,7 +113,7 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
         const searchText = `${item.text} ${item.username}`;
         return queries.every((q) => matchesKanaVariations(searchText, q));
       })
-      .slice(0, 10);
+      .slice(0, 100);
   }, [inputValue, searchIndex, matchesKanaVariations]);
 
   // IME対応版 (issue #1452の解決策)
