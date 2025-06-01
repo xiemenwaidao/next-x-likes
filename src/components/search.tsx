@@ -137,6 +137,18 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
       }
     },
     itemToString: (item) => item?.text || '',
+    // フォーカスが外れてもメニューを開いたままにする
+    stateReducer: (state, actionAndChanges) => {
+      const { type, changes } = actionAndChanges;
+      // Blurイベント時にメニューを閉じないようにする
+      if (type === useCombobox.stateChangeTypes.InputBlur) {
+        return {
+          ...changes,
+          isOpen: state.isOpen, // 現在の開閉状態を維持
+        };
+      }
+      return changes;
+    },
   });
 
   return (
