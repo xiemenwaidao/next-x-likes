@@ -50,8 +50,17 @@ jobs:
       - name: '🗄️ Convert JSON'
         run: pnpm json:conv
 
+      - name: '🧹 Remove duplicate raw data'
+        run: pnpm json:remove-duplicates
+
       - name: '🥳 Fetch and insert tweets'
         run: pnpm json:fetch-tweet
+
+      - name: '📇 Build tweet index'
+        run: pnpm json:build-index
+
+      - name: '🔍 Build search index'
+        run: pnpm json:build-search
 
       - name: '🧀 Commit and push if changed'
         run: |
