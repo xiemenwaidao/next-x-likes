@@ -11,6 +11,7 @@
     "json:conv": "tsx src/scripts/likes-processor.ts",
     "json:fetch-tweet": "tsx src/scripts/insert-tweet-to-json.ts",
     "json:build-index": "tsx src/scripts/build-tweet-index.ts",
+    "json:remove-duplicates": "tsx src/scripts/remove-duplicate-tweets.ts",
     "prepare": "husky"
   },
   "dependencies": {
