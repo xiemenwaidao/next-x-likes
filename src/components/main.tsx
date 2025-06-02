@@ -1,4 +1,7 @@
+'use client';
+
 import { ReactNode } from 'react';
+import { usePathname } from 'next/navigation';
 import { CalendarPicker } from './calendar-picker';
 // import { SiteAnnounce } from './site-announce';
 import { DateInfo } from '@/types/like';
@@ -10,10 +13,15 @@ export function Main({
   children: ReactNode;
   allDates: DateInfo[];
 }) {
+  const pathname = usePathname();
+  
+  // /tweet/[id] パスではカレンダーを表示しない
+  const showCalendar = !pathname.startsWith('/tweet/');
+  
   return (
     <main className="container mx-auto px-4 py-4">
       {/* <SiteAnnounce /> */}
-      <CalendarPicker allDates={allDates} />
+      {showCalendar && <CalendarPicker allDates={allDates} />}
       {children}
     </main>
   );

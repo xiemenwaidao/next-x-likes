@@ -15,7 +15,7 @@ export function CalendarPicker({
   allDates: DateInfo[];
   isFooter?: boolean;
 }) {
-  const { selectedDate, setSelectedDate } = useCalendarStore();
+  const { selectedDate, setSelectedDate, displayMonth, setDisplayMonth } = useCalendarStore();
   const params = useParams();
   const router = useTransitionRouter();
   const pathname = usePathname();
@@ -45,13 +45,17 @@ export function CalendarPicker({
       // 無効な日付の場合はセットしない
       if (!isNaN(dateFromUrl.getTime())) {
         setSelectedDate(dateFromUrl);
+        // カレンダーの表示月も同じ月に設定
+        setDisplayMonth(new Date(Number(params.year), Number(params.month) - 1, 1));
       } else {
         setSelectedDate(undefined);
+        setDisplayMonth(undefined);
       }
     } else {
       setSelectedDate(undefined);
+      setDisplayMonth(undefined);
     }
-  }, [params.year, params.month, params.day, setSelectedDate]);
+  }, [params.year, params.month, params.day, setSelectedDate, setDisplayMonth]);
 
   // 日付選択時のナビゲーション
   const handleSelect = useCallback(
@@ -139,6 +143,8 @@ export function CalendarPicker({
           return firstDate;
         }, [allDates])}
         toDate={toZonedTime(new Date(), 'Asia/Tokyo')}
+        month={displayMonth}
+        onMonthChange={setDisplayMonth}
       />
     </div>
   );
