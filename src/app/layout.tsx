@@ -26,6 +26,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://z.xiemen.me'),
   title: '集讚館',
   description:
     'Xでいいねした投稿を後で見返すためのサイトです。いいねいいねそれいいね。',

@@ -15,8 +15,8 @@ export function Main({
 }) {
   const pathname = usePathname();
   
-  // /tweet/[id] パスではカレンダーを表示しない
-  const showCalendar = !pathname.startsWith('/tweet/');
+  // /tweet/[id] と /urls パスではカレンダーを表示しない
+  const showCalendar = !pathname.startsWith('/tweet/') && !pathname.startsWith('/urls');
   
   return (
     <main className="container mx-auto px-4 py-4">

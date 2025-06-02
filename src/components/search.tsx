@@ -59,52 +59,52 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
       .catch(console.error);
   }, []);
 
-  // ひらがなをカタカナに変換
-  const toKatakana = (str: string) => {
-    return str.replace(/[\u3041-\u3096]/g, (match) => {
-      const chr = match.charCodeAt(0) + 0x60;
-      return String.fromCharCode(chr);
-    });
-  };
-
-  // カタカナをひらがなに変換
-  const toHiragana = (str: string) => {
-    return str.replace(/[\u30A1-\u30F6]/g, (match) => {
-      const chr = match.charCodeAt(0) - 0x60;
-      return String.fromCharCode(chr);
-    });
-  };
-
-  // ひらがな/カタカナの両方のパターンでマッチングを試みる
-  const matchesKanaVariations = (text: string, query: string) => {
-    const lowerText = text.toLowerCase();
-    const lowerQuery = query.toLowerCase();
-
-    // 元のクエリでマッチ
-    if (lowerText.includes(lowerQuery)) return true;
-
-    // クエリをひらがなに変換してマッチ
-    const hiraganaQuery = toHiragana(lowerQuery);
-    if (lowerText.includes(hiraganaQuery)) return true;
-
-    // クエリをカタカナに変換してマッチ
-    const katakanaQuery = toKatakana(lowerQuery);
-    if (lowerText.includes(katakanaQuery)) return true;
-
-    // テキストをひらがなに変換してマッチ
-    const hiraganaText = toHiragana(lowerText);
-    if (hiraganaText.includes(lowerQuery)) return true;
-
-    // テキストをカタカナに変換してマッチ
-    const katakanaText = toKatakana(lowerText);
-    if (katakanaText.includes(lowerQuery)) return true;
-
-    return false;
-  };
-
   // フィルタリングされた結果
   const filteredItems = useMemo(() => {
     if (!inputValue.trim()) return [];
+
+    // ひらがなをカタカナに変換
+    const toKatakana = (str: string) => {
+      return str.replace(/[\u3041-\u3096]/g, (match) => {
+        const chr = match.charCodeAt(0) + 0x60;
+        return String.fromCharCode(chr);
+      });
+    };
+
+    // カタカナをひらがなに変換
+    const toHiragana = (str: string) => {
+      return str.replace(/[\u30A1-\u30F6]/g, (match) => {
+        const chr = match.charCodeAt(0) - 0x60;
+        return String.fromCharCode(chr);
+      });
+    };
+
+    // ひらがな/カタカナの両方のパターンでマッチングを試みる
+    const matchesKanaVariations = (text: string, query: string) => {
+      const lowerText = text.toLowerCase();
+      const lowerQuery = query.toLowerCase();
+
+      // 元のクエリでマッチ
+      if (lowerText.includes(lowerQuery)) return true;
+
+      // クエリをひらがなに変換してマッチ
+      const hiraganaQuery = toHiragana(lowerQuery);
+      if (lowerText.includes(hiraganaQuery)) return true;
+
+      // クエリをカタカナに変換してマッチ
+      const katakanaQuery = toKatakana(lowerQuery);
+      if (lowerText.includes(katakanaQuery)) return true;
+
+      // テキストをひらがなに変換してマッチ
+      const hiraganaText = toHiragana(lowerText);
+      if (hiraganaText.includes(lowerQuery)) return true;
+
+      // テキストをカタカナに変換してマッチ
+      const katakanaText = toKatakana(lowerText);
+      if (katakanaText.includes(lowerQuery)) return true;
+
+      return false;
+    };
 
     const queries = inputValue.split(/\s+/).filter((q) => q);
 
@@ -114,7 +114,7 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
         return queries.every((q) => matchesKanaVariations(searchText, q));
       })
       .slice(0, 100);
-  }, [inputValue, searchIndex, matchesKanaVariations]);
+  }, [inputValue, searchIndex]);
 
   // IME対応版 (issue #1452の解決策)
   const {
