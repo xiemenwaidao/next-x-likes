@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
-import { Search, X } from 'lucide-react';
+import { Search, X, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { useRouter } from 'next/navigation';
 import { useCombobox } from 'downshift';
 
@@ -15,9 +16,24 @@ interface SearchIndexItem {
   path: string;
 }
 
+type SearchTarget = 'all' | 'text' | 'username';
+
+interface SearchFilter {
+  target: SearchTarget;
+  label: string;
+}
+
+const searchFilters: SearchFilter[] = [
+  { target: 'all', label: 'すべて' },
+  { target: 'text', label: '本文' },
+  { target: 'username', label: 'ユーザー名' },
+];
+
 const SearchModal = ({ onClose }: { onClose: () => void }) => {
   const [searchIndex, setSearchIndex] = useState<SearchIndexItem[]>([]);
   const [inputValue, setInputValue] = useState('');
+  const [searchTarget, setSearchTarget] = useState<SearchTarget>('all');
+  const [showFilters, setShowFilters] = useState(false);
   const router = useRouter();
   
   // IME composition状態を追跡するref（issue #1452の解決策）
@@ -110,11 +126,23 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
 
     return searchIndex
       .filter((item) => {
-        const searchText = `${item.text} ${item.username}`;
+        let searchText: string;
+        switch (searchTarget) {
+          case 'text':
+            searchText = item.text;
+            break;
+          case 'username':
+            searchText = item.username;
+            break;
+          case 'all':
+          default:
+            searchText = `${item.text} ${item.username}`;
+            break;
+        }
         return queries.every((q) => matchesKanaVariations(searchText, q));
       })
       .slice(0, 100);
-  }, [inputValue, searchIndex]);
+  }, [inputValue, searchIndex, searchTarget]);
 
   // IME対応版 (issue #1452の解決策)
   const {
@@ -156,38 +184,73 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
       <div className="fixed inset-0 z-[60] bg-black/50" onClick={onClose} />
       <div className="fixed top-20 left-1/2 -translate-x-1/2 w-[calc(100vw-1rem)] max-w-[28rem] z-[70]">
         <div className="bg-gray-800 rounded-lg shadow-lg border border-gray-700">
-          <div 
-            className="flex items-center p-3 sm:p-4 border-b border-gray-700 cursor-text"
-            onClick={(e) => {
-              // パディング部分をクリックした時もinputにフォーカス
-              if (e.target === e.currentTarget || !['INPUT', 'BUTTON'].includes((e.target as HTMLElement).tagName)) {
-                inputRef.current?.focus();
-              }
-            }}
-          >
-            <Search className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 mr-2 sm:mr-3 flex-shrink-0 pointer-events-none" />
-            <input
-              {...getInputProps({
-                ref: inputRef,
-                placeholder: 'ツイートを検索...',
-                className:
-                  'flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-base min-w-0',
-                autoFocus: true,
-                // IME対応のイベントハンドラー（issue #1452の解決策）
-                onChange: getOnChangeWithCompositionSupport({}),
-                onCompositionStart: getOnChangeWithCompositionSupport({}),
-                onCompositionEnd: getOnChangeWithCompositionSupport({}),
-                value: inputValue,
-              })}
-            />
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={onClose}
-              className="ml-1 sm:ml-2 flex-shrink-0"
+          <div>
+            <div 
+              className="flex items-center p-3 sm:p-4 border-b border-gray-700 cursor-text"
+              onClick={(e) => {
+                // パディング部分をクリックした時もinputにフォーカス
+                if (e.target === e.currentTarget || !['INPUT', 'BUTTON'].includes((e.target as HTMLElement).tagName)) {
+                  inputRef.current?.focus();
+                }
+              }}
             >
-              <X className="h-4 w-4 sm:h-5 sm:w-5" />
-            </Button>
+              <Search className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 mr-2 sm:mr-3 flex-shrink-0 pointer-events-none" />
+              <input
+                {...getInputProps({
+                  ref: inputRef,
+                  placeholder: searchTarget === 'text' ? 'ツイート本文を検索...' : searchTarget === 'username' ? 'ユーザー名を検索...' : 'ツイートを検索...',
+                  className:
+                    'flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-base min-w-0',
+                  autoFocus: true,
+                  // IME対応のイベントハンドラー（issue #1452の解決策）
+                  onChange: getOnChangeWithCompositionSupport({}),
+                  onCompositionStart: getOnChangeWithCompositionSupport({}),
+                  onCompositionEnd: getOnChangeWithCompositionSupport({}),
+                  value: inputValue,
+                })}
+              />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setShowFilters(!showFilters)}
+                className="ml-1 sm:ml-2 flex-shrink-0 relative"
+              >
+                <Filter className="h-4 w-4 sm:h-5 sm:w-5" />
+                {searchTarget !== 'all' && (
+                  <span className="absolute -top-1 -right-1 h-2 w-2 bg-blue-500 rounded-full" />
+                )}
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={onClose}
+                className="ml-1 sm:ml-2 flex-shrink-0"
+              >
+                <X className="h-4 w-4 sm:h-5 sm:w-5" />
+              </Button>
+            </div>
+            
+            {showFilters && (
+              <div className="flex gap-2 p-3 border-b border-gray-700 bg-gray-800/50">
+                {searchFilters.map((filter) => (
+                  <Badge
+                    key={filter.target}
+                    variant={searchTarget === filter.target ? 'default' : 'secondary'}
+                    className={`cursor-pointer transition-colors ${
+                      searchTarget === filter.target
+                        ? 'bg-blue-600 hover:bg-blue-700'
+                        : 'bg-gray-700 hover:bg-gray-600'
+                    }`}
+                    onClick={() => {
+                      setSearchTarget(filter.target);
+                      inputRef.current?.focus();
+                    }}
+                  >
+                    {filter.label}
+                  </Badge>
+                ))}
+              </div>
+            )}
           </div>
 
           <div {...getMenuProps()}>
