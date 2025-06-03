@@ -78,12 +78,12 @@ export default async function DayPage({ params }: Props) {
   return (
     <div className="">
       <div className="w-full max-w-md mx-auto space-y-4 py-4 p-0 relative">
-        {/* mix-blend-overlay text-yellow-300 */}
-        <h1 className="text-center sticky top-6 z-50 mix-blend-overlay italic w-fit mx-auto">
-          liked on: {year}/{month}/{day}
-        </h1>
-        <div className="text-center absolute -top-0 left-0 right-0 italic w-fit mx-auto mt-0">
-          liked on: {year}/{month}/{day}
+        {/* Sticky date indicator */}
+        <div className="sticky top-[4.25rem] z-40 text-center mb-6">
+          <h1 className="inline-flex items-center gap-2 px-4 py-1.5 backdrop-blur-md bg-gray-800/60 border border-gray-700/50 rounded-full text-sm font-medium text-gray-300 shadow-lg">
+            <span className="text-gray-500">liked on</span>
+            <span className="text-gray-200">{year}/{month}/{day}</span>
+          </h1>
         </div>
         {content?.body.map(
           (tweet) =>
