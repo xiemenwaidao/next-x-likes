@@ -4,7 +4,6 @@ import { Calendar } from '@/components/ui/calendar';
 import { useCalendarStore } from '@/store/calendar-store';
 import { DateInfo } from '@/types/like';
 import { toZonedTime } from 'date-fns-tz';
-import { useTransitionRouter } from 'next-view-transitions';
 import { useParams, usePathname } from 'next/navigation';
 import { useCallback, useEffect, useMemo } from 'react';
 
@@ -15,9 +14,8 @@ export function CalendarPicker({
   allDates: DateInfo[];
   isFooter?: boolean;
 }) {
-  const { selectedDate, setSelectedDate, displayMonth, setDisplayMonth } = useCalendarStore();
+  const { selectedDate, setSelectedDate, displayMonth, setDisplayMonth, setIsDrawerOpen } = useCalendarStore();
   const params = useParams();
-  const router = useTransitionRouter();
   const pathname = usePathname();
   const isRootPath = pathname === '/';
 
@@ -62,15 +60,13 @@ export function CalendarPicker({
     (date: Date | undefined) => {
       setSelectedDate(date);
       if (!date) {
-        router.push('/');
+        setIsDrawerOpen(false);
         return;
       }
-      const formattedDate = `/${date.getFullYear()}/${String(
-        date.getMonth() + 1,
-      ).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}`;
-      router.push(formattedDate);
+      // ドロワーを開く
+      setIsDrawerOpen(true);
     },
-    [router, setSelectedDate],
+    [setSelectedDate, setIsDrawerOpen],
   );
 
   // 日付の無効化チェック
@@ -87,13 +83,13 @@ export function CalendarPicker({
   return (
     <div
       className={`flex items-center justify-center ${
-        isRootPath ? 'h-full' : ''
+        isRootPath ? 'h-[calc(100vh-12rem)]' : ''
       } ${isRootPath && isFooter ? 'hidden' : ''}`}
     >
       <Calendar
         mode="single"
-        className={`rounded-md border ${
-          isRootPath ? '' : 'max-w-[28rem] w-full'
+        className={`rounded-md border transition-transform duration-300 ${
+          isRootPath ? 'scale-110' : 'max-w-[28rem] w-full'
         }`}
         classNames={
           isRootPath
