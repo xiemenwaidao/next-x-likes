@@ -36,6 +36,8 @@ const getRecentActivityData = cache(async (allDates: any[]): Promise<ActivityDat
   const activityData: ActivityData[] = [];
   const today = new Date();
   
+  console.log('Available dates:', allDates.slice(0, 5)); // デバッグログ
+  
   // 直近7日間のデータを取得
   for (let i = 6; i >= 0; i--) {
     const targetDate = new Date(today);
@@ -44,6 +46,8 @@ const getRecentActivityData = cache(async (allDates: any[]): Promise<ActivityDat
     const year = targetDate.getFullYear().toString();
     const month = (targetDate.getMonth() + 1).toString();
     const day = targetDate.getDate().toString();
+    
+    console.log(`Looking for: ${year}/${month}/${day}`); // デバッグログ
     
     // 該当する日付のデータを検索
     const dateInfo = allDates.find(d => 
@@ -63,12 +67,18 @@ const getRecentActivityData = cache(async (allDates: any[]): Promise<ActivityDat
           `${dateInfo.day.padStart(2, '0')}.json`
         );
         
+        console.log(`Reading file: ${filePath}`); // デバッグログ
+        
         const fileContent = await readFile(filePath, 'utf-8');
         const tweets = JSON.parse(fileContent);
         count = Array.isArray(tweets) ? tweets.length : 0;
+        
+        console.log(`Found ${count} tweets for ${year}/${month}/${day}`); // デバッグログ
       } catch (error) {
         console.error(`Error reading file for ${year}/${month}/${day}:`, error);
       }
+    } else {
+      console.log(`No data found for ${year}/${month}/${day}`); // デバッグログ
     }
     
     const dayNames = ['日', '月', '火', '水', '木', '金', '土'];
@@ -80,6 +90,8 @@ const getRecentActivityData = cache(async (allDates: any[]): Promise<ActivityDat
       dayName
     });
   }
+  
+  console.log('Final activity data:', activityData); // デバッグログ
   
   return activityData;
 });
