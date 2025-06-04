@@ -32,68 +32,53 @@ const getAllDates = cache(async () => {
   return dates;
 });
 
-const getRecentActivityData = cache(async (allDates: any[]): Promise<ActivityData[]> => {
+interface DateInfo {
+  year: string;
+  month: string;
+  day: string;
+}
+
+const getRecentActivityData = cache(async (allDates: DateInfo[]): Promise<ActivityData[]> => {
   const activityData: ActivityData[] = [];
-  const today = new Date();
   
-  console.log('Available dates:', allDates.slice(0, 5)); // デバッグログ
+  // 利用可能な日付から最新の7日分を取得
+  const sortedDates = allDates
+    .map(d => ({
+      ...d,
+      dateObj: new Date(Number(d.year), Number(d.month) - 1, Number(d.day))
+    }))
+    .sort((a, b) => b.dateObj.getTime() - a.dateObj.getTime())
+    .slice(0, 7);
   
-  // 直近7日間のデータを取得
-  for (let i = 6; i >= 0; i--) {
-    const targetDate = new Date(today);
-    targetDate.setDate(today.getDate() - i);
-    
-    const year = targetDate.getFullYear().toString();
-    const month = (targetDate.getMonth() + 1).toString();
-    const day = targetDate.getDate().toString();
-    
-    console.log(`Looking for: ${year}/${month}/${day}`); // デバッグログ
-    
-    // 該当する日付のデータを検索
-    const dateInfo = allDates.find(d => 
-      d.year === year && 
-      d.month === month && 
-      d.day === day
-    );
-    
-    let count = 0;
-    if (dateInfo) {
-      try {
-        const filePath = path.join(
-          process.cwd(),
-          'src/content/likes',
-          dateInfo.year,
-          dateInfo.month.padStart(2, '0'),
-          `${dateInfo.day.padStart(2, '0')}.json`
-        );
-        
-        console.log(`Reading file: ${filePath}`); // デバッグログ
-        
-        const fileContent = await readFile(filePath, 'utf-8');
-        const tweets = JSON.parse(fileContent);
-        count = Array.isArray(tweets) ? tweets.length : 0;
-        
-        console.log(`Found ${count} tweets for ${year}/${month}/${day}`); // デバッグログ
-      } catch (error) {
-        console.error(`Error reading file for ${year}/${month}/${day}:`, error);
-      }
-    } else {
-      console.log(`No data found for ${year}/${month}/${day}`); // デバッグログ
+  for (const dateInfo of sortedDates) {
+    try {
+      const filePath = path.join(
+        process.cwd(),
+        'src/content/likes',
+        dateInfo.year,
+        dateInfo.month.padStart(2, '0'),
+        `${dateInfo.day.padStart(2, '0')}.json`
+      );
+      
+      const fileContent = await readFile(filePath, 'utf-8');
+      const tweets = JSON.parse(fileContent);
+      const count = Array.isArray(tweets) ? tweets.length : 0;
+      
+      const dayNames = ['日', '月', '火', '水', '木', '金', '土'];
+      const dayName = dayNames[dateInfo.dateObj.getDay()];
+      
+      activityData.push({
+        date: `${dateInfo.year}-${dateInfo.month.padStart(2, '0')}-${dateInfo.day.padStart(2, '0')}`,
+        count,
+        dayName
+      });
+    } catch (error) {
+      console.error(`Error reading file for ${dateInfo.year}/${dateInfo.month}/${dateInfo.day}:`, error);
     }
-    
-    const dayNames = ['日', '月', '火', '水', '木', '金', '土'];
-    const dayName = dayNames[targetDate.getDay()];
-    
-    activityData.push({
-      date: `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`,
-      count,
-      dayName
-    });
   }
   
-  console.log('Final activity data:', activityData); // デバッグログ
-  
-  return activityData;
+  // 日付順にソート（古い順）
+  return activityData.sort((a, b) => a.date.localeCompare(b.date));
 });
 
 export default async function Home() {
@@ -101,7 +86,7 @@ export default async function Home() {
   const activityData = await getRecentActivityData(allDates);
 
   return (
-    <div className="flex items-center justify-center py-8">
+    <div className="container mx-auto px-4 py-8 space-y-8">
       <RecentActivityGraph activityData={activityData} />
     </div>
   );
