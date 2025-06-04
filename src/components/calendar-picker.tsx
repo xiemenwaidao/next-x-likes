@@ -92,32 +92,26 @@ export function CalendarPicker({
     >
       <Calendar
         mode="single"
-        className={`rounded-md border ${
-          isRootPath ? '' : 'max-w-[28rem] w-full'
-        }`}
-        classNames={
-          isRootPath
-            ? {}
-            : {
-                months: 'w-full flex flex-col space-y-4',
-                month: 'w-full space-y-4',
-                table: 'w-full border-collapse space-y-1',
-                head_row: 'flex w-full',
-                head_cell:
-                  'w-full rounded-md text-muted-foreground text-sm font-normal',
-                row: 'flex w-full mt-2',
-                cell: 'w-full text-center text-sm p-0 relative focus-within:relative focus-within:z-20',
-                day: 'h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-accent hover:rounded-sm rounded-sm mx-auto',
-                day_selected:
-                  'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground rounded-full',
-                nav: 'space-x-1 flex items-center justify-center',
-                nav_button:
-                  'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-                nav_button_previous: 'absolute left-1',
-                nav_button_next: 'absolute right-1',
-                caption: 'flex justify-center py-2 relative items-center',
-              }
-        }
+        className="rounded-md border max-w-[28rem] w-full"
+        classNames={{
+          months: 'w-full flex flex-col space-y-4',
+          month: 'w-full space-y-4',
+          table: 'w-full border-collapse space-y-1',
+          head_row: 'flex w-full',
+          head_cell:
+            'w-full rounded-md text-muted-foreground text-sm font-normal',
+          row: 'flex w-full mt-2',
+          cell: 'w-full text-center text-sm p-0 relative focus-within:relative focus-within:z-20',
+          day: 'h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-accent hover:rounded-sm rounded-sm mx-auto',
+          day_selected:
+            'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground rounded-full',
+          nav: 'space-x-1 flex items-center justify-center',
+          nav_button:
+            'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+          nav_button_previous: 'absolute left-1',
+          nav_button_next: 'absolute right-1',
+          caption: 'flex justify-center py-2 relative items-center',
+        }}
         selected={selectedDate}
         onSelect={handleSelect}
         disabled={isDateDisabled}
