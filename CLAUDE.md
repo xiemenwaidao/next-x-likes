@@ -8,6 +8,8 @@ This is a Next.js 15 application that displays liked tweets from X (Twitter) in 
 
 ## Development Commands
 
+**Important**: When adding new commands to package.json, always update this list in CLAUDE.md
+
 ```bash
 # Development
 pnpm dev          # Start development server at localhost:3000
@@ -16,11 +18,15 @@ pnpm start        # Run production server
 pnpm lint         # Run Next.js linter
 
 # Data Processing
-pnpm json:dl             # Sync new likes from AWS S3
-pnpm json:conv           # Process raw data into daily collections
-pnpm json:fetch-tweet    # Enrich with full tweet data from X API
-pnpm json:build-index    # Build tweet ID index for /tweet/<id> routes
-pnpm json:build-search   # Build search index for full-text search
+pnpm json:dl                    # Sync new likes from AWS S3
+pnpm json:conv                  # Process raw data into daily collections
+pnpm json:fetch-tweet           # Enrich with full tweet data from X API
+pnpm json:build-index           # Build tweet ID index for /tweet/<id> routes
+pnpm json:build-search          # Build search index for full-text search
+pnpm json:extract-urls          # Extract URLs from tweets for /urls page
+pnpm json:remove-duplicates     # Remove duplicate tweets from processed data
+pnpm json:remove-raw-duplicates # Remove duplicate files from raw S3 data
+pnpm json:build-activity        # Build activity data for recent activity graph
 
 # Git Commits
 pnpm commit       # Create standardized commit with gitmoji
@@ -45,12 +51,30 @@ pnpm commit       # Create standardized commit with gitmoji
 - **CustomTweet**: Renders tweets using react-tweet library
 - **Main**: Layout wrapper that includes the calendar
 - **SearchBox**: Full-text search with real-time suggestions as you type
+- **RecentActivityGraph**: Shows recent like activity using shadcn/ui charts
+
+### UI Framework
+This project uses **shadcn/ui** for UI components. shadcn/ui is a collection of reusable components built with Radix UI and Tailwind CSS.
+
+#### Key shadcn Components Used:
+- **Card**: Used for content containers
+- **Button**: Interactive buttons
+- **Calendar**: Date picker functionality
+- **Chart**: Data visualization (based on Recharts)
+- **Badge**: Status indicators
+- **Popover**: Contextual overlays
+
+#### Adding New Components:
+```bash
+pnpm dlx shadcn@latest add [component-name]
+```
 
 ### Important Considerations
 - All pages use static generation with `force-static` and `revalidate: false`
 - Japan timezone (Asia/Tokyo) is used for date processing
 - Private/deleted tweets are marked but still displayed with a notice
 - The calendar highlights dates that have tweet data available
+- All main content components (Calendar, RecentActivityGraph, etc.) use a consistent max width of `max-w-[28rem]` for visual unity
 
 ## Data Sync Process
 

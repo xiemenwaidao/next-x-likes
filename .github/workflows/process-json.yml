@@ -65,6 +65,9 @@ jobs:
       - name: '🔗 Extract URLs from tweets'
         run: pnpm json:extract-urls
 
+      - name: '📊 Build activity data'
+        run: pnpm json:build-activity
+
       - name: '🧀 Commit and push if changed'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
