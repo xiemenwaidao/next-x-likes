@@ -52,6 +52,7 @@ pnpm commit       # Create standardized commit with gitmoji
 - **Main**: Layout wrapper that includes the calendar
 - **SearchBox**: Full-text search with real-time suggestions as you type
 - **RecentActivityGraph**: Shows recent like activity using shadcn/ui charts
+- **AnnouncementList**: Header popup announcements with data-driven content
 
 ### UI Framework
 This project uses **shadcn/ui** for UI components. shadcn/ui is a collection of reusable components built with Radix UI and Tailwind CSS.
@@ -75,6 +76,7 @@ pnpm dlx shadcn@latest add [component-name]
 - Private/deleted tweets are marked but still displayed with a notice
 - The calendar highlights dates that have tweet data available
 - All main content components (Calendar, RecentActivityGraph, etc.) use a consistent max width of `max-w-[28rem]` for visual unity
+- Header announcements are managed in `src/data/announcements.ts` - update this file to add new features or modify existing ones
 
 ## Data Sync Process
 
