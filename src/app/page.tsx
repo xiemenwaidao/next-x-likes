@@ -32,13 +32,22 @@ const getAllDates = cache(async () => {
   return dates;
 });
 
-interface DateInfo {
-  year: string;
-  month: string;
-  day: string;
-}
 
-const getRecentActivityData = cache(async (allDates: DateInfo[]): Promise<ActivityData[]> => {
+const getRecentActivityData = cache(async (): Promise<ActivityData[]> => {
+  try {
+    // 本番環境では静的に生成されたactivity-data.jsonを使用
+    const activityFilePath = path.join(process.cwd(), 'public/activity-data.json');
+    
+    if (await readFile(activityFilePath, 'utf-8').then(() => true).catch(() => false)) {
+      const activityCache = JSON.parse(await readFile(activityFilePath, 'utf-8'));
+      return activityCache.activities || [];
+    }
+  } catch {
+    console.log('Static activity data not found, generating dynamically...');
+  }
+
+  // フォールバック: 動的にデータを生成（開発環境など）
+  const allDates = await getAllDates();
   const activityData: ActivityData[] = [];
   
   // 利用可能な日付から最新の7日分を取得
@@ -62,7 +71,7 @@ const getRecentActivityData = cache(async (allDates: DateInfo[]): Promise<Activi
       
       const fileContent = await readFile(filePath, 'utf-8');
       const tweets = JSON.parse(fileContent);
-      const count = Array.isArray(tweets) ? tweets.length : 0;
+      const count = Array.isArray(tweets.body) ? tweets.body.length : 0;
       
       const dayNames = ['日', '月', '火', '水', '木', '金', '土'];
       const dayName = dayNames[dateInfo.dateObj.getDay()];
@@ -82,12 +91,14 @@ const getRecentActivityData = cache(async (allDates: DateInfo[]): Promise<Activi
 });
 
 export default async function Home() {
-  const allDates = await getAllDates();
-  const activityData = await getRecentActivityData(allDates);
+  const activityData = await getRecentActivityData();
 
   return (
-    <div className="container mx-auto px-4 py-8 space-y-8">
-      <RecentActivityGraph activityData={activityData} />
+    <div className="flex flex-col items-center justify-center py-8">
+      {/* グラフセクション */}
+      <div className="w-full">
+        <RecentActivityGraph activityData={activityData} />
+      </div>
     </div>
   );
 }
