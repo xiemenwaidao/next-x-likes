@@ -11,7 +11,7 @@ This is a Next.js 15 application that displays liked tweets from X (Twitter) in 
 **Important**: When adding new commands to package.json, always update this list in CLAUDE.md
 
 ```bash
-# Development
+# Development (Note: Always use pnpm, not npm or yarn)
 pnpm dev          # Start development server at localhost:3000
 pnpm build        # Build production application
 pnpm start        # Run production server

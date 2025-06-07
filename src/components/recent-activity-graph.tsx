@@ -18,7 +18,7 @@ interface RecentActivityGraphProps {
 const chartConfig = {
   count: {
     label: "いいね数",
-    color: "hsl(var(--primary))",
+    color: "hsl(var(--chart-1))",
   },
 };
 

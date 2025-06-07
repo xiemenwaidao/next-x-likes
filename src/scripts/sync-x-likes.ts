@@ -6,6 +6,7 @@ import {
 import { promises as fs } from 'fs';
 import { join, basename } from 'path';
 import dotenv from 'dotenv';
+import { toZonedTime, format } from 'date-fns-tz';
 
 // .envファイルを読み込む
 dotenv.config();
@@ -55,8 +56,11 @@ const s3Client = new S3Client({
 });
 
 const getNowDate = () => {
-  // return new Date('2024-01-01T00:00:00Z'); // 仮
-  return new Date(Date.now() - 24 * 60 * 60 * 1000);
+  // 日本時間の現在時刻から24時間前を取得
+  const now = new Date();
+  const nowJapan = toZonedTime(now, 'Asia/Tokyo');
+  nowJapan.setHours(nowJapan.getHours() - 24);
+  return nowJapan;
 };
 
 // tweet-index.jsonを読み込んで、既にいいねしたツイートのIDを取得
@@ -212,11 +216,12 @@ async function downloadNewFiles() {
     console.log(`Skipped (file exists): ${skippedCount}`);
     console.log(`Skipped (already liked): ${duplicateCount}`);
 
-    // 最終同期日時を更新
+    // 最終同期日時を更新（日本時間で記録）
     try {
+      const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
       await fs.writeFile(
         join(process.cwd(), ...lastSyncSavePathList),
-        new Date().toISOString(),
+        format(nowJapan, "yyyy-MM-dd'T'HH:mm:ssXXX", { timeZone: 'Asia/Tokyo' }),
       );
     } catch (error) {
       console.error('Error updating last sync time:', error);
