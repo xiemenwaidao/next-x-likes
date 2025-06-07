@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import glob from 'glob';
+import { toZonedTime, format } from 'date-fns-tz';
 
 interface ActivityData {
   date: string;
@@ -59,10 +60,11 @@ async function buildActivityData() {
     .slice(0, 7)
     .sort((a, b) => a.date.localeCompare(b.date));
 
-  // アクティビティキャッシュを作成
+  // アクティビティキャッシュを作成（日本時間で記録）
+  const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
   const activityCache: ActivityCache = {
     activities: sortedActivities,
-    lastUpdated: new Date().toISOString()
+    lastUpdated: format(nowJapan, "yyyy-MM-dd'T'HH:mm:ssXXX", { timeZone: 'Asia/Tokyo' })
   };
 
   // publicディレクトリに保存

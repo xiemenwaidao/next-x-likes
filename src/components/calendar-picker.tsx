@@ -52,8 +52,10 @@ export function CalendarPicker({
         setDisplayMonth(undefined);
       }
     } else {
+      // URLにパラメータがない場合、日本時間の現在日を基準に表示月を設定
       setSelectedDate(undefined);
-      setDisplayMonth(undefined);
+      const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
+      setDisplayMonth(new Date(nowJapan.getFullYear(), nowJapan.getMonth(), 1));
     }
   }, [params.year, params.month, params.day, setSelectedDate, setDisplayMonth]);
 
