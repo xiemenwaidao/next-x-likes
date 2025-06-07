@@ -24,6 +24,11 @@ interface ExtractedUrl {
   };
 }
 
+// Normalize URL by removing trailing slash
+function normalizeUrl(url: string): string {
+  return url.replace(/\/$/, '');
+}
+
 async function extractUrls() {
   console.log('Extracting URLs from tweets...');
 
@@ -32,6 +37,7 @@ async function extractUrls() {
   const files = glob.sync(pattern);
 
   const extractedUrls: ExtractedUrl[] = [];
+  const seenUrls = new Set<string>(); // Track unique URLs
 
   for (const file of files) {
     // Extract date from file path
@@ -49,6 +55,26 @@ async function extractUrls() {
         if (!like.react_tweet_data?.entities?.urls?.length) continue;
 
         const urls = like.react_tweet_data.entities.urls;
+        
+        // Check for duplicate URLs
+        const isDuplicate = urls.some(u => {
+          const normalizedUrl = normalizeUrl(u.expanded_url || u.url || '');
+          return normalizedUrl && seenUrls.has(normalizedUrl);
+        });
+
+        // Skip if all URLs are duplicates
+        if (isDuplicate) {
+          continue;
+        }
+
+        // Add URLs to seen set
+        urls.forEach(u => {
+          const normalizedUrl = normalizeUrl(u.expanded_url || u.url || '');
+          if (normalizedUrl) {
+            seenUrls.add(normalizedUrl);
+          }
+        });
+
         let card = undefined;
 
         // Extract card data if available
@@ -97,6 +123,7 @@ async function extractUrls() {
   fs.writeFileSync(outputPath, JSON.stringify(extractedUrls, null, 2));
 
   console.log(`Extracted ${extractedUrls.length} tweets with URLs`);
+  console.log(`Found ${seenUrls.size} unique URLs (duplicates removed)`);
   console.log(`Saved to ${outputPath}`);
 
   // Also create a summary for debugging
