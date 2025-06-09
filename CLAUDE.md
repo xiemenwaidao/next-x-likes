@@ -27,6 +27,8 @@ pnpm json:extract-urls          # Extract URLs from tweets for /urls page
 pnpm json:remove-duplicates     # Remove duplicate tweets from processed data
 pnpm json:remove-raw-duplicates # Remove duplicate files from raw S3 data
 pnpm json:build-activity        # Build activity data for recent activity graph
+pnpm json:process-archive       # Process Twitter archive files (like-twitter-*.js)
+pnpm json:fetch-archive         # Fetch tweet data for archive tweets
 
 # Git Commits
 pnpm commit       # Create standardized commit with gitmoji

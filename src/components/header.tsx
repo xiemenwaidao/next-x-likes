@@ -1,5 +1,5 @@
 import { LogoSVG } from './logo-svg';
-import { CircleHelp, LinkIcon } from 'lucide-react';
+import { CircleHelp, LinkIcon, Archive } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Popover,
@@ -22,6 +22,11 @@ export const Header = () => {
           </h1>
           <div className="grow"></div>
           <Button variant="ghost" size="icon" asChild className="flex-none">
+            <Link href="/archive/1" title="アーカイブ">
+              <Archive className="h-5 w-5" />
+            </Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild className="flex-none">
             <Link href="/urls/1" title="URL一覧">
               <LinkIcon className="h-5 w-5" />
             </Link>
@@ -29,7 +34,7 @@ export const Header = () => {
           <SearchBox />
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="ghost" size="icon" className="flex-none">
+              <Button variant="ghost" size="icon" className="flex-none cursor-pointer">
                 <CircleHelp />
               </Button>
             </PopoverTrigger>

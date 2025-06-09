@@ -313,7 +313,7 @@ export const SearchBox = () => {
         variant="ghost"
         size="icon"
         onClick={() => setIsOpen(true)}
-        className="flex-none"
+        className="flex-none cursor-pointer"
       >
         <Search className="h-5 w-5" />
       </Button>
