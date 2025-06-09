@@ -9,18 +9,26 @@ export interface Announcement {
 
 export const announcements: Announcement[] = [
   {
+    id: 'archive-page',
+    icon: '🚧',
+    title: 'アーカイブページ',
+    description: '2024年11月以前にいいねしたツイート一覧（調整中）',
+    isNew: true,
+    date: '2025-06-10'
+  },
+  {
     id: 'activity-graph',
     icon: '📊',
     title: 'いいね活動グラフ',
     description: '直近7日間のいいね数を可視化',
-    isNew: true,
+    isNew: false,
     date: '2025-06-05'
   },
   {
     id: 'url-list',
     icon: '🔗',
     title: 'URL一覧',
-    description: 'URL付きツイートを閲覧',
+    description: 'URL付きツイート一覧',
     isNew: false,
     date: '2025-06-03'
   },
