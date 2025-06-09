@@ -55,7 +55,7 @@ export async function generateStaticParams() {
     return pageFiles.map((file) => ({
       page: file.replace('page-', '').replace('.json', ''),
     }));
-  } catch (error) {
+  } catch {
     return [];
   }
 }
@@ -69,7 +69,7 @@ async function getPageData(pageNumber: string): Promise<PageData | null> {
     );
     const content = await fs.readFile(pagePath, 'utf-8');
     return JSON.parse(content);
-  } catch (error) {
+  } catch {
     return null;
   }
 }
