@@ -41,5 +41,9 @@ next-env.d.ts
 
 # src/assets/data/*
 
+# Archive data files (large files)
+like-twitter-*.js
+src/content/archive/archive-likes-enriched.json
+
 # Claude Code settings
 .claude/

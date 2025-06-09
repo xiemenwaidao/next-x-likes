@@ -15,9 +15,9 @@ export function Main({
 }) {
   const pathname = usePathname();
 
-  // /tweet/[id] と /urls パスではカレンダーを表示しない
+  // /tweet/[id] と /urls と /archive パスではカレンダーを表示しない
   const showCalendar =
-    !pathname.startsWith('/tweet/') && !pathname.startsWith('/urls');
+    !pathname.startsWith('/tweet/') && !pathname.startsWith('/urls') && !pathname.startsWith('/archive');
 
   // トップページではカレンダーとchildrenを特別にレイアウト
   const isHomePage = pathname === '/';

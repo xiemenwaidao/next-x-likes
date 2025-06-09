@@ -16,6 +16,8 @@
     "json:remove-duplicates": "tsx src/scripts/remove-duplicate-tweets.ts",
     "json:remove-raw-duplicates": "tsx src/scripts/remove-duplicate-raw-likes.ts",
     "json:build-activity": "tsx src/scripts/build-activity-data.ts",
+    "json:process-archive": "tsx src/scripts/process-archive-likes.ts",
+    "json:fetch-archive": "tsx src/scripts/fetch-archive-tweets.ts",
     "prepare": "husky"
   },
   "dependencies": {
