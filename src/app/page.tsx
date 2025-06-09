@@ -3,6 +3,7 @@ import { ActivityData } from '@/lib/activity-helper';
 import path from 'path';
 import { readdir, readFile } from 'fs/promises';
 import { cache } from 'react';
+import { toZonedTime, format } from 'date-fns-tz';
 
 const getAllDates = cache(async () => {
   const contentPath = path.join(process.cwd(), 'src/content/likes');
@@ -50,12 +51,18 @@ const getRecentActivityData = cache(async (): Promise<ActivityData[]> => {
   const allDates = await getAllDates();
   const activityData: ActivityData[] = [];
   
-  // 利用可能な日付から最新の7日分を取得
+  // 当日のデータを除外して完全性を保証
+  const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
+  const todayJapan = format(nowJapan, 'yyyy-MM-dd', { timeZone: 'Asia/Tokyo' });
+  
+  // 利用可能な日付から当日を除外して最新の7日分を取得
   const sortedDates = allDates
     .map(d => ({
       ...d,
-      dateObj: new Date(Number(d.year), Number(d.month) - 1, Number(d.day))
+      dateObj: new Date(Number(d.year), Number(d.month) - 1, Number(d.day)),
+      dateString: `${d.year}-${d.month.padStart(2, '0')}-${d.day.padStart(2, '0')}`
     }))
+    .filter(d => d.dateString < todayJapan) // 当日のデータを除外
     .sort((a, b) => b.dateObj.getTime() - a.dateObj.getTime())
     .slice(0, 7);
   
@@ -77,7 +84,7 @@ const getRecentActivityData = cache(async (): Promise<ActivityData[]> => {
       const dayName = dayNames[dateInfo.dateObj.getDay()];
       
       activityData.push({
-        date: `${dateInfo.year}-${dateInfo.month.padStart(2, '0')}-${dateInfo.day.padStart(2, '0')}`,
+        date: dateInfo.dateString,
         count,
         dayName
       });

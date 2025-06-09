@@ -54,14 +54,27 @@ async function buildActivityData() {
     }
   }
 
+  // 実行時刻が日本時間で完全に1日を経過しているかをチェック
+  const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
+  const todayJapan = format(nowJapan, 'yyyy-MM-dd', { timeZone: 'Asia/Tokyo' });
+  
+  // 当日のデータを除外するかどうかを判定
+  // 日本時間で翌日になっていない場合（24時間未満）は当日のデータを除外
+  const shouldExcludeToday = true; // 常に前日までのデータを使用して完全性を保証
+  
+  let filteredActivityData = activityData;
+  if (shouldExcludeToday) {
+    filteredActivityData = activityData.filter(activity => activity.date < todayJapan);
+    console.log(`Excluding today's data (${todayJapan}) to ensure complete day coverage.`);
+  }
+
   // 最新の7日分を取得
-  const sortedActivities = activityData
+  const sortedActivities = filteredActivityData
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 7)
     .sort((a, b) => a.date.localeCompare(b.date));
 
   // アクティビティキャッシュを作成（日本時間で記録）
-  const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
   const activityCache: ActivityCache = {
     activities: sortedActivities,
     lastUpdated: format(nowJapan, "yyyy-MM-dd'T'HH:mm:ssXXX", { timeZone: 'Asia/Tokyo' })
