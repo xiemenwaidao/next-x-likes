@@ -6,6 +6,7 @@ import { DayJson } from '@/types/like';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
+import { Card, CardContent } from '@/components/ui/card';
 
 type Props = {
   params: Promise<{
@@ -92,9 +93,12 @@ export default async function DayPage({ params }: Props) {
           </h1>
         </div>
         
-        {content.body.map(
-          (tweet) =>
-            tweet.tweet_id && (
+        {content.body.map((tweet) => {
+          if (!tweet.tweet_id) return null;
+          
+          // react_tweet_dataがある場合は通常のツイート表示
+          if (tweet.react_tweet_data) {
+            return (
               <CustomTweet
                 key={tweet.tweet_id}
                 tweetData={tweet.react_tweet_data}
@@ -102,8 +106,33 @@ export default async function DayPage({ params }: Props) {
                 isPrivate={tweet.private}
                 isNotFound={tweet.notfound}
               />
-            ),
-        )}
+            );
+          }
+          // react_tweet_dataがない削除済み・非公開ツイートの場合
+          else if (tweet.private || tweet.notfound) {
+            return (
+              <Card key={tweet.tweet_id} className="opacity-60">
+                <CardContent className="pt-6">
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {tweet.private ? 'This tweet is private' : 'Tweet not found'}
+                    : {tweet.tweet_id}
+                  </p>
+                  {tweet.text && <p className="text-sm">{tweet.text}</p>}
+                  <p className="text-xs text-gray-500 mt-2">@{tweet.username}</p>
+                  <a
+                    href={tweet.tweet_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-500 hover:underline mt-2 inline-block"
+                  >
+                    View on X →
+                  </a>
+                </CardContent>
+              </Card>
+            );
+          }
+          return null;
+        })}
       </div>
     </div>
   );
