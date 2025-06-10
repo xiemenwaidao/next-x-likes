@@ -9,7 +9,196 @@
       "fullText": "HTMLとCSSだけで作られたイラスト。\n何を言ってるかわからねーと思うが、HTMLとCSSだけで作られている。\n\nPureCSS Gaze\nhttps://t.co/Z0Lww0I9cn\n\n#CSS https://t.co/H5yfxCf4GA",
       "expandedUrl": "https://twitter.com/i/web/status/1265512519055130625",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 1559,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-27T05:17:51.000Z",
+        "display_text_range": [
+          0,
+          100
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                96,
+                100
+              ],
+              "text": "CSS"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "diana-adrianne.com/purecss-gaze/",
+              "expanded_url": "https://diana-adrianne.com/purecss-gaze/",
+              "indices": [
+                71,
+                94
+              ],
+              "url": "https://t.co/Z0Lww0I9cn"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/H5yfxCf4GA",
+              "expanded_url": "https://x.com/tonkotsuboy_com/status/1265512519055130625/photo/1",
+              "indices": [
+                101,
+                124
+              ],
+              "url": "https://t.co/H5yfxCf4GA"
+            }
+          ]
+        },
+        "id_str": "1265512519055130625",
+        "text": "HTMLとCSSだけで作られたイラスト。\n何を言ってるかわからねーと思うが、HTMLとCSSだけで作られている。\n\nPureCSS Gaze\nhttps://t.co/Z0Lww0I9cn\n\n#CSS https://t.co/H5yfxCf4GA",
+        "user": {
+          "id_str": "563094317",
+          "name": "鹿野 壮 Takeshi Kano",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1312700493685092359/VHmDL_az_normal.jpg",
+          "screen_name": "tonkotsuboy_com",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1265512519055130625"
+          ],
+          "editable_until_msecs": "1590558471285",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/H5yfxCf4GA",
+            "expanded_url": "https://x.com/tonkotsuboy_com/status/1265512519055130625/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              101,
+              124
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EZAAcqoWkAQvV3H.jpg",
+            "original_info": {
+              "height": 2734,
+              "width": 3634,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3634,
+                  "h": 2035
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2734,
+                  "h": 2734
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2398,
+                  "h": 2734
+                },
+                {
+                  "x": 496,
+                  "y": 0,
+                  "w": 1367,
+                  "h": 2734
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3634,
+                  "h": 2734
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1541,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 903,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 512,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/H5yfxCf4GA"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3634,
+                "h": 2035
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 2734,
+                "h": 2734
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 2398,
+                "h": 2734
+              },
+              {
+                "x": 496,
+                "y": 0,
+                "w": 1367,
+                "h": 2734
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3634,
+                "h": 2734
+              }
+            ],
+            "expandedUrl": "https://x.com/tonkotsuboy_com/status/1265512519055130625/photo/1",
+            "url": "https://pbs.twimg.com/media/EZAAcqoWkAQvV3H.jpg",
+            "width": 3634,
+            "height": 2734
+          }
+        ],
+        "conversation_count": 10,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:32.923Z"
     },
     {
       "id": "archive-1265503945646051329",
@@ -17,7 +206,177 @@
       "fullText": "HTMLとCSSだけでつくる\n\nMacbook！！\n（アイソメトリックver）\n\n今週末に\nまた、ぺちゃくちゃ会みたいなものをやろうかと思います✨\n\nこの前ツイートした\ninput使ったコーディングとか\nz-indexのスタックコンテキストについて\n話したい！！！！！笑\n\n【コード】\nhttps://t.co/BTg3TyqMds https://t.co/le1Qt7gaWK",
       "expandedUrl": "https://twitter.com/i/web/status/1265503945646051329",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 319,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-27T04:43:47.000Z",
+        "display_text_range": [
+          0,
+          166
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "7.gigafile.nu/0603-c7bb42b1e…",
+              "expanded_url": "https://7.gigafile.nu/0603-c7bb42b1e805f0bf022ebd3b4ef96906a",
+              "indices": [
+                143,
+                166
+              ],
+              "url": "https://t.co/BTg3TyqMds"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/le1Qt7gaWK",
+              "expanded_url": "https://x.com/ash_creator/status/1265503945646051329/video/1",
+              "indices": [
+                167,
+                190
+              ],
+              "url": "https://t.co/le1Qt7gaWK"
+            }
+          ]
+        },
+        "id_str": "1265503945646051329",
+        "text": "HTMLとCSSだけでつくる\n\nMacbook！！\n（アイソメトリックver）\n\n今週末に\nまた、ぺちゃくちゃ会みたいなものをやろうかと思います✨\n\nこの前ツイートした\ninput使ったコーディングとか\nz-indexのスタックコンテキストについて\n話したい！！！！！笑\n\n【コード】\nhttps://t.co/BTg3TyqMds https://t.co/le1Qt7gaWK",
+        "user": {
+          "id_str": "1151999543971422208",
+          "name": "あしざわ - Webクリエイター",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1708718963998539776/BRYVl-SW_normal.jpg",
+          "screen_name": "ash_creator",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1265503945646051329"
+          ],
+          "editable_until_msecs": "1590556427225",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/le1Qt7gaWK",
+            "expanded_url": "https://x.com/ash_creator/status/1265503945646051329/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              167,
+              190
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1265503844852793353/pu/img/juouIUDui1GVyFJP.jpg",
+            "original_info": {
+              "height": 1280,
+              "width": 720,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1280,
+                "resize": "fit",
+                "w": 720
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 675
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 383
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/le1Qt7gaWK",
+            "video_info": {
+              "aspect_ratio": [
+                9,
+                16
+              ],
+              "duration_millis": 7000,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1265503844852793353/pu/pl/T9iC4cJmCfnexk-n.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 632000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1265503844852793353/pu/vid/320x568/a7I5TlXPMUkvT41J.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1265503844852793353/pu/vid/360x640/AfDlin_AJGFfbGra.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1265503844852793353/pu/vid/720x1280/gU-9ULIXCOUZZMtW.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            9,
+            16
+          ],
+          "contentType": "media_entity",
+          "durationMs": 7000,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1265503844852793353/pu/img/juouIUDui1GVyFJP.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1265503844852793353/pu/pl/T9iC4cJmCfnexk-n.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1265503844852793353/pu/vid/320x568/a7I5TlXPMUkvT41J.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1265503844852793353/pu/vid/360x640/AfDlin_AJGFfbGra.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1265503844852793353/pu/vid/720x1280/gU-9ULIXCOUZZMtW.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1265503945646051329"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 11,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:34.090Z"
     },
     {
       "id": "archive-1265436083094880256",
@@ -25,7 +384,8 @@
       "fullText": "AV女優の麻生美由樹が自分と寝た芸能人を暴露した際、キングコング西野に糞野郎とブログで叩かれたのを皮切りに2ちゃんで誹謗中傷され「近いうちに確実に自殺するつもりです。生まれてきてすいませんでした。」と書き込んで自殺した。自殺に追い込む元凶を産むのはネットではなく芸能界じゃないのか。 https://t.co/hKV3ekellr",
       "expandedUrl": "https://twitter.com/i/web/status/1265436083094880256",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1265054090431590400",
@@ -33,7 +393,186 @@
       "fullText": "中国政府による香港への国家安全法の一方的な導入に反対する共同声明。現在26か国233人の議会人が署名しています。現時点で日本からは私と山田宏議員の2人。\n9時37分から法務委で問題提起します。検察定年延長問題も。国内でも国外でも権力に対する意思表示なしに法の支配は守れない。\n＃HongKong https://t.co/irAF8IX97J",
       "expandedUrl": "https://twitter.com/i/web/status/1265054090431590400",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 7943,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-25T22:56:13.000Z",
+        "display_text_range": [
+          0,
+          147
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                138,
+                147
+              ],
+              "text": "HongKong"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/irAF8IX97J",
+              "expanded_url": "https://x.com/ShioriYamao/status/1265054090431590400/photo/1",
+              "indices": [
+                148,
+                171
+              ],
+              "url": "https://t.co/irAF8IX97J"
+            }
+          ]
+        },
+        "id_str": "1265054090431590400",
+        "text": "中国政府による香港への国家安全法の一方的な導入に反対する共同声明。現在26か国233人の議会人が署名しています。現時点で日本からは私と山田宏議員の2人。\n9時37分から法務委で問題提起します。検察定年延長問題も。国内でも国外でも権力に対する意思表示なしに法の支配は守れない。\n＃HongKong https://t.co/irAF8IX97J",
+        "user": {
+          "id_str": "2904204817",
+          "name": "山尾しおり",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1922532536204345345/QUcqBzW4_normal.jpg",
+          "screen_name": "ShioriYamao",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1265054090431590400"
+          ],
+          "editable_until_msecs": "1590449173384",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/irAF8IX97J",
+            "expanded_url": "https://x.com/ShioriYamao/status/1265054090431590400/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              148,
+              171
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EY5f_UZUMAAp4h7.jpg",
+            "original_info": {
+              "height": 1147,
+              "width": 736,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 166,
+                  "w": 736,
+                  "h": 412
+                },
+                {
+                  "x": 0,
+                  "y": 4,
+                  "w": 736,
+                  "h": 736
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 736,
+                  "h": 839
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 574,
+                  "h": 1147
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 736,
+                  "h": 1147
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1147,
+                "resize": "fit",
+                "w": 736
+              },
+              "medium": {
+                "h": 1147,
+                "resize": "fit",
+                "w": 736
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 436
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/irAF8IX97J"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 166,
+                "w": 736,
+                "h": 412
+              },
+              {
+                "x": 0,
+                "y": 4,
+                "w": 736,
+                "h": 736
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 736,
+                "h": 839
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 574,
+                "h": 1147
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 736,
+                "h": 1147
+              }
+            ],
+            "expandedUrl": "https://x.com/ShioriYamao/status/1265054090431590400/photo/1",
+            "url": "https://pbs.twimg.com/media/EY5f_UZUMAAp4h7.jpg",
+            "width": 736,
+            "height": 1147
+          }
+        ],
+        "conversation_count": 484,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:36.409Z"
     },
     {
       "id": "archive-1264803003141222400",
@@ -41,7 +580,96 @@
       "fullText": "中国は「一つの中国」に固執するしかない。なぜなら台湾を別の存在と認めると、チベット、ウイグルはもちろん、香港にも「独立性」を与え、「ほなうちらも『独立』させてもらいま」と分裂・崩壊してしまうから。 https://t.co/Xzu0uQbiTQ",
       "expandedUrl": "https://twitter.com/i/web/status/1264803003141222400",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 182,
+        "created_at": "2020-05-25T06:18:29.000Z",
+        "display_text_range": [
+          0,
+          98
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1264803003141222400",
+        "text": "中国は「一つの中国」に固執するしかない。なぜなら台湾を別の存在と認めると、チベット、ウイグルはもちろん、香港にも「独立性」を与え、「ほなうちらも『独立』させてもらいま」と分裂・崩壊してしまうから。",
+        "user": {
+          "id_str": "3193715799",
+          "name": "台湾史.jp",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1651073069627379714/sUkT7AMn_normal.jpg",
+          "screen_name": "Formosanhistory",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1264803003141222400"
+          ],
+          "editable_until_msecs": "1590389309509",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "ja",
+          "reply_count": 11,
+          "retweet_count": 303,
+          "favorite_count": 768,
+          "possibly_sensitive": false,
+          "created_at": "2020-05-25T05:06:18.000Z",
+          "display_text_range": [
+            0,
+            155
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "japan.cna.com.tw/news/achi/2020…",
+                "expanded_url": "http://japan.cna.com.tw/news/achi/202005250001.aspx",
+                "indices": [
+                  32,
+                  55
+                ],
+                "url": "https://t.co/7L7pgrkITk"
+              }
+            ],
+            "user_mentions": [],
+            "symbols": []
+          },
+          "id_str": "1264784838868918272",
+          "text": "「台湾は公認の民主主義国家」  外交部、中国外相の発言に反発  https://t.co/7L7pgrkITk\n\n中国の王毅外相が24日の記者会見で「一つの中国」原則に改めて言及したのを受け、外交部（外務省）は同日夜、報道資料で「台湾はすでに公認の民主主義国家であり「中国にはとやかく言う権利はない」と非難した",
+          "user": {
+            "id_str": "1107979190",
+            "name": "台湾ニュース＠中央社フォーカス台湾",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1883103718125826048/EDvDxe-U_normal.jpg",
+            "screen_name": "focustaiwanjapa",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1264784838868918272"
+            ],
+            "editable_until_msecs": "1590384978809",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:37.597Z"
     },
     {
       "id": "archive-1264707737855733761",
@@ -49,7 +677,47 @@
       "fullText": "今の中国の全人代で決定されようとしている「国家安全法」は、香港返還時に約束された「一国二制度」の根幹である、香港の人権と自由と民主主義を根底から覆すものであり断固反対する。わが国の心ある国会議員が声を上げることが世界から求められている。 https://t.co/H5cCLS0l4D",
       "expandedUrl": "https://twitter.com/i/web/status/1264707737855733761",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 9722,
+        "created_at": "2020-05-24T23:59:56.000Z",
+        "display_text_range": [
+          0,
+          118
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1264707737855733761",
+        "text": "今の中国の全人代で決定されようとしている「国家安全法」は、香港返還時に約束された「一国二制度」の根幹である、香港の人権と自由と民主主義を根底から覆すものであり断固反対する。わが国の心ある国会議員が声を上げることが世界から求められている。",
+        "user": {
+          "id_str": "1669900392",
+          "name": "山田宏 自民党参議院議員(全国比例)",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1757318523825889280/MoXccCRy_normal.jpg",
+          "screen_name": "yamazogaikuzo",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1264707737855733761"
+          ],
+          "editable_until_msecs": "1590366596495",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 250,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:38.772Z"
     },
     {
       "id": "archive-1264383087938465792",
@@ -57,7 +725,139 @@
       "fullText": "メビウスルービックキューブというものを考案しました。\n権利は放棄しますので誰でも具現化OKです https://t.co/9ZjgM6oDFf",
       "expandedUrl": "https://twitter.com/i/web/status/1264383087938465792",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 35963,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-24T02:29:53.000Z",
+        "display_text_range": [
+          0,
+          47
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/9ZjgM6oDFf",
+              "expanded_url": "https://x.com/jagarikin/status/1264383087938465792/photo/1",
+              "indices": [
+                48,
+                71
+              ],
+              "url": "https://t.co/9ZjgM6oDFf"
+            }
+          ]
+        },
+        "id_str": "1264383087938465792",
+        "text": "メビウスルービックキューブというものを考案しました。\n権利は放棄しますので誰でも具現化OKです https://t.co/9ZjgM6oDFf",
+        "user": {
+          "id_str": "4230101712",
+          "name": "じゃがりきん",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/666406258451152896/ROaK4lhC_normal.png",
+          "screen_name": "jagarikin",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1264383087938465792"
+          ],
+          "editable_until_msecs": "1590289193923",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/9ZjgM6oDFf",
+            "expanded_url": "https://x.com/jagarikin/status/1264383087938465792/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              48,
+              71
+            ],
+            "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/EYv9nDwU8AAG8Ri.jpg",
+            "original_info": {
+              "height": 488,
+              "width": 700,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 488,
+                "resize": "fit",
+                "w": 700
+              },
+              "medium": {
+                "h": 488,
+                "resize": "fit",
+                "w": 700
+              },
+              "small": {
+                "h": 474,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "animated_gif",
+            "url": "https://t.co/9ZjgM6oDFf",
+            "video_info": {
+              "aspect_ratio": [
+                175,
+                122
+              ],
+              "variants": [
+                {
+                  "bitrate": 0,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/tweet_video/EYv9nDwU8AAG8Ri.mp4"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            175,
+            122
+          ],
+          "contentType": "gif",
+          "durationMs": 0,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/EYv9nDwU8AAG8Ri.jpg",
+          "variants": [
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/tweet_video/EYv9nDwU8AAG8Ri.mp4"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1264383087938465792"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 81,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:39.943Z"
     },
     {
       "id": "archive-1263541500601720832",
@@ -65,7 +865,186 @@
       "fullText": "【figma५✍⋆*】\n#figma のプラグイン『HTML to Figma』を初めて使いました！！\nサイトのURL貼り付けるだけで、トレース完了するなんてすごい👀✨\nコーディング練習したい場合はオススメ🙆‍♀️ https://t.co/ScIfpQotok",
       "expandedUrl": "https://twitter.com/i/web/status/1263541500601720832",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 91,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-21T18:45:43.000Z",
+        "display_text_range": [
+          0,
+          109
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                12,
+                18
+              ],
+              "text": "figma"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/ScIfpQotok",
+              "expanded_url": "https://x.com/blooming_nico/status/1263541500601720832/photo/1",
+              "indices": [
+                108,
+                131
+              ],
+              "url": "https://t.co/ScIfpQotok"
+            }
+          ]
+        },
+        "id_str": "1263541500601720832",
+        "text": "【figma५✍⋆*】\n#figma のプラグイン『HTML to Figma』を初めて使いました！！\nサイトのURL貼り付けるだけで、トレース完了するなんてすごい👀✨\nコーディング練習したい場合はオススメ🙆‍♀️ https://t.co/ScIfpQotok",
+        "user": {
+          "id_str": "1182564290198265857",
+          "name": "笑美里💃シンママライフをAIでアップデート",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1568612561574313986/hN-HK0eM_normal.jpg",
+          "screen_name": "blooming_nico",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1263541500601720832"
+          ],
+          "editable_until_msecs": "1590088543866",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/ScIfpQotok",
+            "expanded_url": "https://x.com/blooming_nico/status/1263541500601720832/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              108,
+              131
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EYj_RZrUMAAxGjt.jpg",
+            "original_info": {
+              "height": 747,
+              "width": 1047,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1047,
+                  "h": 586
+                },
+                {
+                  "x": 150,
+                  "y": 0,
+                  "w": 747,
+                  "h": 747
+                },
+                {
+                  "x": 196,
+                  "y": 0,
+                  "w": 655,
+                  "h": 747
+                },
+                {
+                  "x": 336,
+                  "y": 0,
+                  "w": 374,
+                  "h": 747
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1047,
+                  "h": 747
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 747,
+                "resize": "fit",
+                "w": 1047
+              },
+              "medium": {
+                "h": 747,
+                "resize": "fit",
+                "w": 1047
+              },
+              "small": {
+                "h": 485,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/ScIfpQotok"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1047,
+                "h": 586
+              },
+              {
+                "x": 150,
+                "y": 0,
+                "w": 747,
+                "h": 747
+              },
+              {
+                "x": 196,
+                "y": 0,
+                "w": 655,
+                "h": 747
+              },
+              {
+                "x": 336,
+                "y": 0,
+                "w": 374,
+                "h": 747
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1047,
+                "h": 747
+              }
+            ],
+            "expandedUrl": "https://x.com/blooming_nico/status/1263541500601720832/photo/1",
+            "url": "https://pbs.twimg.com/media/EYj_RZrUMAAxGjt.jpg",
+            "width": 1047,
+            "height": 747
+          }
+        ],
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:41.087Z"
     },
     {
       "id": "archive-1263130286281220098",
@@ -73,7 +1052,8 @@
       "fullText": "絶対じゃないけど比較的顔出しして人と技術系のことをツイートする人はフォロバしてる\n\n前にも話しけどフォロー外した人は定期的に自動でフォロー外すようにしてるんだけどそれで「なんでフォロー外したの」ってキレてきたやつが何人かいる\n\nオメーが外したんだろw",
       "expandedUrl": "https://twitter.com/i/web/status/1263130286281220098",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "notfound": true
     },
     {
       "id": "archive-1263053779546456066",
@@ -81,7 +1061,8 @@
       "fullText": "プログラミングスクールを卒業しただけで通ってたから出来るって勘違いしている人の典型的な例だと思う\n\nスクールの中しかわからない井の中の蛙なんだろうなー https://t.co/YC7ayhuYEk",
       "expandedUrl": "https://twitter.com/i/web/status/1263053779546456066",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "notfound": true
     },
     {
       "id": "archive-1263038515664678913",
@@ -89,7 +1070,8 @@
       "fullText": "@AntiChinazi_jp 仲良し三人組ｗ\n同じ陣営の方だよ https://t.co/kP9s2UWxU6",
       "expandedUrl": "https://twitter.com/i/web/status/1263038515664678913",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1262476222379982848",
@@ -97,7 +1079,8 @@
       "fullText": "台灣知名Youtuber實地進入新疆喀什，親身談集中營，幾度哽咽分享感受，為維吾爾族人發聲。\n#Xinjiang #CCP #Uighurs #ConcentrationCamps https://t.co/RGZds96e2b",
       "expandedUrl": "https://twitter.com/i/web/status/1262476222379982848",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1262460630520324096",
@@ -105,7 +1088,48 @@
       "fullText": "僕が昔エンジニアを\n目指している時に辛かった事\n\n📌HTML全ての意味が分からない\n📌CSSを1行書くたびに崩れる\n📌jsのエラーに気づかない\n📌出来る人が神様に見える\n\nでも行動力だけは\n絶対に忘れませんでした…\n\nいつかなんとかなるって\n信じてました！😂\n\nだからこそ今があるのかなって\n思います⭐️",
       "expandedUrl": "https://twitter.com/i/web/status/1262460630520324096",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 139,
+        "created_at": "2020-05-18T19:10:44.000Z",
+        "display_text_range": [
+          0,
+          157
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1262460630520324096",
+        "text": "僕が昔エンジニアを\n目指している時に辛かった事\n\n📌HTML全ての意味が分からない\n📌CSSを1行書くたびに崩れる\n📌jsのエラーに気づかない\n📌出来る人が神様に見える\n\nでも行動力だけは\n絶対に忘れませんでした…\n\nいつかなんとかなるって\n信じてました！😂\n\nだからこそ今があるのかなって\n思います⭐️",
+        "user": {
+          "id_str": "1188363129710731264",
+          "name": "忍者CODE｜未経験からWEB制作のプロを目指すオンラインプログラミングスクール",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1689556665480470528/gQLOqyEs_normal.jpg",
+          "screen_name": "ninjacodeee",
+          "verified": false,
+          "verified_type": "Business",
+          "is_blue_verified": true,
+          "profile_image_shape": "Square"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1262460630520324096"
+          ],
+          "editable_until_msecs": "1589830844357",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:47.119Z"
     },
     {
       "id": "archive-1262372853283868672",
@@ -113,7 +1137,205 @@
       "fullText": "翻訳。\nウイグルのモスクにて中国人がウイグルの音楽に合わせて踊っている。モスクが中国人の娯楽場になっている…\n\nイスラムにとってモスクは神聖な場所。これはあかんやつじゃないのかしらん。 https://t.co/e6jrPQtB42",
       "expandedUrl": "https://twitter.com/i/web/status/1262372853283868672",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 109,
+        "created_at": "2020-05-18T13:21:56.000Z",
+        "display_text_range": [
+          0,
+          92
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1262372853283868672",
+        "text": "翻訳。\nウイグルのモスクにて中国人がウイグルの音楽に合わせて踊っている。モスクが中国人の娯楽場になっている…\n\nイスラムにとってモスクは神聖な場所。これはあかんやつじゃないのかしらん。",
+        "user": {
+          "id_str": "3193715799",
+          "name": "台湾史.jp",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1651073069627379714/sUkT7AMn_normal.jpg",
+          "screen_name": "Formosanhistory",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1262372853283868672"
+          ],
+          "editable_until_msecs": "1589809916633",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "en",
+          "reply_count": 346,
+          "retweet_count": 3255,
+          "favorite_count": 2941,
+          "possibly_sensitive": false,
+          "created_at": "2020-05-17T09:06:01.000Z",
+          "display_text_range": [
+            0,
+            116
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [],
+            "symbols": [],
+            "media": [
+              {
+                "display_url": "pic.x.com/d7hTWJcwg1",
+                "expanded_url": "https://x.com/UyghurH/status/1261946062664871938/video/1",
+                "indices": [
+                  117,
+                  140
+                ],
+                "url": "https://t.co/d7hTWJcwg1"
+              }
+            ]
+          },
+          "id_str": "1261946062664871938",
+          "text": "The Chinese people are enjoying in the mosque with uyghur  music, the mosque became a place of enjoying for Chinese! https://t.co/d7hTWJcwg1",
+          "user": {
+            "id_str": "995048415053656064",
+            "name": "uyghur hero",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1017877704564264960/y1bdwPBr_normal.jpg",
+            "screen_name": "UyghurH",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1261946062664871938"
+            ],
+            "editable_until_msecs": "1589708161820",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "mediaDetails": [
+            {
+              "additional_media_info": {},
+              "display_url": "pic.x.com/d7hTWJcwg1",
+              "expanded_url": "https://x.com/UyghurH/status/1261946062664871938/video/1",
+              "ext_media_availability": {
+                "status": "Available"
+              },
+              "indices": [
+                117,
+                140
+              ],
+              "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1261945552423604226/pu/img/9CDVKwEsTli9nK1S.jpg",
+              "original_info": {
+                "height": 1280,
+                "width": 720,
+                "focus_rects": []
+              },
+              "sizes": {
+                "large": {
+                  "h": 1280,
+                  "resize": "fit",
+                  "w": 720
+                },
+                "medium": {
+                  "h": 1200,
+                  "resize": "fit",
+                  "w": 675
+                },
+                "small": {
+                  "h": 680,
+                  "resize": "fit",
+                  "w": 383
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "video",
+              "url": "https://t.co/d7hTWJcwg1",
+              "video_info": {
+                "aspect_ratio": [
+                  9,
+                  16
+                ],
+                "duration_millis": 18050,
+                "variants": [
+                  {
+                    "content_type": "application/x-mpegURL",
+                    "url": "https://video.twimg.com/ext_tw_video/1261945552423604226/pu/pl/8TGqcByBK3r5LnyW.m3u8?tag=10&v=ecc"
+                  },
+                  {
+                    "bitrate": 632000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1261945552423604226/pu/vid/320x568/RNpJwM76M_IMJsSN.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 832000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1261945552423604226/pu/vid/360x640/hiZ3twee0AwSB2Tv.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 2176000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1261945552423604226/pu/vid/720x1280/KLnERr6ys3ogH5_y.mp4?tag=10"
+                  }
+                ]
+              }
+            }
+          ],
+          "photos": [],
+          "video": {
+            "aspectRatio": [
+              9,
+              16
+            ],
+            "contentType": "media_entity",
+            "durationMs": 18050,
+            "mediaAvailability": {
+              "status": "available"
+            },
+            "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1261945552423604226/pu/img/9CDVKwEsTli9nK1S.jpg",
+            "variants": [
+              {
+                "type": "application/x-mpegURL",
+                "src": "https://video.twimg.com/ext_tw_video/1261945552423604226/pu/pl/8TGqcByBK3r5LnyW.m3u8?tag=10&v=ecc"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1261945552423604226/pu/vid/320x568/RNpJwM76M_IMJsSN.mp4?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1261945552423604226/pu/vid/360x640/hiZ3twee0AwSB2Tv.mp4?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1261945552423604226/pu/vid/720x1280/KLnERr6ys3ogH5_y.mp4?tag=10"
+              }
+            ],
+            "videoId": {
+              "type": "tweet",
+              "id": "1261946062664871938"
+            },
+            "viewCount": 0
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:48.324Z"
     },
     {
       "id": "archive-1262343190306123777",
@@ -121,7 +1343,8 @@
       "fullText": "モスクはムスリムが物質的な現世や様々な心配事から遠ざかり来世に思いを馳せる場所であり慈悲深きアッラーの至高の館です。そんなモスクが、ウイグルでは中国人の宴会場になりました。中国共産党の同化政策は伝統文化の否定からはじまります。こんな国家に将来はありません。\nhttps://t.co/lJ9KG1XwpF",
       "expandedUrl": "https://twitter.com/i/web/status/1262343190306123777",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1261590003483721729",
@@ -129,7 +1352,188 @@
       "fullText": "ご好評いただきました\n\n「スロットマシン」の\n\nソースコード＆仕組み解説書配布させていただきます！\n\nhttps://t.co/ng808IEGV0\n\n構造がかなり複雑なので\n読み解くのに時間かかりますが\n\n仕組みを知るだけでも\nCSSの理解を深めるきっかけになると思います！😆✨\n\nあなたも変態の道へ！！🤣ww https://t.co/IQkDnT8LyW",
       "expandedUrl": "https://twitter.com/i/web/status/1261590003483721729",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 462,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-16T09:31:10.000Z",
+        "display_text_range": [
+          0,
+          158
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "14.gigafile.nu/0530-b8f593490…",
+              "expanded_url": "https://14.gigafile.nu/0530-b8f59349025d3c0dafa28343026ccd56b",
+              "indices": [
+                51,
+                74
+              ],
+              "url": "https://t.co/ng808IEGV0"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/IQkDnT8LyW",
+              "expanded_url": "https://x.com/ash_creator/status/1261590003483721729/photo/1",
+              "indices": [
+                157,
+                180
+              ],
+              "url": "https://t.co/IQkDnT8LyW"
+            }
+          ]
+        },
+        "id_str": "1261590003483721729",
+        "text": "ご好評いただきました\n\n「スロットマシン」の\n\nソースコード＆仕組み解説書配布させていただきます！\n\nhttps://t.co/ng808IEGV0\n\n構造がかなり複雑なので\n読み解くのに時間かかりますが\n\n仕組みを知るだけでも\nCSSの理解を深めるきっかけになると思います！😆✨\n\nあなたも変態の道へ！！🤣ww https://t.co/IQkDnT8LyW",
+        "user": {
+          "id_str": "1151999543971422208",
+          "name": "あしざわ - Webクリエイター",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1708718963998539776/BRYVl-SW_normal.jpg",
+          "screen_name": "ash_creator",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1261590003483721729"
+          ],
+          "editable_until_msecs": "1589623270696",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/IQkDnT8LyW",
+            "expanded_url": "https://x.com/ash_creator/status/1261590003483721729/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              157,
+              180
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EYIRXyYUEAI6rvP.jpg",
+            "original_info": {
+              "height": 1996,
+              "width": 2066,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 816,
+                  "w": 2066,
+                  "h": 1157
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1996,
+                  "h": 1996
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1751,
+                  "h": 1996
+                },
+                {
+                  "x": 69,
+                  "y": 0,
+                  "w": 998,
+                  "h": 1996
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2066,
+                  "h": 1996
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1979,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 1159,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 657,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/IQkDnT8LyW"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 816,
+                "w": 2066,
+                "h": 1157
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1996,
+                "h": 1996
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1751,
+                "h": 1996
+              },
+              {
+                "x": 69,
+                "y": 0,
+                "w": 998,
+                "h": 1996
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 2066,
+                "h": 1996
+              }
+            ],
+            "expandedUrl": "https://x.com/ash_creator/status/1261590003483721729/photo/1",
+            "url": "https://pbs.twimg.com/media/EYIRXyYUEAI6rvP.jpg",
+            "width": 2066,
+            "height": 1996
+          }
+        ],
+        "conversation_count": 16,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:50.653Z"
     },
     {
       "id": "archive-1261586800763473920",
@@ -137,7 +1541,182 @@
       "fullText": "You’re unable to view this Tweet because this account owner limits who can view their Tweets. {learnmore}",
       "expandedUrl": "https://twitter.com/i/web/status/1261586800763473920",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 44,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-16T09:18:27.000Z",
+        "display_text_range": [
+          0,
+          131
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                107,
+                118
+              ],
+              "text": "プログラミング初心者"
+            },
+            {
+              "indices": [
+                119,
+                129
+              ],
+              "text": "プログラミング学習"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/wrD3qcpV75",
+              "expanded_url": "https://x.com/debug_master68/status/1261586800763473920/video/1",
+              "indices": [
+                130,
+                153
+              ],
+              "url": "https://t.co/wrD3qcpV75"
+            }
+          ]
+        },
+        "id_str": "1261586800763473920",
+        "text": "📢5/16のJavaScript問題\n今日の問題をベースに、少しづつ機能を追加していくような問題形式をやっていきたいので、今日は簡単になってます！\n数字はランダムで、inputのtypeはtextでも構いません💡\n#プログラミング初心者\n#プログラミング学習 https://t.co/wrD3qcpV75",
+        "user": {
+          "id_str": "1205643409823678464",
+          "name": "たかのぶ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1205649914539044864/oWkpD30g_normal.jpg",
+          "screen_name": "debug_master68",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1261586800763473920"
+          ],
+          "editable_until_msecs": "1589622507108",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/wrD3qcpV75",
+            "expanded_url": "https://x.com/debug_master68/status/1261586800763473920/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              130,
+              153
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1261586298436857857/pu/img/ac1EwLOkqOmkJ7Ap.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/wrD3qcpV75",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 21029,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1261586298436857857/pu/pl/WfJ4-jfPOjb-8HtH.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1261586298436857857/pu/vid/480x270/vPhBfJCiMYfaLMSf.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1261586298436857857/pu/vid/640x360/y5_tm3w6Y1SfxxIC.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1261586298436857857/pu/vid/1280x720/hcz74J5oEFi4XQ2t.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 21029,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1261586298436857857/pu/img/ac1EwLOkqOmkJ7Ap.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1261586298436857857/pu/pl/WfJ4-jfPOjb-8HtH.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1261586298436857857/pu/vid/480x270/vPhBfJCiMYfaLMSf.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1261586298436857857/pu/vid/640x360/y5_tm3w6Y1SfxxIC.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1261586298436857857/pu/vid/1280x720/hcz74J5oEFi4XQ2t.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1261586800763473920"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:51.817Z"
     },
     {
       "id": "archive-1261536968468504576",
@@ -145,7 +1724,366 @@
       "fullText": "【この状況で平然と周囲にケンカを売る中国の不可解 南シナ海での中国の行動が示す危険な兆候】\n\n日本ではあまり報道されることはないが、南シナ海をめぐる中国とベトナムとの争いは中国の外交方針がどこか狂い始めたことを示している\nhttps://t.co/tOqOaHFDzG",
       "expandedUrl": "https://twitter.com/i/web/status/1261536968468504576",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 233,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-16T06:00:26.000Z",
+        "display_text_range": [
+          0,
+          134
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "bit.ly/2Z8TzAM",
+              "expanded_url": "https://bit.ly/2Z8TzAM",
+              "indices": [
+                111,
+                134
+              ],
+              "url": "https://t.co/tOqOaHFDzG"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1261536968468504576",
+        "text": "【この状況で平然と周囲にケンカを売る中国の不可解 南シナ海での中国の行動が示す危険な兆候】\n\n日本ではあまり報道されることはないが、南シナ海をめぐる中国とベトナムとの争いは中国の外交方針がどこか狂い始めたことを示している\nhttps://t.co/tOqOaHFDzG",
+        "user": {
+          "id_str": "44386311",
+          "name": "黒色中国",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1616332776323829760/D6gOQtFu_normal.jpg",
+          "screen_name": "bci_",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1261536968468504576"
+          ],
+          "editable_until_msecs": "1589610626163",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 3,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/tOqOaHFDzG",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 150,
+                "width": 214,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "この時期においては、南シナ海の問題をそっとしておくのが上策であろう。しかし、中国はベトナムなどを怒らせる行為を次々に行っている。なぜ中国はそのような行為に走るのであろうか。(1/3)",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "jbpress.ismedia.jp",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 294,
+                "width": 420,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=420x420_1"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 841,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "site": {
+              "scribe_key": "publisher_id",
+              "type": "USER",
+              "user_value": {
+                "id_str": "29166389",
+                "path": []
+              }
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 70,
+                "width": 100,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=100x100"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 841,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 841,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "jbpress.ismedia.jp",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 30,
+                      "green": 23,
+                      "red": 19
+                    },
+                    "percentage": 37.68
+                  },
+                  {
+                    "rgb": {
+                      "blue": 201,
+                      "green": 200,
+                      "red": 202
+                    },
+                    "percentage": 27.11
+                  },
+                  {
+                    "rgb": {
+                      "blue": 88,
+                      "green": 101,
+                      "red": 128
+                    },
+                    "percentage": 9.28
+                  },
+                  {
+                    "rgb": {
+                      "blue": 46,
+                      "green": 85,
+                      "red": 73
+                    },
+                    "percentage": 8.22
+                  },
+                  {
+                    "rgb": {
+                      "blue": 94,
+                      "green": 148,
+                      "red": 147
+                    },
+                    "percentage": 2.23
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "この状況で平然と周囲にケンカを売る中国の不可解 南シナ海での中国の行動が示す危険な兆候 | JBpress (ジェイビープレス)",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 30,
+                      "green": 23,
+                      "red": 19
+                    },
+                    "percentage": 37.68
+                  },
+                  {
+                    "rgb": {
+                      "blue": 201,
+                      "green": 200,
+                      "red": 202
+                    },
+                    "percentage": 27.11
+                  },
+                  {
+                    "rgb": {
+                      "blue": 88,
+                      "green": 101,
+                      "red": 128
+                    },
+                    "percentage": 9.28
+                  },
+                  {
+                    "rgb": {
+                      "blue": 46,
+                      "green": 85,
+                      "red": 73
+                    },
+                    "percentage": 8.22
+                  },
+                  {
+                    "rgb": {
+                      "blue": 94,
+                      "green": 148,
+                      "red": 147
+                    },
+                    "percentage": 2.23
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 841,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 30,
+                      "green": 23,
+                      "red": 19
+                    },
+                    "percentage": 37.68
+                  },
+                  {
+                    "rgb": {
+                      "blue": 201,
+                      "green": 200,
+                      "red": 202
+                    },
+                    "percentage": 27.11
+                  },
+                  {
+                    "rgb": {
+                      "blue": 88,
+                      "green": 101,
+                      "red": 128
+                    },
+                    "percentage": 9.28
+                  },
+                  {
+                    "rgb": {
+                      "blue": 46,
+                      "green": 85,
+                      "red": 73
+                    },
+                    "percentage": 8.22
+                  },
+                  {
+                    "rgb": {
+                      "blue": 94,
+                      "green": 148,
+                      "red": 147
+                    },
+                    "percentage": 2.23
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 841,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/tOqOaHFDzG",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 841,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929882826247229441/oafdmjrZ?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:53.013Z"
     },
     {
       "id": "archive-1261481495878868992",
@@ -153,7 +2091,58 @@
       "fullText": "【25年前から不明のパンチェン・ラマを解放せよ、米が中国に改めて要求】\n\n米国は14日、25年前にチベット仏教第2の高位者パンチェン・ラマに認定され、その後まもなく拘束された男性を解放するよう中国政府に改めて要求\nhttps://t.co/Sm3ULRGeSA",
       "expandedUrl": "https://twitter.com/i/web/status/1261481495878868992",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 51,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-16T02:20:00.000Z",
+        "display_text_range": [
+          0,
+          130
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "bit.ly/3bDGvpG",
+              "expanded_url": "https://bit.ly/3bDGvpG",
+              "indices": [
+                107,
+                130
+              ],
+              "url": "https://t.co/Sm3ULRGeSA"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1261481495878868992",
+        "text": "【25年前から不明のパンチェン・ラマを解放せよ、米が中国に改めて要求】\n\n米国は14日、25年前にチベット仏教第2の高位者パンチェン・ラマに認定され、その後まもなく拘束された男性を解放するよう中国政府に改めて要求\nhttps://t.co/Sm3ULRGeSA",
+        "user": {
+          "id_str": "44386311",
+          "name": "黒色中国",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1616332776323829760/D6gOQtFu_normal.jpg",
+          "screen_name": "bci_",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1261481495878868992"
+          ],
+          "editable_until_msecs": "1589597400467",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:54.169Z"
     },
     {
       "id": "archive-1261256228832935936",
@@ -161,7 +2150,523 @@
       "fullText": "关注新疆乌鲁木齐推友李霖因为推特油管言论被罗织罪名，判刑四年。先以其他罪名被捕，最后被“煽动颠覆国家政权”。李霖母亲以文书证明乌鲁木齐检察院刘进波在办案过程中程序违法。现在申诉中，呼吁关注。\n逮捕书上提到的言论显然有关习近平。 https://t.co/0eOZwtU6mK",
       "expandedUrl": "https://twitter.com/i/web/status/1261256228832935936",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "zh",
+        "favorite_count": 384,
+        "possibly_sensitive": false,
+        "created_at": "2020-05-15T11:24:52.000Z",
+        "display_text_range": [
+          0,
+          113
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/0eOZwtU6mK",
+              "expanded_url": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+              "indices": [
+                114,
+                137
+              ],
+              "url": "https://t.co/0eOZwtU6mK"
+            }
+          ]
+        },
+        "id_str": "1261256228832935936",
+        "text": "关注新疆乌鲁木齐推友李霖因为推特油管言论被罗织罪名，判刑四年。先以其他罪名被捕，最后被“煽动颠覆国家政权”。李霖母亲以文书证明乌鲁木齐检察院刘进波在办案过程中程序违法。现在申诉中，呼吁关注。\n逮捕书上提到的言论显然有关习近平。 https://t.co/0eOZwtU6mK",
+        "user": {
+          "id_str": "202963011",
+          "name": "周锋锁 Fengsuo Zhou",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1497738522907787265/suoxNLsn_normal.jpg",
+          "screen_name": "ZhouFengSuo",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1261256228832935936"
+          ],
+          "editable_until_msecs": "1589543692618",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/0eOZwtU6mK",
+            "expanded_url": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              114,
+              137
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EYDh2YaXgAEWXZm.jpg",
+            "original_info": {
+              "height": 1152,
+              "width": 864,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 864,
+                  "h": 484
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 864,
+                  "h": 864
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 864,
+                  "h": 985
+                },
+                {
+                  "x": 144,
+                  "y": 0,
+                  "w": 576,
+                  "h": 1152
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 864,
+                  "h": 1152
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1152,
+                "resize": "fit",
+                "w": 864
+              },
+              "medium": {
+                "h": 1152,
+                "resize": "fit",
+                "w": 864
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 510
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/0eOZwtU6mK"
+          },
+          {
+            "display_url": "pic.x.com/0eOZwtU6mK",
+            "expanded_url": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              114,
+              137
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EYDh2YcWAAAuD6K.jpg",
+            "original_info": {
+              "height": 1440,
+              "width": 1080,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 94,
+                  "w": 1080,
+                  "h": 605
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1080
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1231
+                },
+                {
+                  "x": 252,
+                  "y": 0,
+                  "w": 720,
+                  "h": 1440
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1440
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1440,
+                "resize": "fit",
+                "w": 1080
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 900
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 510
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/0eOZwtU6mK"
+          },
+          {
+            "display_url": "pic.x.com/0eOZwtU6mK",
+            "expanded_url": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              114,
+              137
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EYDh2jdWoAAsq0b.jpg",
+            "original_info": {
+              "height": 1152,
+              "width": 864,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 17,
+                  "w": 864,
+                  "h": 484
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 864,
+                  "h": 864
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 864,
+                  "h": 985
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 576,
+                  "h": 1152
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 864,
+                  "h": 1152
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1152,
+                "resize": "fit",
+                "w": 864
+              },
+              "medium": {
+                "h": 1152,
+                "resize": "fit",
+                "w": 864
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 510
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/0eOZwtU6mK"
+          },
+          {
+            "display_url": "pic.x.com/0eOZwtU6mK",
+            "expanded_url": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              114,
+              137
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EYDh2mpXYAA5glX.jpg",
+            "original_info": {
+              "height": 961,
+              "width": 1510,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 66,
+                  "w": 1510,
+                  "h": 846
+                },
+                {
+                  "x": 462,
+                  "y": 0,
+                  "w": 961,
+                  "h": 961
+                },
+                {
+                  "x": 521,
+                  "y": 0,
+                  "w": 843,
+                  "h": 961
+                },
+                {
+                  "x": 702,
+                  "y": 0,
+                  "w": 481,
+                  "h": 961
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1510,
+                  "h": 961
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 961,
+                "resize": "fit",
+                "w": 1510
+              },
+              "medium": {
+                "h": 764,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 433,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/0eOZwtU6mK"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 864,
+                "h": 484
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 864,
+                "h": 864
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 864,
+                "h": 985
+              },
+              {
+                "x": 144,
+                "y": 0,
+                "w": 576,
+                "h": 1152
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 864,
+                "h": 1152
+              }
+            ],
+            "expandedUrl": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+            "url": "https://pbs.twimg.com/media/EYDh2YaXgAEWXZm.jpg",
+            "width": 864,
+            "height": 1152
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 94,
+                "w": 1080,
+                "h": 605
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1080,
+                "h": 1080
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1080,
+                "h": 1231
+              },
+              {
+                "x": 252,
+                "y": 0,
+                "w": 720,
+                "h": 1440
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1080,
+                "h": 1440
+              }
+            ],
+            "expandedUrl": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+            "url": "https://pbs.twimg.com/media/EYDh2YcWAAAuD6K.jpg",
+            "width": 1080,
+            "height": 1440
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 17,
+                "w": 864,
+                "h": 484
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 864,
+                "h": 864
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 864,
+                "h": 985
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 576,
+                "h": 1152
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 864,
+                "h": 1152
+              }
+            ],
+            "expandedUrl": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+            "url": "https://pbs.twimg.com/media/EYDh2jdWoAAsq0b.jpg",
+            "width": 864,
+            "height": 1152
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 66,
+                "w": 1510,
+                "h": 846
+              },
+              {
+                "x": 462,
+                "y": 0,
+                "w": 961,
+                "h": 961
+              },
+              {
+                "x": 521,
+                "y": 0,
+                "w": 843,
+                "h": 961
+              },
+              {
+                "x": 702,
+                "y": 0,
+                "w": 481,
+                "h": 961
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1510,
+                "h": 961
+              }
+            ],
+            "expandedUrl": "https://x.com/ZhouFengSuo/status/1261256228832935936/photo/1",
+            "url": "https://pbs.twimg.com/media/EYDh2mpXYAA5glX.jpg",
+            "width": 1510,
+            "height": 961
+          }
+        ],
+        "conversation_count": 18,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:59:55.335Z"
     }
   ]
 }

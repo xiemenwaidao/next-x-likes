@@ -9,7 +9,47 @@
       "fullText": "明天不想去上班😭",
       "expandedUrl": "https://twitter.com/i/web/status/1181952654559178752",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 3,
+        "created_at": "2019-10-09T15:20:47.000Z",
+        "display_text_range": [
+          0,
+          9
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1181952654559178752",
+        "text": "明天不想去上班😭",
+        "user": {
+          "id_str": "1173200034180956160",
+          "name": "しゃんしゃお🐪",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1189914054237839361/BfxYzgth_normal.jpg",
+          "screen_name": "shanxiao_",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1181952654559178752"
+          ],
+          "editable_until_msecs": "1570636247122",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:33.497Z"
     },
     {
       "id": "archive-1181747843070976000",
@@ -17,7 +57,479 @@
       "fullText": "【25岁吉林人支持“反送中”被捕】 https://t.co/dQxHNjg9X4\n吉林省の青年が、中国のSNSで香港デモ支持の投稿をしたら（添付画像参照）すぐ警察に逮捕されたそうです。香港デモ抗議者と同じく黒づくめ、片目を隠し、中国国旗に火をつけようとしてますが、NBAロケッツのシャツまで着込むとは徹底しすぎww https://t.co/H6UCTKxtzO",
       "expandedUrl": "https://twitter.com/i/web/status/1181747843070976000",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "in_reply_to_screen_name": "bci_",
+        "in_reply_to_status_id_str": "1181581060053667841",
+        "in_reply_to_user_id_str": "44386311",
+        "lang": "ja",
+        "favorite_count": 53,
+        "possibly_sensitive": false,
+        "created_at": "2019-10-09T01:46:56.000Z",
+        "display_text_range": [
+          0,
+          158
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "rfa.org/mandarin/Xinwe…",
+              "expanded_url": "https://www.rfa.org/mandarin/Xinwen/1-10082019111908.html",
+              "indices": [
+                18,
+                41
+              ],
+              "url": "https://t.co/dQxHNjg9X4"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/H6UCTKxtzO",
+              "expanded_url": "https://x.com/bci_/status/1181747843070976000/photo/1",
+              "indices": [
+                159,
+                182
+              ],
+              "url": "https://t.co/H6UCTKxtzO"
+            }
+          ]
+        },
+        "id_str": "1181747843070976000",
+        "text": "【25岁吉林人支持“反送中”被捕】 https://t.co/dQxHNjg9X4\n吉林省の青年が、中国のSNSで香港デモ支持の投稿をしたら（添付画像参照）すぐ警察に逮捕されたそうです。香港デモ抗議者と同じく黒づくめ、片目を隠し、中国国旗に火をつけようとしてますが、NBAロケッツのシャツまで着込むとは徹底しすぎww https://t.co/H6UCTKxtzO",
+        "user": {
+          "id_str": "44386311",
+          "name": "黒色中国",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1616332776323829760/D6gOQtFu_normal.jpg",
+          "screen_name": "bci_",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1181747843070976000"
+          ],
+          "editable_until_msecs": "1570587416258",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/H6UCTKxtzO",
+            "expanded_url": "https://x.com/bci_/status/1181747843070976000/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              159,
+              182
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EGZoVR0UUAAyZTc.jpg",
+            "original_info": {
+              "height": 355,
+              "width": 375,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 375,
+                  "h": 210
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 355,
+                  "h": 355
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 311,
+                  "h": 355
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 178,
+                  "h": 355
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 375,
+                  "h": 355
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 355,
+                "resize": "fit",
+                "w": 375
+              },
+              "medium": {
+                "h": 355,
+                "resize": "fit",
+                "w": 375
+              },
+              "small": {
+                "h": 355,
+                "resize": "fit",
+                "w": 375
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/H6UCTKxtzO"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 375,
+                "h": 210
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 355,
+                "h": 355
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 311,
+                "h": 355
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 178,
+                "h": 355
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 375,
+                "h": 355
+              }
+            ],
+            "expandedUrl": "https://x.com/bci_/status/1181747843070976000/photo/1",
+            "url": "https://pbs.twimg.com/media/EGZoVR0UUAAyZTc.jpg",
+            "width": 375,
+            "height": 355
+          }
+        ],
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "parent": {
+          "in_reply_to_screen_name": "bci_",
+          "in_reply_to_status_id_str": "1181539166049333248",
+          "in_reply_to_user_id_str": "44386311",
+          "lang": "ja",
+          "reply_count": 1,
+          "retweet_count": 34,
+          "favorite_count": 55,
+          "possibly_sensitive": false,
+          "created_at": "2019-10-08T14:44:12.000Z",
+          "display_text_range": [
+            0,
+            148
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "nikkei.com/article/DGXMZO…",
+                "expanded_url": "https://www.nikkei.com/article/DGXMZO50737200Y9A001C1000000/",
+                "indices": [
+                  125,
+                  148
+                ],
+                "url": "https://t.co/YSvT7rSYEw"
+              }
+            ],
+            "user_mentions": [],
+            "symbols": []
+          },
+          "id_str": "1181581060053667841",
+          "text": "【香港デモ、中国政府は必ず報復に動く】\n\n「秋後算帳」という中国語のフレーズは、直訳すれば「秋の収穫後に貸し借りを清算する」という意味。だが一般的な言い回しでは「機が熟した時に復讐する」ことを意味する。中国の指導者たちは香港の問題を話し合うために…\nhttps://t.co/YSvT7rSYEw",
+          "user": {
+            "id_str": "44386311",
+            "name": "黒色中国",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1616332776323829760/D6gOQtFu_normal.jpg",
+            "screen_name": "bci_",
+            "verified": false,
+            "is_blue_verified": true,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1181581060053667841"
+            ],
+            "editable_until_msecs": "1570547652088",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "card": {
+            "card_platform": {
+              "platform": {
+                "audience": {
+                  "name": "production"
+                },
+                "device": {
+                  "name": "iPhone",
+                  "version": "13"
+                }
+              }
+            },
+            "name": "summary_large_image",
+            "url": "https://t.co/YSvT7rSYEw",
+            "binding_values": {
+              "photo_image_full_size_large": {
+                "image_value": {
+                  "height": 268,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=600x314"
+                },
+                "type": "IMAGE"
+              },
+              "thumbnail_image": {
+                "image_value": {
+                  "height": 144,
+                  "width": 144,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=144x144"
+                },
+                "type": "IMAGE"
+              },
+              "description": {
+                "string_value": "日本経済新聞の電子版。日経や日経ＢＰの提供する経済、企業、国際、政治、マーケット、情報・通信、社会など各分野のニュース。ビジネス、マネー、IT、スポーツ、住宅、キャリアなどの専門情報も満載。",
+                "type": "STRING"
+              },
+              "domain": {
+                "string_value": "www.nikkei.com",
+                "type": "STRING"
+              },
+              "thumbnail_image_large": {
+                "image_value": {
+                  "height": 320,
+                  "width": 320,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=800x320_1"
+                },
+                "type": "IMAGE"
+              },
+              "summary_photo_image_small": {
+                "image_value": {
+                  "height": 202,
+                  "width": 386,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=386x202"
+                },
+                "type": "IMAGE"
+              },
+              "thumbnail_image_original": {
+                "image_value": {
+                  "height": 512,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=orig"
+                },
+                "type": "IMAGE"
+              },
+              "site": {
+                "scribe_key": "publisher_id",
+                "type": "USER",
+                "user_value": {
+                  "id_str": "169480493",
+                  "path": []
+                }
+              },
+              "photo_image_full_size_small": {
+                "image_value": {
+                  "height": 202,
+                  "width": 386,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=386x202"
+                },
+                "type": "IMAGE"
+              },
+              "summary_photo_image_large": {
+                "image_value": {
+                  "height": 268,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=600x314"
+                },
+                "type": "IMAGE"
+              },
+              "thumbnail_image_small": {
+                "image_value": {
+                  "height": 100,
+                  "width": 100,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=100x100"
+                },
+                "type": "IMAGE"
+              },
+              "thumbnail_image_x_large": {
+                "image_value": {
+                  "height": 512,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=2048x2048_2_exp"
+                },
+                "type": "IMAGE"
+              },
+              "photo_image_full_size_original": {
+                "image_value": {
+                  "height": 512,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=orig"
+                },
+                "type": "IMAGE"
+              },
+              "vanity_url": {
+                "scribe_key": "vanity_url",
+                "string_value": "nikkei.com",
+                "type": "STRING"
+              },
+              "photo_image_full_size": {
+                "image_value": {
+                  "height": 268,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=600x314"
+                },
+                "type": "IMAGE"
+              },
+              "thumbnail_image_color": {
+                "image_color_value": {
+                  "palette": [
+                    {
+                      "rgb": {
+                        "blue": 112,
+                        "green": 62,
+                        "red": 0
+                      },
+                      "percentage": 93.19
+                    },
+                    {
+                      "rgb": {
+                        "blue": 255,
+                        "green": 255,
+                        "red": 255
+                      },
+                      "percentage": 6.71
+                    }
+                  ]
+                },
+                "type": "IMAGE_COLOR"
+              },
+              "title": {
+                "string_value": "[FT]香港デモ、中国政府は必ず報復に動く",
+                "type": "STRING"
+              },
+              "summary_photo_image_color": {
+                "image_color_value": {
+                  "palette": [
+                    {
+                      "rgb": {
+                        "blue": 112,
+                        "green": 62,
+                        "red": 0
+                      },
+                      "percentage": 93.19
+                    },
+                    {
+                      "rgb": {
+                        "blue": 255,
+                        "green": 255,
+                        "red": 255
+                      },
+                      "percentage": 6.71
+                    }
+                  ]
+                },
+                "type": "IMAGE_COLOR"
+              },
+              "summary_photo_image_x_large": {
+                "image_value": {
+                  "height": 512,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=2048x2048_2_exp"
+                },
+                "type": "IMAGE"
+              },
+              "summary_photo_image": {
+                "image_value": {
+                  "height": 268,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=600x314"
+                },
+                "type": "IMAGE"
+              },
+              "photo_image_full_size_color": {
+                "image_color_value": {
+                  "palette": [
+                    {
+                      "rgb": {
+                        "blue": 112,
+                        "green": 62,
+                        "red": 0
+                      },
+                      "percentage": 93.19
+                    },
+                    {
+                      "rgb": {
+                        "blue": 255,
+                        "green": 255,
+                        "red": 255
+                      },
+                      "percentage": 6.71
+                    }
+                  ]
+                },
+                "type": "IMAGE_COLOR"
+              },
+              "photo_image_full_size_x_large": {
+                "image_value": {
+                  "height": 512,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=2048x2048_2_exp"
+                },
+                "type": "IMAGE"
+              },
+              "card_url": {
+                "scribe_key": "card_url",
+                "string_value": "https://t.co/YSvT7rSYEw",
+                "type": "STRING"
+              },
+              "summary_photo_image_original": {
+                "image_value": {
+                  "height": 512,
+                  "width": 512,
+                  "url": "https://pbs.twimg.com/card_img/1930100718830268420/szB9ITUm?format=png&name=orig"
+                },
+                "type": "IMAGE"
+              }
+            }
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:34.681Z"
     },
     {
       "id": "archive-1181157237529595906",
@@ -25,7 +537,47 @@
       "fullText": "@88millimetre 実際に面と向かって女性にそんなこと言えるんですか？失礼ですよ。",
       "expandedUrl": "https://twitter.com/i/web/status/1181157237529595906",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 3,
+        "created_at": "2019-10-07T10:40:04.000Z",
+        "display_text_range": [
+          14,
+          45
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1181157237529595906",
+        "text": "@88millimetre 実際に面と向かって女性にそんなこと言えるんですか？失礼ですよ。",
+        "user": {
+          "id_str": "748244571725824000",
+          "name": "たべもの倶楽部",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/748247417363931136/QqNl_4w8_normal.jpg",
+          "screen_name": "TabemonoKurabu",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1181157237529595906"
+          ],
+          "editable_until_msecs": "1570446604924",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:35.854Z"
     },
     {
       "id": "archive-1180936671480561664",
@@ -33,7 +585,8 @@
       "fullText": "キモい。\n\nしかしウォーハンマーのようなカッコ良さがある。\n\n#ゼルダの伝説\n#BreathoftheWild https://t.co/BtCBwyMGoH",
       "expandedUrl": "https://twitter.com/i/web/status/1180936671480561664",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1180681104740749312",
@@ -41,7 +594,200 @@
       "fullText": "｢メイドインアビス｣ナナチの家\nこの作品は本当にたくさんの方々の才能に支えられています！美術においても若手からベテランまで持てる力を発揮しました。\nこちらは美術設定としても活躍した、緻密な描写が持ち味の西俊樹氏による本編背景です。\n\n#madeinabyss\n#メイドインアビス\n#背景美術\n許可済 https://t.co/5RHmvosWtW",
       "expandedUrl": "https://twitter.com/i/web/status/1180681104740749312",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 2493,
+        "possibly_sensitive": false,
+        "created_at": "2019-10-06T03:08:06.000Z",
+        "display_text_range": [
+          0,
+          149
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                117,
+                129
+              ],
+              "text": "madeinabyss"
+            },
+            {
+              "indices": [
+                130,
+                139
+              ],
+              "text": "メイドインアビス"
+            },
+            {
+              "indices": [
+                140,
+                145
+              ],
+              "text": "背景美術"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/5RHmvosWtW",
+              "expanded_url": "https://x.com/MasuyamaOsamu/status/1180681104740749312/photo/1",
+              "indices": [
+                150,
+                173
+              ],
+              "url": "https://t.co/5RHmvosWtW"
+            }
+          ]
+        },
+        "id_str": "1180681104740749312",
+        "text": "｢メイドインアビス｣ナナチの家\nこの作品は本当にたくさんの方々の才能に支えられています！美術においても若手からベテランまで持てる力を発揮しました。\nこちらは美術設定としても活躍した、緻密な描写が持ち味の西俊樹氏による本編背景です。\n\n#madeinabyss\n#メイドインアビス\n#背景美術\n許可済 https://t.co/5RHmvosWtW",
+        "user": {
+          "id_str": "1050773138777100289",
+          "name": "増山修/インスパイアード",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1050777924507394049/_gmMKgOQ_normal.jpg",
+          "screen_name": "MasuyamaOsamu",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1180681104740749312"
+          ],
+          "editable_until_msecs": "1570333086021",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/5RHmvosWtW",
+            "expanded_url": "https://x.com/MasuyamaOsamu/status/1180681104740749312/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              150,
+              173
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EGKfM-ZUEAA0Rvx.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1075
+                },
+                {
+                  "x": 420,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1080
+                },
+                {
+                  "x": 487,
+                  "y": 0,
+                  "w": 947,
+                  "h": 1080
+                },
+                {
+                  "x": 690,
+                  "y": 0,
+                  "w": 540,
+                  "h": 1080
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1080
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/5RHmvosWtW"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1075
+              },
+              {
+                "x": 420,
+                "y": 0,
+                "w": 1080,
+                "h": 1080
+              },
+              {
+                "x": 487,
+                "y": 0,
+                "w": 947,
+                "h": 1080
+              },
+              {
+                "x": 690,
+                "y": 0,
+                "w": 540,
+                "h": 1080
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1080
+              }
+            ],
+            "expandedUrl": "https://x.com/MasuyamaOsamu/status/1180681104740749312/photo/1",
+            "url": "https://pbs.twimg.com/media/EGKfM-ZUEAA0Rvx.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        ],
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:38.195Z"
     },
     {
       "id": "archive-1180657446328532993",
@@ -49,7 +795,193 @@
       "fullText": "#BreathoftheWild #NintendoSwitch https://t.co/7aj3lLAR8b",
       "expandedUrl": "https://twitter.com/i/web/status/1180657446328532993",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "qme",
+        "favorite_count": 1,
+        "possibly_sensitive": false,
+        "created_at": "2019-10-06T01:34:05.000Z",
+        "display_text_range": [
+          0,
+          32
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                0,
+                16
+              ],
+              "text": "BreathoftheWild"
+            },
+            {
+              "indices": [
+                17,
+                32
+              ],
+              "text": "NintendoSwitch"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/7aj3lLAR8b",
+              "expanded_url": "https://x.com/alephfin/status/1180657446328532993/photo/1",
+              "indices": [
+                33,
+                56
+              ],
+              "url": "https://t.co/7aj3lLAR8b"
+            }
+          ]
+        },
+        "id_str": "1180657446328532993",
+        "text": "#BreathoftheWild #NintendoSwitch https://t.co/7aj3lLAR8b",
+        "user": {
+          "id_str": "1169658545811447811",
+          "name": "Alephfin",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1169658694243639296/QpBW8CBQ_normal.jpg",
+          "screen_name": "alephfin",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1180657446328532993"
+          ],
+          "editable_until_msecs": "1570327445416",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/7aj3lLAR8b",
+            "expanded_url": "https://x.com/alephfin/status/1180657446328532993/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              33,
+              56
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EGKJsM3U8AASdzx.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1280,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1280,
+                  "h": 717
+                },
+                {
+                  "x": 560,
+                  "y": 0,
+                  "w": 720,
+                  "h": 720
+                },
+                {
+                  "x": 648,
+                  "y": 0,
+                  "w": 632,
+                  "h": 720
+                },
+                {
+                  "x": 920,
+                  "y": 0,
+                  "w": 360,
+                  "h": 720
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1280,
+                  "h": 720
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/7aj3lLAR8b"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1280,
+                "h": 717
+              },
+              {
+                "x": 560,
+                "y": 0,
+                "w": 720,
+                "h": 720
+              },
+              {
+                "x": 648,
+                "y": 0,
+                "w": 632,
+                "h": 720
+              },
+              {
+                "x": 920,
+                "y": 0,
+                "w": 360,
+                "h": 720
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1280,
+                "h": 720
+              }
+            ],
+            "expandedUrl": "https://x.com/alephfin/status/1180657446328532993/photo/1",
+            "url": "https://pbs.twimg.com/media/EGKJsM3U8AASdzx.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:39.412Z"
     },
     {
       "id": "archive-1179948938607988736",
@@ -57,7 +989,8 @@
       "fullText": "You’re unable to view this Tweet because this account owner limits who can view their Tweets. {learnmore}",
       "expandedUrl": "https://twitter.com/i/web/status/1179948938607988736",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1179658459056365570",
@@ -65,7 +998,203 @@
       "fullText": "Another #threejs experiment with InstancedMesh and physics with #ammo.js 15x15x4 = 900 bricks. You can throw balls to the tower https://t.co/cXIPi80I3K https://t.co/LxLRlNszCs",
       "expandedUrl": "https://twitter.com/i/web/status/1179658459056365570",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 26,
+        "possibly_sensitive": false,
+        "created_at": "2019-10-03T07:24:28.000Z",
+        "display_text_range": [
+          0,
+          151
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                8,
+                16
+              ],
+              "text": "threejs"
+            },
+            {
+              "indices": [
+                64,
+                69
+              ],
+              "text": "ammo"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "yomboprime.github.io/instancedBrick…",
+              "expanded_url": "https://yomboprime.github.io/instancedBricks/examples/instancedBricks.html",
+              "indices": [
+                128,
+                151
+              ],
+              "url": "https://t.co/cXIPi80I3K"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/LxLRlNszCs",
+              "expanded_url": "https://x.com/yombo/status/1179658459056365570/photo/1",
+              "indices": [
+                152,
+                175
+              ],
+              "url": "https://t.co/LxLRlNszCs"
+            }
+          ]
+        },
+        "id_str": "1179658459056365570",
+        "text": "Another #threejs experiment with InstancedMesh and physics with #ammo.js 15x15x4 = 900 bricks. You can throw balls to the tower https://t.co/cXIPi80I3K https://t.co/LxLRlNszCs",
+        "user": {
+          "id_str": "16030722",
+          "name": "yombo",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1180678830681444352/HoZ5lJmj_normal.png",
+          "screen_name": "yombo",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1179658459056365570"
+          ],
+          "editable_until_msecs": "1570089268290",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/LxLRlNszCs",
+            "expanded_url": "https://x.com/yombo/status/1179658459056365570/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              152,
+              175
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EF79DLVW4AE_QV8.png",
+            "original_info": {
+              "height": 882,
+              "width": 1292,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1292,
+                  "h": 724
+                },
+                {
+                  "x": 410,
+                  "y": 0,
+                  "w": 882,
+                  "h": 882
+                },
+                {
+                  "x": 518,
+                  "y": 0,
+                  "w": 774,
+                  "h": 882
+                },
+                {
+                  "x": 845,
+                  "y": 0,
+                  "w": 441,
+                  "h": 882
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1292,
+                  "h": 882
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 882,
+                "resize": "fit",
+                "w": 1292
+              },
+              "medium": {
+                "h": 819,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 464,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/LxLRlNszCs"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1292,
+                "h": 724
+              },
+              {
+                "x": 410,
+                "y": 0,
+                "w": 882,
+                "h": 882
+              },
+              {
+                "x": 518,
+                "y": 0,
+                "w": 774,
+                "h": 882
+              },
+              {
+                "x": 845,
+                "y": 0,
+                "w": 441,
+                "h": 882
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1292,
+                "h": 882
+              }
+            ],
+            "expandedUrl": "https://x.com/yombo/status/1179658459056365570/photo/1",
+            "url": "https://pbs.twimg.com/media/EF79DLVW4AE_QV8.png",
+            "width": 1292,
+            "height": 882
+          }
+        ],
+        "conversation_count": 5,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:41.908Z"
     },
     {
       "id": "archive-1178849200634613763",
@@ -73,7 +1202,178 @@
       "fullText": "どうでもいいけど滝川クリステルさんは中国では『滝川雅美』さんでした。もし「クリステル」じゃなくて「クリスタル」だったら『滝川水晶』という風に訳されてたのかな。 https://t.co/WgHpcxqZep",
       "expandedUrl": "https://twitter.com/i/web/status/1178849200634613763",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 9,
+        "possibly_sensitive": false,
+        "created_at": "2019-10-01T01:48:46.000Z",
+        "display_text_range": [
+          0,
+          79
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/WgHpcxqZep",
+              "expanded_url": "https://x.com/Kuroki_Shinji/status/1178849200634613763/photo/1",
+              "indices": [
+                80,
+                103
+              ],
+              "url": "https://t.co/WgHpcxqZep"
+            }
+          ]
+        },
+        "id_str": "1178849200634613763",
+        "text": "どうでもいいけど滝川クリステルさんは中国では『滝川雅美』さんでした。もし「クリステル」じゃなくて「クリスタル」だったら『滝川水晶』という風に訳されてたのかな。 https://t.co/WgHpcxqZep",
+        "user": {
+          "id_str": "404175560",
+          "name": "黒木真二",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/649389433402224640/23BWGBHU_normal.jpg",
+          "screen_name": "Kuroki_Shinji",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1178849200634613763"
+          ],
+          "editable_until_msecs": "1569896326047",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/WgHpcxqZep",
+            "expanded_url": "https://x.com/Kuroki_Shinji/status/1178849200634613763/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              80,
+              103
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EFwdGSqU4AAnjRx.png",
+            "original_info": {
+              "height": 410,
+              "width": 592,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 78,
+                  "w": 592,
+                  "h": 332
+                },
+                {
+                  "x": 182,
+                  "y": 0,
+                  "w": 410,
+                  "h": 410
+                },
+                {
+                  "x": 218,
+                  "y": 0,
+                  "w": 360,
+                  "h": 410
+                },
+                {
+                  "x": 296,
+                  "y": 0,
+                  "w": 205,
+                  "h": 410
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 592,
+                  "h": 410
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 410,
+                "resize": "fit",
+                "w": 592
+              },
+              "medium": {
+                "h": 410,
+                "resize": "fit",
+                "w": 592
+              },
+              "small": {
+                "h": 410,
+                "resize": "fit",
+                "w": 592
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/WgHpcxqZep"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 78,
+                "w": 592,
+                "h": 332
+              },
+              {
+                "x": 182,
+                "y": 0,
+                "w": 410,
+                "h": 410
+              },
+              {
+                "x": 218,
+                "y": 0,
+                "w": 360,
+                "h": 410
+              },
+              {
+                "x": 296,
+                "y": 0,
+                "w": 205,
+                "h": 410
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 592,
+                "h": 410
+              }
+            ],
+            "expandedUrl": "https://x.com/Kuroki_Shinji/status/1178849200634613763/photo/1",
+            "url": "https://pbs.twimg.com/media/EFwdGSqU4AAnjRx.png",
+            "width": 592,
+            "height": 410
+          }
+        ],
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:43.069Z"
     },
     {
       "id": "archive-1177536961306775552",
@@ -81,7 +1381,8 @@
       "fullText": "きれい。。。。。。#ABZU #NintendoSwitch https://t.co/i8y2q7ZS0V",
       "expandedUrl": "https://twitter.com/i/web/status/1177536961306775552",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1176102385447559168",
@@ -89,7 +1390,8 @@
       "fullText": "美しい。。。 https://t.co/JItyLiWRF5",
       "expandedUrl": "https://twitter.com/i/web/status/1176102385447559168",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1165173858724237313",
@@ -97,7 +1399,8 @@
       "fullText": "新宿立候補 李小牧\n\n彼はweiboだけではなく、昔、テレビでも尖閣諸島は我々中国のものだと主張した。彼は海外の愛国者として中国の番組によく出演している。\n\n李氏は外国人参政権が日本を救うとよく言っているが、本当に認めたら、中国の愛国者は日本を変える力が手に入リ、日本は逆に危なくなる。 https://t.co/7N3j56bazY",
       "expandedUrl": "https://twitter.com/i/web/status/1165173858724237313",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1153628243116773378",
@@ -105,7 +1408,139 @@
       "fullText": "🇨🇳うわあああ！！！！\nポケモン×テンセントがゲーム開発！\n楽しみ嬉しいわーーーい！！！\nこれは人気になればまたゲーム内でECのクーポン配布とかしていくのかな\n随時情報探してツイートします🔥 https://t.co/SDOdYyF84r https://t.co/43hrzyjMhb",
       "expandedUrl": "https://twitter.com/i/web/status/1153628243116773378",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 2,
+        "possibly_sensitive": false,
+        "created_at": "2019-07-23T11:29:41.000Z",
+        "display_text_range": [
+          0,
+          98
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/43hrzyjMhb",
+              "expanded_url": "https://x.com/nihaohayo22/status/1153628243116773378/photo/1",
+              "indices": [
+                96,
+                119
+              ],
+              "url": "https://t.co/43hrzyjMhb"
+            }
+          ]
+        },
+        "id_str": "1153628243116773378",
+        "text": "🇨🇳うわあああ！！！！\nポケモン×テンセントがゲーム開発！\n楽しみ嬉しいわーーーい！！！\nこれは人気になればまたゲーム内でECのクーポン配布とかしていくのかな\n随時情報探してツイートします🔥 https://t.co/43hrzyjMhb",
+        "user": {
+          "id_str": "1028975372258312193",
+          "name": "🥟",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1683426885823504385/Y7OAJL-X_normal.jpg",
+          "screen_name": "nihaohayo22",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1153628243116773378"
+          ],
+          "editable_until_msecs": "1563883181192",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/43hrzyjMhb",
+            "expanded_url": "https://x.com/nihaohayo22/status/1153628243116773378/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              96,
+              119
+            ],
+            "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/EAKCxAcU8AADxJh.jpg",
+            "original_info": {
+              "height": 124,
+              "width": 220,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 124,
+                "resize": "fit",
+                "w": 220
+              },
+              "medium": {
+                "h": 124,
+                "resize": "fit",
+                "w": 220
+              },
+              "small": {
+                "h": 124,
+                "resize": "fit",
+                "w": 220
+              },
+              "thumb": {
+                "h": 124,
+                "resize": "crop",
+                "w": 124
+              }
+            },
+            "type": "animated_gif",
+            "url": "https://t.co/43hrzyjMhb",
+            "video_info": {
+              "aspect_ratio": [
+                55,
+                31
+              ],
+              "variants": [
+                {
+                  "bitrate": 0,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/tweet_video/EAKCxAcU8AADxJh.mp4"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            55,
+            31
+          ],
+          "contentType": "gif",
+          "durationMs": 0,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/EAKCxAcU8AADxJh.jpg",
+          "variants": [
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/tweet_video/EAKCxAcU8AADxJh.mp4"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1153628243116773378"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:48.003Z"
     },
     {
       "id": "archive-1152984332241264640",
@@ -113,7 +1548,8 @@
       "fullText": "#ゼルダの伝説 #BreathoftheWild #NintendoSwitch https://t.co/qxmBhMW1ta",
       "expandedUrl": "https://twitter.com/i/web/status/1152984332241264640",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1149879154025697280",
@@ -121,7 +1557,8 @@
       "fullText": "Kiwi Walks開発の大人気RPG\n魔女の泉シリーズ最新作\n《魔女の泉4》ティザー動画大公開！\n\n《魔女の泉4》 \n～小さな王、モカモリの話～\n\niOS/Android対応\n2019年11月配信予定\n\n#魔女の泉4 https://t.co/t396YiDEOs",
       "expandedUrl": "https://twitter.com/i/web/status/1149879154025697280",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     },
     {
       "id": "archive-1141368224182759424",
@@ -129,7 +1566,175 @@
       "fullText": "モカモリ、絶賛修練中…\n\n#魔女の泉4 https://t.co/8FkjZCWT7k",
       "expandedUrl": "https://twitter.com/i/web/status/1141368224182759424",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 401,
+        "possibly_sensitive": false,
+        "created_at": "2019-06-19T15:32:44.000Z",
+        "display_text_range": [
+          0,
+          19
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                13,
+                19
+              ],
+              "text": "魔女の泉4"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/8FkjZCWT7k",
+              "expanded_url": "https://x.com/WitchSprings/status/1141368224182759424/video/1",
+              "indices": [
+                20,
+                43
+              ],
+              "url": "https://t.co/8FkjZCWT7k"
+            }
+          ]
+        },
+        "id_str": "1141368224182759424",
+        "text": "モカモリ、絶賛修練中…\n\n#魔女の泉4 https://t.co/8FkjZCWT7k",
+        "user": {
+          "id_str": "788604244563722241",
+          "name": "【公式】魔女の泉",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1739506330170445824/E4pPmLyx_normal.png",
+          "screen_name": "WitchSprings",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1141368224182759424"
+          ],
+          "editable_until_msecs": "1560960164898",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/8FkjZCWT7k",
+            "expanded_url": "https://x.com/WitchSprings/status/1141368224182759424/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              20,
+              43
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1141365896008499202/pu/img/4GH8B0s9yUSuZjZz.jpg",
+            "original_info": {
+              "height": 480,
+              "width": 720,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 480,
+                "resize": "fit",
+                "w": 720
+              },
+              "medium": {
+                "h": 480,
+                "resize": "fit",
+                "w": 720
+              },
+              "small": {
+                "h": 453,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/8FkjZCWT7k",
+            "video_info": {
+              "aspect_ratio": [
+                3,
+                2
+              ],
+              "duration_millis": 23084,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1141365896008499202/pu/pl/kMZ_7YS8sLe5pOLJ.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1141365896008499202/pu/vid/404x270/b_th5_F6YMf1gk6P.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1141365896008499202/pu/vid/540x360/EQ5KQQHpx_OT0XtX.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1141365896008499202/pu/vid/720x480/KXWG-mnOb5Uj3m04.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            3,
+            2
+          ],
+          "contentType": "media_entity",
+          "durationMs": 23084,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1141365896008499202/pu/img/4GH8B0s9yUSuZjZz.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1141365896008499202/pu/pl/kMZ_7YS8sLe5pOLJ.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1141365896008499202/pu/vid/404x270/b_th5_F6YMf1gk6P.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1141365896008499202/pu/vid/540x360/EQ5KQQHpx_OT0XtX.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1141365896008499202/pu/vid/720x480/KXWG-mnOb5Uj3m04.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1141368224182759424"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 11,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:51.479Z"
     },
     {
       "id": "archive-1139961662713188357",
@@ -137,7 +1742,158 @@
       "fullText": "給香港人\n我們日本人永遠是香港人的朋友。當香港的自由受到威脅時，我們會站在你們這邊。願香港的自由永遠持續下去🇭🇰\n\nDear Hong Konger, \nJapanese will always be your friend. When freedom is being eroded in Hong Kong, we will always be your side. Pray for Hong Kong eternal freedom🇯🇵 https://t.co/d4Yk7gpkvG",
       "expandedUrl": "https://twitter.com/i/web/status/1139961662713188357",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "zh",
+        "favorite_count": 6400,
+        "possibly_sensitive": false,
+        "created_at": "2019-06-15T18:23:34.000Z",
+        "display_text_range": [
+          0,
+          226
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/d4Yk7gpkvG",
+              "expanded_url": "https://x.com/suzutaro18/status/1139961662713188357/video/1",
+              "indices": [
+                223,
+                246
+              ],
+              "url": "https://t.co/d4Yk7gpkvG"
+            }
+          ]
+        },
+        "id_str": "1139961662713188357",
+        "text": "給香港人\n我們日本人永遠是香港人的朋友。當香港的自由受到威脅時，我們會站在你們這邊。願香港的自由永遠持續下去🇭🇰\n\nDear Hong Konger, \nJapanese will always be your friend. When freedom is being eroded in Hong Kong, we will always be your side. Pray for Hong Kong eternal freedom🇯🇵 https://t.co/d4Yk7gpkvG",
+        "user": {
+          "id_str": "820936813",
+          "name": "平野雨龍 Uryu Hirano🐉",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1929022836666150920/2QK7dNum_normal.jpg",
+          "screen_name": "uryuhirano",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1139961662713188357"
+          ],
+          "editable_until_msecs": "1560624814511",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/d4Yk7gpkvG",
+            "expanded_url": "https://x.com/suzutaro18/status/1139961662713188357/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              223,
+              246
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1139961027079000064/pu/img/_m3KGwhUMwpAYgqq.jpg",
+            "original_info": {
+              "height": 816,
+              "width": 458,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 816,
+                "resize": "fit",
+                "w": 458
+              },
+              "medium": {
+                "h": 816,
+                "resize": "fit",
+                "w": 458
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 382
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/d4Yk7gpkvG",
+            "video_info": {
+              "aspect_ratio": [
+                229,
+                408
+              ],
+              "duration_millis": 107000,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1139961027079000064/pu/pl/aGHrFG2KpBc9oD_m.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 632000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1139961027079000064/pu/vid/320x570/8TT7aI7zLqXXEycI.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1139961027079000064/pu/vid/458x816/mt8wbeHZPwP2jtzm.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            229,
+            408
+          ],
+          "contentType": "media_entity",
+          "durationMs": 107000,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1139961027079000064/pu/img/_m3KGwhUMwpAYgqq.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1139961027079000064/pu/pl/aGHrFG2KpBc9oD_m.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1139961027079000064/pu/vid/320x570/8TT7aI7zLqXXEycI.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1139961027079000064/pu/vid/458x816/mt8wbeHZPwP2jtzm.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1139961662713188357"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 511,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:52.656Z"
     },
     {
       "id": "archive-1137904723510480897",
@@ -145,7 +1901,387 @@
       "fullText": "【報告】自主制作で「SkyNet」というコンテンツを作りました。\n長らくWebGL制作から離れていたので、リハビリも兼ねてオープンデータと連携した日本上空の航空状況をシミュレートしてみました。\nhttps://t.co/DHLqYJTnr8 \n#webgl #threejs #OpenData",
       "expandedUrl": "https://twitter.com/i/web/status/1137904723510480897",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 541,
+        "possibly_sensitive": false,
+        "created_at": "2019-06-10T02:10:01.000Z",
+        "display_text_range": [
+          0,
+          147
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                122,
+                128
+              ],
+              "text": "webgl"
+            },
+            {
+              "indices": [
+                129,
+                137
+              ],
+              "text": "threejs"
+            },
+            {
+              "indices": [
+                138,
+                147
+              ],
+              "text": "OpenData"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "nulldesign.jp/skynet/",
+              "expanded_url": "https://nulldesign.jp/skynet/",
+              "indices": [
+                97,
+                120
+              ],
+              "url": "https://t.co/DHLqYJTnr8"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1137904723510480897",
+        "text": "【報告】自主制作で「SkyNet」というコンテンツを作りました。\n長らくWebGL制作から離れていたので、リハビリも兼ねてオープンデータと連携した日本上空の航空状況をシミュレートしてみました。\nhttps://t.co/DHLqYJTnr8 \n#webgl #threejs #OpenData",
+        "user": {
+          "id_str": "31341148",
+          "name": "Hiroshi",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1563860200918073345/ZVPMeEsJ_normal.jpg",
+          "screen_name": "nulldesign",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1137904723510480897"
+          ],
+          "editable_until_msecs": "1560134401989",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 10,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/DHLqYJTnr8",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 150,
+                "width": 267,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "SkyNet is a project to visualize aviation information in Japan. Based on the flight schedule obtained in real time, we simulate the current Japanese sky situation.　SkyNetは日本における航空情報を視覚化するプロジェクトです。リ...",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "nulldesign.jp",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 320,
+                "width": 569,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=800x320_1"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 720,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 81,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "creator": {
+              "type": "USER",
+              "user_value": {
+                "id_str": "31341148",
+                "path": []
+              }
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 720,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 720,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "nulldesign.jp",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 48,
+                      "green": 40,
+                      "red": 36
+                    },
+                    "percentage": 94.91
+                  },
+                  {
+                    "rgb": {
+                      "blue": 126,
+                      "green": 106,
+                      "red": 84
+                    },
+                    "percentage": 3.94
+                  },
+                  {
+                    "rgb": {
+                      "blue": 48,
+                      "green": 55,
+                      "red": 54
+                    },
+                    "percentage": 0.52
+                  },
+                  {
+                    "rgb": {
+                      "blue": 96,
+                      "green": 81,
+                      "red": 111
+                    },
+                    "percentage": 0.26
+                  },
+                  {
+                    "rgb": {
+                      "blue": 112,
+                      "green": 106,
+                      "red": 70
+                    },
+                    "percentage": 0.26
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "SkyNet",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 48,
+                      "green": 40,
+                      "red": 36
+                    },
+                    "percentage": 94.91
+                  },
+                  {
+                    "rgb": {
+                      "blue": 126,
+                      "green": 106,
+                      "red": 84
+                    },
+                    "percentage": 3.94
+                  },
+                  {
+                    "rgb": {
+                      "blue": 48,
+                      "green": 55,
+                      "red": 54
+                    },
+                    "percentage": 0.52
+                  },
+                  {
+                    "rgb": {
+                      "blue": 96,
+                      "green": 81,
+                      "red": 111
+                    },
+                    "percentage": 0.26
+                  },
+                  {
+                    "rgb": {
+                      "blue": 112,
+                      "green": 106,
+                      "red": 70
+                    },
+                    "percentage": 0.26
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 720,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 48,
+                      "green": 40,
+                      "red": 36
+                    },
+                    "percentage": 94.91
+                  },
+                  {
+                    "rgb": {
+                      "blue": 126,
+                      "green": 106,
+                      "red": 84
+                    },
+                    "percentage": 3.94
+                  },
+                  {
+                    "rgb": {
+                      "blue": 48,
+                      "green": 55,
+                      "red": 54
+                    },
+                    "percentage": 0.52
+                  },
+                  {
+                    "rgb": {
+                      "blue": 96,
+                      "green": 81,
+                      "red": 111
+                    },
+                    "percentage": 0.26
+                  },
+                  {
+                    "rgb": {
+                      "blue": 112,
+                      "green": 106,
+                      "red": 70
+                    },
+                    "percentage": 0.26
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 720,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/DHLqYJTnr8",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 720,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930315833571717124/jO9OufQE?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:53.841Z"
     },
     {
       "id": "archive-1124165667416993793",
@@ -153,7 +2289,47 @@
       "fullText": "「システムが落ちたのではない。あなたがたが上昇しているのだ。」\n\n困った時にお使いください🙇",
       "expandedUrl": "https://twitter.com/i/web/status/1124165667416993793",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 472,
+        "created_at": "2019-05-03T04:15:55.000Z",
+        "display_text_range": [
+          0,
+          47
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1124165667416993793",
+        "text": "「システムが落ちたのではない。あなたがたが上昇しているのだ。」\n\n困った時にお使いください🙇",
+        "user": {
+          "id_str": "267117239",
+          "name": "しよたろ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1313232835302453248/41bDBza-_normal.jpg",
+          "screen_name": "_siyotaro",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1124165667416993793"
+          ],
+          "editable_until_msecs": "1556858755757",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-10T00:03:54.997Z"
     },
     {
       "id": "archive-1088380604704411648",
@@ -161,7 +2337,8 @@
       "fullText": "This Tweet is from a suspended account. {learnmore}",
       "expandedUrl": "https://twitter.com/i/web/status/1088380604704411648",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.915Z"
+      "processedAt": "2025-06-09T12:50:22.915Z",
+      "private": true
     }
   ]
 }

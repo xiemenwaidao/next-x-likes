@@ -9,7 +9,226 @@
       "fullText": "ここのリプを見ると「間違った発言」はできないのがわかりますね… https://t.co/hVrE14fmRd",
       "expandedUrl": "https://twitter.com/i/web/status/1285102233831354370",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 77,
+        "created_at": "2020-07-20T06:40:23.000Z",
+        "display_text_range": [
+          0,
+          31
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1285102233831354370",
+        "text": "ここのリプを見ると「間違った発言」はできないのがわかりますね…",
+        "user": {
+          "id_str": "86076630",
+          "name": "けろっと",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1342490625728368640/eNsgZKh0_normal.jpg",
+          "screen_name": "kerotto",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1285102233831354370"
+          ],
+          "editable_until_msecs": "1595229023247",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "ja",
+          "reply_count": 22,
+          "retweet_count": 131,
+          "favorite_count": 216,
+          "possibly_sensitive": false,
+          "created_at": "2020-07-20T05:17:42.000Z",
+          "display_text_range": [
+            0,
+            151
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "onestop.ucas.ac.cn/home/infob/143…",
+                "expanded_url": "http://onestop.ucas.ac.cn/home/infob/143523c8-c00c-400f-b060-a1f555733951/1",
+                "indices": [
+                  128,
+                  151
+                ],
+                "url": "https://t.co/67OomMD9Rn"
+              }
+            ],
+            "user_mentions": [],
+            "symbols": [],
+            "media": [
+              {
+                "display_url": "pic.x.com/kAsgGmJdbN",
+                "expanded_url": "https://x.com/kerotto/status/1285081427348844544/photo/1",
+                "indices": [
+                  152,
+                  175
+                ],
+                "url": "https://t.co/kAsgGmJdbN"
+              }
+            ]
+          },
+          "id_str": "1285081427348844544",
+          "text": "中国でも個人は政治についても自由に発言できるという話が出回ってますが、壁に向かって言うならそうですけどSNS等で反政府や国を侮辱するよう発言すると処分されます。ツィッターなど海外のものでも。中国科学院大学の大学院生がつい最近ツィッターでそれをして除籍処分\nhttps://t.co/67OomMD9Rn https://t.co/kAsgGmJdbN",
+          "user": {
+            "id_str": "86076630",
+            "name": "けろっと",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1342490625728368640/eNsgZKh0_normal.jpg",
+            "screen_name": "kerotto",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1285081427348844544"
+            ],
+            "editable_until_msecs": "1595224062595",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "mediaDetails": [
+            {
+              "display_url": "pic.x.com/kAsgGmJdbN",
+              "expanded_url": "https://x.com/kerotto/status/1285081427348844544/photo/1",
+              "ext_media_availability": {
+                "status": "Available"
+              },
+              "indices": [
+                152,
+                175
+              ],
+              "media_url_https": "https://pbs.twimg.com/media/EdWGvp2U4AEI-sR.jpg",
+              "original_info": {
+                "height": 2048,
+                "width": 1448,
+                "focus_rects": [
+                  {
+                    "x": 0,
+                    "y": 1237,
+                    "w": 1448,
+                    "h": 811
+                  },
+                  {
+                    "x": 0,
+                    "y": 600,
+                    "w": 1448,
+                    "h": 1448
+                  },
+                  {
+                    "x": 0,
+                    "y": 397,
+                    "w": 1448,
+                    "h": 1651
+                  },
+                  {
+                    "x": 424,
+                    "y": 0,
+                    "w": 1024,
+                    "h": 2048
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "w": 1448,
+                    "h": 2048
+                  }
+                ]
+              },
+              "sizes": {
+                "large": {
+                  "h": 2048,
+                  "resize": "fit",
+                  "w": 1448
+                },
+                "medium": {
+                  "h": 1200,
+                  "resize": "fit",
+                  "w": 848
+                },
+                "small": {
+                  "h": 680,
+                  "resize": "fit",
+                  "w": 481
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "photo",
+              "url": "https://t.co/kAsgGmJdbN"
+            }
+          ],
+          "photos": [
+            {
+              "backgroundColor": {
+                "red": 204,
+                "green": 214,
+                "blue": 221
+              },
+              "cropCandidates": [
+                {
+                  "x": 0,
+                  "y": 1237,
+                  "w": 1448,
+                  "h": 811
+                },
+                {
+                  "x": 0,
+                  "y": 600,
+                  "w": 1448,
+                  "h": 1448
+                },
+                {
+                  "x": 0,
+                  "y": 397,
+                  "w": 1448,
+                  "h": 1651
+                },
+                {
+                  "x": 424,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1448,
+                  "h": 2048
+                }
+              ],
+              "expandedUrl": "https://x.com/kerotto/status/1285081427348844544/photo/1",
+              "url": "https://pbs.twimg.com/media/EdWGvp2U4AEI-sR.jpg",
+              "width": 1448,
+              "height": 2048
+            }
+          ],
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:32.767Z"
     },
     {
       "id": "archive-1284755166315470848",
@@ -17,7 +236,47 @@
       "fullText": "「中国人のモラルの無さは中共のせい、文化大革命のせいなどの考え方は本末転倒」\n\n中国は素晴らしい。が、🇨🇳がすべて壊した。よって🇨🇳が全部悪いというロジックを展開している個人や報道機関は多いが、敢えて蓋をして隠してるのも多い。魯迅や林語堂を読んだら🇨🇳は関係ないことくらいわかるのに。 https://t.co/OwNUh2b6j4",
       "expandedUrl": "https://twitter.com/i/web/status/1284755166315470848",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 110,
+        "created_at": "2020-07-19T07:41:15.000Z",
+        "display_text_range": [
+          0,
+          148
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1284755166315470848",
+        "text": "「中国人のモラルの無さは中共のせい、文化大革命のせいなどの考え方は本末転倒」\n\n中国は素晴らしい。が、🇨🇳がすべて壊した。よって🇨🇳が全部悪いというロジックを展開している個人や報道機関は多いが、敢えて蓋をして隠してるのも多い。魯迅や林語堂を読んだら🇨🇳は関係ないことくらいわかるのに。",
+        "user": {
+          "id_str": "3193715799",
+          "name": "台湾史.jp",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1651073069627379714/sUkT7AMn_normal.jpg",
+          "screen_name": "Formosanhistory",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1284755166315470848"
+          ],
+          "editable_until_msecs": "1595146275903",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:33.925Z"
     },
     {
       "id": "archive-1284527730541727744",
@@ -25,7 +284,8 @@
       "fullText": "プログラミング系の電子書籍買ったとき毎回これやってた\n\nかなり便利 https://t.co/B1bDK0XxMS",
       "expandedUrl": "https://twitter.com/i/web/status/1284527730541727744",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "notfound": true
     },
     {
       "id": "archive-1284342698246238210",
@@ -33,7 +293,8 @@
       "fullText": "You’re unable to view this Tweet because this account owner limits who can view their Tweets. {learnmore}",
       "expandedUrl": "https://twitter.com/i/web/status/1284342698246238210",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "private": true
     },
     {
       "id": "archive-1284264244289003521",
@@ -41,7 +302,58 @@
       "fullText": "台湾のIT大臣いわく。\n「通信インフラに中国製を入れるのは、トロイの木馬を自陣に入れるのと同じ」\n「中国に民間企業は存在しない。すべて共産党のコントロール下にある」\n\nこれを日経(アジアンレビュー)とのインタビューで述べてるのがミソ。\nhttps://t.co/RhKz3mh6qW",
       "expandedUrl": "https://twitter.com/i/web/status/1284264244289003521",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 27181,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-17T23:10:30.000Z",
+        "display_text_range": [
+          0,
+          141
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "epochtimes.com/b5/20/7/16/n12…",
+              "expanded_url": "https://www.epochtimes.com/b5/20/7/16/n12261105.htm/amp?__twitter_impression=true",
+              "indices": [
+                118,
+                141
+              ],
+              "url": "https://t.co/RhKz3mh6qW"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1284264244289003521",
+        "text": "台湾のIT大臣いわく。\n「通信インフラに中国製を入れるのは、トロイの木馬を自陣に入れるのと同じ」\n「中国に民間企業は存在しない。すべて共産党のコントロール下にある」\n\nこれを日経(アジアンレビュー)とのインタビューで述べてるのがミソ。\nhttps://t.co/RhKz3mh6qW",
+        "user": {
+          "id_str": "3193715799",
+          "name": "台湾史.jp",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1651073069627379714/sUkT7AMn_normal.jpg",
+          "screen_name": "Formosanhistory",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1284264244289003521"
+          ],
+          "editable_until_msecs": "1595029230971",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 94,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:37.399Z"
     },
     {
       "id": "archive-1284183535104868354",
@@ -49,7 +361,47 @@
       "fullText": "three.js は自分でシェーダ書こうと思ったときに、それ自体はそんなに大変じゃないんだけど他のプリセットのマテリアルを当てたオブジェクトと共存させようとする（かつ質感を揃えようとする）と一気にヤバさが増すことがいまさらわかったのでピュア WebGL は全部自分でやれていいな～ってなってる",
       "expandedUrl": "https://twitter.com/i/web/status/1284183535104868354",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 12,
+        "created_at": "2020-07-17T17:49:48.000Z",
+        "display_text_range": [
+          0,
+          146
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1284183535104868354",
+        "text": "three.js は自分でシェーダ書こうと思ったときに、それ自体はそんなに大変じゃないんだけど他のプリセットのマテリアルを当てたオブジェクトと共存させようとする（かつ質感を揃えようとする）と一気にヤバさが増すことがいまさらわかったのでピュア WebGL は全部自分でやれていいな～ってなってる",
+        "user": {
+          "id_str": "153079194",
+          "name": "h_doxas",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1133019079/doxas_smile_normal.jpg",
+          "screen_name": "h_doxas",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1284183535104868354"
+          ],
+          "editable_until_msecs": "1595009988402",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:38.557Z"
     },
     {
       "id": "archive-1284135381370171392",
@@ -57,7 +409,8 @@
       "fullText": "先ほど、中国のマネー教育における哲学を見ました。\n\nしかし、中国人が生きるための哲学(拝金主義)で教育された中国の子どもは実際どうなるのか？一つ例をあげます。\n\n理想と現実のギャップがかなり大きいので、中国の宣伝を信じるとバカを見る。 https://t.co/fweGbtat0z https://t.co/5WUhY0MXWr",
       "expandedUrl": "https://twitter.com/i/web/status/1284135381370171392",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "private": true
     },
     {
       "id": "archive-1283756508082102273",
@@ -65,7 +418,62 @@
       "fullText": "const quiz = [\n    {q:'A',c:['A0','A1','A2']},\n  ];\n\n「１つの言葉から３つ生まれるもの」の考え方面白かったなぁ\nたぶん@web_art_picassoさんは前回も説明したと思うけど今日完全に覚えた。笑\n\n企画再度がんばろーっと\n\n＃現役エンジニアと繋がりたい\n＃勉強会",
       "expandedUrl": "https://twitter.com/i/web/status/1283756508082102273",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 4,
+        "created_at": "2020-07-16T13:32:57.000Z",
+        "display_text_range": [
+          0,
+          160
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                141,
+                155
+              ],
+              "text": "現役エンジニアと繋がりたい"
+            },
+            {
+              "indices": [
+                156,
+                160
+              ],
+              "text": "勉強会"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1283756508082102273",
+        "text": "const quiz = [\n    {q:'A',c:['A0','A1','A2']},\n  ];\n\n「１つの言葉から３つ生まれるもの」の考え方面白かったなぁ\nたぶん@web_art_picassoさんは前回も説明したと思うけど今日完全に覚えた。笑\n\n企画再度がんばろーっと\n\n＃現役エンジニアと繋がりたい\n＃勉強会",
+        "user": {
+          "id_str": "1245565172095176704",
+          "name": "複業保育士はやし",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1245567299634921477/0q7gaVW6_normal.jpg",
+          "screen_name": "hukugyo_hayashi",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1283756508082102273"
+          ],
+          "editable_until_msecs": "1594908177226",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:40.891Z"
     },
     {
       "id": "archive-1283693401246806016",
@@ -73,7 +481,397 @@
       "fullText": "【ダライ・ラマ法王を賛美した罪でチベット人2名が懲役刑に＝中国青海省】\n两名藏人赞美达赖喇嘛被判刑\nhttps://t.co/h1pd3A5llO \n▲ダライ・ラマ法王を賛美する歌を作って歌ったのが「煽動分裂国家」と「国家機密漏洩」の罪にあたるそうです。その他、歌をSNSで配布した女性も逮捕とのこと\n#Tibet",
       "expandedUrl": "https://twitter.com/i/web/status/1283693401246806016",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 186,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-16T09:22:11.000Z",
+        "display_text_range": [
+          0,
+          157
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                151,
+                157
+              ],
+              "text": "Tibet"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "bit.ly/3fA225C",
+              "expanded_url": "https://bit.ly/3fA225C",
+              "indices": [
+                50,
+                73
+              ],
+              "url": "https://t.co/h1pd3A5llO"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1283693401246806016",
+        "text": "【ダライ・ラマ法王を賛美した罪でチベット人2名が懲役刑に＝中国青海省】\n两名藏人赞美达赖喇嘛被判刑\nhttps://t.co/h1pd3A5llO \n▲ダライ・ラマ法王を賛美する歌を作って歌ったのが「煽動分裂国家」と「国家機密漏洩」の罪にあたるそうです。その他、歌をSNSで配布した女性も逮捕とのこと\n#Tibet",
+        "user": {
+          "id_str": "44386311",
+          "name": "黒色中国",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1616332776323829760/D6gOQtFu_normal.jpg",
+          "screen_name": "bci_",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1283693401246806016"
+          ],
+          "editable_until_msecs": "1594893131384",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/h1pd3A5llO",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 147,
+                "width": 280,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "青海泽库县两名藏人通过歌曲赞美达赖喇嘛而在去年遭到拘捕，本月初分别被判处七个月和三年有期徒刑。",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "www.rfa.org",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 315,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=600x600"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "site": {
+              "scribe_key": "publisher_id",
+              "type": "USER",
+              "user_value": {
+                "id_str": "16561457",
+                "path": []
+              }
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 76,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_alt_text": {
+              "string_value": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+              "type": "STRING"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "rfa.org",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_alt_text": {
+              "string_value": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+              "type": "STRING"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 33,
+                      "green": 41,
+                      "red": 50
+                    },
+                    "percentage": 33.89
+                  },
+                  {
+                    "rgb": {
+                      "blue": 183,
+                      "green": 191,
+                      "red": 186
+                    },
+                    "percentage": 30.96
+                  },
+                  {
+                    "rgb": {
+                      "blue": 39,
+                      "green": 64,
+                      "red": 103
+                    },
+                    "percentage": 8.9
+                  },
+                  {
+                    "rgb": {
+                      "blue": 119,
+                      "green": 141,
+                      "red": 191
+                    },
+                    "percentage": 4.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 36,
+                      "green": 36,
+                      "red": 73
+                    },
+                    "percentage": 2.97
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "两名藏人赞美达赖喇嘛被判刑",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 33,
+                      "green": 41,
+                      "red": 50
+                    },
+                    "percentage": 33.89
+                  },
+                  {
+                    "rgb": {
+                      "blue": 183,
+                      "green": 191,
+                      "red": 186
+                    },
+                    "percentage": 30.96
+                  },
+                  {
+                    "rgb": {
+                      "blue": 39,
+                      "green": 64,
+                      "red": 103
+                    },
+                    "percentage": 8.9
+                  },
+                  {
+                    "rgb": {
+                      "blue": 119,
+                      "green": 141,
+                      "red": 191
+                    },
+                    "percentage": 4.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 36,
+                      "green": 36,
+                      "red": 73
+                    },
+                    "percentage": 2.97
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 33,
+                      "green": 41,
+                      "red": 50
+                    },
+                    "percentage": 33.89
+                  },
+                  {
+                    "rgb": {
+                      "blue": 183,
+                      "green": 191,
+                      "red": 186
+                    },
+                    "percentage": 30.96
+                  },
+                  {
+                    "rgb": {
+                      "blue": 39,
+                      "green": 64,
+                      "red": 103
+                    },
+                    "percentage": 8.9
+                  },
+                  {
+                    "rgb": {
+                      "blue": 119,
+                      "green": 141,
+                      "red": 191
+                    },
+                    "percentage": 4.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 36,
+                      "green": 36,
+                      "red": 73
+                    },
+                    "percentage": 2.97
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/h1pd3A5llO",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "alt": "被判刑的青海泽库县藏人康卓才丹（消息人士提供）",
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1931769864517222401/mFps7kfy?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:42.089Z"
     },
     {
       "id": "archive-1282687919761711104",
@@ -81,7 +879,186 @@
       "fullText": "うおおおおおおおおおおお！！！！！！やったあああああああああああああああああああああああああああああああああああ！！！アルバトリオン撃破ぁあああああああ！！！ #MHWIB https://t.co/O7AdMbYjEX",
       "expandedUrl": "https://twitter.com/i/web/status/1282687919761711104",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 6,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-13T14:46:45.000Z",
+        "display_text_range": [
+          0,
+          86
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                80,
+                86
+              ],
+              "text": "MHWIB"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/O7AdMbYjEX",
+              "expanded_url": "https://x.com/GranatoLeone/status/1282687919761711104/photo/1",
+              "indices": [
+                87,
+                110
+              ],
+              "url": "https://t.co/O7AdMbYjEX"
+            }
+          ]
+        },
+        "id_str": "1282687919761711104",
+        "text": "うおおおおおおおおおおお！！！！！！やったあああああああああああああああああああああああああああああああああああ！！！アルバトリオン撃破ぁあああああああ！！！ #MHWIB https://t.co/O7AdMbYjEX",
+        "user": {
+          "id_str": "943072732970758144",
+          "name": "たけ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1718198855261655040/BmULQkgm_normal.jpg",
+          "screen_name": "GranatoLeone",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1282687919761711104"
+          ],
+          "editable_until_msecs": "1594653405917",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/O7AdMbYjEX",
+            "expanded_url": "https://x.com/GranatoLeone/status/1282687919761711104/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              87,
+              110
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ec0F0zfUEAAUEyC.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1075
+                },
+                {
+                  "x": 840,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1080
+                },
+                {
+                  "x": 919,
+                  "y": 0,
+                  "w": 947,
+                  "h": 1080
+                },
+                {
+                  "x": 1122,
+                  "y": 0,
+                  "w": 540,
+                  "h": 1080
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1080
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/O7AdMbYjEX"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1075
+              },
+              {
+                "x": 840,
+                "y": 0,
+                "w": 1080,
+                "h": 1080
+              },
+              {
+                "x": 919,
+                "y": 0,
+                "w": 947,
+                "h": 1080
+              },
+              {
+                "x": 1122,
+                "y": 0,
+                "w": 540,
+                "h": 1080
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1080
+              }
+            ],
+            "expandedUrl": "https://x.com/GranatoLeone/status/1282687919761711104/photo/1",
+            "url": "https://pbs.twimg.com/media/Ec0F0zfUEAAUEyC.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:43.247Z"
     },
     {
       "id": "archive-1282594313621221377",
@@ -89,7 +1066,167 @@
       "fullText": "PlayDate クランク般若心経を初めて実機で確認できた。回転と移動距離の比率は良い感じ。SDKバージョン上がったら手前側での描画がおかしいので調べる。 https://t.co/RUoo5zYEzZ",
       "expandedUrl": "https://twitter.com/i/web/status/1282594313621221377",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 12600,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-13T08:34:48.000Z",
+        "display_text_range": [
+          0,
+          77
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/RUoo5zYEzZ",
+              "expanded_url": "https://x.com/skoji/status/1282594313621221377/video/1",
+              "indices": [
+                78,
+                101
+              ],
+              "url": "https://t.co/RUoo5zYEzZ"
+            }
+          ]
+        },
+        "id_str": "1282594313621221377",
+        "text": "PlayDate クランク般若心経を初めて実機で確認できた。回転と移動距離の比率は良い感じ。SDKバージョン上がったら手前側での描画がおかしいので調べる。 https://t.co/RUoo5zYEzZ",
+        "user": {
+          "id_str": "4171501",
+          "name": "Satoshi Kojima",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/867008522332057601/RIvNYhpv_normal.jpg",
+          "screen_name": "skoji",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1282594313621221377"
+          ],
+          "editable_until_msecs": "1594631088474",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/RUoo5zYEzZ",
+            "expanded_url": "https://x.com/skoji/status/1282594313621221377/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              78,
+              101
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1282594278602993664/pu/img/1WXiTR1zT4giLKT9.jpg",
+            "original_info": {
+              "height": 588,
+              "width": 720,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 588,
+                "resize": "fit",
+                "w": 720
+              },
+              "medium": {
+                "h": 588,
+                "resize": "fit",
+                "w": 720
+              },
+              "small": {
+                "h": 555,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/RUoo5zYEzZ",
+            "video_info": {
+              "aspect_ratio": [
+                60,
+                49
+              ],
+              "duration_millis": 24033,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1282594278602993664/pu/pl/ZrIXqz1I_8DGoj6Y.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1282594278602993664/pu/vid/330x270/I4ojkxuJTBOZThlp.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1282594278602993664/pu/vid/440x360/83BvXj2uQoY6yfGE.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1282594278602993664/pu/vid/720x588/31tN7hrobTRXUxxi.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            60,
+            49
+          ],
+          "contentType": "media_entity",
+          "durationMs": 24033,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1282594278602993664/pu/img/1WXiTR1zT4giLKT9.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1282594278602993664/pu/pl/ZrIXqz1I_8DGoj6Y.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1282594278602993664/pu/vid/330x270/I4ojkxuJTBOZThlp.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1282594278602993664/pu/vid/440x360/83BvXj2uQoY6yfGE.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1282594278602993664/pu/vid/720x588/31tN7hrobTRXUxxi.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1282594313621221377"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 12,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:44.669Z"
     },
     {
       "id": "archive-1282556291819298817",
@@ -97,7 +1234,224 @@
       "fullText": "50まんえん！え、すごい。\nすごくない？ https://t.co/ONAnb8irai",
       "expandedUrl": "https://twitter.com/i/web/status/1282556291819298817",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 33,
+        "created_at": "2020-07-13T06:03:43.000Z",
+        "display_text_range": [
+          0,
+          20
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1282556291819298817",
+        "text": "50まんえん！え、すごい。\nすごくない？",
+        "user": {
+          "id_str": "2249879000",
+          "name": "unity-chan!公式",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1572483389147746307/fVbpOZfS_normal.jpg",
+          "screen_name": "UnityChan_PR",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1282556291819298817"
+          ],
+          "editable_until_msecs": "1594622023370",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "ja",
+          "reply_count": 1,
+          "retweet_count": 195,
+          "favorite_count": 315,
+          "possibly_sensitive": false,
+          "created_at": "2020-07-13T03:00:00.000Z",
+          "display_text_range": [
+            0,
+            192
+          ],
+          "entities": {
+            "hashtags": [
+              {
+                "indices": [
+                  31,
+                  46
+                ],
+                "text": "ClusterGAMEJAM"
+              }
+            ],
+            "urls": [
+              {
+                "display_url": "gamejam.cluster.mu",
+                "expanded_url": "https://www.gamejam.cluster.mu/",
+                "indices": [
+                  166,
+                  189
+                ],
+                "url": "https://t.co/NEZSnXHaP4"
+              }
+            ],
+            "user_mentions": [],
+            "symbols": [],
+            "media": [
+              {
+                "display_url": "pic.x.com/VnWJddx2FZ",
+                "expanded_url": "https://x.com/cluster_jp/status/1282510059759472640/video/1",
+                "indices": [
+                  190,
+                  213
+                ],
+                "url": "https://t.co/VnWJddx2FZ"
+              }
+            ]
+          },
+          "id_str": "1282510059759472640",
+          "text": "【！優勝賞金50万円！】\n国内最大級のオンラインゲームジャム「#ClusterGAMEJAM 2020 in SUMMER」開催決定🎉\n個人でもチームでも企業でも！\nバーチャルSNS「cluster」に作品を投稿して大賞をつかみ取れ🔥\n\n📅開催期間：7/31(金) 20:00 - 8/2(日) 19:59\n\n▼エントリー受付中！\nhttps://t.co/NEZSnXHaP4 https://t.co/VnWJddx2FZ",
+          "user": {
+            "id_str": "1032114346871087104",
+            "name": "cluster公式∞",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1569909026166829057/51pAmXE__normal.jpg",
+            "screen_name": "cluster_jp",
+            "verified": false,
+            "verified_type": "Business",
+            "is_blue_verified": false,
+            "profile_image_shape": "Square"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1282510059759472640"
+            ],
+            "editable_until_msecs": "1594611000788",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "mediaDetails": [
+            {
+              "additional_media_info": {},
+              "display_url": "pic.x.com/VnWJddx2FZ",
+              "expanded_url": "https://x.com/cluster_jp/status/1282510059759472640/video/1",
+              "ext_media_availability": {
+                "status": "Available"
+              },
+              "indices": [
+                190,
+                213
+              ],
+              "media_url_https": "https://pbs.twimg.com/media/EcyCA_dUMAED6zm.png",
+              "original_info": {
+                "height": 1080,
+                "width": 1920,
+                "focus_rects": []
+              },
+              "sizes": {
+                "large": {
+                  "h": 1080,
+                  "resize": "fit",
+                  "w": 1920
+                },
+                "medium": {
+                  "h": 675,
+                  "resize": "fit",
+                  "w": 1200
+                },
+                "small": {
+                  "h": 383,
+                  "resize": "fit",
+                  "w": 680
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "video",
+              "url": "https://t.co/VnWJddx2FZ",
+              "video_info": {
+                "aspect_ratio": [
+                  16,
+                  9
+                ],
+                "duration_millis": 31283,
+                "variants": [
+                  {
+                    "content_type": "application/x-mpegURL",
+                    "url": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/pl/fr85z7VcXOQkpTLY.m3u8?tag=10"
+                  },
+                  {
+                    "bitrate": 256000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/480x270/QKk7yQNtLD07CIVk.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 832000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/640x360/RYCNNuW3LLUE28Ri.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 2176000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/1280x720/LGZu8HkON5CUHrHz.mp4?tag=10"
+                  }
+                ]
+              }
+            }
+          ],
+          "photos": [],
+          "video": {
+            "aspectRatio": [
+              16,
+              9
+            ],
+            "contentType": "media_entity",
+            "durationMs": 31283,
+            "mediaAvailability": {
+              "status": "available"
+            },
+            "poster": "https://pbs.twimg.com/media/EcyCA_dUMAED6zm.png",
+            "variants": [
+              {
+                "type": "application/x-mpegURL",
+                "src": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/pl/fr85z7VcXOQkpTLY.m3u8?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/480x270/QKk7yQNtLD07CIVk.mp4?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/640x360/RYCNNuW3LLUE28Ri.mp4?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/1280x720/LGZu8HkON5CUHrHz.mp4?tag=10"
+              }
+            ],
+            "videoId": {
+              "type": "tweet",
+              "id": "1282510059759472640"
+            },
+            "viewCount": 0
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:45.868Z"
     },
     {
       "id": "archive-1282510059759472640",
@@ -105,7 +1459,186 @@
       "fullText": "【！優勝賞金50万円！】\n国内最大級のオンラインゲームジャム「#ClusterGAMEJAM 2020 in SUMMER」開催決定🎉\n個人でもチームでも企業でも！\nバーチャルSNS「cluster」に作品を投稿して大賞をつかみ取れ🔥\n\n📅開催期間：7/31(金) 20:00 - 8/2(日) 19:59\n\n▼エントリー受付中！\nhttps://t.co/NEZSnXHaP4 https://t.co/VnWJddx2FZ",
       "expandedUrl": "https://twitter.com/i/web/status/1282510059759472640",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 315,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-13T03:00:00.000Z",
+        "display_text_range": [
+          0,
+          192
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                31,
+                46
+              ],
+              "text": "ClusterGAMEJAM"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "gamejam.cluster.mu",
+              "expanded_url": "https://www.gamejam.cluster.mu/",
+              "indices": [
+                166,
+                189
+              ],
+              "url": "https://t.co/NEZSnXHaP4"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/VnWJddx2FZ",
+              "expanded_url": "https://x.com/cluster_jp/status/1282510059759472640/video/1",
+              "indices": [
+                190,
+                213
+              ],
+              "url": "https://t.co/VnWJddx2FZ"
+            }
+          ]
+        },
+        "id_str": "1282510059759472640",
+        "text": "【！優勝賞金50万円！】\n国内最大級のオンラインゲームジャム「#ClusterGAMEJAM 2020 in SUMMER」開催決定🎉\n個人でもチームでも企業でも！\nバーチャルSNS「cluster」に作品を投稿して大賞をつかみ取れ🔥\n\n📅開催期間：7/31(金) 20:00 - 8/2(日) 19:59\n\n▼エントリー受付中！\nhttps://t.co/NEZSnXHaP4 https://t.co/VnWJddx2FZ",
+        "user": {
+          "id_str": "1032114346871087104",
+          "name": "cluster公式∞",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1569909026166829057/51pAmXE__normal.jpg",
+          "screen_name": "cluster_jp",
+          "verified": false,
+          "verified_type": "Business",
+          "is_blue_verified": false,
+          "profile_image_shape": "Square"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1282510059759472640"
+          ],
+          "editable_until_msecs": "1594611000788",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/VnWJddx2FZ",
+            "expanded_url": "https://x.com/cluster_jp/status/1282510059759472640/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              190,
+              213
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EcyCA_dUMAED6zm.png",
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/VnWJddx2FZ",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 31283,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/pl/fr85z7VcXOQkpTLY.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/480x270/QKk7yQNtLD07CIVk.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/640x360/RYCNNuW3LLUE28Ri.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/1280x720/LGZu8HkON5CUHrHz.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 31283,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/media/EcyCA_dUMAED6zm.png",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/pl/fr85z7VcXOQkpTLY.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/480x270/QKk7yQNtLD07CIVk.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/640x360/RYCNNuW3LLUE28Ri.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1282014674909720579/pu/vid/1280x720/LGZu8HkON5CUHrHz.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1282510059759472640"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:47.045Z"
     },
     {
       "id": "archive-1282460305943957506",
@@ -113,7 +1646,68 @@
       "fullText": "これが白痴。\n\nTikTokと神奈川県は「県政の情報発信・広報についての連携と協力に関する協定」を締結しました! https://t.co/APqdXG10Uk @PRTIMES_JPより",
       "expandedUrl": "https://twitter.com/i/web/status/1282460305943957506",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 1147,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-12T23:42:18.000Z",
+        "display_text_range": [
+          0,
+          94
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "prtimes.jp/main/html/rd/p…",
+              "expanded_url": "https://prtimes.jp/main/html/rd/p/000000125.000030435.html",
+              "indices": [
+                57,
+                80
+              ],
+              "url": "https://t.co/APqdXG10Uk"
+            }
+          ],
+          "user_mentions": [
+            {
+              "id_str": "164109352",
+              "indices": [
+                81,
+                92
+              ],
+              "name": "PR TIMES",
+              "screen_name": "PRTIMES_JP"
+            }
+          ],
+          "symbols": []
+        },
+        "id_str": "1282460305943957506",
+        "text": "これが白痴。\n\nTikTokと神奈川県は「県政の情報発信・広報についての連携と協力に関する協定」を締結しました! https://t.co/APqdXG10Uk @PRTIMES_JPより",
+        "user": {
+          "id_str": "3193715799",
+          "name": "台湾史.jp",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1651073069627379714/sUkT7AMn_normal.jpg",
+          "screen_name": "Formosanhistory",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1282460305943957506"
+          ],
+          "editable_until_msecs": "1594599138554",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 53,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:48.207Z"
     },
     {
       "id": "archive-1282286523199569927",
@@ -121,7 +1715,205 @@
       "fullText": "本当参加したかった！関西にもやってほしい！ https://t.co/36BqrAMxRO",
       "expandedUrl": "https://twitter.com/i/web/status/1282286523199569927",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 97,
+        "created_at": "2020-07-12T12:11:45.000Z",
+        "display_text_range": [
+          0,
+          21
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1282286523199569927",
+        "text": "本当参加したかった！関西にもやってほしい！",
+        "user": {
+          "id_str": "861672236",
+          "name": "Ryu🇯🇵🇭🇰🇬🇧🇺🇦関西の龍",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1597212213953298433/-osWDoLG_normal.jpg",
+          "screen_name": "ryu___jp",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1282286523199569927"
+          ],
+          "editable_until_msecs": "1594557705519",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "en",
+          "reply_count": 79,
+          "retweet_count": 1032,
+          "favorite_count": 2241,
+          "possibly_sensitive": false,
+          "created_at": "2020-07-12T02:22:08.000Z",
+          "display_text_range": [
+            0,
+            53
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [],
+            "symbols": [],
+            "media": [
+              {
+                "display_url": "pic.x.com/YBvWUzYIho",
+                "expanded_url": "https://x.com/shujamtaro/status/1282138141097246721/video/1",
+                "indices": [
+                  54,
+                  77
+                ],
+                "url": "https://t.co/YBvWUzYIho"
+              }
+            ]
+          },
+          "id_str": "1282138141097246721",
+          "text": "Uyghur × Hong Kong solidarity demo has just started‼️ https://t.co/YBvWUzYIho",
+          "user": {
+            "id_str": "979309305089290240",
+            "name": "Yuko Matsuoka (Xさん) 🗣",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1813793371544240128/ML6QmNrC_normal.jpg",
+            "screen_name": "shujamtaro",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1282138141097246721"
+            ],
+            "editable_until_msecs": "1594522328469",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "mediaDetails": [
+            {
+              "additional_media_info": {},
+              "display_url": "pic.x.com/YBvWUzYIho",
+              "expanded_url": "https://x.com/shujamtaro/status/1282138141097246721/video/1",
+              "ext_media_availability": {
+                "status": "Available"
+              },
+              "indices": [
+                54,
+                77
+              ],
+              "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1282137482729906176/pu/img/msFKs0QiL5-DlwB1.jpg",
+              "original_info": {
+                "height": 1280,
+                "width": 720,
+                "focus_rects": []
+              },
+              "sizes": {
+                "large": {
+                  "h": 1280,
+                  "resize": "fit",
+                  "w": 720
+                },
+                "medium": {
+                  "h": 1200,
+                  "resize": "fit",
+                  "w": 675
+                },
+                "small": {
+                  "h": 680,
+                  "resize": "fit",
+                  "w": 383
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "video",
+              "url": "https://t.co/YBvWUzYIho",
+              "video_info": {
+                "aspect_ratio": [
+                  9,
+                  16
+                ],
+                "duration_millis": 103143,
+                "variants": [
+                  {
+                    "content_type": "application/x-mpegURL",
+                    "url": "https://video.twimg.com/ext_tw_video/1282137482729906176/pu/pl/c5IOwjwzqQdRGI8z.m3u8?tag=10"
+                  },
+                  {
+                    "bitrate": 632000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1282137482729906176/pu/vid/320x568/4dQTk8BPVz4xpSfs.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 832000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1282137482729906176/pu/vid/360x640/PTlHlSPb5zS_0dIX.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 2176000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1282137482729906176/pu/vid/720x1280/QZmnXduDj4otyM8o.mp4?tag=10"
+                  }
+                ]
+              }
+            }
+          ],
+          "photos": [],
+          "video": {
+            "aspectRatio": [
+              9,
+              16
+            ],
+            "contentType": "media_entity",
+            "durationMs": 103143,
+            "mediaAvailability": {
+              "status": "available"
+            },
+            "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1282137482729906176/pu/img/msFKs0QiL5-DlwB1.jpg",
+            "variants": [
+              {
+                "type": "application/x-mpegURL",
+                "src": "https://video.twimg.com/ext_tw_video/1282137482729906176/pu/pl/c5IOwjwzqQdRGI8z.m3u8?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1282137482729906176/pu/vid/320x568/4dQTk8BPVz4xpSfs.mp4?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1282137482729906176/pu/vid/360x640/PTlHlSPb5zS_0dIX.mp4?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1282137482729906176/pu/vid/720x1280/QZmnXduDj4otyM8o.mp4?tag=10"
+              }
+            ],
+            "videoId": {
+              "type": "tweet",
+              "id": "1282138141097246721"
+            },
+            "viewCount": 0
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:49.408Z"
     },
     {
       "id": "archive-1282214509638152192",
@@ -129,7 +1921,188 @@
       "fullText": "何念慈はMichiyoという日本風のEnglish nameを名乗っているが、「抗日英雄」を讃えることに抵抗がないのはマレーシア人の多くが「皇軍」と現在の日本を切り離して見ているからだと思う。そうでない人もいるけど(Saya anak Malaysiaの映像より)\nhttps://t.co/eLLN6gFcRx https://t.co/oxzhluQ81Z",
       "expandedUrl": "https://twitter.com/i/web/status/1282214509638152192",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 29,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-12T07:25:36.000Z",
+        "display_text_range": [
+          0,
+          156
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "youtu.be/tYQEfTLye1Y",
+              "expanded_url": "https://youtu.be/tYQEfTLye1Y",
+              "indices": [
+                133,
+                156
+              ],
+              "url": "https://t.co/eLLN6gFcRx"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/oxzhluQ81Z",
+              "expanded_url": "https://x.com/hsiang_dien/status/1282214509638152192/photo/1",
+              "indices": [
+                157,
+                180
+              ],
+              "url": "https://t.co/oxzhluQ81Z"
+            }
+          ]
+        },
+        "id_str": "1282214509638152192",
+        "text": "何念慈はMichiyoという日本風のEnglish nameを名乗っているが、「抗日英雄」を讃えることに抵抗がないのはマレーシア人の多くが「皇軍」と現在の日本を切り離して見ているからだと思う。そうでない人もいるけど(Saya anak Malaysiaの映像より)\nhttps://t.co/eLLN6gFcRx https://t.co/oxzhluQ81Z",
+        "user": {
+          "id_str": "1179027993567477761",
+          "name": "熱の奶茶",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1464442181788536834/VjFu5X-T_normal.jpg",
+          "screen_name": "hsiang_dien",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1282214509638152192"
+          ],
+          "editable_until_msecs": "1594540536148",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/oxzhluQ81Z",
+            "expanded_url": "https://x.com/hsiang_dien/status/1282214509638152192/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              157,
+              180
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EctXTLNUMAEphVE.png",
+            "original_info": {
+              "height": 675,
+              "width": 1200,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1200,
+                  "h": 672
+                },
+                {
+                  "x": 525,
+                  "y": 0,
+                  "w": 675,
+                  "h": 675
+                },
+                {
+                  "x": 608,
+                  "y": 0,
+                  "w": 592,
+                  "h": 675
+                },
+                {
+                  "x": 761,
+                  "y": 0,
+                  "w": 338,
+                  "h": 675
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1200,
+                  "h": 675
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/oxzhluQ81Z"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1200,
+                "h": 672
+              },
+              {
+                "x": 525,
+                "y": 0,
+                "w": 675,
+                "h": 675
+              },
+              {
+                "x": 608,
+                "y": 0,
+                "w": 592,
+                "h": 675
+              },
+              {
+                "x": 761,
+                "y": 0,
+                "w": 338,
+                "h": 675
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1200,
+                "h": 675
+              }
+            ],
+            "expandedUrl": "https://x.com/hsiang_dien/status/1282214509638152192/photo/1",
+            "url": "https://pbs.twimg.com/media/EctXTLNUMAEphVE.png",
+            "width": 1200,
+            "height": 675
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:50.573Z"
     },
     {
       "id": "archive-1280781165821956098",
@@ -137,7 +2110,183 @@
       "fullText": "中国共産党は、ウイグル人の学生や他のイスラム系少数民族が母語を話すのを処罰したり、キャンパスでの礼拝や宗教的な装いを禁じています https://t.co/ZHXphTjKCU",
       "expandedUrl": "https://twitter.com/i/web/status/1280781165821956098",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 11893,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-08T08:30:00.000Z",
+        "display_text_range": [
+          0,
+          64
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/ZHXphTjKCU",
+              "expanded_url": "https://x.com/usembassytokyo/status/1280781165821956098/video/1",
+              "indices": [
+                65,
+                88
+              ],
+              "url": "https://t.co/ZHXphTjKCU"
+            }
+          ]
+        },
+        "id_str": "1280781165821956098",
+        "text": "中国共産党は、ウイグル人の学生や他のイスラム系少数民族が母語を話すのを処罰したり、キャンパスでの礼拝や宗教的な装いを禁じています https://t.co/ZHXphTjKCU",
+        "user": {
+          "id_str": "93471126",
+          "name": "アメリカ大使館",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1199510499743789056/b5Tphubs_normal.jpg",
+          "screen_name": "usembassytokyo",
+          "verified": false,
+          "verified_type": "Government",
+          "highlighted_label": {
+            "description": "Department of State",
+            "badge": {
+              "url": "https://pbs.twimg.com/profile_images/1883303881632804864/d638Kku-_bigger.jpg"
+            },
+            "url": {
+              "url": "https://twitter.com/StateDept",
+              "url_type": "DeepLink"
+            },
+            "user_label_type": "BusinessLabel",
+            "user_label_display_type": "Badge"
+          },
+          "is_blue_verified": true
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1280781165821956098"
+          ],
+          "editable_until_msecs": "1594198800352",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {
+              "description": "",
+              "embeddable": true,
+              "title": ""
+            },
+            "display_url": "pic.x.com/ZHXphTjKCU",
+            "expanded_url": "https://x.com/usembassytokyo/status/1280781165821956098/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              65,
+              88
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EcYJ9llU8AEz1-0.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 720,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 720
+              },
+              "medium": {
+                "h": 720,
+                "resize": "fit",
+                "w": 720
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/ZHXphTjKCU",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "duration_millis": 76158,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/amplify_video/1280721874482126848/pl/89uevtYvRatl6EIo.m3u8?tag=13&v=bc0"
+                },
+                {
+                  "bitrate": 432000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/1280721874482126848/vid/320x320/vrWcqVpyO9MD9XJ4.mp4?tag=13"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/1280721874482126848/vid/480x480/D0VYMOgNdvD5y3iI.mp4?tag=13"
+                },
+                {
+                  "bitrate": 1280000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/1280721874482126848/vid/720x720/Nzu9_mxN71uV9SpS.mp4?tag=13"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1,
+            1
+          ],
+          "contentType": "media_entity",
+          "durationMs": 76158,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/media/EcYJ9llU8AEz1-0.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/amplify_video/1280721874482126848/pl/89uevtYvRatl6EIo.m3u8?tag=13&v=bc0"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/amplify_video/1280721874482126848/vid/320x320/vrWcqVpyO9MD9XJ4.mp4?tag=13"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/amplify_video/1280721874482126848/vid/480x480/D0VYMOgNdvD5y3iI.mp4?tag=13"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/amplify_video/1280721874482126848/vid/720x720/Nzu9_mxN71uV9SpS.mp4?tag=13"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1280781165821956098"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 247,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:51.728Z"
     },
     {
       "id": "archive-1280461931770376192",
@@ -145,7 +2294,8 @@
       "fullText": "You’re unable to view this Tweet because this account owner limits who can view their Tweets. {learnmore}",
       "expandedUrl": "https://twitter.com/i/web/status/1280461931770376192",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "private": true
     },
     {
       "id": "archive-1280279064050200576",
@@ -153,7 +2303,58 @@
       "fullText": "この法律、世界70億人が対象らしい。中国はそんなに偉いのか？\n\n香港の外でも外国人でも処罰　「国安法」に不安広がる（朝日新聞デジタル） https://t.co/il3K9hBnEI",
       "expandedUrl": "https://twitter.com/i/web/status/1280279064050200576",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 30331,
+        "possibly_sensitive": false,
+        "created_at": "2020-07-06T23:14:49.000Z",
+        "display_text_range": [
+          0,
+          91
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "headlines.yahoo.co.jp/hl?a=20200706-…",
+              "expanded_url": "https://headlines.yahoo.co.jp/hl?a=20200706-00000063-asahi-int",
+              "indices": [
+                68,
+                91
+              ],
+              "url": "https://t.co/il3K9hBnEI"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1280279064050200576",
+        "text": "この法律、世界70億人が対象らしい。中国はそんなに偉いのか？\n\n香港の外でも外国人でも処罰　「国安法」に不安広がる（朝日新聞デジタル） https://t.co/il3K9hBnEI",
+        "user": {
+          "id_str": "242646380",
+          "name": "竹田恒泰",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1225217715/P1000187_normal.jpg",
+          "screen_name": "takenoma",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1280279064050200576"
+          ],
+          "editable_until_msecs": "1594079089961",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 813,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:54.048Z"
     },
     {
       "id": "archive-1279752066974380032",
@@ -161,7 +2362,55 @@
       "fullText": "これはわかりやすい！\n日本一ややこしい京都の地名も、これでざっくりとわかる。\nフォロワーさんに京都好きが多いのでお裾分け。\n#京都 https://t.co/AvZi27PxOo",
       "expandedUrl": "https://twitter.com/i/web/status/1279752066974380032",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 94,
+        "created_at": "2020-07-05T12:20:44.000Z",
+        "display_text_range": [
+          0,
+          65
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                62,
+                65
+              ],
+              "text": "京都"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1279752066974380032",
+        "text": "これはわかりやすい！\n日本一ややこしい京都の地名も、これでざっくりとわかる。\nフォロワーさんに京都好きが多いのでお裾分け。\n#京都",
+        "user": {
+          "id_str": "3193715799",
+          "name": "台湾史.jp",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1651073069627379714/sUkT7AMn_normal.jpg",
+          "screen_name": "Formosanhistory",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1279752066974380032"
+          ],
+          "editable_until_msecs": "1593953444067",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:57:55.228Z"
     }
   ]
 }

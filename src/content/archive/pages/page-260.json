@@ -9,7 +9,167 @@
       "fullText": "GM. I do a little test https://t.co/gjOTvnSgPX",
       "expandedUrl": "https://twitter.com/i/web/status/1515987669884542977",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 597,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-18T09:36:40.000Z",
+        "display_text_range": [
+          0,
+          22
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/gjOTvnSgPX",
+              "expanded_url": "https://x.com/ObiFeyn/status/1515987669884542977/video/1",
+              "indices": [
+                23,
+                46
+              ],
+              "url": "https://t.co/gjOTvnSgPX"
+            }
+          ]
+        },
+        "id_str": "1515987669884542977",
+        "text": "GM. I do a little test https://t.co/gjOTvnSgPX",
+        "user": {
+          "id_str": "363637248",
+          "name": "pinkbrain.eth🇺🇦 (Anastasiia Reznichenko)",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1628643853216501760/bAxeKnTt_normal.jpg",
+          "screen_name": "ObiFeyn",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515987669884542977"
+          ],
+          "editable_until_msecs": "1650276400846",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/gjOTvnSgPX",
+            "expanded_url": "https://x.com/ObiFeyn/status/1515987669884542977/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              23,
+              46
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1515987528557514758/pu/img/2jP7bPaGGmj6bejo.jpg",
+            "original_info": {
+              "height": 1920,
+              "width": 1536,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1920,
+                "resize": "fit",
+                "w": 1536
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 960
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 544
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/gjOTvnSgPX",
+            "video_info": {
+              "aspect_ratio": [
+                4,
+                5
+              ],
+              "duration_millis": 3440,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1515987528557514758/pu/pl/m-2AoUSYdS83mdbj.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 632000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515987528557514758/pu/vid/320x400/pDhrmXQUIFoJ3wjc.mp4?tag=12"
+                },
+                {
+                  "bitrate": 950000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515987528557514758/pu/vid/480x600/HDrssC-mJ9u3l0Fi.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515987528557514758/pu/vid/720x900/u3CdgCefNWRfAGD0.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            4,
+            5
+          ],
+          "contentType": "media_entity",
+          "durationMs": 3440,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1515987528557514758/pu/img/2jP7bPaGGmj6bejo.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1515987528557514758/pu/pl/m-2AoUSYdS83mdbj.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515987528557514758/pu/vid/320x400/pDhrmXQUIFoJ3wjc.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515987528557514758/pu/vid/480x600/HDrssC-mJ9u3l0Fi.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515987528557514758/pu/vid/720x900/u3CdgCefNWRfAGD0.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1515987669884542977"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 32,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:36.314Z"
     },
     {
       "id": "archive-1515888614726860800",
@@ -17,7 +177,167 @@
       "fullText": "これはまじで後悔。Microsoftが提供しているヒートマップツールClarityがやばい。ユーザーがどういう動きをしているのかモニタリングして動画でみれる。施策改善後に意図した動きをしてくれているか確認するのに最適。しかもこれが無料... https://t.co/Xj7KNqoDca",
       "expandedUrl": "https://twitter.com/i/web/status/1515888614726860800",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 2569,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-18T03:03:04.000Z",
+        "display_text_range": [
+          0,
+          120
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/Xj7KNqoDca",
+              "expanded_url": "https://x.com/iritec_jp/status/1515888614726860800/video/1",
+              "indices": [
+                121,
+                144
+              ],
+              "url": "https://t.co/Xj7KNqoDca"
+            }
+          ]
+        },
+        "id_str": "1515888614726860800",
+        "text": "これはまじで後悔。Microsoftが提供しているヒートマップツールClarityがやばい。ユーザーがどういう動きをしているのかモニタリングして動画でみれる。施策改善後に意図した動きをしてくれているか確認するのに最適。しかもこれが無料... https://t.co/Xj7KNqoDca",
+        "user": {
+          "id_str": "66309597",
+          "name": "入江 慎吾",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1621603976650305536/quztwOMB_normal.jpg",
+          "screen_name": "iritec_jp",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515888614726860800"
+          ],
+          "editable_until_msecs": "1650252784256",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/Xj7KNqoDca",
+            "expanded_url": "https://x.com/iritec_jp/status/1515888614726860800/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              121,
+              144
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1515888297494839296/pu/img/EjE0SkHlQTO-ncUP.jpg",
+            "original_info": {
+              "height": 1724,
+              "width": 2852,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1238,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 725,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 411,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/Xj7KNqoDca",
+            "video_info": {
+              "aspect_ratio": [
+                713,
+                431
+              ],
+              "duration_millis": 3850,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1515888297494839296/pu/pl/R8TRgpePGH5rPcyu.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515888297494839296/pu/vid/446x270/UBMOECYpRT6CjLep.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515888297494839296/pu/vid/594x360/QuLtztfrD_ROO5uq.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515888297494839296/pu/vid/1190x720/zjT1SgcrmV74mvBl.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            713,
+            431
+          ],
+          "contentType": "media_entity",
+          "durationMs": 3850,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1515888297494839296/pu/img/EjE0SkHlQTO-ncUP.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1515888297494839296/pu/pl/R8TRgpePGH5rPcyu.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515888297494839296/pu/vid/446x270/UBMOECYpRT6CjLep.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515888297494839296/pu/vid/594x360/QuLtztfrD_ROO5uq.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515888297494839296/pu/vid/1190x720/zjT1SgcrmV74mvBl.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1515888614726860800"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:37.479Z"
     },
     {
       "id": "archive-1515520482207956995",
@@ -25,7 +345,139 @@
       "fullText": "https://t.co/JLyMVmqI4c",
       "expandedUrl": "https://twitter.com/i/web/status/1515520482207956995",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "zxx",
+        "favorite_count": 262,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-17T02:40:14.000Z",
+        "display_text_range": [
+          0,
+          0
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/JLyMVmqI4c",
+              "expanded_url": "https://x.com/TatsuyaBot/status/1515520482207956995/photo/1",
+              "indices": [
+                0,
+                23
+              ],
+              "url": "https://t.co/JLyMVmqI4c"
+            }
+          ]
+        },
+        "id_str": "1515520482207956995",
+        "text": "https://t.co/JLyMVmqI4c",
+        "user": {
+          "id_str": "146248983",
+          "name": "TatsuyaM™",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1162977630313836544/j5uVJgIs_normal.png",
+          "screen_name": "TatsuyaBot",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515520482207956995"
+          ],
+          "editable_until_msecs": "1650165014624",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/JLyMVmqI4c",
+            "expanded_url": "https://x.com/TatsuyaBot/status/1515520482207956995/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              0,
+              23
+            ],
+            "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/FQg1zC0VUAASkDY.jpg",
+            "original_info": {
+              "height": 600,
+              "width": 600,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 600,
+                "resize": "fit",
+                "w": 600
+              },
+              "medium": {
+                "h": 600,
+                "resize": "fit",
+                "w": 600
+              },
+              "small": {
+                "h": 600,
+                "resize": "fit",
+                "w": 600
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "animated_gif",
+            "url": "https://t.co/JLyMVmqI4c",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "variants": [
+                {
+                  "bitrate": 0,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/tweet_video/FQg1zC0VUAASkDY.mp4"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1,
+            1
+          ],
+          "contentType": "gif",
+          "durationMs": 0,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/FQg1zC0VUAASkDY.jpg",
+          "variants": [
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/tweet_video/FQg1zC0VUAASkDY.mp4"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1515520482207956995"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:38.675Z"
     },
     {
       "id": "archive-1515265740798304256",
@@ -33,7 +485,178 @@
       "fullText": "うわーーーーー！！！！！やられた！！！！！！まじかどうしよう https://t.co/2jCBonlbJe",
       "expandedUrl": "https://twitter.com/i/web/status/1515265740798304256",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 892,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-16T09:47:59.000Z",
+        "display_text_range": [
+          0,
+          30
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/2jCBonlbJe",
+              "expanded_url": "https://x.com/seventhgraphics/status/1515265740798304256/photo/1",
+              "indices": [
+                31,
+                54
+              ],
+              "url": "https://t.co/2jCBonlbJe"
+            }
+          ]
+        },
+        "id_str": "1515265740798304256",
+        "text": "うわーーーーー！！！！！やられた！！！！！！まじかどうしよう https://t.co/2jCBonlbJe",
+        "user": {
+          "id_str": "15966529",
+          "name": "朝倉涼 / Ryo Asakura",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1734663199906217984/iC69BCbC_normal.jpg",
+          "screen_name": "seventhgraphics",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515265740798304256"
+          ],
+          "editable_until_msecs": "1650104279539",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/2jCBonlbJe",
+            "expanded_url": "https://x.com/seventhgraphics/status/1515265740798304256/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              31,
+              54
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FQdOJoMaAAIybvR.jpg",
+            "original_info": {
+              "height": 2048,
+              "width": 1536,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 338,
+                  "w": 1536,
+                  "h": 860
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 1536
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 1751
+                },
+                {
+                  "x": 256,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 2048
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 1536
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 900
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 510
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/2jCBonlbJe"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 338,
+                "w": 1536,
+                "h": 860
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 1536
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 1751
+              },
+              {
+                "x": 256,
+                "y": 0,
+                "w": 1024,
+                "h": 2048
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 2048
+              }
+            ],
+            "expandedUrl": "https://x.com/seventhgraphics/status/1515265740798304256/photo/1",
+            "url": "https://pbs.twimg.com/media/FQdOJoMaAAIybvR.jpg",
+            "width": 1536,
+            "height": 2048
+          }
+        ],
+        "conversation_count": 9,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:39.837Z"
     },
     {
       "id": "archive-1515256108692439049",
@@ -41,7 +664,192 @@
       "fullText": "I tried to reproduce the effects on monopo london's site.\n\nhttps://t.co/49d8JempMf\n\n#threejs #r3f https://t.co/MRcXleX9dO",
       "expandedUrl": "https://twitter.com/i/web/status/1515256108692439049",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 204,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-16T09:09:43.000Z",
+        "display_text_range": [
+          0,
+          97
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                84,
+                92
+              ],
+              "text": "threejs"
+            },
+            {
+              "indices": [
+                93,
+                97
+              ],
+              "text": "r3f"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "monopo.london",
+              "expanded_url": "https://monopo.london/",
+              "indices": [
+                59,
+                82
+              ],
+              "url": "https://t.co/49d8JempMf"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/MRcXleX9dO",
+              "expanded_url": "https://x.com/focru_ino/status/1515256108692439049/video/1",
+              "indices": [
+                98,
+                121
+              ],
+              "url": "https://t.co/MRcXleX9dO"
+            }
+          ]
+        },
+        "id_str": "1515256108692439049",
+        "text": "I tried to reproduce the effects on monopo london's site.\n\nhttps://t.co/49d8JempMf\n\n#threejs #r3f https://t.co/MRcXleX9dO",
+        "user": {
+          "id_str": "293438309",
+          "name": "ふぉくる",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1928502205902180352/WI9G5eyp_normal.jpg",
+          "screen_name": "focru_ino",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515256108692439049"
+          ],
+          "editable_until_msecs": "1650101983066",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/MRcXleX9dO",
+            "expanded_url": "https://x.com/focru_ino/status/1515256108692439049/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              98,
+              121
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1515255785353510912/pu/img/VzhG1J1TJ7UlasE7.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/MRcXleX9dO",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 19800,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1515255785353510912/pu/pl/QlbHVesuJ5cDnhSA.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515255785353510912/pu/vid/480x270/03PUEpphCxajVs6Q.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515255785353510912/pu/vid/640x360/DqPQReJeDNnKY8uv.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515255785353510912/pu/vid/1280x720/6bpXHnoO3lQjtKMr.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 19800,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1515255785353510912/pu/img/VzhG1J1TJ7UlasE7.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1515255785353510912/pu/pl/QlbHVesuJ5cDnhSA.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515255785353510912/pu/vid/480x270/03PUEpphCxajVs6Q.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515255785353510912/pu/vid/640x360/DqPQReJeDNnKY8uv.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515255785353510912/pu/vid/1280x720/6bpXHnoO3lQjtKMr.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1515256108692439049"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:41.038Z"
     },
     {
       "id": "archive-1515251489970655235",
@@ -49,7 +857,315 @@
       "fullText": "ミニチュアキッチンを作りました\n\n#blender  #b3d #3DCG https://t.co/GXzDZF3L6o",
       "expandedUrl": "https://twitter.com/i/web/status/1515251489970655235",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 655,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-16T08:51:21.000Z",
+        "display_text_range": [
+          0,
+          37
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                17,
+                25
+              ],
+              "text": "blender"
+            },
+            {
+              "indices": [
+                27,
+                31
+              ],
+              "text": "b3d"
+            },
+            {
+              "indices": [
+                32,
+                37
+              ],
+              "text": "3DCG"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/GXzDZF3L6o",
+              "expanded_url": "https://x.com/Yuki_blender11/status/1515251489970655235/photo/1",
+              "indices": [
+                38,
+                61
+              ],
+              "url": "https://t.co/GXzDZF3L6o"
+            }
+          ]
+        },
+        "id_str": "1515251489970655235",
+        "text": "ミニチュアキッチンを作りました\n\n#blender  #b3d #3DCG https://t.co/GXzDZF3L6o",
+        "user": {
+          "id_str": "1446771015250440193",
+          "name": "Yuki",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1492445760738136067/-S2WRt8i_normal.jpg",
+          "screen_name": "Yuki_blender11",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515251489970655235"
+          ],
+          "editable_until_msecs": "1650100881877",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/GXzDZF3L6o",
+            "expanded_url": "https://x.com/Yuki_blender11/status/1515251489970655235/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              38,
+              61
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FQdBMvMVsAUFYjB.jpg",
+            "original_info": {
+              "height": 753,
+              "width": 753,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 221,
+                  "w": 753,
+                  "h": 422
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 753,
+                  "h": 753
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 661,
+                  "h": 753
+                },
+                {
+                  "x": 56,
+                  "y": 0,
+                  "w": 377,
+                  "h": 753
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 753,
+                  "h": 753
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 753,
+                "resize": "fit",
+                "w": 753
+              },
+              "medium": {
+                "h": 753,
+                "resize": "fit",
+                "w": 753
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/GXzDZF3L6o"
+          },
+          {
+            "display_url": "pic.x.com/GXzDZF3L6o",
+            "expanded_url": "https://x.com/Yuki_blender11/status/1515251489970655235/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              38,
+              61
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FQdBMvNVEAUL1I5.jpg",
+            "original_info": {
+              "height": 753,
+              "width": 753,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 259,
+                  "w": 753,
+                  "h": 422
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 753,
+                  "h": 753
+                },
+                {
+                  "x": 65,
+                  "y": 0,
+                  "w": 661,
+                  "h": 753
+                },
+                {
+                  "x": 207,
+                  "y": 0,
+                  "w": 377,
+                  "h": 753
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 753,
+                  "h": 753
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 753,
+                "resize": "fit",
+                "w": 753
+              },
+              "medium": {
+                "h": 753,
+                "resize": "fit",
+                "w": 753
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/GXzDZF3L6o"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 221,
+                "w": 753,
+                "h": 422
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 753,
+                "h": 753
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 661,
+                "h": 753
+              },
+              {
+                "x": 56,
+                "y": 0,
+                "w": 377,
+                "h": 753
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 753,
+                "h": 753
+              }
+            ],
+            "expandedUrl": "https://x.com/Yuki_blender11/status/1515251489970655235/photo/1",
+            "url": "https://pbs.twimg.com/media/FQdBMvMVsAUFYjB.jpg",
+            "width": 753,
+            "height": 753
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 259,
+                "w": 753,
+                "h": 422
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 753,
+                "h": 753
+              },
+              {
+                "x": 65,
+                "y": 0,
+                "w": 661,
+                "h": 753
+              },
+              {
+                "x": 207,
+                "y": 0,
+                "w": 377,
+                "h": 753
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 753,
+                "h": 753
+              }
+            ],
+            "expandedUrl": "https://x.com/Yuki_blender11/status/1515251489970655235/photo/1",
+            "url": "https://pbs.twimg.com/media/FQdBMvNVEAUL1I5.jpg",
+            "width": 753,
+            "height": 753
+          }
+        ],
+        "conversation_count": 3,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:42.237Z"
     },
     {
       "id": "archive-1515189005150666754",
@@ -57,7 +1173,196 @@
       "fullText": "mirrored braids\n#art #loop #loopgang #generativeart https://t.co/rFzEoZBjMM",
       "expandedUrl": "https://twitter.com/i/web/status/1515189005150666754",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 163,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-16T04:43:04.000Z",
+        "display_text_range": [
+          0,
+          51
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                16,
+                20
+              ],
+              "text": "art"
+            },
+            {
+              "indices": [
+                21,
+                26
+              ],
+              "text": "loop"
+            },
+            {
+              "indices": [
+                27,
+                36
+              ],
+              "text": "loopgang"
+            },
+            {
+              "indices": [
+                37,
+                51
+              ],
+              "text": "generativeart"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/rFzEoZBjMM",
+              "expanded_url": "https://x.com/Yann_LeGall/status/1515189005150666754/video/1",
+              "indices": [
+                52,
+                75
+              ],
+              "url": "https://t.co/rFzEoZBjMM"
+            }
+          ]
+        },
+        "id_str": "1515189005150666754",
+        "text": "mirrored braids\n#art #loop #loopgang #generativeart https://t.co/rFzEoZBjMM",
+        "user": {
+          "id_str": "318194602",
+          "name": "Yann Le Gall",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1384331959699083268/qwCJqcYx_normal.jpg",
+          "screen_name": "Yann_LeGall",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515189005150666754"
+          ],
+          "editable_until_msecs": "1650085984335",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/rFzEoZBjMM",
+            "expanded_url": "https://x.com/Yann_LeGall/status/1515189005150666754/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              52,
+              75
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1515188707459887108/pu/img/3T-oehc7K-7zMyEU.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1080,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1080
+              },
+              "medium": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1080
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/rFzEoZBjMM",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "duration_millis": 5000,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1515188707459887108/pu/pl/zt64Li4Hcie_U1Bh.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 432000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515188707459887108/pu/vid/320x320/FExD1-jQivqwhjd_.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515188707459887108/pu/vid/540x540/KtJC7veKWs2-5A0Y.mp4?tag=12"
+                },
+                {
+                  "bitrate": 1280000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515188707459887108/pu/vid/720x720/5nk-LVHkuvMYCdRF.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1,
+            1
+          ],
+          "contentType": "media_entity",
+          "durationMs": 5000,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1515188707459887108/pu/img/3T-oehc7K-7zMyEU.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1515188707459887108/pu/pl/zt64Li4Hcie_U1Bh.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515188707459887108/pu/vid/320x320/FExD1-jQivqwhjd_.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515188707459887108/pu/vid/540x540/KtJC7veKWs2-5A0Y.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515188707459887108/pu/vid/720x720/5nk-LVHkuvMYCdRF.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1515189005150666754"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:43.391Z"
     },
     {
       "id": "archive-1515139689820217345",
@@ -65,7 +1370,189 @@
       "fullText": "I've been bitten by the VFX bug and added in some ambient petals and grass blades\n#UE4 #VFX #GameDev https://t.co/q5jcVA9Ia7",
       "expandedUrl": "https://twitter.com/i/web/status/1515139689820217345",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 704,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-16T01:27:06.000Z",
+        "display_text_range": [
+          0,
+          100
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                82,
+                86
+              ],
+              "text": "UE4"
+            },
+            {
+              "indices": [
+                87,
+                91
+              ],
+              "text": "VFX"
+            },
+            {
+              "indices": [
+                92,
+                100
+              ],
+              "text": "GameDev"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/q5jcVA9Ia7",
+              "expanded_url": "https://x.com/MccaffreyEli/status/1515139689820217345/video/1",
+              "indices": [
+                101,
+                124
+              ],
+              "url": "https://t.co/q5jcVA9Ia7"
+            }
+          ]
+        },
+        "id_str": "1515139689820217345",
+        "text": "I've been bitten by the VFX bug and added in some ambient petals and grass blades\n#UE4 #VFX #GameDev https://t.co/q5jcVA9Ia7",
+        "user": {
+          "id_str": "1214696920561672192",
+          "name": "Smëli",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1750157595661250560/Wyrh6Peu_normal.jpg",
+          "screen_name": "studio_Smeli",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515139689820217345"
+          ],
+          "editable_until_msecs": "1650074226644",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/q5jcVA9Ia7",
+            "expanded_url": "https://x.com/MccaffreyEli/status/1515139689820217345/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              101,
+              124
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1515139125896044544/pu/img/pj9vtG2sQbN7Nn2n.jpg",
+            "original_info": {
+              "height": 1040,
+              "width": 1920,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1040,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 650,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 368,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/q5jcVA9Ia7",
+            "video_info": {
+              "aspect_ratio": [
+                24,
+                13
+              ],
+              "duration_millis": 23517,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1515139125896044544/pu/pl/hATdYX8uNzTt5p_I.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515139125896044544/pu/vid/498x270/Y7PUJNbE9f-YnY8z.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515139125896044544/pu/vid/664x360/vA7500EZYjCq85wL.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515139125896044544/pu/vid/1328x720/VSbjPx9iiRaWh4Gh.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            24,
+            13
+          ],
+          "contentType": "media_entity",
+          "durationMs": 23517,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1515139125896044544/pu/img/pj9vtG2sQbN7Nn2n.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1515139125896044544/pu/pl/hATdYX8uNzTt5p_I.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515139125896044544/pu/vid/498x270/Y7PUJNbE9f-YnY8z.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515139125896044544/pu/vid/664x360/vA7500EZYjCq85wL.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515139125896044544/pu/vid/1328x720/VSbjPx9iiRaWh4Gh.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1515139689820217345"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 3,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:44.566Z"
     },
     {
       "id": "archive-1515113099409313794",
@@ -73,7 +1560,167 @@
       "fullText": "風が踊るところ https://t.co/KpQGKdeBa9",
       "expandedUrl": "https://twitter.com/i/web/status/1515113099409313794",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 117254,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-15T23:41:26.000Z",
+        "display_text_range": [
+          0,
+          7
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/KpQGKdeBa9",
+              "expanded_url": "https://x.com/aozukikawasemi/status/1515113099409313794/video/1",
+              "indices": [
+                8,
+                31
+              ],
+              "url": "https://t.co/KpQGKdeBa9"
+            }
+          ]
+        },
+        "id_str": "1515113099409313794",
+        "text": "風が踊るところ https://t.co/KpQGKdeBa9",
+        "user": {
+          "id_str": "3064422462",
+          "name": "革蝉【コミティア152(I26b)】",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1672312542662918145/JAUeE_9h_normal.jpg",
+          "screen_name": "aozukikawasemi",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515113099409313794"
+          ],
+          "editable_until_msecs": "1650067886996",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/KpQGKdeBa9",
+            "expanded_url": "https://x.com/aozukikawasemi/status/1515113099409313794/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              8,
+              31
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1515113067595530242/pu/img/JQ5X9i2eaMQvPsMh.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/KpQGKdeBa9",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 4700,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1515113067595530242/pu/pl/kDYdck_gARBops7g.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515113067595530242/pu/vid/480x270/KeALzr2zHopiCuE1.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515113067595530242/pu/vid/640x360/AlZ6v9ASC6y38Tz2.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515113067595530242/pu/vid/1280x720/5NNEWnlk4T7HuQNi.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 4700,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1515113067595530242/pu/img/JQ5X9i2eaMQvPsMh.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1515113067595530242/pu/pl/kDYdck_gARBops7g.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515113067595530242/pu/vid/480x270/KeALzr2zHopiCuE1.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515113067595530242/pu/vid/640x360/AlZ6v9ASC6y38Tz2.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515113067595530242/pu/vid/1280x720/5NNEWnlk4T7HuQNi.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1515113099409313794"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 58,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:45.730Z"
     },
     {
       "id": "archive-1515053411934236672",
@@ -81,7 +1728,189 @@
       "fullText": "Tanglable 03\n\nReally love this series, even if twitter compression hates it =P\n\nMade in a single glsl fragment shader \n\n#genartclub #generative #creativecodeart https://t.co/1zH1NoMgyo",
       "expandedUrl": "https://twitter.com/i/web/status/1515053411934236672",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 76,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-15T19:44:16.000Z",
+        "display_text_range": [
+          0,
+          160
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                120,
+                131
+              ],
+              "text": "genartclub"
+            },
+            {
+              "indices": [
+                132,
+                143
+              ],
+              "text": "generative"
+            },
+            {
+              "indices": [
+                144,
+                160
+              ],
+              "text": "creativecodeart"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/1zH1NoMgyo",
+              "expanded_url": "https://x.com/willstall/status/1515053411934236672/video/1",
+              "indices": [
+                161,
+                184
+              ],
+              "url": "https://t.co/1zH1NoMgyo"
+            }
+          ]
+        },
+        "id_str": "1515053411934236672",
+        "text": "Tanglable 03\n\nReally love this series, even if twitter compression hates it =P\n\nMade in a single glsl fragment shader \n\n#genartclub #generative #creativecodeart https://t.co/1zH1NoMgyo",
+        "user": {
+          "id_str": "15357779",
+          "name": "William Stallwood",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1478840591257681921/aqXSQcNB_normal.jpg",
+          "screen_name": "willstall",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1515053411934236672"
+          ],
+          "editable_until_msecs": "1650053656393",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/1zH1NoMgyo",
+            "expanded_url": "https://x.com/willstall/status/1515053411934236672/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              161,
+              184
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1515053100666609664/pu/img/GKzzFWwRLJPQeUai.jpg",
+            "original_info": {
+              "height": 2048,
+              "width": 2048,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/1zH1NoMgyo",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "duration_millis": 6000,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1515053100666609664/pu/pl/KYi3g_kD4AblMqFa.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 432000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515053100666609664/pu/vid/320x320/Fi6m3BABdhwrNdsb.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515053100666609664/pu/vid/540x540/I5TyNonZpoDUlGvp.mp4?tag=12"
+                },
+                {
+                  "bitrate": 1280000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1515053100666609664/pu/vid/720x720/ciKVUObAogronUGR.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1,
+            1
+          ],
+          "contentType": "media_entity",
+          "durationMs": 6000,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1515053100666609664/pu/img/GKzzFWwRLJPQeUai.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1515053100666609664/pu/pl/KYi3g_kD4AblMqFa.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515053100666609664/pu/vid/320x320/Fi6m3BABdhwrNdsb.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515053100666609664/pu/vid/540x540/I5TyNonZpoDUlGvp.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1515053100666609664/pu/vid/720x720/ciKVUObAogronUGR.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1515053411934236672"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:46.899Z"
     },
     {
       "id": "archive-1514963498341912580",
@@ -89,7 +1918,199 @@
       "fullText": "Sketch.207 / src https://t.co/fhY7d7Ipxq / テキストを選択したときの背景色をアニメーションさせる / #css #dailycoding #dailyinteractive https://t.co/JO2VT3ZQSr",
       "expandedUrl": "https://twitter.com/i/web/status/1514963498341912580",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 111,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-15T13:46:59.000Z",
+        "display_text_range": [
+          0,
+          107
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                72,
+                76
+              ],
+              "text": "css"
+            },
+            {
+              "indices": [
+                77,
+                89
+              ],
+              "text": "dailycoding"
+            },
+            {
+              "indices": [
+                90,
+                107
+              ],
+              "text": "dailyinteractive"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "github.com/ikeryou/sketch…",
+              "expanded_url": "https://github.com/ikeryou/sketch207",
+              "indices": [
+                17,
+                40
+              ],
+              "url": "https://t.co/fhY7d7Ipxq"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/JO2VT3ZQSr",
+              "expanded_url": "https://x.com/ikeryou/status/1514963498341912580/video/1",
+              "indices": [
+                108,
+                131
+              ],
+              "url": "https://t.co/JO2VT3ZQSr"
+            }
+          ]
+        },
+        "id_str": "1514963498341912580",
+        "text": "Sketch.207 / src https://t.co/fhY7d7Ipxq / テキストを選択したときの背景色をアニメーションさせる / #css #dailycoding #dailyinteractive https://t.co/JO2VT3ZQSr",
+        "user": {
+          "id_str": "14351121",
+          "name": "ikeryou",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1866681590199488514/lx_eD7Xs_normal.jpg",
+          "screen_name": "ikeryou",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514963498341912580"
+          ],
+          "editable_until_msecs": "1650032219322",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/JO2VT3ZQSr",
+            "expanded_url": "https://x.com/ikeryou/status/1514963498341912580/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              108,
+              131
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1514963384604983298/pu/img/N6vENkPuc7DBzwOY.jpg",
+            "original_info": {
+              "height": 1232,
+              "width": 2010,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1232,
+                "resize": "fit",
+                "w": 2010
+              },
+              "medium": {
+                "h": 736,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 417,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/JO2VT3ZQSr",
+            "video_info": {
+              "aspect_ratio": [
+                1005,
+                616
+              ],
+              "duration_millis": 20066,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1514963384604983298/pu/pl/hsHnzE33ehzI90Dr.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514963384604983298/pu/vid/440x270/I4jebwg8np-eiTkM.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514963384604983298/pu/vid/586x360/p2p1npNUp3FlAEP9.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514963384604983298/pu/vid/1174x720/X70qQ5sLoHlMaoUV.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1005,
+            616
+          ],
+          "contentType": "media_entity",
+          "durationMs": 20066,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1514963384604983298/pu/img/N6vENkPuc7DBzwOY.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1514963384604983298/pu/pl/hsHnzE33ehzI90Dr.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514963384604983298/pu/vid/440x270/I4jebwg8np-eiTkM.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514963384604983298/pu/vid/586x360/p2p1npNUp3FlAEP9.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514963384604983298/pu/vid/1174x720/X70qQ5sLoHlMaoUV.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1514963498341912580"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:48.325Z"
     },
     {
       "id": "archive-1514939695985274880",
@@ -97,7 +2118,203 @@
       "fullText": "Environmental Resistance\n\n#3Danimation  #b3d #digitalart #loopgang #motionGraphics https://t.co/mW8M8wgck3",
       "expandedUrl": "https://twitter.com/i/web/status/1514939695985274880",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "es",
+        "favorite_count": 40,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-15T12:12:24.000Z",
+        "display_text_range": [
+          0,
+          82
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                26,
+                38
+              ],
+              "text": "3Danimation"
+            },
+            {
+              "indices": [
+                40,
+                44
+              ],
+              "text": "b3d"
+            },
+            {
+              "indices": [
+                45,
+                56
+              ],
+              "text": "digitalart"
+            },
+            {
+              "indices": [
+                57,
+                66
+              ],
+              "text": "loopgang"
+            },
+            {
+              "indices": [
+                67,
+                82
+              ],
+              "text": "motionGraphics"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/mW8M8wgck3",
+              "expanded_url": "https://x.com/frktnv/status/1514939695985274880/video/1",
+              "indices": [
+                83,
+                106
+              ],
+              "url": "https://t.co/mW8M8wgck3"
+            }
+          ]
+        },
+        "id_str": "1514939695985274880",
+        "text": "Environmental Resistance\n\n#3Danimation  #b3d #digitalart #loopgang #motionGraphics https://t.co/mW8M8wgck3",
+        "user": {
+          "id_str": "1365238629799444483",
+          "name": "Konstantin Faraktinov",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1365238774008066048/SQSqNWZG_normal.jpg",
+          "screen_name": "frktnv",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514939695985274880"
+          ],
+          "editable_until_msecs": "1650026544398",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/mW8M8wgck3",
+            "expanded_url": "https://x.com/frktnv/status/1514939695985274880/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              83,
+              106
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1514939502694916096/pu/img/pzkaYFxTyUjSKj2s.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1080,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1080
+              },
+              "medium": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1080
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/mW8M8wgck3",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "duration_millis": 6000,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1514939502694916096/pu/pl/BNOKZEsy7uKUq4KE.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 432000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514939502694916096/pu/vid/320x320/-9f4v-v5nkKRXamS.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514939502694916096/pu/vid/540x540/RC_N-rZZxkP080ed.mp4?tag=12"
+                },
+                {
+                  "bitrate": 1280000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514939502694916096/pu/vid/720x720/bnUU00wpvsNgFZFH.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1,
+            1
+          ],
+          "contentType": "media_entity",
+          "durationMs": 6000,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1514939502694916096/pu/img/pzkaYFxTyUjSKj2s.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1514939502694916096/pu/pl/BNOKZEsy7uKUq4KE.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514939502694916096/pu/vid/320x320/-9f4v-v5nkKRXamS.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514939502694916096/pu/vid/540x540/RC_N-rZZxkP080ed.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514939502694916096/pu/vid/720x720/bnUU00wpvsNgFZFH.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1514939695985274880"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:49.482Z"
     },
     {
       "id": "archive-1514830802995269634",
@@ -105,7 +2322,177 @@
       "fullText": "クールな電子カルテのUIデザイン。お医者さんがこんなの使ってたらガン見しちゃいますね。\nhttps://t.co/a3BhGZM1fx https://t.co/KiW8T6K2M9",
       "expandedUrl": "https://twitter.com/i/web/status/1514830802995269634",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 279,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-15T04:59:42.000Z",
+        "display_text_range": [
+          0,
+          67
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "dribbble.com/shots/17950228…",
+              "expanded_url": "https://dribbble.com/shots/17950228-EHR-Electronic-Health-Record-System-Case-Study",
+              "indices": [
+                44,
+                67
+              ],
+              "url": "https://t.co/a3BhGZM1fx"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/KiW8T6K2M9",
+              "expanded_url": "https://x.com/seikei_kin/status/1514830802995269634/video/1",
+              "indices": [
+                68,
+                91
+              ],
+              "url": "https://t.co/KiW8T6K2M9"
+            }
+          ]
+        },
+        "id_str": "1514830802995269634",
+        "text": "クールな電子カルテのUIデザイン。お医者さんがこんなの使ってたらガン見しちゃいますね。\nhttps://t.co/a3BhGZM1fx https://t.co/KiW8T6K2M9",
+        "user": {
+          "id_str": "975947010250436609",
+          "name": "金 成奎",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1108345732526829568/f5VZaqbz_normal.png",
+          "screen_name": "seikei_kin",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514830802995269634"
+          ],
+          "editable_until_msecs": "1650000582286",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/KiW8T6K2M9",
+            "expanded_url": "https://x.com/seikei_kin/status/1514830802995269634/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              68,
+              91
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1514829678720466946/pu/img/m0ohrpxA6iGMZwgN.jpg",
+            "original_info": {
+              "height": 768,
+              "width": 1024,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 768,
+                "resize": "fit",
+                "w": 1024
+              },
+              "medium": {
+                "h": 768,
+                "resize": "fit",
+                "w": 1024
+              },
+              "small": {
+                "h": 510,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/KiW8T6K2M9",
+            "video_info": {
+              "aspect_ratio": [
+                4,
+                3
+              ],
+              "duration_millis": 19484,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1514829678720466946/pu/pl/IzaLCfazFInQTjel.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514829678720466946/pu/vid/360x270/oWvQ7u-6rTAzlmRf.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514829678720466946/pu/vid/480x360/f3GXt6z87WjN5Dh_.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514829678720466946/pu/vid/960x720/8KTMgoC5HF_Schx2.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            4,
+            3
+          ],
+          "contentType": "media_entity",
+          "durationMs": 19484,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1514829678720466946/pu/img/m0ohrpxA6iGMZwgN.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1514829678720466946/pu/pl/IzaLCfazFInQTjel.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514829678720466946/pu/vid/360x270/oWvQ7u-6rTAzlmRf.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514829678720466946/pu/vid/480x360/f3GXt6z87WjN5Dh_.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514829678720466946/pu/vid/960x720/8KTMgoC5HF_Schx2.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1514830802995269634"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:50.652Z"
     },
     {
       "id": "archive-1514807274535264256",
@@ -113,7 +2500,96 @@
       "fullText": "ボタンの名前もあるし、モーダルのフォーカストラップも実装されてるし、フォーカスインジケータ見えるし、実装者はなかなかアクセシビリティにも精通しているとみた。（モーダル開いたあとのボタンがエンターやスペースで発火しないのだけなぜかわからない） https://t.co/pqo7Kko2eT",
       "expandedUrl": "https://twitter.com/i/web/status/1514807274535264256",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 16,
+        "created_at": "2022-04-15T03:26:12.000Z",
+        "display_text_range": [
+          0,
+          120
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1514807274535264256",
+        "text": "ボタンの名前もあるし、モーダルのフォーカストラップも実装されてるし、フォーカスインジケータ見えるし、実装者はなかなかアクセシビリティにも精通しているとみた。（モーダル開いたあとのボタンがエンターやスペースで発火しないのだけなぜかわからない）",
+        "user": {
+          "id_str": "100895568",
+          "name": "ゆうてん🖖",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1759213043/avatar_normal.jpg",
+          "screen_name": "cloud10designs",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514807274535264256"
+          ],
+          "editable_until_msecs": "1649994972664",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "ja",
+          "reply_count": 0,
+          "retweet_count": 4,
+          "favorite_count": 45,
+          "possibly_sensitive": false,
+          "created_at": "2022-04-14T15:29:33.000Z",
+          "display_text_range": [
+            0,
+            51
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "jujutsukaisen.dolcegabbana.com",
+                "expanded_url": "https://jujutsukaisen.dolcegabbana.com/",
+                "indices": [
+                  28,
+                  51
+                ],
+                "url": "https://t.co/KvkEihsTE6"
+              }
+            ],
+            "user_mentions": [],
+            "symbols": []
+          },
+          "id_str": "1514626924047663111",
+          "text": "WebGLとかの使い方うまいな。明日ソース読んでみよ。 https://t.co/KvkEihsTE6",
+          "user": {
+            "id_str": "100895568",
+            "name": "ゆうてん🖖",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1759213043/avatar_normal.jpg",
+            "screen_name": "cloud10designs",
+            "verified": false,
+            "is_blue_verified": true,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1514626924047663111"
+            ],
+            "editable_until_msecs": "1649951973757",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:51.831Z"
     },
     {
       "id": "archive-1514771148353208321",
@@ -121,7 +2597,206 @@
       "fullText": "実績紹介】デジタルクリエイタープラットフォーム ”ZEY” のサービス紹介サイトが公開されました。僕はTOPのフロント実装とインタラクティブモーションの実装を担当しました。ぜひPCとスマホの両端末でご覧ください！！ https://t.co/ed6ob7i3Y7 #css #threejs #webgl #creativecoding https://t.co/E70BKsG084",
       "expandedUrl": "https://twitter.com/i/web/status/1514771148353208321",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 61,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-15T01:02:39.000Z",
+        "display_text_range": [
+          0,
+          168
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                132,
+                136
+              ],
+              "text": "css"
+            },
+            {
+              "indices": [
+                137,
+                145
+              ],
+              "text": "threejs"
+            },
+            {
+              "indices": [
+                146,
+                152
+              ],
+              "text": "webgl"
+            },
+            {
+              "indices": [
+                153,
+                168
+              ],
+              "text": "creativecoding"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "hello.zey.zone",
+              "expanded_url": "https://hello.zey.zone/",
+              "indices": [
+                108,
+                131
+              ],
+              "url": "https://t.co/ed6ob7i3Y7"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/E70BKsG084",
+              "expanded_url": "https://x.com/ikeryou/status/1514771148353208321/video/1",
+              "indices": [
+                169,
+                192
+              ],
+              "url": "https://t.co/E70BKsG084"
+            }
+          ]
+        },
+        "id_str": "1514771148353208321",
+        "text": "実績紹介】デジタルクリエイタープラットフォーム ”ZEY” のサービス紹介サイトが公開されました。僕はTOPのフロント実装とインタラクティブモーションの実装を担当しました。ぜひPCとスマホの両端末でご覧ください！！ https://t.co/ed6ob7i3Y7 #css #threejs #webgl #creativecoding https://t.co/E70BKsG084",
+        "user": {
+          "id_str": "14351121",
+          "name": "ikeryou",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1866681590199488514/lx_eD7Xs_normal.jpg",
+          "screen_name": "ikeryou",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514771148353208321"
+          ],
+          "editable_until_msecs": "1649986359511",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/E70BKsG084",
+            "expanded_url": "https://x.com/ikeryou/status/1514771148353208321/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              169,
+              192
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1514770877241761792/pu/img/8JLYmxYA5H6A5zdw.jpg",
+            "original_info": {
+              "height": 1322,
+              "width": 2646,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1023,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 600,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 340,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/E70BKsG084",
+            "video_info": {
+              "aspect_ratio": [
+                1323,
+                661
+              ],
+              "duration_millis": 32566,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1514770877241761792/pu/pl/7JDW-haCnMgjC7db.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514770877241761792/pu/vid/540x270/Je1QgKpiURG4jcbP.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514770877241761792/pu/vid/720x360/MMPprXRvaCm-C6PB.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514770877241761792/pu/vid/1440x720/z8Nmx4bSwH3eTUs6.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1323,
+            661
+          ],
+          "contentType": "media_entity",
+          "durationMs": 32566,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1514770877241761792/pu/img/8JLYmxYA5H6A5zdw.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1514770877241761792/pu/pl/7JDW-haCnMgjC7db.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514770877241761792/pu/vid/540x270/Je1QgKpiURG4jcbP.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514770877241761792/pu/vid/720x360/MMPprXRvaCm-C6PB.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514770877241761792/pu/vid/1440x720/z8Nmx4bSwH3eTUs6.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1514771148353208321"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:53.056Z"
     },
     {
       "id": "archive-1514650835879399427",
@@ -129,7 +2804,189 @@
       "fullText": "building factories #threejs #typescript #blender https://t.co/OpUidcOITZ",
       "expandedUrl": "https://twitter.com/i/web/status/1514650835879399427",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 58,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-14T17:04:34.000Z",
+        "display_text_range": [
+          0,
+          48
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                19,
+                27
+              ],
+              "text": "threejs"
+            },
+            {
+              "indices": [
+                28,
+                39
+              ],
+              "text": "typescript"
+            },
+            {
+              "indices": [
+                40,
+                48
+              ],
+              "text": "blender"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/OpUidcOITZ",
+              "expanded_url": "https://x.com/lukaswestner/status/1514650835879399427/video/1",
+              "indices": [
+                49,
+                72
+              ],
+              "url": "https://t.co/OpUidcOITZ"
+            }
+          ]
+        },
+        "id_str": "1514650835879399427",
+        "text": "building factories #threejs #typescript #blender https://t.co/OpUidcOITZ",
+        "user": {
+          "id_str": "2310844501",
+          "name": "Luk",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/446610241975623680/bri2KBE1_normal.png",
+          "screen_name": "lukaswestner",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514650835879399427"
+          ],
+          "editable_until_msecs": "1649957674782",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/OpUidcOITZ",
+            "expanded_url": "https://x.com/lukaswestner/status/1514650835879399427/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              49,
+              72
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1514650234445565955/pu/img/qm5aekZAX0mJyJ5R.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/OpUidcOITZ",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 56100,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1514650234445565955/pu/pl/U331MyjilE9vr_8Y.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514650234445565955/pu/vid/480x270/jSBrU7Ev0sJkL4cV.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514650234445565955/pu/vid/640x360/AQX-OY2o_9ZRyAkP.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514650234445565955/pu/vid/1280x720/TX_iXHz1RBciP-dI.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 56100,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1514650234445565955/pu/img/qm5aekZAX0mJyJ5R.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1514650234445565955/pu/pl/U331MyjilE9vr_8Y.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514650234445565955/pu/vid/480x270/jSBrU7Ev0sJkL4cV.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514650234445565955/pu/vid/640x360/AQX-OY2o_9ZRyAkP.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514650234445565955/pu/vid/1280x720/TX_iXHz1RBciP-dI.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1514650835879399427"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 3,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:54.237Z"
     },
     {
       "id": "archive-1514625758870007812",
@@ -137,7 +2994,188 @@
       "fullText": "脸书开源了最新的文本编辑器 Lexical，目前脸书和 Instagram 官网用的都是它。\n\n它替代了脸书原来的 Draftjs，跟 Prosemirror 相比，更轻量、可配置性更高，缺点是文档目前不全。https://t.co/09N7mcFAgY https://t.co/PTVxyOVtey",
       "expandedUrl": "https://twitter.com/i/web/status/1514625758870007812",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "zh",
+        "favorite_count": 280,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-14T15:24:55.000Z",
+        "display_text_range": [
+          0,
+          127
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "lexical.dev",
+              "expanded_url": "https://lexical.dev/",
+              "indices": [
+                104,
+                127
+              ],
+              "url": "https://t.co/09N7mcFAgY"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/PTVxyOVtey",
+              "expanded_url": "https://x.com/ruanyf/status/1514625758870007812/photo/1",
+              "indices": [
+                128,
+                151
+              ],
+              "url": "https://t.co/PTVxyOVtey"
+            }
+          ]
+        },
+        "id_str": "1514625758870007812",
+        "text": "脸书开源了最新的文本编辑器 Lexical，目前脸书和 Instagram 官网用的都是它。\n\n它替代了脸书原来的 Draftjs，跟 Prosemirror 相比，更轻量、可配置性更高，缺点是文档目前不全。https://t.co/09N7mcFAgY https://t.co/PTVxyOVtey",
+        "user": {
+          "id_str": "1580781",
+          "name": "ruanyf",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/2363795309/wbi37mdkxhr2trsr4ofa_normal.jpeg",
+          "screen_name": "ruanyf",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514625758870007812"
+          ],
+          "editable_until_msecs": "1649951695957",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/PTVxyOVtey",
+            "expanded_url": "https://x.com/ruanyf/status/1514625758870007812/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              128,
+              151
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FQUIFOfaUAQSEBc.jpg",
+            "original_info": {
+              "height": 932,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 128,
+                  "y": 0,
+                  "w": 1664,
+                  "h": 932
+                },
+                {
+                  "x": 494,
+                  "y": 0,
+                  "w": 932,
+                  "h": 932
+                },
+                {
+                  "x": 551,
+                  "y": 0,
+                  "w": 818,
+                  "h": 932
+                },
+                {
+                  "x": 727,
+                  "y": 0,
+                  "w": 466,
+                  "h": 932
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 932
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 932,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 583,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 330,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/PTVxyOVtey"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 128,
+                "y": 0,
+                "w": 1664,
+                "h": 932
+              },
+              {
+                "x": 494,
+                "y": 0,
+                "w": 932,
+                "h": 932
+              },
+              {
+                "x": 551,
+                "y": 0,
+                "w": 818,
+                "h": 932
+              },
+              {
+                "x": 727,
+                "y": 0,
+                "w": 466,
+                "h": 932
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 932
+              }
+            ],
+            "expandedUrl": "https://x.com/ruanyf/status/1514625758870007812/photo/1",
+            "url": "https://pbs.twimg.com/media/FQUIFOfaUAQSEBc.jpg",
+            "width": 1920,
+            "height": 932
+          }
+        ],
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:55.409Z"
     },
     {
       "id": "archive-1514604744790376450",
@@ -145,7 +3183,203 @@
       "fullText": "我在推微前端时，经常会被问：\n“为什么不用 iframe？”\n\n我每次都是零星地回答，不够正式，不够严谨，是我太懒没有总结成文。（惭愧😬\n\n今天发现一篇好文，推荐给大家：\nhttps://t.co/DBdTRe87lr\n\n#MicroFrontends #Frontend https://t.co/tmF1Qa1ymo",
       "expandedUrl": "https://twitter.com/i/web/status/1514604744790376450",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "zh",
+        "favorite_count": 117,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-14T14:01:25.000Z",
+        "display_text_range": [
+          0,
+          137
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                111,
+                126
+              ],
+              "text": "MicroFrontends"
+            },
+            {
+              "indices": [
+                127,
+                136
+              ],
+              "text": "Frontend"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "yuque.com/kuitos/gky7yw/…",
+              "expanded_url": "https://www.yuque.com/kuitos/gky7yw/gesexv",
+              "indices": [
+                86,
+                109
+              ],
+              "url": "https://t.co/DBdTRe87lr"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/tmF1Qa1ymo",
+              "expanded_url": "https://x.com/ThaddeusJiang/status/1514604744790376450/photo/1",
+              "indices": [
+                137,
+                160
+              ],
+              "url": "https://t.co/tmF1Qa1ymo"
+            }
+          ]
+        },
+        "id_str": "1514604744790376450",
+        "text": "我在推微前端时，经常会被问：\n“为什么不用 iframe？”\n\n我每次都是零星地回答，不够正式，不够严谨，是我太懒没有总结成文。（惭愧😬\n\n今天发现一篇好文，推荐给大家：\nhttps://t.co/DBdTRe87lr\n\n#MicroFrontends #Frontend https://t.co/tmF1Qa1ymo",
+        "user": {
+          "id_str": "1150937016361553920",
+          "name": "TJ (thaddeus jiang)",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1831660665687207936/NI1QhPjH_normal.jpg",
+          "screen_name": "thaddeusjiangzh",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514604744790376450"
+          ],
+          "editable_until_msecs": "1649946685810",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/tmF1Qa1ymo",
+            "expanded_url": "https://x.com/ThaddeusJiang/status/1514604744790376450/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              137,
+              160
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FQT0ETvacAEgOOi.png",
+            "original_info": {
+              "height": 314,
+              "width": 1513,
+              "focus_rects": [
+                {
+                  "x": 514,
+                  "y": 0,
+                  "w": 561,
+                  "h": 314
+                },
+                {
+                  "x": 637,
+                  "y": 0,
+                  "w": 314,
+                  "h": 314
+                },
+                {
+                  "x": 657,
+                  "y": 0,
+                  "w": 275,
+                  "h": 314
+                },
+                {
+                  "x": 716,
+                  "y": 0,
+                  "w": 157,
+                  "h": 314
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1513,
+                  "h": 314
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 314,
+                "resize": "fit",
+                "w": 1513
+              },
+              "medium": {
+                "h": 249,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 141,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/tmF1Qa1ymo"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 514,
+                "y": 0,
+                "w": 561,
+                "h": 314
+              },
+              {
+                "x": 637,
+                "y": 0,
+                "w": 314,
+                "h": 314
+              },
+              {
+                "x": 657,
+                "y": 0,
+                "w": 275,
+                "h": 314
+              },
+              {
+                "x": 716,
+                "y": 0,
+                "w": 157,
+                "h": 314
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1513,
+                "h": 314
+              }
+            ],
+            "expandedUrl": "https://x.com/ThaddeusJiang/status/1514604744790376450/photo/1",
+            "url": "https://pbs.twimg.com/media/FQT0ETvacAEgOOi.png",
+            "width": 1513,
+            "height": 314
+          }
+        ],
+        "conversation_count": 7,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:56.567Z"
     },
     {
       "id": "archive-1514552824495210499",
@@ -153,7 +3387,220 @@
       "fullText": "Cloned kirihuda's(@kirifuda_inc) works page.\n\n♠️original\nhttps://t.co/tL96xpQxV5\n\n♥️application\nhttps://t.co/LWAJb7DH28\n\n♦️repogitry\nhttps://t.co/a47rmwddNI\n\n#threejs #r3f https://t.co/D77oRigvuK",
       "expandedUrl": "https://twitter.com/i/web/status/1514552824495210499",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 102,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-14T10:35:07.000Z",
+        "display_text_range": [
+          0,
+          171
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                158,
+                166
+              ],
+              "text": "threejs"
+            },
+            {
+              "indices": [
+                167,
+                171
+              ],
+              "text": "r3f"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "kirifuda.co.jp/works/",
+              "expanded_url": "https://kirifuda.co.jp/works/",
+              "indices": [
+                57,
+                80
+              ],
+              "url": "https://t.co/tL96xpQxV5"
+            },
+            {
+              "display_url": "nemutas.github.io/r3f-kirifuda/",
+              "expanded_url": "https://nemutas.github.io/r3f-kirifuda/",
+              "indices": [
+                96,
+                119
+              ],
+              "url": "https://t.co/LWAJb7DH28"
+            },
+            {
+              "display_url": "github.com/nemutas/r3f-ki…",
+              "expanded_url": "https://github.com/nemutas/r3f-kirifuda",
+              "indices": [
+                133,
+                156
+              ],
+              "url": "https://t.co/a47rmwddNI"
+            }
+          ],
+          "user_mentions": [
+            {
+              "id_str": "2414036342",
+              "indices": [
+                18,
+                31
+              ],
+              "name": "kirifuda",
+              "screen_name": "kirifuda_inc"
+            }
+          ],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/D77oRigvuK",
+              "expanded_url": "https://x.com/focru_ino/status/1514552824495210499/video/1",
+              "indices": [
+                172,
+                195
+              ],
+              "url": "https://t.co/D77oRigvuK"
+            }
+          ]
+        },
+        "id_str": "1514552824495210499",
+        "text": "Cloned kirihuda's(@kirifuda_inc) works page.\n\n♠️original\nhttps://t.co/tL96xpQxV5\n\n♥️application\nhttps://t.co/LWAJb7DH28\n\n♦️repogitry\nhttps://t.co/a47rmwddNI\n\n#threejs #r3f https://t.co/D77oRigvuK",
+        "user": {
+          "id_str": "293438309",
+          "name": "ふぉくる",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1928502205902180352/WI9G5eyp_normal.jpg",
+          "screen_name": "focru_ino",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514552824495210499"
+          ],
+          "editable_until_msecs": "1649934307047",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/D77oRigvuK",
+            "expanded_url": "https://x.com/focru_ino/status/1514552824495210499/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              172,
+              195
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1514551813550534662/pu/img/euo-7ujRpcoRVx1N.jpg",
+            "original_info": {
+              "height": 628,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 628,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 589,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 334,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/D77oRigvuK",
+            "video_info": {
+              "aspect_ratio": [
+                320,
+                157
+              ],
+              "duration_millis": 18396,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1514551813550534662/pu/pl/6H_7PPcoFPboya8E.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514551813550534662/pu/vid/550x270/zOElv0jIHd5HSJFV.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514551813550534662/pu/vid/732x360/yztHcZ7neo5fr0e_.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1514551813550534662/pu/vid/1280x628/r5JxhgUTgzV0EkB2.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            320,
+            157
+          ],
+          "contentType": "media_entity",
+          "durationMs": 18396,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1514551813550534662/pu/img/euo-7ujRpcoRVx1N.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1514551813550534662/pu/pl/6H_7PPcoFPboya8E.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514551813550534662/pu/vid/550x270/zOElv0jIHd5HSJFV.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514551813550534662/pu/vid/732x360/yztHcZ7neo5fr0e_.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1514551813550534662/pu/vid/1280x628/r5JxhgUTgzV0EkB2.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1514552824495210499"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:57.734Z"
     },
     {
       "id": "archive-1514507977021026306",
@@ -161,7 +3608,200 @@
       "fullText": "毎日ちょっとずつ育てていくピクミン箱庭\n1日目\n\n#blender #blender初心者 #3DCG https://t.co/Vjq0785atn",
       "expandedUrl": "https://twitter.com/i/web/status/1514507977021026306",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 275,
+        "possibly_sensitive": false,
+        "created_at": "2022-04-14T07:36:54.000Z",
+        "display_text_range": [
+          0,
+          51
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                25,
+                33
+              ],
+              "text": "blender"
+            },
+            {
+              "indices": [
+                34,
+                45
+              ],
+              "text": "blender初心者"
+            },
+            {
+              "indices": [
+                46,
+                51
+              ],
+              "text": "3DCG"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/Vjq0785atn",
+              "expanded_url": "https://x.com/michikirin/status/1514507977021026306/photo/1",
+              "indices": [
+                52,
+                75
+              ],
+              "url": "https://t.co/Vjq0785atn"
+            }
+          ]
+        },
+        "id_str": "1514507977021026306",
+        "text": "毎日ちょっとずつ育てていくピクミン箱庭\n1日目\n\n#blender #blender初心者 #3DCG https://t.co/Vjq0785atn",
+        "user": {
+          "id_str": "1299165162339934210",
+          "name": "みちる🦒",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1923061531291549698/2SJcjlcY_normal.jpg",
+          "screen_name": "michikirin",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1514507977021026306"
+          ],
+          "editable_until_msecs": "1649923614576",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/Vjq0785atn",
+            "expanded_url": "https://x.com/michikirin/status/1514507977021026306/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              52,
+              75
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FQScuhPVQAQ30Rg.jpg",
+            "original_info": {
+              "height": 1920,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 567,
+                  "w": 1920,
+                  "h": 1075
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1920
+                },
+                {
+                  "x": 118,
+                  "y": 0,
+                  "w": 1684,
+                  "h": 1920
+                },
+                {
+                  "x": 480,
+                  "y": 0,
+                  "w": 960,
+                  "h": 1920
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1920
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1920,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/Vjq0785atn"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 567,
+                "w": 1920,
+                "h": 1075
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1920
+              },
+              {
+                "x": 118,
+                "y": 0,
+                "w": 1684,
+                "h": 1920
+              },
+              {
+                "x": 480,
+                "y": 0,
+                "w": 960,
+                "h": 1920
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1920
+              }
+            ],
+            "expandedUrl": "https://x.com/michikirin/status/1514507977021026306/photo/1",
+            "url": "https://pbs.twimg.com/media/FQScuhPVQAQ30Rg.jpg",
+            "width": 1920,
+            "height": 1920
+          }
+        ],
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:17:58.892Z"
     }
   ]
 }

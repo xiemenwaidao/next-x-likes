@@ -9,7 +9,167 @@
       "fullText": "※東進のパクリ\n【中国語版東進CM】が出来ました。✨ https://t.co/Yse2qP6siE",
       "expandedUrl": "https://twitter.com/i/web/status/1297114845939027970",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 1035,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-22T10:14:13.000Z",
+        "display_text_range": [
+          0,
+          26
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/Yse2qP6siE",
+              "expanded_url": "https://x.com/dongdongchstudy/status/1297114845939027970/video/1",
+              "indices": [
+                27,
+                50
+              ],
+              "url": "https://t.co/Yse2qP6siE"
+            }
+          ]
+        },
+        "id_str": "1297114845939027970",
+        "text": "※東進のパクリ\n【中国語版東進CM】が出来ました。✨ https://t.co/Yse2qP6siE",
+        "user": {
+          "id_str": "1109768669028995072",
+          "name": "タケ@中国語勉強中",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1255768814051975169/MhBwjEwy_normal.jpg",
+          "screen_name": "dongdongchstudy",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1297114845939027970"
+          ],
+          "editable_until_msecs": "1598093053157",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/Yse2qP6siE",
+            "expanded_url": "https://x.com/dongdongchstudy/status/1297114845939027970/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              27,
+              50
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1297114733863038976/pu/img/nlPFPgqsJF6DlvM_.jpg",
+            "original_info": {
+              "height": 540,
+              "width": 960,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 540,
+                "resize": "fit",
+                "w": 960
+              },
+              "medium": {
+                "h": 540,
+                "resize": "fit",
+                "w": 960
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/Yse2qP6siE",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 63313,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1297114733863038976/pu/pl/Avihg5qpDfdCmsIR.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1297114733863038976/pu/vid/480x270/ji95419F7Gma1VUe.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1297114733863038976/pu/vid/640x360/EtqZJgApy_R_ryHP.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1297114733863038976/pu/vid/960x540/jSwtwOV4L1p1CIb1.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 63313,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1297114733863038976/pu/img/nlPFPgqsJF6DlvM_.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1297114733863038976/pu/pl/Avihg5qpDfdCmsIR.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1297114733863038976/pu/vid/480x270/ji95419F7Gma1VUe.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1297114733863038976/pu/vid/640x360/EtqZJgApy_R_ryHP.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1297114733863038976/pu/vid/960x540/jSwtwOV4L1p1CIb1.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1297114845939027970"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 25,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:32.903Z"
     },
     {
       "id": "archive-1296948913048453121",
@@ -17,7 +177,58 @@
       "fullText": "この記事から1年。僕がBlenderを始めたのはこの記事がきっかけでした。\n\n「やっと3Dツールが紙とペンのような存在になる」エヴァ制作のカラーがBlenderへの移行を進める理由とは？（西田宗千佳） - Engadget 日本版 https://t.co/ODj7V2LYxC",
       "expandedUrl": "https://twitter.com/i/web/status/1296948913048453121",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 126,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-21T23:14:51.000Z",
+        "display_text_range": [
+          0,
+          139
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "japanese.engadget.com/jp-2019-08-14-…",
+              "expanded_url": "https://japanese.engadget.com/jp-2019-08-14-blender-khara.html",
+              "indices": [
+                116,
+                139
+              ],
+              "url": "https://t.co/ODj7V2LYxC"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1296948913048453121",
+        "text": "この記事から1年。僕がBlenderを始めたのはこの記事がきっかけでした。\n\n「やっと3Dツールが紙とペンのような存在になる」エヴァ制作のカラーがBlenderへの移行を進める理由とは？（西田宗千佳） - Engadget 日本版 https://t.co/ODj7V2LYxC",
+        "user": {
+          "id_str": "175205398",
+          "name": "Taka Tachibana",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1290078782875791361/b2rMZivg_normal.jpg",
+          "screen_name": "taka_tachibana",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296948913048453121"
+          ],
+          "editable_until_msecs": "1598053491673",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:34.086Z"
     },
     {
       "id": "archive-1296926955611316224",
@@ -25,7 +236,8 @@
       "fullText": "And they say women's intuition is a myth B) @FallGuysGame \n\n女の勘ってヤツよね ♡ https://t.co/0B0p2dGb4Q",
       "expandedUrl": "https://twitter.com/i/web/status/1296926955611316224",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "private": true
     },
     {
       "id": "archive-1296833317065486342",
@@ -33,7 +245,8 @@
       "fullText": "You’re unable to view this Tweet because this account owner limits who can view their Tweets. {learnmore}",
       "expandedUrl": "https://twitter.com/i/web/status/1296833317065486342",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "private": true
     },
     {
       "id": "archive-1296812363622932480",
@@ -41,7 +254,178 @@
       "fullText": "ラム！ https://t.co/5jkE27kCEs",
       "expandedUrl": "https://twitter.com/i/web/status/1296812363622932480",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 16,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-21T14:12:15.000Z",
+        "display_text_range": [
+          0,
+          3
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/5jkE27kCEs",
+              "expanded_url": "https://x.com/kurosaurus/status/1296812363622932480/photo/1",
+              "indices": [
+                4,
+                27
+              ],
+              "url": "https://t.co/5jkE27kCEs"
+            }
+          ]
+        },
+        "id_str": "1296812363622932480",
+        "text": "ラム！ https://t.co/5jkE27kCEs",
+        "user": {
+          "id_str": "129137407",
+          "name": "くろさわ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1122901393352716288/cFzDTTb6_normal.png",
+          "screen_name": "kurosaurus",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296812363622932480"
+          ],
+          "editable_until_msecs": "1598020935753",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/5jkE27kCEs",
+            "expanded_url": "https://x.com/kurosaurus/status/1296812363622932480/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              4,
+              27
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef8z9pKU0AExzhf.jpg",
+            "original_info": {
+              "height": 2048,
+              "width": 1536,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 235,
+                  "w": 1536,
+                  "h": 860
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 1536
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 1751
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 2048
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 1536
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 900
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 510
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/5jkE27kCEs"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 235,
+                "w": 1536,
+                "h": 860
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 1536
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 1751
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1024,
+                "h": 2048
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 2048
+              }
+            ],
+            "expandedUrl": "https://x.com/kurosaurus/status/1296812363622932480/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef8z9pKU0AExzhf.jpg",
+            "width": 1536,
+            "height": 2048
+          }
+        ],
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:37.536Z"
     },
     {
       "id": "archive-1296798366819422209",
@@ -49,7 +433,167 @@
       "fullText": "ひたすら飼育員の邪魔をするパンダのビデオがずっと見てられる https://t.co/G5JHeVLLXg",
       "expandedUrl": "https://twitter.com/i/web/status/1296798366819422209",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 155465,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-21T13:16:38.000Z",
+        "display_text_range": [
+          0,
+          53
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/G5JHeVLLXg",
+              "expanded_url": "https://x.com/Sci_Phile/status/1296199633165787136/video/1",
+              "indices": [
+                30,
+                53
+              ],
+              "url": "https://t.co/G5JHeVLLXg"
+            }
+          ]
+        },
+        "id_str": "1296798366819422209",
+        "text": "ひたすら飼育員の邪魔をするパンダのビデオがずっと見てられる https://t.co/G5JHeVLLXg",
+        "user": {
+          "id_str": "933562792187109376",
+          "name": "最多情報局",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1142197940443680768/_hpVLFxk_normal.jpg",
+          "screen_name": "tyomateee",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296798366819422209"
+          ],
+          "editable_until_msecs": "1598017598655",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/G5JHeVLLXg",
+            "expanded_url": "https://x.com/Sci_Phile/status/1296199633165787136/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              30,
+              53
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1296199529713238016/pu/img/0PNpyr8QQ_re6634.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/G5JHeVLLXg",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 119697,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1296199529713238016/pu/pl/YsKOmR29yyTjzMhW.m3u8?tag=10&v=c1e"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1296199529713238016/pu/vid/480x270/sg8OeGaVDQr1K-D2.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1296199529713238016/pu/vid/640x360/lPqn5UFl_ojkIGS9.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1296199529713238016/pu/vid/1280x720/UHbiw_gkCulu_JPx.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 119697,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1296199529713238016/pu/img/0PNpyr8QQ_re6634.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1296199529713238016/pu/pl/YsKOmR29yyTjzMhW.m3u8?tag=10&v=c1e"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1296199529713238016/pu/vid/480x270/sg8OeGaVDQr1K-D2.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1296199529713238016/pu/vid/640x360/lPqn5UFl_ojkIGS9.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1296199529713238016/pu/vid/1280x720/UHbiw_gkCulu_JPx.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1296798366819422209"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 172,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:38.701Z"
     },
     {
       "id": "archive-1296757690404749312",
@@ -57,7 +601,247 @@
       "fullText": "【お知らせ】現在、《魔女の泉3 Re:Fine》公式サイトへのアクセスが一時的に集中しており、上手く接続できない場合がございます。大変ご不便をおかけしますが、しばらく時間をおいてからアクセスを再度お試しください。\n\n《魔女の泉3 Re:Fine》公式ページ：https://t.co/WijIL18PRc https://t.co/NGOUx4Hu5t",
       "expandedUrl": "https://twitter.com/i/web/status/1296757690404749312",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 61,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-21T10:35:00.000Z",
+        "display_text_range": [
+          0,
+          152
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "gchoice.jp/WS3R/",
+              "expanded_url": "https://gchoice.jp/WS3R/",
+              "indices": [
+                129,
+                152
+              ],
+              "url": "https://t.co/WijIL18PRc"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1296757690404749312",
+        "text": "【お知らせ】現在、《魔女の泉3 Re:Fine》公式サイトへのアクセスが一時的に集中しており、上手く接続できない場合がございます。大変ご不便をおかけしますが、しばらく時間をおいてからアクセスを再度お試しください。\n\n《魔女の泉3 Re:Fine》公式ページ：https://t.co/WijIL18PRc",
+        "user": {
+          "id_str": "788604244563722241",
+          "name": "【公式】魔女の泉",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1739506330170445824/E4pPmLyx_normal.png",
+          "screen_name": "WitchSprings",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296757690404749312"
+          ],
+          "editable_until_msecs": "1598007900642",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "ja",
+          "reply_count": 14,
+          "retweet_count": 431,
+          "favorite_count": 775,
+          "possibly_sensitive": false,
+          "created_at": "2020-08-21T09:52:23.000Z",
+          "display_text_range": [
+            0,
+            174
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "gchoice.jp/WS3R/",
+                "expanded_url": "https://gchoice.jp/WS3R/",
+                "indices": [
+                  151,
+                  174
+                ],
+                "url": "https://t.co/WijIL18PRc"
+              }
+            ],
+            "user_mentions": [
+              {
+                "id_str": "1283691004097224706",
+                "indices": [
+                  91,
+                  105
+                ],
+                "name": "G CHOICE",
+                "screen_name": "G_CHOICE_INFO"
+              }
+            ],
+            "symbols": [],
+            "media": [
+              {
+                "display_url": "pic.x.com/0NPb9Gk5FG",
+                "expanded_url": "https://x.com/WitchSprings/status/1296746965913329666/photo/1",
+                "indices": [
+                  175,
+                  198
+                ],
+                "url": "https://t.co/0NPb9Gk5FG"
+              }
+            ]
+          },
+          "id_str": "1296746965913329666",
+          "text": "【お知らせ】《魔女の泉3 Re:Fine》Nintendo Switch版が発売決定！\n\n全グラフィック要素が完全にリニューアルされ、限定コンテンツやキャラボイスまで―\n詳しい情報は@G_CHOICE_INFOの公式サイトからどうぞ。事前予約もお忘れなく！\n\n《魔女の泉3 Re:Fine》公式ページ：https://t.co/WijIL18PRc https://t.co/0NPb9Gk5FG",
+          "user": {
+            "id_str": "788604244563722241",
+            "name": "【公式】魔女の泉",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1739506330170445824/E4pPmLyx_normal.png",
+            "screen_name": "WitchSprings",
+            "verified": false,
+            "is_blue_verified": true,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1296746965913329666"
+            ],
+            "editable_until_msecs": "1598005343724",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "mediaDetails": [
+            {
+              "display_url": "pic.x.com/0NPb9Gk5FG",
+              "expanded_url": "https://x.com/WitchSprings/status/1296746965913329666/photo/1",
+              "ext_media_availability": {
+                "status": "Available"
+              },
+              "indices": [
+                175,
+                198
+              ],
+              "media_url_https": "https://pbs.twimg.com/media/Ef7wFX6UwAArU3i.jpg",
+              "original_info": {
+                "height": 1020,
+                "width": 1642,
+                "focus_rects": [
+                  {
+                    "x": 0,
+                    "y": 100,
+                    "w": 1642,
+                    "h": 920
+                  },
+                  {
+                    "x": 622,
+                    "y": 0,
+                    "w": 1020,
+                    "h": 1020
+                  },
+                  {
+                    "x": 747,
+                    "y": 0,
+                    "w": 895,
+                    "h": 1020
+                  },
+                  {
+                    "x": 1098,
+                    "y": 0,
+                    "w": 510,
+                    "h": 1020
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "w": 1642,
+                    "h": 1020
+                  }
+                ]
+              },
+              "sizes": {
+                "large": {
+                  "h": 1020,
+                  "resize": "fit",
+                  "w": 1642
+                },
+                "medium": {
+                  "h": 745,
+                  "resize": "fit",
+                  "w": 1200
+                },
+                "small": {
+                  "h": 422,
+                  "resize": "fit",
+                  "w": 680
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "photo",
+              "url": "https://t.co/0NPb9Gk5FG"
+            }
+          ],
+          "photos": [
+            {
+              "backgroundColor": {
+                "red": 204,
+                "green": 214,
+                "blue": 221
+              },
+              "cropCandidates": [
+                {
+                  "x": 0,
+                  "y": 100,
+                  "w": 1642,
+                  "h": 920
+                },
+                {
+                  "x": 622,
+                  "y": 0,
+                  "w": 1020,
+                  "h": 1020
+                },
+                {
+                  "x": 747,
+                  "y": 0,
+                  "w": 895,
+                  "h": 1020
+                },
+                {
+                  "x": 1098,
+                  "y": 0,
+                  "w": 510,
+                  "h": 1020
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1642,
+                  "h": 1020
+                }
+              ],
+              "expandedUrl": "https://x.com/WitchSprings/status/1296746965913329666/photo/1",
+              "url": "https://pbs.twimg.com/media/Ef7wFX6UwAArU3i.jpg",
+              "width": 1642,
+              "height": 1020
+            }
+          ],
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:39.874Z"
     },
     {
       "id": "archive-1296727646039138304",
@@ -65,7 +849,147 @@
       "fullText": "experiment with curves in #threejs https://t.co/GZ23QZqtXr",
       "expandedUrl": "https://twitter.com/i/web/status/1296727646039138304",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 521,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-21T08:35:37.000Z",
+        "display_text_range": [
+          0,
+          34
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                26,
+                34
+              ],
+              "text": "threejs"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/GZ23QZqtXr",
+              "expanded_url": "https://x.com/akella/status/1296727646039138304/photo/1",
+              "indices": [
+                35,
+                58
+              ],
+              "url": "https://t.co/GZ23QZqtXr"
+            }
+          ]
+        },
+        "id_str": "1296727646039138304",
+        "text": "experiment with curves in #threejs https://t.co/GZ23QZqtXr",
+        "user": {
+          "id_str": "10316842",
+          "name": "akella",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1316066623409868800/vjr89qvM_normal.png",
+          "screen_name": "akella",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296727646039138304"
+          ],
+          "editable_until_msecs": "1598000737507",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/GZ23QZqtXr",
+            "expanded_url": "https://x.com/akella/status/1296727646039138304/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              35,
+              58
+            ],
+            "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/Ef7mzUjX0AAVAxW.jpg",
+            "original_info": {
+              "height": 1024,
+              "width": 1024,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1024,
+                "resize": "fit",
+                "w": 1024
+              },
+              "medium": {
+                "h": 1024,
+                "resize": "fit",
+                "w": 1024
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "animated_gif",
+            "url": "https://t.co/GZ23QZqtXr",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "variants": [
+                {
+                  "bitrate": 0,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/tweet_video/Ef7mzUjX0AAVAxW.mp4"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1,
+            1
+          ],
+          "contentType": "gif",
+          "durationMs": 0,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/Ef7mzUjX0AAVAxW.jpg",
+          "variants": [
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/tweet_video/Ef7mzUjX0AAVAxW.mp4"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1296727646039138304"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 5,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:41.036Z"
     },
     {
       "id": "archive-1296701722430066688",
@@ -73,7 +997,96 @@
       "fullText": "GPUメーカーの1位はぶっちぎりでIntelなのでそんなに間違っていない😇 https://t.co/kk0cHjD3yC",
       "expandedUrl": "https://twitter.com/i/web/status/1296701722430066688",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 91,
+        "created_at": "2020-08-21T06:52:36.000Z",
+        "display_text_range": [
+          0,
+          38
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1296701722430066688",
+        "text": "GPUメーカーの1位はぶっちぎりでIntelなのでそんなに間違っていない😇",
+        "user": {
+          "id_str": "17380994",
+          "name": "野生の男",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1305813419535134720/St-XfIl1_normal.jpg",
+          "screen_name": "yasei_no_otoko",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296701722430066688"
+          ],
+          "editable_until_msecs": "1597994556837",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "ja",
+          "reply_count": 1,
+          "retweet_count": 24,
+          "favorite_count": 35,
+          "possibly_sensitive": false,
+          "created_at": "2020-08-21T02:47:35.000Z",
+          "display_text_range": [
+            0,
+            148
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "home1990.net/entry/gyudon-r…",
+                "expanded_url": "https://www.home1990.net/entry/gyudon-ranking",
+                "indices": [
+                  125,
+                  148
+                ],
+                "url": "https://t.co/AibW07JzSJ"
+              }
+            ],
+            "user_mentions": [],
+            "symbols": []
+          },
+          "id_str": "1296640059005784064",
+          "text": "昔、GPUメーカーの違いについて、あまり詳しくない人に「NVIDIAっていう吉野家みたいな会社と、ATI(当時)っていう松屋みたいな会社があって……」という雑な説明をした記憶があるけど、去年の牛丼業界売り上げランキングだと、1位はすき家なんだよね。\nhttps://t.co/AibW07JzSJ",
+          "user": {
+            "id_str": "101907138",
+            "name": "Ph.D.rita",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1349935323698982912/dePpfpaF_normal.jpg",
+            "screen_name": "rita0222",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1296640059005784064"
+            ],
+            "editable_until_msecs": "1597979855131",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:42.238Z"
     },
     {
       "id": "archive-1296697476741607428",
@@ -81,7 +1094,189 @@
       "fullText": "【待望】魔女育成RPG『魔女の泉3』のリメイク版がスイッチで発売決定\nhttps://t.co/ymVSIBCXhG\n\n新ブランド「G CHOICE」の第1作目として人気スマホゲームのリメイク版が登場。シリーズ累計170万ダウンロード以上を達成している『魔女の泉』シリーズが新規ビジュアル、フルボイス搭載でパワーアップ https://t.co/c9Fqjlb7IW",
       "expandedUrl": "https://twitter.com/i/web/status/1296697476741607428",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 455,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-21T06:35:44.000Z",
+        "display_text_range": [
+          0,
+          159
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "news.denfaminicogamer.jp/news/200821i",
+              "expanded_url": "https://news.denfaminicogamer.jp/news/200821i",
+              "indices": [
+                35,
+                58
+              ],
+              "url": "https://t.co/ymVSIBCXhG"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/c9Fqjlb7IW",
+              "expanded_url": "https://x.com/denfaminicogame/status/1296697476741607428/photo/1",
+              "indices": [
+                160,
+                183
+              ],
+              "url": "https://t.co/c9Fqjlb7IW"
+            }
+          ]
+        },
+        "id_str": "1296697476741607428",
+        "text": "【待望】魔女育成RPG『魔女の泉3』のリメイク版がスイッチで発売決定\nhttps://t.co/ymVSIBCXhG\n\n新ブランド「G CHOICE」の第1作目として人気スマホゲームのリメイク版が登場。シリーズ累計170万ダウンロード以上を達成している『魔女の泉』シリーズが新規ビジュアル、フルボイス搭載でパワーアップ https://t.co/c9Fqjlb7IW",
+        "user": {
+          "id_str": "2786677338",
+          "name": "電ファミニコゲーマー",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1552262697852366848/KJN34d9n_normal.jpg",
+          "screen_name": "denfaminicogame",
+          "verified": false,
+          "verified_type": "Business",
+          "is_blue_verified": true,
+          "profile_image_shape": "Square"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296697476741607428"
+          ],
+          "editable_until_msecs": "1597993544586",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/c9Fqjlb7IW",
+            "expanded_url": "https://x.com/denfaminicogame/status/1296697476741607428/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              160,
+              183
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef7Le5NUcAENBCy.png",
+            "original_info": {
+              "height": 338,
+              "width": 600,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "w": 600,
+                  "h": 336
+                },
+                {
+                  "x": 86,
+                  "y": 0,
+                  "w": 338,
+                  "h": 338
+                },
+                {
+                  "x": 107,
+                  "y": 0,
+                  "w": 296,
+                  "h": 338
+                },
+                {
+                  "x": 171,
+                  "y": 0,
+                  "w": 169,
+                  "h": 338
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 600,
+                  "h": 338
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 338,
+                "resize": "fit",
+                "w": 600
+              },
+              "medium": {
+                "h": 338,
+                "resize": "fit",
+                "w": 600
+              },
+              "small": {
+                "h": 338,
+                "resize": "fit",
+                "w": 600
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/c9Fqjlb7IW"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 2,
+                "w": 600,
+                "h": 336
+              },
+              {
+                "x": 86,
+                "y": 0,
+                "w": 338,
+                "h": 338
+              },
+              {
+                "x": 107,
+                "y": 0,
+                "w": 296,
+                "h": 338
+              },
+              {
+                "x": 171,
+                "y": 0,
+                "w": 169,
+                "h": 338
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 600,
+                "h": 338
+              }
+            ],
+            "expandedUrl": "https://x.com/denfaminicogame/status/1296697476741607428/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef7Le5NUcAENBCy.png",
+            "width": 600,
+            "height": 338
+          }
+        ],
+        "conversation_count": 3,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:43.383Z"
     },
     {
       "id": "archive-1296553180126478336",
@@ -89,7 +1284,320 @@
       "fullText": "i hope you're all continuing to stay safe despite things re-opening, fuck corona, take care of each other ♡ \n\n仕事や学校が再開したと思うけど、みんなが無事に過ごせてると良いな！ みんなの事をとても気にしてるから、外では気を付けてね！ みんな、大好きだよ (*´ω｀*) \n\n#Vtuber #ENVtuber https://t.co/NvgguLLlwD",
       "expandedUrl": "https://twitter.com/i/web/status/1296553180126478336",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 902,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-20T21:02:21.000Z",
+        "display_text_range": [
+          0,
+          209
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                192,
+                199
+              ],
+              "text": "Vtuber"
+            },
+            {
+              "indices": [
+                200,
+                209
+              ],
+              "text": "ENVtuber"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/NvgguLLlwD",
+              "expanded_url": "https://x.com/Veibae/status/1296553180126478336/photo/1",
+              "indices": [
+                210,
+                233
+              ],
+              "url": "https://t.co/NvgguLLlwD"
+            }
+          ]
+        },
+        "id_str": "1296553180126478336",
+        "text": "i hope you're all continuing to stay safe despite things re-opening, fuck corona, take care of each other ♡ \n\n仕事や学校が再開したと思うけど、みんなが無事に過ごせてると良いな！ みんなの事をとても気にしてるから、外では気を付けてね！ みんな、大好きだよ (*´ω｀*) \n\n#Vtuber #ENVtuber https://t.co/NvgguLLlwD",
+        "user": {
+          "id_str": "777264456871149568",
+          "name": "vei 😈",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1926503268282216450/MbiQQJf7_normal.jpg",
+          "screen_name": "Veibae",
+          "verified": false,
+          "highlighted_label": {
+            "description": "Gamer Supps®",
+            "badge": {
+              "url": "https://pbs.twimg.com/profile_images/1666119132478046208/_ARcTc5__bigger.jpg"
+            },
+            "url": {
+              "url": "https://twitter.com/GamerSupps",
+              "url_type": "DeepLink"
+            },
+            "user_label_type": "BusinessLabel",
+            "user_label_display_type": "Badge"
+          },
+          "is_blue_verified": true
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296553180126478336"
+          ],
+          "editable_until_msecs": "1597959141592",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/NvgguLLlwD",
+            "expanded_url": "https://x.com/Veibae/status/1296553180126478336/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              210,
+              233
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef5Hb4aWoAAfkuj.jpg",
+            "original_info": {
+              "height": 3500,
+              "width": 3500,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3500,
+                  "h": 1960
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3500,
+                  "h": 3500
+                },
+                {
+                  "x": 215,
+                  "y": 0,
+                  "w": 3070,
+                  "h": 3500
+                },
+                {
+                  "x": 875,
+                  "y": 0,
+                  "w": 1750,
+                  "h": 3500
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3500,
+                  "h": 3500
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/NvgguLLlwD"
+          },
+          {
+            "display_url": "pic.x.com/NvgguLLlwD",
+            "expanded_url": "https://x.com/Veibae/status/1296553180126478336/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              210,
+              233
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef5HcrzX0AA9vER.jpg",
+            "original_info": {
+              "height": 3500,
+              "width": 3500,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3500,
+                  "h": 1960
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3500,
+                  "h": 3500
+                },
+                {
+                  "x": 127,
+                  "y": 0,
+                  "w": 3070,
+                  "h": 3500
+                },
+                {
+                  "x": 787,
+                  "y": 0,
+                  "w": 1750,
+                  "h": 3500
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3500,
+                  "h": 3500
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/NvgguLLlwD"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3500,
+                "h": 1960
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3500,
+                "h": 3500
+              },
+              {
+                "x": 215,
+                "y": 0,
+                "w": 3070,
+                "h": 3500
+              },
+              {
+                "x": 875,
+                "y": 0,
+                "w": 1750,
+                "h": 3500
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3500,
+                "h": 3500
+              }
+            ],
+            "expandedUrl": "https://x.com/Veibae/status/1296553180126478336/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef5Hb4aWoAAfkuj.jpg",
+            "width": 3500,
+            "height": 3500
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3500,
+                "h": 1960
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3500,
+                "h": 3500
+              },
+              {
+                "x": 127,
+                "y": 0,
+                "w": 3070,
+                "h": 3500
+              },
+              {
+                "x": 787,
+                "y": 0,
+                "w": 1750,
+                "h": 3500
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3500,
+                "h": 3500
+              }
+            ],
+            "expandedUrl": "https://x.com/Veibae/status/1296553180126478336/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef5HcrzX0AA9vER.jpg",
+            "width": 3500,
+            "height": 3500
+          }
+        ],
+        "conversation_count": 15,
+        "news_action_type": "covid19",
+        "covid19_hub_url": "https://twitter.com/explore/tabs/covid-19",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:44.817Z"
     },
     {
       "id": "archive-1296474432450564100",
@@ -97,7 +1605,58 @@
       "fullText": "https://t.co/a3q1vFmWEl",
       "expandedUrl": "https://twitter.com/i/web/status/1296474432450564100",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "zxx",
+        "favorite_count": 173,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-20T15:49:26.000Z",
+        "display_text_range": [
+          0,
+          23
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "mettin.booth.pm/items/1184086",
+              "expanded_url": "https://mettin.booth.pm/items/1184086",
+              "indices": [
+                0,
+                23
+              ],
+              "url": "https://t.co/a3q1vFmWEl"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1296474432450564100",
+        "text": "https://t.co/a3q1vFmWEl",
+        "user": {
+          "id_str": "1179071743945625600",
+          "name": "めっちん",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1288780083654569984/Dl9gDJc9_normal.jpg",
+          "screen_name": "mettin_55",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296474432450564100"
+          ],
+          "editable_until_msecs": "1597940366683",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 3,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:45.971Z"
     },
     {
       "id": "archive-1296374544656080896",
@@ -105,7 +1664,121 @@
       "fullText": "(x²+y²−1)³=x²y³\nどんな形のグラフになる？",
       "expandedUrl": "https://twitter.com/i/web/status/1296374544656080896",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 27599,
+        "created_at": "2020-08-20T09:12:31.000Z",
+        "display_text_range": [
+          0,
+          28
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1296374544656080896",
+        "text": "(x²+y²−1)³=x²y³\nどんな形のグラフになる？",
+        "user": {
+          "id_str": "1088555132478844929",
+          "name": "ポテト一郎🥔",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1435156763515363328/Aw9ALFg6_normal.jpg",
+          "screen_name": "potetoichiro",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296374544656080896"
+          ],
+          "editable_until_msecs": "1597916551577",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 126,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "poll4choice_text_only",
+          "url": "card://1296374543880134657",
+          "binding_values": {
+            "choice1_label": {
+              "string_value": "○",
+              "type": "STRING"
+            },
+            "choice2_label": {
+              "string_value": "△",
+              "type": "STRING"
+            },
+            "end_datetime_utc": {
+              "string_value": "2020-08-27T09:12:31Z",
+              "type": "STRING"
+            },
+            "counts_are_final": {
+              "boolean_value": true,
+              "type": "BOOLEAN"
+            },
+            "choice2_count": {
+              "string_value": "17609",
+              "type": "STRING"
+            },
+            "choice1_count": {
+              "string_value": "30386",
+              "type": "STRING"
+            },
+            "choice4_label": {
+              "string_value": "☆",
+              "type": "STRING"
+            },
+            "last_updated_datetime_utc": {
+              "string_value": "2020-08-27T09:12:35Z",
+              "type": "STRING"
+            },
+            "duration_minutes": {
+              "string_value": "10080",
+              "type": "STRING"
+            },
+            "choice3_count": {
+              "string_value": "23213",
+              "type": "STRING"
+            },
+            "choice4_count": {
+              "string_value": "101050",
+              "type": "STRING"
+            },
+            "choice3_label": {
+              "string_value": "□",
+              "type": "STRING"
+            },
+            "api": {
+              "string_value": "capi://passthrough/1",
+              "type": "STRING"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://twitter.com",
+              "type": "STRING"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:47.141Z"
     },
     {
       "id": "archive-1296371908590501890",
@@ -113,7 +1786,381 @@
       "fullText": "続報！！「ヱヴァンゲリヲン新劇場版」の「EVA PILOTS」シリーズ第２弾に新アイテムが登場！！全国の100円ショップにて2020年8月下旬から順次発売予定！ https://t.co/AfqRQrZdUN #evainfo",
       "expandedUrl": "https://twitter.com/i/web/status/1296371908590501890",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 1315,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-20T09:02:03.000Z",
+        "display_text_range": [
+          0,
+          113
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                105,
+                113
+              ],
+              "text": "evainfo"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "eva-info.jp/10038",
+              "expanded_url": "https://www.eva-info.jp/10038",
+              "indices": [
+                81,
+                104
+              ],
+              "url": "https://t.co/AfqRQrZdUN"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1296371908590501890",
+        "text": "続報！！「ヱヴァンゲリヲン新劇場版」の「EVA PILOTS」シリーズ第２弾に新アイテムが登場！！全国の100円ショップにて2020年8月下旬から順次発売予定！ https://t.co/AfqRQrZdUN #evainfo",
+        "user": {
+          "id_str": "366415404",
+          "name": "エヴァインフォ公式",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/647337305812791296/7OT_AAGx_normal.png",
+          "screen_name": "eva_information",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296371908590501890"
+          ],
+          "editable_until_msecs": "1597915923090",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/AfqRQrZdUN",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 150,
+                "width": 274,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "「EVA PILOTS」シリーズ第二弾の新アイテムが全国の100円ショップに続々登場します！ 5人の可愛いキャラクター達のカラフルな雑貨に気分が上がる事間違いなし♪エヴァンゲリオンの機体をモチーフとした、「EVA-UNIT」の新アイテ",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "www.eva-info.jp",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 320,
+                "width": 585,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=800x320_1"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 500,
+                "width": 914,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "site": {
+              "scribe_key": "publisher_id",
+              "type": "USER",
+              "user_value": {
+                "id_str": "366415404",
+                "path": []
+              }
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 79,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "creator": {
+              "type": "USER",
+              "user_value": {
+                "id_str": "366415404",
+                "path": []
+              }
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 500,
+                "width": 914,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 500,
+                "width": 914,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "eva-info.jp",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 229,
+                      "green": 234,
+                      "red": 186
+                    },
+                    "percentage": 59.49
+                  },
+                  {
+                    "rgb": {
+                      "blue": 204,
+                      "green": 181,
+                      "red": 218
+                    },
+                    "percentage": 7.95
+                  },
+                  {
+                    "rgb": {
+                      "blue": 138,
+                      "green": 244,
+                      "red": 255
+                    },
+                    "percentage": 7.38
+                  },
+                  {
+                    "rgb": {
+                      "blue": 228,
+                      "green": 235,
+                      "red": 183
+                    },
+                    "percentage": 6.85
+                  },
+                  {
+                    "rgb": {
+                      "blue": 85,
+                      "green": 237,
+                      "red": 249
+                    },
+                    "percentage": 2.18
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "続報！！「ヱヴァンゲリヲン新劇場版」の「EVA PILOTS」シリーズ第２弾に新アイテムが登場！！全国の100円ショップにて2020年8月下旬から順次発売予定！ « エヴァ・インフォメーション",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 229,
+                      "green": 234,
+                      "red": 186
+                    },
+                    "percentage": 59.49
+                  },
+                  {
+                    "rgb": {
+                      "blue": 204,
+                      "green": 181,
+                      "red": 218
+                    },
+                    "percentage": 7.95
+                  },
+                  {
+                    "rgb": {
+                      "blue": 138,
+                      "green": 244,
+                      "red": 255
+                    },
+                    "percentage": 7.38
+                  },
+                  {
+                    "rgb": {
+                      "blue": 228,
+                      "green": 235,
+                      "red": 183
+                    },
+                    "percentage": 6.85
+                  },
+                  {
+                    "rgb": {
+                      "blue": 85,
+                      "green": 237,
+                      "red": 249
+                    },
+                    "percentage": 2.18
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 500,
+                "width": 914,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 229,
+                      "green": 234,
+                      "red": 186
+                    },
+                    "percentage": 59.49
+                  },
+                  {
+                    "rgb": {
+                      "blue": 204,
+                      "green": 181,
+                      "red": 218
+                    },
+                    "percentage": 7.95
+                  },
+                  {
+                    "rgb": {
+                      "blue": 138,
+                      "green": 244,
+                      "red": 255
+                    },
+                    "percentage": 7.38
+                  },
+                  {
+                    "rgb": {
+                      "blue": 228,
+                      "green": 235,
+                      "red": 183
+                    },
+                    "percentage": 6.85
+                  },
+                  {
+                    "rgb": {
+                      "blue": 85,
+                      "green": 237,
+                      "red": 249
+                    },
+                    "percentage": 2.18
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 500,
+                "width": 914,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/AfqRQrZdUN",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 500,
+                "width": 914,
+                "url": "https://pbs.twimg.com/card_img/1929908582172028928/AbaFsh_c?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:48.317Z"
     },
     {
       "id": "archive-1296335893125410816",
@@ -121,7 +2168,523 @@
       "fullText": "史上最高にイケてる広告に出会った。 https://t.co/H8cJcx8u2c",
       "expandedUrl": "https://twitter.com/i/web/status/1296335893125410816",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 239349,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-20T06:38:56.000Z",
+        "display_text_range": [
+          0,
+          17
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/H8cJcx8u2c",
+              "expanded_url": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+              "indices": [
+                18,
+                41
+              ],
+              "url": "https://t.co/H8cJcx8u2c"
+            }
+          ]
+        },
+        "id_str": "1296335893125410816",
+        "text": "史上最高にイケてる広告に出会った。 https://t.co/H8cJcx8u2c",
+        "user": {
+          "id_str": "857422904719364097",
+          "name": "Moto Ⅰ AI企業のCMO",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1663157703471136774/sI_slagg_normal.jpg",
+          "screen_name": "Nmomo28",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296335893125410816"
+          ],
+          "editable_until_msecs": "1597907336334",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/H8cJcx8u2c",
+            "expanded_url": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              18,
+              41
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef2Cn35VoAAAH_C.jpg",
+            "original_info": {
+              "height": 600,
+              "width": 425,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 362,
+                  "w": 425,
+                  "h": 238
+                },
+                {
+                  "x": 0,
+                  "y": 175,
+                  "w": 425,
+                  "h": 425
+                },
+                {
+                  "x": 0,
+                  "y": 115,
+                  "w": 425,
+                  "h": 485
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 300,
+                  "h": 600
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 425,
+                  "h": 600
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 600,
+                "resize": "fit",
+                "w": 425
+              },
+              "medium": {
+                "h": 600,
+                "resize": "fit",
+                "w": 425
+              },
+              "small": {
+                "h": 600,
+                "resize": "fit",
+                "w": 425
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/H8cJcx8u2c"
+          },
+          {
+            "display_url": "pic.x.com/H8cJcx8u2c",
+            "expanded_url": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              18,
+              41
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef2Cn36U8AECsJI.jpg",
+            "original_info": {
+              "height": 600,
+              "width": 425,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 362,
+                  "w": 425,
+                  "h": 238
+                },
+                {
+                  "x": 0,
+                  "y": 175,
+                  "w": 425,
+                  "h": 425
+                },
+                {
+                  "x": 0,
+                  "y": 115,
+                  "w": 425,
+                  "h": 485
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 300,
+                  "h": 600
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 425,
+                  "h": 600
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 600,
+                "resize": "fit",
+                "w": 425
+              },
+              "medium": {
+                "h": 600,
+                "resize": "fit",
+                "w": 425
+              },
+              "small": {
+                "h": 600,
+                "resize": "fit",
+                "w": 425
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/H8cJcx8u2c"
+          },
+          {
+            "display_url": "pic.x.com/H8cJcx8u2c",
+            "expanded_url": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              18,
+              41
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef2Cn36UwAA2fPY.jpg",
+            "original_info": {
+              "height": 658,
+              "width": 466,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 397,
+                  "w": 466,
+                  "h": 261
+                },
+                {
+                  "x": 0,
+                  "y": 192,
+                  "w": 466,
+                  "h": 466
+                },
+                {
+                  "x": 0,
+                  "y": 127,
+                  "w": 466,
+                  "h": 531
+                },
+                {
+                  "x": 69,
+                  "y": 0,
+                  "w": 329,
+                  "h": 658
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 466,
+                  "h": 658
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 658,
+                "resize": "fit",
+                "w": 466
+              },
+              "medium": {
+                "h": 658,
+                "resize": "fit",
+                "w": 466
+              },
+              "small": {
+                "h": 658,
+                "resize": "fit",
+                "w": 466
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/H8cJcx8u2c"
+          },
+          {
+            "display_url": "pic.x.com/H8cJcx8u2c",
+            "expanded_url": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              18,
+              41
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef2Cn4eVAAESdp-.jpg",
+            "original_info": {
+              "height": 659,
+              "width": 465,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 399,
+                  "w": 465,
+                  "h": 260
+                },
+                {
+                  "x": 0,
+                  "y": 194,
+                  "w": 465,
+                  "h": 465
+                },
+                {
+                  "x": 0,
+                  "y": 129,
+                  "w": 465,
+                  "h": 530
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 330,
+                  "h": 659
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 465,
+                  "h": 659
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 659,
+                "resize": "fit",
+                "w": 465
+              },
+              "medium": {
+                "h": 659,
+                "resize": "fit",
+                "w": 465
+              },
+              "small": {
+                "h": 659,
+                "resize": "fit",
+                "w": 465
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/H8cJcx8u2c"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 362,
+                "w": 425,
+                "h": 238
+              },
+              {
+                "x": 0,
+                "y": 175,
+                "w": 425,
+                "h": 425
+              },
+              {
+                "x": 0,
+                "y": 115,
+                "w": 425,
+                "h": 485
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 300,
+                "h": 600
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 425,
+                "h": 600
+              }
+            ],
+            "expandedUrl": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef2Cn35VoAAAH_C.jpg",
+            "width": 425,
+            "height": 600
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 362,
+                "w": 425,
+                "h": 238
+              },
+              {
+                "x": 0,
+                "y": 175,
+                "w": 425,
+                "h": 425
+              },
+              {
+                "x": 0,
+                "y": 115,
+                "w": 425,
+                "h": 485
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 300,
+                "h": 600
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 425,
+                "h": 600
+              }
+            ],
+            "expandedUrl": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef2Cn36U8AECsJI.jpg",
+            "width": 425,
+            "height": 600
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 397,
+                "w": 466,
+                "h": 261
+              },
+              {
+                "x": 0,
+                "y": 192,
+                "w": 466,
+                "h": 466
+              },
+              {
+                "x": 0,
+                "y": 127,
+                "w": 466,
+                "h": 531
+              },
+              {
+                "x": 69,
+                "y": 0,
+                "w": 329,
+                "h": 658
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 466,
+                "h": 658
+              }
+            ],
+            "expandedUrl": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef2Cn36UwAA2fPY.jpg",
+            "width": 466,
+            "height": 658
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 399,
+                "w": 465,
+                "h": 260
+              },
+              {
+                "x": 0,
+                "y": 194,
+                "w": 465,
+                "h": 465
+              },
+              {
+                "x": 0,
+                "y": 129,
+                "w": 465,
+                "h": 530
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 330,
+                "h": 659
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 465,
+                "h": 659
+              }
+            ],
+            "expandedUrl": "https://x.com/N_Motoki1128/status/1296335893125410816/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef2Cn4eVAAESdp-.jpg",
+            "width": 465,
+            "height": 659
+          }
+        ],
+        "conversation_count": 88,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:49.477Z"
     },
     {
       "id": "archive-1296271968526667777",
@@ -129,7 +2692,178 @@
       "fullText": "「ついに死去」の「ついに」に喜びが満ち溢れていて笑ってしまった https://t.co/F3690ZqSi6",
       "expandedUrl": "https://twitter.com/i/web/status/1296271968526667777",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 5134,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-20T02:24:55.000Z",
+        "display_text_range": [
+          0,
+          31
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/F3690ZqSi6",
+              "expanded_url": "https://x.com/ikeay/status/1296271968526667777/photo/1",
+              "indices": [
+                32,
+                55
+              ],
+              "url": "https://t.co/F3690ZqSi6"
+            }
+          ]
+        },
+        "id_str": "1296271968526667777",
+        "text": "「ついに死去」の「ついに」に喜びが満ち溢れていて笑ってしまった https://t.co/F3690ZqSi6",
+        "user": {
+          "id_str": "149505338",
+          "name": "池澤あやか / いけあや",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1334136134234849280/XgE0O39a_normal.jpg",
+          "screen_name": "ikeay",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296271968526667777"
+          ],
+          "editable_until_msecs": "1597892095522",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/F3690ZqSi6",
+            "expanded_url": "https://x.com/ikeay/status/1296271968526667777/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              32,
+              55
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Ef1IYayU0AASYdo.jpg",
+            "original_info": {
+              "height": 764,
+              "width": 1202,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 54,
+                  "w": 1202,
+                  "h": 673
+                },
+                {
+                  "x": 309,
+                  "y": 0,
+                  "w": 764,
+                  "h": 764
+                },
+                {
+                  "x": 356,
+                  "y": 0,
+                  "w": 670,
+                  "h": 764
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "w": 382,
+                  "h": 764
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1202,
+                  "h": 764
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 764,
+                "resize": "fit",
+                "w": 1202
+              },
+              "medium": {
+                "h": 763,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 432,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/F3690ZqSi6"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 54,
+                "w": 1202,
+                "h": 673
+              },
+              {
+                "x": 309,
+                "y": 0,
+                "w": 764,
+                "h": 764
+              },
+              {
+                "x": 356,
+                "y": 0,
+                "w": 670,
+                "h": 764
+              },
+              {
+                "x": 500,
+                "y": 0,
+                "w": 382,
+                "h": 764
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1202,
+                "h": 764
+              }
+            ],
+            "expandedUrl": "https://x.com/ikeay/status/1296271968526667777/photo/1",
+            "url": "https://pbs.twimg.com/media/Ef1IYayU0AASYdo.jpg",
+            "width": 1202,
+            "height": 764
+          }
+        ],
+        "conversation_count": 13,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:50.649Z"
     },
     {
       "id": "archive-1296261947516530688",
@@ -137,7 +2871,545 @@
       "fullText": "仲間と一緒だから頑張れたの (*^ω^*)\n\nそれとレイシストのデモを囲んで叱り倒した後で、既に温まっているカウンターに出くわして、最初からフルスロットルでシバかれる幸福実現党の街宣隊って…きっと日頃の行いが悪くて神様から嫌われているのでしょうね♪ https://t.co/9WZcuDWPrb",
       "expandedUrl": "https://twitter.com/i/web/status/1296261947516530688",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 240,
+        "created_at": "2020-08-20T01:45:06.000Z",
+        "display_text_range": [
+          0,
+          124
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1296261947516530688",
+        "text": "仲間と一緒だから頑張れたの (*^ω^*)\n\nそれとレイシストのデモを囲んで叱り倒した後で、既に温まっているカウンターに出くわして、最初からフルスロットルでシバかれる幸福実現党の街宣隊って…きっと日頃の行いが悪くて神様から嫌われているのでしょうね♪",
+        "user": {
+          "id_str": "2608398084",
+          "name": "堀内ゅい",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1328590794878558210/kHXQumeK_normal.jpg",
+          "screen_name": "jsk_yui",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296261947516530688"
+          ],
+          "editable_until_msecs": "1597889706327",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "in_reply_to_screen_name": "doranekonyan3",
+          "in_reply_to_status_id_str": "1295661739170648066",
+          "in_reply_to_user_id_str": "1163294625362087936",
+          "lang": "ja",
+          "reply_count": 1,
+          "retweet_count": 27,
+          "favorite_count": 67,
+          "possibly_sensitive": false,
+          "created_at": "2020-08-18T10:02:22.000Z",
+          "display_text_range": [
+            669,
+            733
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "x.com/jsk_yui/status…",
+                "expanded_url": "https://x.com/jsk_yui/status/1183299430562189312?s=21",
+                "indices": [
+                  710,
+                  733
+                ],
+                "url": "https://t.co/TTQ2NjES8Y"
+              }
+            ],
+            "user_mentions": [
+              {
+                "id_str": "1163294625362087936",
+                "indices": [
+                  0,
+                  14
+                ],
+                "name": "(ki⊙ꇴ⊙ki)",
+                "screen_name": "doranekonyan3"
+              },
+              {
+                "id_str": "1343099796328890369",
+                "indices": [
+                  28,
+                  41
+                ],
+                "name": "sciencerasgood",
+                "screen_name": "Aurelius_aug"
+              },
+              {
+                "id_str": "179044651",
+                "indices": [
+                  56,
+                  70
+                ],
+                "name": "スカーレット( ‘ᾥ’ )",
+                "screen_name": "Scarlet_Coral"
+              },
+              {
+                "id_str": "62943009",
+                "indices": [
+                  71,
+                  80
+                ],
+                "name": "🌍 Takashi kei' Uchioki©︎🌍",
+                "screen_name": "PASONEKO"
+              },
+              {
+                "id_str": "267218267",
+                "indices": [
+                  81,
+                  96
+                ],
+                "name": "ロビン王朝を継ぐ者「超人博士」",
+                "screen_name": "asuramen_ikari"
+              },
+              {
+                "id_str": "1305585094946557955",
+                "indices": [
+                  111,
+                  120
+                ],
+                "name": "岡本仁",
+                "screen_name": "withktsy"
+              },
+              {
+                "id_str": "931150764818317312",
+                "indices": [
+                  135,
+                  146
+                ],
+                "name": "タイニャン🐾の戦士",
+                "screen_name": "pawn_titan"
+              },
+              {
+                "id_str": "1218486676185436160",
+                "indices": [
+                  147,
+                  163
+                ],
+                "name": "❄︎.*白花曼珠沙華❅*°(旧✾雪中花✾)",
+                "screen_name": "h1ganhen0kake84"
+              },
+              {
+                "id_str": "4575179233",
+                "indices": [
+                  164,
+                  178
+                ],
+                "name": "はにわ",
+                "screen_name": "mogura_haniwa"
+              },
+              {
+                "id_str": "1225002028675452930",
+                "indices": [
+                  179,
+                  192
+                ],
+                "name": "アントニオ圭さん🏳️‍🌈🎏⚾️",
+                "screen_name": "Voorlichter5"
+              },
+              {
+                "id_str": "1378516592",
+                "indices": [
+                  193,
+                  204
+                ],
+                "name": "makoto😺",
+                "screen_name": "makotodeth"
+              },
+              {
+                "id_str": "1184483197796569089",
+                "indices": [
+                  205,
+                  214
+                ],
+                "name": "フルハム三浦",
+                "screen_name": "usk_kato"
+              },
+              {
+                "id_str": "1092070199975497728",
+                "indices": [
+                  215,
+                  225
+                ],
+                "name": "しょうやん",
+                "screen_name": "showyan12"
+              },
+              {
+                "id_str": "1135356796950835200",
+                "indices": [
+                  241,
+                  255
+                ],
+                "name": "星の🌟み～み🐾🌈👼🐈👼雪組❄",
+                "screen_name": "neko_no_mi_mi"
+              },
+              {
+                "id_str": "6882322",
+                "indices": [
+                  256,
+                  261
+                ],
+                "name": "【PR】ⒼⓄⓇⓃ™ PhD 新刊準備中重装改",
+                "screen_name": "gorn"
+              },
+              {
+                "id_str": "957099494482440192",
+                "indices": [
+                  262,
+                  272
+                ],
+                "name": "悟りに至らず",
+                "screen_name": "payottelu"
+              },
+              {
+                "id_str": "92305436",
+                "indices": [
+                  300,
+                  309
+                ],
+                "name": "パルデサ@ Спартак",
+                "screen_name": "pardeza7"
+              },
+              {
+                "id_str": "114931398",
+                "indices": [
+                  343,
+                  357
+                ],
+                "name": "青識亜論（せいしき・あろん）",
+                "screen_name": "BlauerSeelowe"
+              },
+              {
+                "id_str": "265509405",
+                "indices": [
+                  358,
+                  372
+                ],
+                "name": "座間宮ガレイ@参謀",
+                "screen_name": "zamamiyagarei"
+              },
+              {
+                "id_str": "210696559",
+                "indices": [
+                  413,
+                  421
+                ],
+                "name": "haebaru",
+                "screen_name": "haebaru"
+              },
+              {
+                "id_str": "2385264271",
+                "indices": [
+                  422,
+                  433
+                ],
+                "name": "ポコタヌキ",
+                "screen_name": "tanuking_j"
+              },
+              {
+                "id_str": "2953683332",
+                "indices": [
+                  434,
+                  450
+                ],
+                "name": "やまいだれ",
+                "screen_name": "die_umbellifere"
+              },
+              {
+                "id_str": "802456043213066240",
+                "indices": [
+                  451,
+                  463
+                ],
+                "name": "中尾ひかる小僧正(こんな人たち)🥦",
+                "screen_name": "pikaru_1207"
+              },
+              {
+                "id_str": "248109145",
+                "indices": [
+                  464,
+                  471
+                ],
+                "name": "🖕( ’ᾥ’ﾇ)🖕@Nationalism is an sophomore disease.",
+                "screen_name": "nuxunu"
+              },
+              {
+                "id_str": "1208607892565188611",
+                "indices": [
+                  472,
+                  484
+                ],
+                "name": "吉之助",
+                "screen_name": "siroamp3150"
+              },
+              {
+                "id_str": "43646839",
+                "indices": [
+                  485,
+                  492
+                ],
+                "name": "❤︎ utchie! 🌝",
+                "screen_name": "utchie"
+              },
+              {
+                "id_str": "3186685351",
+                "indices": [
+                  493,
+                  507
+                ],
+                "name": "テオ・テオ・平沼銑次👉👉ゲッツ！",
+                "screen_name": "shishinosenzi"
+              },
+              {
+                "id_str": "2827383397",
+                "indices": [
+                  508,
+                  518
+                ],
+                "name": "☆勉強くん★",
+                "screen_name": "pinaikara"
+              },
+              {
+                "id_str": "2318252268",
+                "indices": [
+                  519,
+                  533
+                ],
+                "name": "Shinnosuke　インブロンじゃあ!",
+                "screen_name": "x18008fxxkoff"
+              },
+              {
+                "id_str": "1150231605413236736",
+                "indices": [
+                  534,
+                  548
+                ],
+                "name": "うい魂",
+                "screen_name": "power_growing"
+              },
+              {
+                "id_str": "241725815",
+                "indices": [
+                  560,
+                  576
+                ],
+                "name": "㈱ま(特異集団ではありません)",
+                "screen_name": "HiroshiDesu2019"
+              },
+              {
+                "id_str": "15398828",
+                "indices": [
+                  577,
+                  589
+                ],
+                "name": "桜ここあ💙@繁忙期終わったyou&me",
+                "screen_name": "sakuracocoa"
+              },
+              {
+                "id_str": "95811493",
+                "indices": [
+                  590,
+                  602
+                ],
+                "name": "紫式都🐗🐍✨",
+                "screen_name": "skidivekara"
+              },
+              {
+                "id_str": "1004287256796880896",
+                "indices": [
+                  603,
+                  619
+                ],
+                "name": "テキサスおっ母さん",
+                "screen_name": "jCjmmlgiyjxYQ1C"
+              },
+              {
+                "id_str": "1242697496876351489",
+                "indices": [
+                  620,
+                  634
+                ],
+                "name": "ソルマダム",
+                "screen_name": "gerogerogeroR"
+              }
+            ],
+            "symbols": [],
+            "media": [
+              {
+                "display_url": "pic.x.com/LvgzirXIQw",
+                "expanded_url": "https://x.com/fukuchin6666/status/1295662312250994688/photo/1",
+                "indices": [
+                  734,
+                  757
+                ],
+                "url": "https://t.co/LvgzirXIQw"
+              }
+            ]
+          },
+          "id_str": "1295662312250994688",
+          "text": "@doranekonyan3 @BluesKing19 @Aurelius_aug @kusoyaroh333 @Scarlet_Coral @PASONEKO @asuramen_ikari @2sabon_m117l @withktsy @Nagasaki_jin @pawn_titan @h1ganhen0kake84 @mogura_haniwa @Voorlichter5 @makotodeth @usk_kato @showyan12 @saiounjisekai @neko_no_mi_mi @gorn @payottelu @nemuihitonemu @nyanhechan @pardeza7 @DXHjO4OjHbJhoM1 @dozugawagonan1 @BlauerSeelowe @zamamiyagarei @utigoshikai @getbacknowhere @ee0_ghost @haebaru @tanuking_j @die_umbellifere @pikaru_1207 @nuxunu @siroamp3150 @utchie @shishinosenzi @pinaikara @x18008fxxkoff @power_growing @SrN0215m1 @HiroshiDesu2019 @sakuracocoa @skidivekara @jCjmmlgiyjxYQ1C @gerogerogeroR @vxf9alMy6sn74g4 @IVNx3xSIZ1NRD4j 関係ないですが、ゅいさんってマジリスペクトですね。\n目の前でやってるんですから。\nhttps://t.co/TTQ2NjES8Y https://t.co/LvgzirXIQw",
+          "user": {
+            "id_str": "1232915401270382592",
+            "name": "アームズ魂",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1679030292034781185/BUs2Cx8j_normal.jpg",
+            "screen_name": "fukuchin6666",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1295662312250994688"
+            ],
+            "editable_until_msecs": "1597746742139",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "mediaDetails": [
+            {
+              "display_url": "pic.x.com/LvgzirXIQw",
+              "expanded_url": "https://x.com/fukuchin6666/status/1295662312250994688/photo/1",
+              "ext_media_availability": {
+                "status": "Available"
+              },
+              "indices": [
+                734,
+                757
+              ],
+              "media_url_https": "https://pbs.twimg.com/media/EfseAMRUEAU-kIo.jpg",
+              "original_info": {
+                "height": 2048,
+                "width": 1365,
+                "focus_rects": [
+                  {
+                    "x": 0,
+                    "y": 386,
+                    "w": 1365,
+                    "h": 764
+                  },
+                  {
+                    "x": 0,
+                    "y": 86,
+                    "w": 1365,
+                    "h": 1365
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "w": 1365,
+                    "h": 1556
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "w": 1024,
+                    "h": 2048
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "w": 1365,
+                    "h": 2048
+                  }
+                ]
+              },
+              "sizes": {
+                "large": {
+                  "h": 2048,
+                  "resize": "fit",
+                  "w": 1365
+                },
+                "medium": {
+                  "h": 1200,
+                  "resize": "fit",
+                  "w": 800
+                },
+                "small": {
+                  "h": 680,
+                  "resize": "fit",
+                  "w": 453
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "photo",
+              "url": "https://t.co/LvgzirXIQw"
+            }
+          ],
+          "photos": [
+            {
+              "backgroundColor": {
+                "red": 204,
+                "green": 214,
+                "blue": 221
+              },
+              "cropCandidates": [
+                {
+                  "x": 0,
+                  "y": 386,
+                  "w": 1365,
+                  "h": 764
+                },
+                {
+                  "x": 0,
+                  "y": 86,
+                  "w": 1365,
+                  "h": 1365
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1365,
+                  "h": 1556
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1365,
+                  "h": 2048
+                }
+              ],
+              "expandedUrl": "https://x.com/fukuchin6666/status/1295662312250994688/photo/1",
+              "url": "https://pbs.twimg.com/media/EfseAMRUEAU-kIo.jpg",
+              "width": 1365,
+              "height": 2048
+            }
+          ],
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:51.879Z"
     },
     {
       "id": "archive-1296160022049763328",
@@ -145,7 +3417,47 @@
       "fullText": "日本は、アジアで最も発展した国のひとつです。日本の皆さんは、他の国々と共有できるすぐれた技能や経験を持っています。ですから、国内にいて不平を言うのではなく、発展途上国に行って困っている人々を助け、あなた方の善意を届けてあげてください。そうすれば、自信や勇気も湧いてくるでしょう。",
       "expandedUrl": "https://twitter.com/i/web/status/1296160022049763328",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 1273,
+        "created_at": "2020-08-19T19:00:05.000Z",
+        "display_text_range": [
+          0,
+          139
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1296160022049763328",
+        "text": "日本は、アジアで最も発展した国のひとつです。日本の皆さんは、他の国々と共有できるすぐれた技能や経験を持っています。ですから、国内にいて不平を言うのではなく、発展途上国に行って困っている人々を助け、あなた方の善意を届けてあげてください。そうすれば、自信や勇気も湧いてくるでしょう。",
+        "user": {
+          "id_str": "3115763124",
+          "name": "ダライ・ラマ法王14世日本公式サイト",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/582254829264711680/UsuMCKrT_normal.jpg",
+          "screen_name": "DalailamaJpn",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296160022049763328"
+          ],
+          "editable_until_msecs": "1597865405402",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 8,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:53.056Z"
     },
     {
       "id": "archive-1296089556580622338",
@@ -153,7 +3465,178 @@
       "fullText": "「あ，好き」ってなった😃 https://t.co/mGMFilimdd",
       "expandedUrl": "https://twitter.com/i/web/status/1296089556580622338",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 25,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-19T14:20:05.000Z",
+        "display_text_range": [
+          0,
+          13
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/mGMFilimdd",
+              "expanded_url": "https://x.com/takawo/status/1296089556580622338/photo/1",
+              "indices": [
+                13,
+                36
+              ],
+              "url": "https://t.co/mGMFilimdd"
+            }
+          ]
+        },
+        "id_str": "1296089556580622338",
+        "text": "「あ，好き」ってなった😃 https://t.co/mGMFilimdd",
+        "user": {
+          "id_str": "5617022",
+          "name": "Shunsuke Takawo 🐌",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1725087477189509120/qhdYon5r_normal.jpg",
+          "screen_name": "takawo",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1296089556580622338"
+          ],
+          "editable_until_msecs": "1597848605125",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/mGMFilimdd",
+            "expanded_url": "https://x.com/takawo/status/1296089556580622338/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              13,
+              36
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EfyiZcAUcAIUujS.png",
+            "original_info": {
+              "height": 1600,
+              "width": 1600,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 704,
+                  "w": 1600,
+                  "h": 896
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1600,
+                  "h": 1600
+                },
+                {
+                  "x": 196,
+                  "y": 0,
+                  "w": 1404,
+                  "h": 1600
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "w": 800,
+                  "h": 1600
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1600,
+                  "h": 1600
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1600,
+                "resize": "fit",
+                "w": 1600
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/mGMFilimdd"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 704,
+                "w": 1600,
+                "h": 896
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1600,
+                "h": 1600
+              },
+              {
+                "x": 196,
+                "y": 0,
+                "w": 1404,
+                "h": 1600
+              },
+              {
+                "x": 600,
+                "y": 0,
+                "w": 800,
+                "h": 1600
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1600,
+                "h": 1600
+              }
+            ],
+            "expandedUrl": "https://x.com/takawo/status/1296089556580622338/photo/1",
+            "url": "https://pbs.twimg.com/media/EfyiZcAUcAIUujS.png",
+            "width": 1600,
+            "height": 1600
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:54.231Z"
     },
     {
       "id": "archive-1295699147719204866",
@@ -161,7 +3644,523 @@
       "fullText": "中国開発のソシャゲ、「自由」がNGワードになってるのおそろしい\n試しにウイグルって入力したら警告文まで出た https://t.co/gaVGQbUqCK",
       "expandedUrl": "https://twitter.com/i/web/status/1295699147719204866",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 23892,
+        "possibly_sensitive": false,
+        "created_at": "2020-08-18T12:28:44.000Z",
+        "display_text_range": [
+          0,
+          53
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/gaVGQbUqCK",
+              "expanded_url": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+              "indices": [
+                54,
+                77
+              ],
+              "url": "https://t.co/gaVGQbUqCK"
+            }
+          ]
+        },
+        "id_str": "1295699147719204866",
+        "text": "中国開発のソシャゲ、「自由」がNGワードになってるのおそろしい\n試しにウイグルって入力したら警告文まで出た https://t.co/gaVGQbUqCK",
+        "user": {
+          "id_str": "894561813601304576",
+          "name": "本日の主役🐰",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1885270695183343617/CnJBlkFf_normal.jpg",
+          "screen_name": "Mottili_Rabbit",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1295699147719204866"
+          ],
+          "editable_until_msecs": "1597755524399",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/gaVGQbUqCK",
+            "expanded_url": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              54,
+              77
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Efs_gX3UEAEIiIw.jpg",
+            "original_info": {
+              "height": 828,
+              "width": 1792,
+              "focus_rects": [
+                {
+                  "x": 157,
+                  "y": 0,
+                  "w": 1479,
+                  "h": 828
+                },
+                {
+                  "x": 482,
+                  "y": 0,
+                  "w": 828,
+                  "h": 828
+                },
+                {
+                  "x": 533,
+                  "y": 0,
+                  "w": 726,
+                  "h": 828
+                },
+                {
+                  "x": 689,
+                  "y": 0,
+                  "w": 414,
+                  "h": 828
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1792,
+                  "h": 828
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 828,
+                "resize": "fit",
+                "w": 1792
+              },
+              "medium": {
+                "h": 554,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 314,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/gaVGQbUqCK"
+          },
+          {
+            "display_url": "pic.x.com/gaVGQbUqCK",
+            "expanded_url": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              54,
+              77
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Efs_gYgUEAQD8ta.jpg",
+            "original_info": {
+              "height": 828,
+              "width": 1792,
+              "focus_rects": [
+                {
+                  "x": 313,
+                  "y": 0,
+                  "w": 1479,
+                  "h": 828
+                },
+                {
+                  "x": 964,
+                  "y": 0,
+                  "w": 828,
+                  "h": 828
+                },
+                {
+                  "x": 1024,
+                  "y": 0,
+                  "w": 726,
+                  "h": 828
+                },
+                {
+                  "x": 1180,
+                  "y": 0,
+                  "w": 414,
+                  "h": 828
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1792,
+                  "h": 828
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 828,
+                "resize": "fit",
+                "w": 1792
+              },
+              "medium": {
+                "h": 554,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 314,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/gaVGQbUqCK"
+          },
+          {
+            "display_url": "pic.x.com/gaVGQbUqCK",
+            "expanded_url": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              54,
+              77
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Efs_gX1U0AADsvq.jpg",
+            "original_info": {
+              "height": 828,
+              "width": 1792,
+              "focus_rects": [
+                {
+                  "x": 157,
+                  "y": 0,
+                  "w": 1479,
+                  "h": 828
+                },
+                {
+                  "x": 482,
+                  "y": 0,
+                  "w": 828,
+                  "h": 828
+                },
+                {
+                  "x": 533,
+                  "y": 0,
+                  "w": 726,
+                  "h": 828
+                },
+                {
+                  "x": 689,
+                  "y": 0,
+                  "w": 414,
+                  "h": 828
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1792,
+                  "h": 828
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 828,
+                "resize": "fit",
+                "w": 1792
+              },
+              "medium": {
+                "h": 554,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 314,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/gaVGQbUqCK"
+          },
+          {
+            "display_url": "pic.x.com/gaVGQbUqCK",
+            "expanded_url": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              54,
+              77
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Efs_gZgUMAAlU6A.jpg",
+            "original_info": {
+              "height": 828,
+              "width": 1792,
+              "focus_rects": [
+                {
+                  "x": 200,
+                  "y": 0,
+                  "w": 1479,
+                  "h": 828
+                },
+                {
+                  "x": 525,
+                  "y": 0,
+                  "w": 828,
+                  "h": 828
+                },
+                {
+                  "x": 576,
+                  "y": 0,
+                  "w": 726,
+                  "h": 828
+                },
+                {
+                  "x": 732,
+                  "y": 0,
+                  "w": 414,
+                  "h": 828
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1792,
+                  "h": 828
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 828,
+                "resize": "fit",
+                "w": 1792
+              },
+              "medium": {
+                "h": 554,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 314,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/gaVGQbUqCK"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 157,
+                "y": 0,
+                "w": 1479,
+                "h": 828
+              },
+              {
+                "x": 482,
+                "y": 0,
+                "w": 828,
+                "h": 828
+              },
+              {
+                "x": 533,
+                "y": 0,
+                "w": 726,
+                "h": 828
+              },
+              {
+                "x": 689,
+                "y": 0,
+                "w": 414,
+                "h": 828
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1792,
+                "h": 828
+              }
+            ],
+            "expandedUrl": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+            "url": "https://pbs.twimg.com/media/Efs_gX3UEAEIiIw.jpg",
+            "width": 1792,
+            "height": 828
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 313,
+                "y": 0,
+                "w": 1479,
+                "h": 828
+              },
+              {
+                "x": 964,
+                "y": 0,
+                "w": 828,
+                "h": 828
+              },
+              {
+                "x": 1024,
+                "y": 0,
+                "w": 726,
+                "h": 828
+              },
+              {
+                "x": 1180,
+                "y": 0,
+                "w": 414,
+                "h": 828
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1792,
+                "h": 828
+              }
+            ],
+            "expandedUrl": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+            "url": "https://pbs.twimg.com/media/Efs_gYgUEAQD8ta.jpg",
+            "width": 1792,
+            "height": 828
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 157,
+                "y": 0,
+                "w": 1479,
+                "h": 828
+              },
+              {
+                "x": 482,
+                "y": 0,
+                "w": 828,
+                "h": 828
+              },
+              {
+                "x": 533,
+                "y": 0,
+                "w": 726,
+                "h": 828
+              },
+              {
+                "x": 689,
+                "y": 0,
+                "w": 414,
+                "h": 828
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1792,
+                "h": 828
+              }
+            ],
+            "expandedUrl": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+            "url": "https://pbs.twimg.com/media/Efs_gX1U0AADsvq.jpg",
+            "width": 1792,
+            "height": 828
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 200,
+                "y": 0,
+                "w": 1479,
+                "h": 828
+              },
+              {
+                "x": 525,
+                "y": 0,
+                "w": 828,
+                "h": 828
+              },
+              {
+                "x": 576,
+                "y": 0,
+                "w": 726,
+                "h": 828
+              },
+              {
+                "x": 732,
+                "y": 0,
+                "w": 414,
+                "h": 828
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1792,
+                "h": 828
+              }
+            ],
+            "expandedUrl": "https://x.com/igarashi187/status/1295699147719204866/photo/1",
+            "url": "https://pbs.twimg.com/media/Efs_gZgUMAAlU6A.jpg",
+            "width": 1792,
+            "height": 828
+          }
+        ],
+        "conversation_count": 110,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:55:55.401Z"
     }
   ]
 }

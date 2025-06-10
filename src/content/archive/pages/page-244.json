@@ -9,7 +9,167 @@
       "fullText": "Designs for a creature that can walk down a pipe. https://t.co/yGelv2zVrk",
       "expandedUrl": "https://twitter.com/i/web/status/1542178863966322688",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 97565,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-29T16:11:08.000Z",
+        "display_text_range": [
+          0,
+          49
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/yGelv2zVrk",
+              "expanded_url": "https://x.com/rich_lord/status/1542178863966322688/video/1",
+              "indices": [
+                50,
+                73
+              ],
+              "url": "https://t.co/yGelv2zVrk"
+            }
+          ]
+        },
+        "id_str": "1542178863966322688",
+        "text": "Designs for a creature that can walk down a pipe. https://t.co/yGelv2zVrk",
+        "user": {
+          "id_str": "66545200",
+          "name": "rich_lord",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1116921079300157440/0KICCLyE_normal.png",
+          "screen_name": "rich_lord",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1542178863966322688"
+          ],
+          "editable_until_msecs": "1656520868000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/yGelv2zVrk",
+            "expanded_url": "https://x.com/rich_lord/status/1542178863966322688/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              50,
+              73
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1542178189056692231/pu/img/HkFtZvt4ziXBCK3y.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1080,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1080
+              },
+              "medium": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1080
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/yGelv2zVrk",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "duration_millis": 28000,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1542178189056692231/pu/pl/LPQJYHsYQPbKOaQ2.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 432000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1542178189056692231/pu/vid/320x320/W_nTpX5vB-YgEN1T.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1542178189056692231/pu/vid/540x540/luJlKNi2N0DXdCQt.mp4?tag=12"
+                },
+                {
+                  "bitrate": 1280000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1542178189056692231/pu/vid/720x720/HewdffU3lXJx7kmm.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1,
+            1
+          ],
+          "contentType": "media_entity",
+          "durationMs": 28000,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1542178189056692231/pu/img/HkFtZvt4ziXBCK3y.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1542178189056692231/pu/pl/LPQJYHsYQPbKOaQ2.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1542178189056692231/pu/vid/320x320/W_nTpX5vB-YgEN1T.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1542178189056692231/pu/vid/540x540/luJlKNi2N0DXdCQt.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1542178189056692231/pu/vid/720x720/HewdffU3lXJx7kmm.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1542178863966322688"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 2388,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:13.667Z"
     },
     {
       "id": "archive-1542086511814131712",
@@ -17,7 +177,50 @@
       "fullText": "フロントエンドでのバリデーションは「やらない理由がない」と考えています。\n基本的には submit させて結果が返ってくるよりは submit させるまえにエラー結果がわかったほうが、ユーザの向上性は良いと考えています。",
       "expandedUrl": "https://twitter.com/i/web/status/1542086511814131712",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 436,
+        "conversation_control": {
+          "policy": "Community"
+        },
+        "created_at": "2022-06-29T10:04:09.000Z",
+        "display_text_range": [
+          0,
+          110
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1542086511814131712",
+        "text": "フロントエンドでのバリデーションは「やらない理由がない」と考えています。\n基本的には submit させて結果が返ってくるよりは submit させるまえにエラー結果がわかったほうが、ユーザの向上性は良いと考えています。",
+        "user": {
+          "id_str": "805726499542138881",
+          "name": "kageko",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1635264342114578434/N0XIh6Yz_normal.jpg",
+          "screen_name": "kageko_777",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1542086511814131712"
+          ],
+          "editable_until_msecs": "1656498849000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 6,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:14.829Z"
     },
     {
       "id": "archive-1542025384027336705",
@@ -25,7 +228,109 @@
       "fullText": "@_unshift 私もTSを導入してみたいなと思いつつ、そこまで必要なのかと思っていまして『@ ts-check』を使用しています。\n\n簡易的な型チェックができるので複雑なことをしないならこれぐらいで十分かなと思っています。笑\n\nhttps://t.co/0RQ0Rk9sIc",
       "expandedUrl": "https://twitter.com/i/web/status/1542025384027336705",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "in_reply_to_screen_name": "_unshift",
+        "in_reply_to_status_id_str": "1541995714993336321",
+        "in_reply_to_user_id_str": "928275898125639680",
+        "lang": "ja",
+        "favorite_count": 2,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-29T06:01:15.000Z",
+        "display_text_range": [
+          10,
+          139
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "typescriptlang.org/ja/docs/handbo…",
+              "expanded_url": "https://www.typescriptlang.org/ja/docs/handbook/intro-to-js-ts.html",
+              "indices": [
+                116,
+                139
+              ],
+              "url": "https://t.co/0RQ0Rk9sIc"
+            }
+          ],
+          "user_mentions": [
+            {
+              "id_str": "928275898125639680",
+              "indices": [
+                0,
+                9
+              ],
+              "name": "Takumi HASEGAWA (unshift Inc.)",
+              "screen_name": "_unshift"
+            }
+          ],
+          "symbols": []
+        },
+        "id_str": "1542025384027336705",
+        "text": "@_unshift 私もTSを導入してみたいなと思いつつ、そこまで必要なのかと思っていまして『@ ts-check』を使用しています。\n\n簡易的な型チェックができるので複雑なことをしないならこれぐらいで十分かなと思っています。笑\n\nhttps://t.co/0RQ0Rk9sIc",
+        "user": {
+          "id_str": "1480833976835375107",
+          "name": "Yuki-Kanayama / Developer / spicato inc.",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1860853500823158784/Sp0fIARg_normal.jpg",
+          "screen_name": "spicato_kana",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1542025384027336705"
+          ],
+          "editable_until_msecs": "1656484275000",
+          "is_edit_eligible": false,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "parent": {
+          "lang": "ja",
+          "reply_count": 3,
+          "retweet_count": 0,
+          "favorite_count": 31,
+          "created_at": "2022-06-29T04:03:22.000Z",
+          "display_text_range": [
+            0,
+            139
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [],
+            "symbols": []
+          },
+          "id_str": "1541995714993336321",
+          "text": "TypeScriptってすごく便利だと思う反面、複雑な型定義とかに頭を悩ませるのって、機能の実装の本質から離れていっている気がして、あまり複雑なことはやらないようにしちゃう。TypeScriptのTwitterコミュニティとかを見てると、みんな複雑なことしててスゴイなって思う。",
+          "user": {
+            "id_str": "928275898125639680",
+            "name": "Takumi HASEGAWA (unshift Inc.)",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1855780401081630720/vwJxhOY5_normal.jpg",
+            "screen_name": "_unshift",
+            "verified": false,
+            "is_blue_verified": true,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1541995714993336321"
+            ],
+            "editable_until_msecs": "1656477202000",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:16.004Z"
     },
     {
       "id": "archive-1541662699334934528",
@@ -33,7 +338,533 @@
       "fullText": "昨日から話題沸騰中のmount制作「KUBOTA FUTURE CUBE」は、コンセプトアート＆イラストを担当したJames Gilleard @jgilleardさんの作品も素晴らしいです。日本人はノスタルジックで不思議な感覚にさせられるのでは。ご本人が長野・松本在住なところに、この世界観に惹きつけられる秘密があるのかも…？ https://t.co/qdLie3Y1m7",
       "expandedUrl": "https://twitter.com/i/web/status/1541662699334934528",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 148,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-28T06:00:04.000Z",
+        "display_text_range": [
+          0,
+          164
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [
+            {
+              "id_str": "251310447",
+              "indices": [
+                72,
+                82
+              ],
+              "name": "James Gilleard",
+              "screen_name": "jgilleard"
+            }
+          ],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/qdLie3Y1m7",
+              "expanded_url": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+              "indices": [
+                165,
+                188
+              ],
+              "url": "https://t.co/qdLie3Y1m7"
+            }
+          ]
+        },
+        "id_str": "1541662699334934528",
+        "text": "昨日から話題沸騰中のmount制作「KUBOTA FUTURE CUBE」は、コンセプトアート＆イラストを担当したJames Gilleard @jgilleardさんの作品も素晴らしいです。日本人はノスタルジックで不思議な感覚にさせられるのでは。ご本人が長野・松本在住なところに、この世界観に惹きつけられる秘密があるのかも…？ https://t.co/qdLie3Y1m7",
+        "user": {
+          "id_str": "1428250158626525185",
+          "name": "iDID | アイディ・アイディ / 世界中のクリエイターをつなげるコミュニティプラットフォーム",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1470286122118889473/VW3M3mCi_normal.jpg",
+          "screen_name": "iDID_team",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1541662699334934528"
+          ],
+          "editable_until_msecs": "1656397804000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/qdLie3Y1m7",
+            "expanded_url": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              165,
+              188
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWUS8VMVEAEQTDz.jpg",
+            "original_info": {
+              "height": 509,
+              "width": 1000,
+              "focus_rects": [
+                {
+                  "x": 91,
+                  "y": 0,
+                  "w": 909,
+                  "h": 509
+                },
+                {
+                  "x": 370,
+                  "y": 0,
+                  "w": 509,
+                  "h": 509
+                },
+                {
+                  "x": 401,
+                  "y": 0,
+                  "w": 446,
+                  "h": 509
+                },
+                {
+                  "x": 497,
+                  "y": 0,
+                  "w": 255,
+                  "h": 509
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1000,
+                  "h": 509
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 509,
+                "resize": "fit",
+                "w": 1000
+              },
+              "medium": {
+                "h": 509,
+                "resize": "fit",
+                "w": 1000
+              },
+              "small": {
+                "h": 346,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/qdLie3Y1m7"
+          },
+          {
+            "display_url": "pic.x.com/qdLie3Y1m7",
+            "expanded_url": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              165,
+              188
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWUS8wyUcAAF70q.jpg",
+            "original_info": {
+              "height": 806,
+              "width": 1500,
+              "focus_rects": [
+                {
+                  "x": 61,
+                  "y": 0,
+                  "w": 1439,
+                  "h": 806
+                },
+                {
+                  "x": 609,
+                  "y": 0,
+                  "w": 806,
+                  "h": 806
+                },
+                {
+                  "x": 659,
+                  "y": 0,
+                  "w": 707,
+                  "h": 806
+                },
+                {
+                  "x": 811,
+                  "y": 0,
+                  "w": 403,
+                  "h": 806
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1500,
+                  "h": 806
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 806,
+                "resize": "fit",
+                "w": 1500
+              },
+              "medium": {
+                "h": 645,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 365,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/qdLie3Y1m7"
+          },
+          {
+            "display_url": "pic.x.com/qdLie3Y1m7",
+            "expanded_url": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              165,
+              188
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWUS9YTVsAAYwHq.jpg",
+            "original_info": {
+              "height": 563,
+              "width": 750,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 750,
+                  "h": 420
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 563,
+                  "h": 563
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 494,
+                  "h": 563
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 282,
+                  "h": 563
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 750,
+                  "h": 563
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 563,
+                "resize": "fit",
+                "w": 750
+              },
+              "medium": {
+                "h": 563,
+                "resize": "fit",
+                "w": 750
+              },
+              "small": {
+                "h": 510,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/qdLie3Y1m7"
+          },
+          {
+            "display_url": "pic.x.com/qdLie3Y1m7",
+            "expanded_url": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              165,
+              188
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWUS-IEUsAAVrD7.jpg",
+            "original_info": {
+              "height": 848,
+              "width": 1500,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 8,
+                  "w": 1500,
+                  "h": 840
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 848,
+                  "h": 848
+                },
+                {
+                  "x": 40,
+                  "y": 0,
+                  "w": 744,
+                  "h": 848
+                },
+                {
+                  "x": 200,
+                  "y": 0,
+                  "w": 424,
+                  "h": 848
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1500,
+                  "h": 848
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 848,
+                "resize": "fit",
+                "w": 1500
+              },
+              "medium": {
+                "h": 678,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 384,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/qdLie3Y1m7"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 91,
+                "y": 0,
+                "w": 909,
+                "h": 509
+              },
+              {
+                "x": 370,
+                "y": 0,
+                "w": 509,
+                "h": 509
+              },
+              {
+                "x": 401,
+                "y": 0,
+                "w": 446,
+                "h": 509
+              },
+              {
+                "x": 497,
+                "y": 0,
+                "w": 255,
+                "h": 509
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1000,
+                "h": 509
+              }
+            ],
+            "expandedUrl": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+            "url": "https://pbs.twimg.com/media/FWUS8VMVEAEQTDz.jpg",
+            "width": 1000,
+            "height": 509
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 61,
+                "y": 0,
+                "w": 1439,
+                "h": 806
+              },
+              {
+                "x": 609,
+                "y": 0,
+                "w": 806,
+                "h": 806
+              },
+              {
+                "x": 659,
+                "y": 0,
+                "w": 707,
+                "h": 806
+              },
+              {
+                "x": 811,
+                "y": 0,
+                "w": 403,
+                "h": 806
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1500,
+                "h": 806
+              }
+            ],
+            "expandedUrl": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+            "url": "https://pbs.twimg.com/media/FWUS8wyUcAAF70q.jpg",
+            "width": 1500,
+            "height": 806
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 750,
+                "h": 420
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 563,
+                "h": 563
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 494,
+                "h": 563
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 282,
+                "h": 563
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 750,
+                "h": 563
+              }
+            ],
+            "expandedUrl": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+            "url": "https://pbs.twimg.com/media/FWUS9YTVsAAYwHq.jpg",
+            "width": 750,
+            "height": 563
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 8,
+                "w": 1500,
+                "h": 840
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 848,
+                "h": 848
+              },
+              {
+                "x": 40,
+                "y": 0,
+                "w": 744,
+                "h": 848
+              },
+              {
+                "x": 200,
+                "y": 0,
+                "w": 424,
+                "h": 848
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1500,
+                "h": 848
+              }
+            ],
+            "expandedUrl": "https://x.com/iDID_team/status/1541662699334934528/photo/1",
+            "url": "https://pbs.twimg.com/media/FWUS-IEUsAAVrD7.jpg",
+            "width": 1500,
+            "height": 848
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:17.180Z"
     },
     {
       "id": "archive-1541633179810861056",
@@ -41,7 +872,368 @@
       "fullText": "cssでブラウザが対応していたらtrueを返してくれる@supportsってやつがあるのか知らなかった。。\n\ngridが対応していれば以下\n@supports (display: grid) { \n}\n\ngridが対応していない場合は以下\n@supports not (display: grid) {\n}\n\nhttps://t.co/RPrgvgVZKG",
       "expandedUrl": "https://twitter.com/i/web/status/1541633179810861056",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 104,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-28T04:02:46.000Z",
+        "display_text_range": [
+          0,
+          178
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "developer.mozilla.org/ja/docs/Web/CS…",
+              "expanded_url": "https://developer.mozilla.org/ja/docs/Web/CSS/@supports",
+              "indices": [
+                155,
+                178
+              ],
+              "url": "https://t.co/RPrgvgVZKG"
+            }
+          ],
+          "user_mentions": [
+            {
+              "id_str": "973320463",
+              "indices": [
+                27,
+                36
+              ],
+              "name": "CSS Feature Support",
+              "screen_name": "supports"
+            },
+            {
+              "id_str": "973320463",
+              "indices": [
+                70,
+                79
+              ],
+              "name": "CSS Feature Support",
+              "screen_name": "supports"
+            },
+            {
+              "id_str": "973320463",
+              "indices": [
+                120,
+                129
+              ],
+              "name": "CSS Feature Support",
+              "screen_name": "supports"
+            }
+          ],
+          "symbols": []
+        },
+        "id_str": "1541633179810861056",
+        "text": "cssでブラウザが対応していたらtrueを返してくれる@supportsってやつがあるのか知らなかった。。\n\ngridが対応していれば以下\n@supports (display: grid) { \n}\n\ngridが対応していない場合は以下\n@supports not (display: grid) {\n}\n\nhttps://t.co/RPrgvgVZKG",
+        "user": {
+          "id_str": "772069501756055552",
+          "name": "夢みるゴリラ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1125362977723432960/LzncWV-e_normal.png",
+          "screen_name": "yumegori1228",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1541633179810861056"
+          ],
+          "editable_until_msecs": "1656390766000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/RPrgvgVZKG",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 150,
+                "width": 267,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "@supports は CSS のアットルールで、ブラウザーが CSS 機能に対応しているかによって、 CSS 宣言を指定することができます。 このアットルールを使用することは、一般に機能クエリーと呼ばれます。 ルールはコードの最上位または他の条件付きグループアットルールの中に配置しなければなりません。",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "developer.mozilla.org",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 320,
+                "width": 569,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=800x320_1"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 1080,
+                "width": 1920,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 81,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "creator": {
+              "type": "USER",
+              "user_value": {
+                "id_str": "1317739632",
+                "path": []
+              }
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 1080,
+                "width": 1920,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 1080,
+                "width": 1920,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_alt_text": {
+              "string_value": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+              "type": "STRING"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "developer.mozilla.org",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_alt_text": {
+              "string_value": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+              "type": "STRING"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 7,
+                      "green": 7,
+                      "red": 4
+                    },
+                    "percentage": 99.14
+                  },
+                  {
+                    "rgb": {
+                      "blue": 115,
+                      "green": 115,
+                      "red": 114
+                    },
+                    "percentage": 0.55
+                  },
+                  {
+                    "rgb": {
+                      "blue": 98,
+                      "green": 59,
+                      "red": 32
+                    },
+                    "percentage": 0.3
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "@supports - CSS: カスケーディングスタイルシート | MDN",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 7,
+                      "green": 7,
+                      "red": 4
+                    },
+                    "percentage": 99.14
+                  },
+                  {
+                    "rgb": {
+                      "blue": 115,
+                      "green": 115,
+                      "red": 114
+                    },
+                    "percentage": 0.55
+                  },
+                  {
+                    "rgb": {
+                      "blue": 98,
+                      "green": 59,
+                      "red": 32
+                    },
+                    "percentage": 0.3
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 1080,
+                "width": 1920,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 7,
+                      "green": 7,
+                      "red": 4
+                    },
+                    "percentage": 99.14
+                  },
+                  {
+                    "rgb": {
+                      "blue": 115,
+                      "green": 115,
+                      "red": 114
+                    },
+                    "percentage": 0.55
+                  },
+                  {
+                    "rgb": {
+                      "blue": 98,
+                      "green": 59,
+                      "red": 32
+                    },
+                    "percentage": 0.3
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 1080,
+                "width": 1920,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/RPrgvgVZKG",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "alt": "The MDN Web Docs logo, featuring a blue accent color, displayed on a solid black background.",
+                "height": 1080,
+                "width": 1920,
+                "url": "https://pbs.twimg.com/card_img/1930942926638759936/nFInMiTr?format=png&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:18.378Z"
     },
     {
       "id": "archive-1541529590652456964",
@@ -49,7 +1241,167 @@
       "fullText": "Interesting times ahead. This is the new &lt;model&gt; running in iOS Safari https://t.co/iaYZHXXSay",
       "expandedUrl": "https://twitter.com/i/web/status/1541529590652456964",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 670,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-27T21:11:09.000Z",
+        "display_text_range": [
+          0,
+          76
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/iaYZHXXSay",
+              "expanded_url": "https://x.com/MikkoH/status/1541529590652456964/video/1",
+              "indices": [
+                77,
+                100
+              ],
+              "url": "https://t.co/iaYZHXXSay"
+            }
+          ]
+        },
+        "id_str": "1541529590652456964",
+        "text": "Interesting times ahead. This is the new &lt;model&gt; running in iOS Safari https://t.co/iaYZHXXSay",
+        "user": {
+          "id_str": "17294128",
+          "name": "Mikko Haapoja",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/876794939392348160/dSKyXxSY_normal.jpg",
+          "screen_name": "MikkoH",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1541529590652456964"
+          ],
+          "editable_until_msecs": "1656366069000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/iaYZHXXSay",
+            "expanded_url": "https://x.com/MikkoH/status/1541529590652456964/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              77,
+              100
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1541529524990509057/pu/img/fPmJswccyAKhcT6b.jpg",
+            "original_info": {
+              "height": 592,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 592,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 555,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 315,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/iaYZHXXSay",
+            "video_info": {
+              "aspect_ratio": [
+                80,
+                37
+              ],
+              "duration_millis": 14740,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1541529524990509057/pu/pl/_S9MhHWy07mwwnC0.m3u8?tag=12"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1541529524990509057/pu/vid/582x270/7jQm7op3l_VxQnlm.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1541529524990509057/pu/vid/778x360/lEe5LumfjlB1z7xB.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1541529524990509057/pu/vid/1280x592/SjmRAOJtxs-nhn1s.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            80,
+            37
+          ],
+          "contentType": "media_entity",
+          "durationMs": 14740,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1541529524990509057/pu/img/fPmJswccyAKhcT6b.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1541529524990509057/pu/pl/_S9MhHWy07mwwnC0.m3u8?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1541529524990509057/pu/vid/582x270/7jQm7op3l_VxQnlm.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1541529524990509057/pu/vid/778x360/lEe5LumfjlB1z7xB.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1541529524990509057/pu/vid/1280x592/SjmRAOJtxs-nhn1s.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1541529590652456964"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 13,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:19.543Z"
     },
     {
       "id": "archive-1541488179361918976",
@@ -57,7 +1409,178 @@
       "fullText": "RT to enter a raffle and win an edition @ 1:00 PM UTC tomorrow!\n\nMore info below ⬇️ https://t.co/RiMEcj2Aui",
       "expandedUrl": "https://twitter.com/i/web/status/1541488179361918976",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 553,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-27T18:26:36.000Z",
+        "display_text_range": [
+          0,
+          83
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/RiMEcj2Aui",
+              "expanded_url": "https://x.com/MoriYuzan/status/1541488179361918976/photo/1",
+              "indices": [
+                84,
+                107
+              ],
+              "url": "https://t.co/RiMEcj2Aui"
+            }
+          ]
+        },
+        "id_str": "1541488179361918976",
+        "text": "RT to enter a raffle and win an edition @ 1:00 PM UTC tomorrow!\n\nMore info below ⬇️ https://t.co/RiMEcj2Aui",
+        "user": {
+          "id_str": "1415759323481796609",
+          "name": "Hamonshū",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1832252030578044928/9fAaOgOg_normal.jpg",
+          "screen_name": "MoriYuzan",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1541488179361918976"
+          ],
+          "editable_until_msecs": "1656356196000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/RiMEcj2Aui",
+            "expanded_url": "https://x.com/MoriYuzan/status/1541488179361918976/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              84,
+              107
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWR3HQMXgAE3s8a.jpg",
+            "original_info": {
+              "height": 2400,
+              "width": 1760,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 1364,
+                  "w": 1760,
+                  "h": 986
+                },
+                {
+                  "x": 0,
+                  "y": 640,
+                  "w": 1760,
+                  "h": 1760
+                },
+                {
+                  "x": 0,
+                  "y": 394,
+                  "w": 1760,
+                  "h": 2006
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1200,
+                  "h": 2400
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1760,
+                  "h": 2400
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 1502
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 880
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 499
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/RiMEcj2Aui"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 1364,
+                "w": 1760,
+                "h": 986
+              },
+              {
+                "x": 0,
+                "y": 640,
+                "w": 1760,
+                "h": 1760
+              },
+              {
+                "x": 0,
+                "y": 394,
+                "w": 1760,
+                "h": 2006
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1200,
+                "h": 2400
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1760,
+                "h": 2400
+              }
+            ],
+            "expandedUrl": "https://x.com/MoriYuzan/status/1541488179361918976/photo/1",
+            "url": "https://pbs.twimg.com/media/FWR3HQMXgAE3s8a.jpg",
+            "width": 1760,
+            "height": 2400
+          }
+        ],
+        "conversation_count": 26,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:20.711Z"
     },
     {
       "id": "archive-1541412868385837057",
@@ -65,7 +1588,381 @@
       "fullText": "書きましたやで😃\n\n31歳未経験からモダン・フロントエンドエンジニアになった軌跡を全て書いていく https://t.co/liLzJSZhet #Qiita",
       "expandedUrl": "https://twitter.com/i/web/status/1541412868385837057",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 545,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-27T13:27:20.000Z",
+        "display_text_range": [
+          0,
+          80
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                73,
+                79
+              ],
+              "text": "Qiita"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "qiita.com/Yametaro/items…",
+              "expanded_url": "https://qiita.com/Yametaro/items/46aea37f10c7bec35df8",
+              "indices": [
+                49,
+                72
+              ],
+              "url": "https://t.co/liLzJSZhet"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1541412868385837057",
+        "text": "書きましたやで😃\n\n31歳未経験からモダン・フロントエンドエンジニアになった軌跡を全て書いていく https://t.co/liLzJSZhet #Qiita",
+        "user": {
+          "id_str": "931291612654661634",
+          "name": "無職やめ太郎（本名）",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1685415283375427584/gj9kBm0R_normal.jpg",
+          "screen_name": "Yametaro1983",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1541412868385837057"
+          ],
+          "editable_until_msecs": "1656338240000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/liLzJSZhet",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 147,
+                "width": 280,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "※Qiitaのおかげ（？）で転職できた話です。【22歳】工場勤務ワイワイ「毎日毎日、接着剤で部品をくっつけるのしんどいな・・・」ワイ「ワイ、作業が遅すぎて先輩に嫌われてるし・・・」ワイ「転職…",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "qiita.com",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 315,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=600x600"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "site": {
+              "scribe_key": "publisher_id",
+              "type": "USER",
+              "user_value": {
+                "id_str": "341374118",
+                "path": []
+              }
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 76,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "creator": {
+              "type": "USER",
+              "user_value": {
+                "id_str": "931291612654661634",
+                "path": []
+              }
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "qiita.com",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 91.52
+                  },
+                  {
+                    "rgb": {
+                      "blue": 123,
+                      "green": 122,
+                      "red": 120
+                    },
+                    "percentage": 4.01
+                  },
+                  {
+                    "rgb": {
+                      "blue": 13,
+                      "green": 200,
+                      "red": 93
+                    },
+                    "percentage": 2.51
+                  },
+                  {
+                    "rgb": {
+                      "blue": 220,
+                      "green": 151,
+                      "red": 64
+                    },
+                    "percentage": 1.1
+                  },
+                  {
+                    "rgb": {
+                      "blue": 141,
+                      "green": 230,
+                      "red": 180
+                    },
+                    "percentage": 0.45
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "高卒30代未経験からモダン・フロントエンドエンジニアになった軌跡を全て書いていく - Qiita",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 91.52
+                  },
+                  {
+                    "rgb": {
+                      "blue": 123,
+                      "green": 122,
+                      "red": 120
+                    },
+                    "percentage": 4.01
+                  },
+                  {
+                    "rgb": {
+                      "blue": 13,
+                      "green": 200,
+                      "red": 93
+                    },
+                    "percentage": 2.51
+                  },
+                  {
+                    "rgb": {
+                      "blue": 220,
+                      "green": 151,
+                      "red": 64
+                    },
+                    "percentage": 1.1
+                  },
+                  {
+                    "rgb": {
+                      "blue": 141,
+                      "green": 230,
+                      "red": 180
+                    },
+                    "percentage": 0.45
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 91.52
+                  },
+                  {
+                    "rgb": {
+                      "blue": 123,
+                      "green": 122,
+                      "red": 120
+                    },
+                    "percentage": 4.01
+                  },
+                  {
+                    "rgb": {
+                      "blue": 13,
+                      "green": 200,
+                      "red": 93
+                    },
+                    "percentage": 2.51
+                  },
+                  {
+                    "rgb": {
+                      "blue": 220,
+                      "green": 151,
+                      "red": 64
+                    },
+                    "percentage": 1.1
+                  },
+                  {
+                    "rgb": {
+                      "blue": 141,
+                      "green": 230,
+                      "red": 180
+                    },
+                    "percentage": 0.45
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/liLzJSZhet",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1930150228054945792/Ow5Kd9gg?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:21.940Z"
     },
     {
       "id": "archive-1541342592117649408",
@@ -73,7 +1970,467 @@
       "fullText": "@bokoko33 @junim つくった時期が↓のような順番なのですが、\nhttps://t.co/UNg8QfSz08 -&gt; wheelイベントを拾って独自に\nhttps://t.co/aGPAquZBOD -&gt; cssのscroll-snapをベースに値をいい感じに利用する\nhttps://t.co/Am4NpBzx4H -&gt; 独自\nスクロールまわりは自分でもまだ模索中で、毎回つくり変えてます…！",
       "expandedUrl": "https://twitter.com/i/web/status/1541342592117649408",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "in_reply_to_screen_name": "bokoko33",
+        "in_reply_to_status_id_str": "1541341088694226944",
+        "in_reply_to_user_id_str": "1277982316002861056",
+        "lang": "ja",
+        "favorite_count": 35,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-27T08:48:05.000Z",
+        "display_text_range": [
+          17,
+          212
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "pola.co.jp/wecaremore/",
+              "expanded_url": "https://pola.co.jp/wecaremore/",
+              "indices": [
+                38,
+                61
+              ],
+              "url": "https://t.co/UNg8QfSz08"
+            },
+            {
+              "display_url": "kubota.co.jp/futurecube/",
+              "expanded_url": "https://kubota.co.jp/futurecube/",
+              "indices": [
+                85,
+                108
+              ],
+              "url": "https://t.co/aGPAquZBOD"
+            },
+            {
+              "display_url": "pola.co.jp/wecaremore/mot…",
+              "expanded_url": "https://pola.co.jp/wecaremore/mothersday/",
+              "indices": [
+                147,
+                170
+              ],
+              "url": "https://t.co/Am4NpBzx4H"
+            }
+          ],
+          "user_mentions": [
+            {
+              "id_str": "1277982316002861056",
+              "indices": [
+                0,
+                9
+              ],
+              "name": "boko｜ぼこ",
+              "screen_name": "bokoko33"
+            },
+            {
+              "id_str": "6346432",
+              "indices": [
+                10,
+                16
+              ],
+              "name": "イム ジョンホ / mount inc.",
+              "screen_name": "junim"
+            }
+          ],
+          "symbols": []
+        },
+        "id_str": "1541342592117649408",
+        "text": "@bokoko33 @junim つくった時期が↓のような順番なのですが、\nhttps://t.co/UNg8QfSz08 -&gt; wheelイベントを拾って独自に\nhttps://t.co/aGPAquZBOD -&gt; cssのscroll-snapをベースに値をいい感じに利用する\nhttps://t.co/Am4NpBzx4H -&gt; 独自\nスクロールまわりは自分でもまだ模索中で、毎回つくり変えてます…！",
+        "user": {
+          "id_str": "7400862",
+          "name": "岡部健二",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1443843214247530497/bTceHK8R_normal.jpg",
+          "screen_name": "kenjiokabe",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1541342592117649408"
+          ],
+          "editable_until_msecs": "1656321485000",
+          "is_edit_eligible": false,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "parent": {
+          "in_reply_to_screen_name": "junim",
+          "in_reply_to_status_id_str": "1541340531250569216",
+          "in_reply_to_user_id_str": "6346432",
+          "lang": "ja",
+          "reply_count": 1,
+          "retweet_count": 0,
+          "favorite_count": 3,
+          "created_at": "2022-06-27T08:42:06.000Z",
+          "display_text_range": [
+            19,
+            90
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [
+              {
+                "id_str": "6346432",
+                "indices": [
+                  0,
+                  6
+                ],
+                "name": "イム ジョンホ / mount inc.",
+                "screen_name": "junim"
+              },
+              {
+                "id_str": "7400862",
+                "indices": [
+                  7,
+                  18
+                ],
+                "name": "岡部健二",
+                "screen_name": "kenjiokabe"
+              },
+              {
+                "id_str": "7400862",
+                "indices": [
+                  40,
+                  51
+                ],
+                "name": "岡部健二",
+                "screen_name": "kenjiokabe"
+              }
+            ],
+            "symbols": []
+          },
+          "id_str": "1541341088694226944",
+          "text": "@junim @kenjiokabe ！！！\nありがとうございます！🙇‍♂️\n\n@kenjiokabe \n可能な範囲で構いませんのでご教示いただけますととっても嬉しいです...！",
+          "user": {
+            "id_str": "1277982316002861056",
+            "name": "boko｜ぼこ",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1932015159473786881/ThvQSjWL_normal.jpg",
+            "screen_name": "bokoko33",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1541341088694226944"
+            ],
+            "editable_until_msecs": "1656321126000",
+            "is_edit_eligible": false,
+            "edits_remaining": "5"
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/Am4NpBzx4H",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 147,
+                "width": 280,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "2022年の母の日に公開した、POLAのメッセージ広告です。今を生きる、すべてのお母さんへの感謝を込めています。",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "www.pola.co.jp",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 315,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=600x600"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 76,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "pola.co.jp",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 237,
+                      "green": 237,
+                      "red": 237
+                    },
+                    "percentage": 71.36
+                  },
+                  {
+                    "rgb": {
+                      "blue": 40,
+                      "green": 67,
+                      "red": 225
+                    },
+                    "percentage": 9.99
+                  },
+                  {
+                    "rgb": {
+                      "blue": 165,
+                      "green": 86,
+                      "red": 36
+                    },
+                    "percentage": 4.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 32,
+                      "green": 168,
+                      "red": 241
+                    },
+                    "percentage": 3.47
+                  },
+                  {
+                    "rgb": {
+                      "blue": 102,
+                      "green": 114,
+                      "red": 229
+                    },
+                    "percentage": 1.55
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "すべてのお母さんに、ありがとう。| ポーラ公式 エイジングケアと美白・化粧品",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 237,
+                      "green": 237,
+                      "red": 237
+                    },
+                    "percentage": 71.36
+                  },
+                  {
+                    "rgb": {
+                      "blue": 40,
+                      "green": 67,
+                      "red": 225
+                    },
+                    "percentage": 9.99
+                  },
+                  {
+                    "rgb": {
+                      "blue": 165,
+                      "green": 86,
+                      "red": 36
+                    },
+                    "percentage": 4.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 32,
+                      "green": 168,
+                      "red": 241
+                    },
+                    "percentage": 3.47
+                  },
+                  {
+                    "rgb": {
+                      "blue": 102,
+                      "green": 114,
+                      "red": 229
+                    },
+                    "percentage": 1.55
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 237,
+                      "green": 237,
+                      "red": 237
+                    },
+                    "percentage": 71.36
+                  },
+                  {
+                    "rgb": {
+                      "blue": 40,
+                      "green": 67,
+                      "red": 225
+                    },
+                    "percentage": 9.99
+                  },
+                  {
+                    "rgb": {
+                      "blue": 165,
+                      "green": 86,
+                      "red": 36
+                    },
+                    "percentage": 4.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 32,
+                      "green": 168,
+                      "red": 241
+                    },
+                    "percentage": 3.47
+                  },
+                  {
+                    "rgb": {
+                      "blue": 102,
+                      "green": 114,
+                      "red": 229
+                    },
+                    "percentage": 1.55
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/Am4NpBzx4H",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1928607362627284994/m-DPYHzd?format=png&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:23.137Z"
     },
     {
       "id": "archive-1541300358060048385",
@@ -81,7 +2438,218 @@
       "fullText": "クボタの新コンテンツ「KUBOTA FUTURE CUBE」を企画・制作しました。ローポリ風フルCG映像と2.5Dイラストで、クボタが思い描く未来の地球と技術をピースフルに表現しました🌏\n#mountinc #クボタ #UnrealEngine\n\nhttps://t.co/pWUFWWWsu7\n\nAD：米道 昌弘@masalive\nTD：岡部 健二@kenjiokabe\n. https://t.co/IfVJESqcmw",
       "expandedUrl": "https://twitter.com/i/web/status/1541300358060048385",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 1797,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-27T06:00:15.000Z",
+        "display_text_range": [
+          0,
+          189
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                94,
+                103
+              ],
+              "text": "mountinc"
+            },
+            {
+              "indices": [
+                104,
+                108
+              ],
+              "text": "クボタ"
+            },
+            {
+              "indices": [
+                109,
+                122
+              ],
+              "text": "UnrealEngine"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "kubota.co.jp/futurecube/",
+              "expanded_url": "https://www.kubota.co.jp/futurecube/",
+              "indices": [
+                124,
+                147
+              ],
+              "url": "https://t.co/pWUFWWWsu7"
+            }
+          ],
+          "user_mentions": [
+            {
+              "id_str": "14507794",
+              "indices": [
+                157,
+                166
+              ],
+              "name": "米道昌弘 / mount inc.",
+              "screen_name": "masalive"
+            },
+            {
+              "id_str": "7400862",
+              "indices": [
+                175,
+                186
+              ],
+              "name": "岡部健二",
+              "screen_name": "kenjiokabe"
+            }
+          ],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/IfVJESqcmw",
+              "expanded_url": "https://x.com/mount_inc/status/1541300358060048385/video/1",
+              "indices": [
+                189,
+                212
+              ],
+              "url": "https://t.co/IfVJESqcmw"
+            }
+          ]
+        },
+        "id_str": "1541300358060048385",
+        "text": "クボタの新コンテンツ「KUBOTA FUTURE CUBE」を企画・制作しました。ローポリ風フルCG映像と2.5Dイラストで、クボタが思い描く未来の地球と技術をピースフルに表現しました🌏\n#mountinc #クボタ #UnrealEngine\n\nhttps://t.co/pWUFWWWsu7\n\nAD：米道 昌弘@masalive\nTD：岡部 健二@kenjiokabe\n. https://t.co/IfVJESqcmw",
+        "user": {
+          "id_str": "166229556",
+          "name": "mount inc.",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1156185720261730304/bPuAT_-c_normal.jpg",
+          "screen_name": "mount_inc",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1541300358060048385"
+          ],
+          "editable_until_msecs": "1656311415000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/IfVJESqcmw",
+            "expanded_url": "https://x.com/mount_inc/status/1541300358060048385/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              189,
+              212
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1541267358316371971/pu/img/rxF-Bbp_fZ0YvnoX.jpg",
+            "original_info": {
+              "height": 810,
+              "width": 1440,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 810,
+                "resize": "fit",
+                "w": 1440
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/IfVJESqcmw",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 38238,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1541267358316371971/pu/pl/aMjbyTMZdBuYxqA6.m3u8?tag=12&v=cfc"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1541267358316371971/pu/vid/480x270/rWF-htbZ7-a-quco.mp4?tag=12"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1541267358316371971/pu/vid/640x360/dEAOHZBS6aKpv2zf.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1541267358316371971/pu/vid/1280x720/8Z3owyvmzLP519Ew.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 38238,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1541267358316371971/pu/img/rxF-Bbp_fZ0YvnoX.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1541267358316371971/pu/pl/aMjbyTMZdBuYxqA6.m3u8?tag=12&v=cfc"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1541267358316371971/pu/vid/480x270/rWF-htbZ7-a-quco.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1541267358316371971/pu/vid/640x360/dEAOHZBS6aKpv2zf.mp4?tag=12"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1541267358316371971/pu/vid/1280x720/8Z3owyvmzLP519Ew.mp4?tag=12"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1541300358060048385"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 5,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:24.312Z"
     },
     {
       "id": "archive-1541082360547905536",
@@ -89,7 +2657,552 @@
       "fullText": "#WCCChallenge #creativecoding #generativeart #p5js \nthese chinese window frames arent strictly ancient, they r very much still in use, but well, they do give off that vibe to me https://t.co/7GRWEcIjuz",
       "expandedUrl": "https://twitter.com/i/web/status/1541082360547905536",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 20,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-26T15:34:01.000Z",
+        "display_text_range": [
+          0,
+          177
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                0,
+                13
+              ],
+              "text": "WCCChallenge"
+            },
+            {
+              "indices": [
+                14,
+                29
+              ],
+              "text": "creativecoding"
+            },
+            {
+              "indices": [
+                30,
+                44
+              ],
+              "text": "generativeart"
+            },
+            {
+              "indices": [
+                45,
+                50
+              ],
+              "text": "p5js"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/7GRWEcIjuz",
+              "expanded_url": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+              "indices": [
+                178,
+                201
+              ],
+              "url": "https://t.co/7GRWEcIjuz"
+            }
+          ]
+        },
+        "id_str": "1541082360547905536",
+        "text": "#WCCChallenge #creativecoding #generativeart #p5js \nthese chinese window frames arent strictly ancient, they r very much still in use, but well, they do give off that vibe to me https://t.co/7GRWEcIjuz",
+        "user": {
+          "id_str": "1443596659955429383",
+          "name": "CIOSAI",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1443980451111002114/fTd87WcM_normal.jpg",
+          "screen_name": "CIOSAI_tw",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1541082360547905536"
+          ],
+          "editable_until_msecs": "1656259441000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/7GRWEcIjuz",
+            "expanded_url": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              178,
+              201
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWMFTv0VEAA2NB3.png",
+            "original_info": {
+              "height": 1075,
+              "width": 1075,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 473,
+                  "w": 1075,
+                  "h": 602
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 1075
+                },
+                {
+                  "x": 66,
+                  "y": 0,
+                  "w": 943,
+                  "h": 1075
+                },
+                {
+                  "x": 268,
+                  "y": 0,
+                  "w": 538,
+                  "h": 1075
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 1075
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1075,
+                "resize": "fit",
+                "w": 1075
+              },
+              "medium": {
+                "h": 1075,
+                "resize": "fit",
+                "w": 1075
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/7GRWEcIjuz"
+          },
+          {
+            "display_url": "pic.x.com/7GRWEcIjuz",
+            "expanded_url": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              178,
+              201
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWMFVO8UYAIa6wQ.png",
+            "original_info": {
+              "height": 1075,
+              "width": 1075,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 602
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 1075
+                },
+                {
+                  "x": 66,
+                  "y": 0,
+                  "w": 943,
+                  "h": 1075
+                },
+                {
+                  "x": 268,
+                  "y": 0,
+                  "w": 538,
+                  "h": 1075
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 1075
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1075,
+                "resize": "fit",
+                "w": 1075
+              },
+              "medium": {
+                "h": 1075,
+                "resize": "fit",
+                "w": 1075
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/7GRWEcIjuz"
+          },
+          {
+            "display_url": "pic.x.com/7GRWEcIjuz",
+            "expanded_url": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              178,
+              201
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWMFXHaUsAUoFYd.png",
+            "original_info": {
+              "height": 1075,
+              "width": 1075,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 473,
+                  "w": 1075,
+                  "h": 602
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 1075
+                },
+                {
+                  "x": 66,
+                  "y": 0,
+                  "w": 943,
+                  "h": 1075
+                },
+                {
+                  "x": 268,
+                  "y": 0,
+                  "w": 538,
+                  "h": 1075
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 1075
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1075,
+                "resize": "fit",
+                "w": 1075
+              },
+              "medium": {
+                "h": 1075,
+                "resize": "fit",
+                "w": 1075
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/7GRWEcIjuz"
+          },
+          {
+            "display_url": "pic.x.com/7GRWEcIjuz",
+            "expanded_url": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              178,
+              201
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FWMFYpcUUAEJKM_.png",
+            "original_info": {
+              "height": 1075,
+              "width": 1075,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 602
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 1075
+                },
+                {
+                  "x": 66,
+                  "y": 0,
+                  "w": 943,
+                  "h": 1075
+                },
+                {
+                  "x": 268,
+                  "y": 0,
+                  "w": 538,
+                  "h": 1075
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1075,
+                  "h": 1075
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1075,
+                "resize": "fit",
+                "w": 1075
+              },
+              "medium": {
+                "h": 1075,
+                "resize": "fit",
+                "w": 1075
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/7GRWEcIjuz"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 473,
+                "w": 1075,
+                "h": 602
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 1075
+              },
+              {
+                "x": 66,
+                "y": 0,
+                "w": 943,
+                "h": 1075
+              },
+              {
+                "x": 268,
+                "y": 0,
+                "w": 538,
+                "h": 1075
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 1075
+              }
+            ],
+            "expandedUrl": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+            "url": "https://pbs.twimg.com/media/FWMFTv0VEAA2NB3.png",
+            "width": 1075,
+            "height": 1075
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 602
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 1075
+              },
+              {
+                "x": 66,
+                "y": 0,
+                "w": 943,
+                "h": 1075
+              },
+              {
+                "x": 268,
+                "y": 0,
+                "w": 538,
+                "h": 1075
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 1075
+              }
+            ],
+            "expandedUrl": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+            "url": "https://pbs.twimg.com/media/FWMFVO8UYAIa6wQ.png",
+            "width": 1075,
+            "height": 1075
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 473,
+                "w": 1075,
+                "h": 602
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 1075
+              },
+              {
+                "x": 66,
+                "y": 0,
+                "w": 943,
+                "h": 1075
+              },
+              {
+                "x": 268,
+                "y": 0,
+                "w": 538,
+                "h": 1075
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 1075
+              }
+            ],
+            "expandedUrl": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+            "url": "https://pbs.twimg.com/media/FWMFXHaUsAUoFYd.png",
+            "width": 1075,
+            "height": 1075
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 602
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 1075
+              },
+              {
+                "x": 66,
+                "y": 0,
+                "w": 943,
+                "h": 1075
+              },
+              {
+                "x": 268,
+                "y": 0,
+                "w": 538,
+                "h": 1075
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1075,
+                "h": 1075
+              }
+            ],
+            "expandedUrl": "https://x.com/CIOSAI_tw/status/1541082360547905536/photo/1",
+            "url": "https://pbs.twimg.com/media/FWMFYpcUUAEJKM_.png",
+            "width": 1075,
+            "height": 1075
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:25.688Z"
     },
     {
       "id": "archive-1540941119865122817",
@@ -97,7 +3210,47 @@
       "fullText": "そうか、htmlでscriptをdeferで読み込むと、domツリーが構成された時点でjavascriptが実行されるけど、stylesheetとか画像リソースはその時点ではすべて読み込めてないんだね。\nだから、それらに依存したgsapをscriptの初期化時点で作ろうとすると、不整合が起きると。",
       "expandedUrl": "https://twitter.com/i/web/status/1540941119865122817",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 3,
+        "created_at": "2022-06-26T06:12:46.000Z",
+        "display_text_range": [
+          0,
+          149
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1540941119865122817",
+        "text": "そうか、htmlでscriptをdeferで読み込むと、domツリーが構成された時点でjavascriptが実行されるけど、stylesheetとか画像リソースはその時点ではすべて読み込めてないんだね。\nだから、それらに依存したgsapをscriptの初期化時点で作ろうとすると、不整合が起きると。",
+        "user": {
+          "id_str": "293438309",
+          "name": "ふぉくる",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1928502205902180352/WI9G5eyp_normal.jpg",
+          "screen_name": "focru_ino",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1540941119865122817"
+          ],
+          "editable_until_msecs": "1656225766000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:26.943Z"
     },
     {
       "id": "archive-1540935275433836544",
@@ -105,7 +3258,8 @@
       "fullText": "https://t.co/A3nOsjh24b",
       "expandedUrl": "https://twitter.com/i/web/status/1540935275433836544",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "private": true
     },
     {
       "id": "archive-1540355119757553664",
@@ -113,7 +3267,47 @@
       "fullText": "Bye 30s~! What a rollercoaster of emotions you've been...",
       "expandedUrl": "https://twitter.com/i/web/status/1540355119757553664",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 363,
+        "created_at": "2022-06-24T15:24:13.000Z",
+        "display_text_range": [
+          0,
+          57
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1540355119757553664",
+        "text": "Bye 30s~! What a rollercoaster of emotions you've been...",
+        "user": {
+          "id_str": "20733754",
+          "name": "mrdoob",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1619147369999917056/5jd5MK9C_normal.jpg",
+          "screen_name": "mrdoob",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1540355119757553664"
+          ],
+          "editable_until_msecs": "1656086053000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 53,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:29.270Z"
     },
     {
       "id": "archive-1540050879977607168",
@@ -121,7 +3315,206 @@
       "fullText": "Ok, I think that's it for this. Took a while to get around to finishing but i'm pretty happy with the results.\n\nBig thanks to @bruno_simon for his #threejsJourney course. It's by far the best online course I have ever done!\n\nSee it in live: https://t.co/hghEJwoXyH https://t.co/gj4aXkoQtG",
       "expandedUrl": "https://twitter.com/i/web/status/1540050879977607168",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 92,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-23T19:15:17.000Z",
+        "display_text_range": [
+          0,
+          264
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                147,
+                162
+              ],
+              "text": "threejsJourney"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "livingroom-nine.vercel.app",
+              "expanded_url": "http://livingroom-nine.vercel.app",
+              "indices": [
+                241,
+                264
+              ],
+              "url": "https://t.co/hghEJwoXyH"
+            }
+          ],
+          "user_mentions": [
+            {
+              "id_str": "83389771",
+              "indices": [
+                126,
+                138
+              ],
+              "name": "Bruno Simon",
+              "screen_name": "bruno_simon"
+            }
+          ],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/gj4aXkoQtG",
+              "expanded_url": "https://x.com/thomasauros/status/1540050879977607168/photo/1",
+              "indices": [
+                265,
+                288
+              ],
+              "url": "https://t.co/gj4aXkoQtG"
+            }
+          ]
+        },
+        "id_str": "1540050879977607168",
+        "text": "Ok, I think that's it for this. Took a while to get around to finishing but i'm pretty happy with the results.\n\nBig thanks to @bruno_simon for his #threejsJourney course. It's by far the best online course I have ever done!\n\nSee it in live: https://t.co/hghEJwoXyH https://t.co/gj4aXkoQtG",
+        "user": {
+          "id_str": "187378879",
+          "name": "Thomas Cullen",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1929288859608555520/Zx3RYDt6_normal.jpg",
+          "screen_name": "thomasauros",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1540050879977607168"
+          ],
+          "editable_until_msecs": "1656013517000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/gj4aXkoQtG",
+            "expanded_url": "https://x.com/thomasauros/status/1540050879977607168/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              265,
+              288
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FV9cHJeXEAQw-oH.jpg",
+            "original_info": {
+              "height": 980,
+              "width": 1271,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1271,
+                  "h": 712
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 980,
+                  "h": 980
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 860,
+                  "h": 980
+                },
+                {
+                  "x": 167,
+                  "y": 0,
+                  "w": 490,
+                  "h": 980
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1271,
+                  "h": 980
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 980,
+                "resize": "fit",
+                "w": 1271
+              },
+              "medium": {
+                "h": 925,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 524,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/gj4aXkoQtG"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1271,
+                "h": 712
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 980,
+                "h": 980
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 860,
+                "h": 980
+              },
+              {
+                "x": 167,
+                "y": 0,
+                "w": 490,
+                "h": 980
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1271,
+                "h": 980
+              }
+            ],
+            "expandedUrl": "https://x.com/thomasauros/status/1540050879977607168/photo/1",
+            "url": "https://pbs.twimg.com/media/FV9cHJeXEAQw-oH.jpg",
+            "width": 1271,
+            "height": 980
+          }
+        ],
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:30.456Z"
     },
     {
       "id": "archive-1540031178094579712",
@@ -129,7 +3522,178 @@
       "fullText": "https://t.co/wcgA87sybV",
       "expandedUrl": "https://twitter.com/i/web/status/1540031178094579712",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "zxx",
+        "favorite_count": 22704,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-23T17:56:59.000Z",
+        "display_text_range": [
+          0,
+          0
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/wcgA87sybV",
+              "expanded_url": "https://x.com/yuki77mi/status/1540031178094579712/photo/1",
+              "indices": [
+                0,
+                23
+              ],
+              "url": "https://t.co/wcgA87sybV"
+            }
+          ]
+        },
+        "id_str": "1540031178094579712",
+        "text": "https://t.co/wcgA87sybV",
+        "user": {
+          "id_str": "1139170314363916288",
+          "name": "ななみ雪",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1145336604489220096/XEoT0kZ3_normal.jpg",
+          "screen_name": "yuki77mi",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1540031178094579712"
+          ],
+          "editable_until_msecs": "1656008819000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/wcgA87sybV",
+            "expanded_url": "https://x.com/yuki77mi/status/1540031178094579712/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              0,
+              23
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/FV9KMWPakAAhogr.jpg",
+            "original_info": {
+              "height": 1305,
+              "width": 969,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 87,
+                  "w": 969,
+                  "h": 543
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 969,
+                  "h": 969
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 969,
+                  "h": 1105
+                },
+                {
+                  "x": 32,
+                  "y": 0,
+                  "w": 653,
+                  "h": 1305
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 969,
+                  "h": 1305
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1305,
+                "resize": "fit",
+                "w": 969
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 891
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 505
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/wcgA87sybV"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 87,
+                "w": 969,
+                "h": 543
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 969,
+                "h": 969
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 969,
+                "h": 1105
+              },
+              {
+                "x": 32,
+                "y": 0,
+                "w": 653,
+                "h": 1305
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 969,
+                "h": 1305
+              }
+            ],
+            "expandedUrl": "https://x.com/yuki77mi/status/1540031178094579712/photo/1",
+            "url": "https://pbs.twimg.com/media/FV9KMWPakAAhogr.jpg",
+            "width": 969,
+            "height": 1305
+          }
+        ],
+        "conversation_count": 16,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:31.633Z"
     },
     {
       "id": "archive-1539977140875427840",
@@ -137,7 +3701,217 @@
       "fullText": "2個しか無いけどCode Breakdownの再生リストです。\n第1回でthree.js使ったグラフィックデザインの作り方\n第2回pixi.js使ったクリエーティブコーディング的なやつを話しました。\n\nこの2回に僕の今までの経験がギュウギュウに詰まってるような気がします。応援してくれ〜\n\nhttps://t.co/y4NS4x9pdr",
       "expandedUrl": "https://twitter.com/i/web/status/1539977140875427840",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 124,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-23T14:22:16.000Z",
+        "display_text_range": [
+          0,
+          168
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "youtube.com/playlist?list=…",
+              "expanded_url": "https://youtube.com/playlist?list=PLry9fd96Bq37oo5IIH-98WIPQxnmJTuBy",
+              "indices": [
+                145,
+                168
+              ],
+              "url": "https://t.co/y4NS4x9pdr"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1539977140875427840",
+        "text": "2個しか無いけどCode Breakdownの再生リストです。\n第1回でthree.js使ったグラフィックデザインの作り方\n第2回pixi.js使ったクリエーティブコーディング的なやつを話しました。\n\nこの2回に僕の今までの経験がギュウギュウに詰まってるような気がします。応援してくれ〜\n\nhttps://t.co/y4NS4x9pdr",
+        "user": {
+          "id_str": "3293617003",
+          "name": "Keita Yamada",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1909511590279626753/TARi7j5x_normal.png",
+          "screen_name": "P5_keita",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1539977140875427840"
+          ],
+          "editable_until_msecs": "1655995936000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary",
+          "url": "https://t.co/y4NS4x9pdr",
+          "binding_values": {
+            "app_star_rating": {
+              "string_value": "4.6791",
+              "type": "STRING"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 144,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1929581426141171712/yGRqYqtS?format=jpg&name=144x144_2"
+              },
+              "type": "IMAGE"
+            },
+            "domain": {
+              "string_value": "www.youtube.com",
+              "type": "STRING"
+            },
+            "app_is_free": {
+              "string_value": "true",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 270,
+                "width": 270,
+                "url": "https://pbs.twimg.com/card_img/1929581426141171712/yGRqYqtS?format=jpg&name=280x280_2"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 270,
+                "width": 480,
+                "url": "https://pbs.twimg.com/card_img/1929581426141171712/yGRqYqtS?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "site": {
+              "scribe_key": "publisher_id",
+              "type": "USER",
+              "user_value": {
+                "id_str": "10228272",
+                "path": []
+              }
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 100,
+                "width": 100,
+                "url": "https://pbs.twimg.com/card_img/1929581426141171712/yGRqYqtS?format=jpg&name=100x100_2"
+              },
+              "type": "IMAGE"
+            },
+            "app_num_ratings": {
+              "string_value": "42,247,791",
+              "type": "STRING"
+            },
+            "app_price_amount": {
+              "string_value": "0.0",
+              "type": "STRING"
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 270,
+                "width": 480,
+                "url": "https://pbs.twimg.com/card_img/1929581426141171712/yGRqYqtS?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "youtube.com",
+              "type": "STRING"
+            },
+            "app_name": {
+              "string_value": "YouTube",
+              "type": "STRING"
+            },
+            "app_id": {
+              "scribe_key": "publisher_app_id",
+              "string_value": "544007664",
+              "type": "STRING"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 210,
+                      "green": 209,
+                      "red": 199
+                    },
+                    "percentage": 74.56
+                  },
+                  {
+                    "rgb": {
+                      "blue": 18,
+                      "green": 18,
+                      "red": 18
+                    },
+                    "percentage": 13.6
+                  },
+                  {
+                    "rgb": {
+                      "blue": 79,
+                      "green": 28,
+                      "red": 220
+                    },
+                    "percentage": 5.48
+                  },
+                  {
+                    "rgb": {
+                      "blue": 168,
+                      "green": 150,
+                      "red": 212
+                    },
+                    "percentage": 2.59
+                  },
+                  {
+                    "rgb": {
+                      "blue": 126,
+                      "green": 97,
+                      "red": 213
+                    },
+                    "percentage": 2.55
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "Playground – Code Breakdown",
+              "type": "STRING"
+            },
+            "app_price_currency": {
+              "string_value": "USD",
+              "type": "STRING"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/y4NS4x9pdr",
+              "type": "STRING"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:32.801Z"
     },
     {
       "id": "archive-1539888799416983554",
@@ -145,7 +3919,366 @@
       "fullText": "新着記事のお知らせ\n\nHTMLでモーダルUIを作るときに気をつけたいこと - ICS MEDIA https://t.co/QRXTlRF5PT",
       "expandedUrl": "https://twitter.com/i/web/status/1539888799416983554",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 40,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-23T08:31:14.000Z",
+        "display_text_range": [
+          0,
+          72
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "ics.media/entry/220620/",
+              "expanded_url": "https://ics.media/entry/220620/",
+              "indices": [
+                49,
+                72
+              ],
+              "url": "https://t.co/QRXTlRF5PT"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1539888799416983554",
+        "text": "新着記事のお知らせ\n\nHTMLでモーダルUIを作るときに気をつけたいこと - ICS MEDIA https://t.co/QRXTlRF5PT",
+        "user": {
+          "id_str": "2313250794",
+          "name": "ICS MEDIA",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/427717397294755841/bFJDq_El_normal.png",
+          "screen_name": "icsweb",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1539888799416983554"
+          ],
+          "editable_until_msecs": "1655974874000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/QRXTlRF5PT",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 160,
+                "width": 400,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=400x400"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "ダイアログやハンバーガーメニューといったユーザーインタフェース（UI）は、多くのウェブサイトで利用されており頻繁に見かけます。どこでも見かけることから「簡単に作成できる」と思われがちですが、意外と実装が難しいUIです。",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "ics.media",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 320,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=800x320_1"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 512,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "site": {
+              "scribe_key": "publisher_id",
+              "type": "USER",
+              "user_value": {
+                "id_str": "2313250794",
+                "path": []
+              }
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 58,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 512,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 512,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "ics.media",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 141,
+                      "green": 141,
+                      "red": 77
+                    },
+                    "percentage": 93.69
+                  },
+                  {
+                    "rgb": {
+                      "blue": 209,
+                      "green": 209,
+                      "red": 182
+                    },
+                    "percentage": 4.09
+                  },
+                  {
+                    "rgb": {
+                      "blue": 74,
+                      "green": 77,
+                      "red": 31
+                    },
+                    "percentage": 0.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 43,
+                      "green": 227,
+                      "red": 209
+                    },
+                    "percentage": 0.47
+                  },
+                  {
+                    "rgb": {
+                      "blue": 90,
+                      "green": 201,
+                      "red": 165
+                    },
+                    "percentage": 0.37
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "HTMLでモーダルUIを作るときに気をつけたいこと - ICS MEDIA",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 141,
+                      "green": 141,
+                      "red": 77
+                    },
+                    "percentage": 93.69
+                  },
+                  {
+                    "rgb": {
+                      "blue": 209,
+                      "green": 209,
+                      "red": 182
+                    },
+                    "percentage": 4.09
+                  },
+                  {
+                    "rgb": {
+                      "blue": 74,
+                      "green": 77,
+                      "red": 31
+                    },
+                    "percentage": 0.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 43,
+                      "green": 227,
+                      "red": 209
+                    },
+                    "percentage": 0.47
+                  },
+                  {
+                    "rgb": {
+                      "blue": 90,
+                      "green": 201,
+                      "red": 165
+                    },
+                    "percentage": 0.37
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 512,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 141,
+                      "green": 141,
+                      "red": 77
+                    },
+                    "percentage": 93.69
+                  },
+                  {
+                    "rgb": {
+                      "blue": 209,
+                      "green": 209,
+                      "red": 182
+                    },
+                    "percentage": 4.09
+                  },
+                  {
+                    "rgb": {
+                      "blue": 74,
+                      "green": 77,
+                      "red": 31
+                    },
+                    "percentage": 0.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 43,
+                      "green": 227,
+                      "red": 209
+                    },
+                    "percentage": 0.47
+                  },
+                  {
+                    "rgb": {
+                      "blue": 90,
+                      "green": 201,
+                      "red": 165
+                    },
+                    "percentage": 0.37
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 512,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/QRXTlRF5PT",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 512,
+                "width": 1280,
+                "url": "https://pbs.twimg.com/card_img/1930722564244221952/kLNDhT0O?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:34.008Z"
     },
     {
       "id": "archive-1539888349137084416",
@@ -153,7 +4286,355 @@
       "fullText": "今年もサイボウズのエンジニア新人研修講義資料および動画を公開しました\nhttps://t.co/UAb6FAYrvX",
       "expandedUrl": "https://twitter.com/i/web/status/1539888349137084416",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 2165,
+        "possibly_sensitive": false,
+        "created_at": "2022-06-23T08:29:26.000Z",
+        "display_text_range": [
+          0,
+          58
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "blog.cybozu.io/entry/2022/06/…",
+              "expanded_url": "https://blog.cybozu.io/entry/2022/06/23/170000",
+              "indices": [
+                35,
+                58
+              ],
+              "url": "https://t.co/UAb6FAYrvX"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1539888349137084416",
+        "text": "今年もサイボウズのエンジニア新人研修講義資料および動画を公開しました\nhttps://t.co/UAb6FAYrvX",
+        "user": {
+          "id_str": "88422742",
+          "name": "sat",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1405823769717841920/HNQJJGC7_normal.jpg",
+          "screen_name": "satoru_takeuchi",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1539888349137084416"
+          ],
+          "editable_until_msecs": "1655974766000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/UAb6FAYrvX",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "app_star_rating": {
+              "string_value": "5.0",
+              "type": "STRING"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 147,
+                "width": 280,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "People Experienceチーム*1の酒井（@sakay_y）です。 2022年もエンジニア新人研修を行いましたので、軽い紹介と、講義資料および一部講義動画を公開いたします。 *1:研修を運営するオンボーディングチームと技術広報っぽいコネクト支援チームを兼務していましたが、このたびチームが一つになりました",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "blog.cybozu.io",
+              "type": "STRING"
+            },
+            "app_is_free": {
+              "string_value": "true",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 315,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=600x600"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "app_url_resolved": {
+              "string_value": "hatenablog:///open?uri=https%3A%2F%2Fblog.cybozu.io%2Fentry%2F2022%2F06%2F23%2F170000",
+              "type": "STRING"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 76,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "app_num_ratings": {
+              "string_value": "5",
+              "type": "STRING"
+            },
+            "app_price_amount": {
+              "string_value": "0.0",
+              "type": "STRING"
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_alt_text": {
+              "string_value": "2022年のエンジニア新人研修の講義資料を公開しました - Cybozu Inside Out | サイボウズエンジニアのブログ",
+              "type": "STRING"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "blog.cybozu.io",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "app_name": {
+              "string_value": "はてなブログ",
+              "type": "STRING"
+            },
+            "summary_photo_image_alt_text": {
+              "string_value": "2022年のエンジニア新人研修の講義資料を公開しました - Cybozu Inside Out | サイボウズエンジニアのブログ",
+              "type": "STRING"
+            },
+            "app_id": {
+              "scribe_key": "publisher_app_id",
+              "string_value": "583299321",
+              "type": "STRING"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 90.51
+                  },
+                  {
+                    "rgb": {
+                      "blue": 213,
+                      "green": 189,
+                      "red": 101
+                    },
+                    "percentage": 9.15
+                  },
+                  {
+                    "rgb": {
+                      "blue": 181,
+                      "green": 151,
+                      "red": 112
+                    },
+                    "percentage": 0.34
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "2022年のエンジニア新人研修の講義資料を公開しました - Cybozu Inside Out | サイボウズエンジニアのブログ",
+              "type": "STRING"
+            },
+            "app_price_currency": {
+              "string_value": "USD",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 90.51
+                  },
+                  {
+                    "rgb": {
+                      "blue": 213,
+                      "green": 189,
+                      "red": 101
+                    },
+                    "percentage": 9.15
+                  },
+                  {
+                    "rgb": {
+                      "blue": 181,
+                      "green": 151,
+                      "red": 112
+                    },
+                    "percentage": 0.34
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "app_url": {
+              "string_value": "https://t.co/redirect?url=hatenablog%3A%2F%2F%2Fopen%3Furi%3Dhttps%253A%252F%252Fblog.cybozu.io%252Fentry%252F2022%252F06%252F23%252F170000&sig=7517c05d168903858a915ca837cebbde10e8ee07&ssr=true&slug=UAb6FAYrvX",
+              "type": "STRING"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 90.51
+                  },
+                  {
+                    "rgb": {
+                      "blue": 213,
+                      "green": 189,
+                      "red": 101
+                    },
+                    "percentage": 9.15
+                  },
+                  {
+                    "rgb": {
+                      "blue": 181,
+                      "green": 151,
+                      "red": 112
+                    },
+                    "percentage": 0.34
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/UAb6FAYrvX",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 630,
+                "width": 1200,
+                "url": "https://pbs.twimg.com/card_img/1929864288619110400/-1QGkV_N?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:35.192Z"
     },
     {
       "id": "archive-1539879856603037696",
@@ -161,7 +4642,47 @@
       "fullText": "代々脈々と受け継いできた秘伝のspacer.gifと同じように代々脈々と使い続けているパーティクル用の白い点の画像、秘伝のpoint.pngというものを僕は持っています。プロジェクトによってはparticle.pngだったりdot.pngだったりにリネームされる時もあります。",
       "expandedUrl": "https://twitter.com/i/web/status/1539879856603037696",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 20,
+        "created_at": "2022-06-23T07:55:42.000Z",
+        "display_text_range": [
+          0,
+          138
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1539879856603037696",
+        "text": "代々脈々と受け継いできた秘伝のspacer.gifと同じように代々脈々と使い続けているパーティクル用の白い点の画像、秘伝のpoint.pngというものを僕は持っています。プロジェクトによってはparticle.pngだったりdot.pngだったりにリネームされる時もあります。",
+        "user": {
+          "id_str": "4137031",
+          "name": "Masayuki Daijima",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/747082730341433344/YErVmA6J_normal.jpg",
+          "screen_name": "daijimachine",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1539879856603037696"
+          ],
+          "editable_until_msecs": "1655972742000",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T15:11:36.354Z"
     }
   ]
 }

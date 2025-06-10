@@ -9,7 +9,178 @@
       "fullText": "オックサンが用意してくれたおかずなんだけど、パが多いwww https://t.co/Od5kjSvII6",
       "expandedUrl": "https://twitter.com/i/web/status/1351726823550304257",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 16,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-20T03:02:43.000Z",
+        "display_text_range": [
+          0,
+          29
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/Od5kjSvII6",
+              "expanded_url": "https://x.com/GranatoLeone/status/1351726823550304257/photo/1",
+              "indices": [
+                30,
+                53
+              ],
+              "url": "https://t.co/Od5kjSvII6"
+            }
+          ]
+        },
+        "id_str": "1351726823550304257",
+        "text": "オックサンが用意してくれたおかずなんだけど、パが多いwww https://t.co/Od5kjSvII6",
+        "user": {
+          "id_str": "943072732970758144",
+          "name": "たけ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1718198855261655040/BmULQkgm_normal.jpg",
+          "screen_name": "GranatoLeone",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1351726823550304257"
+          ],
+          "editable_until_msecs": "1611113563261",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/Od5kjSvII6",
+            "expanded_url": "https://x.com/GranatoLeone/status/1351726823550304257/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              30,
+              53
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EsJMYXLUwAMKKe4.jpg",
+            "original_info": {
+              "height": 1536,
+              "width": 2048,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 389,
+                  "w": 2048,
+                  "h": 1147
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 1536
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1347,
+                  "h": 1536
+                },
+                {
+                  "x": 281,
+                  "y": 0,
+                  "w": 768,
+                  "h": 1536
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2048,
+                  "h": 1536
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1536,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 900,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 510,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/Od5kjSvII6"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 389,
+                "w": 2048,
+                "h": 1147
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 1536
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1347,
+                "h": 1536
+              },
+              {
+                "x": 281,
+                "y": 0,
+                "w": 768,
+                "h": 1536
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 2048,
+                "h": 1536
+              }
+            ],
+            "expandedUrl": "https://x.com/GranatoLeone/status/1351726823550304257/photo/1",
+            "url": "https://pbs.twimg.com/media/EsJMYXLUwAMKKe4.jpg",
+            "width": 2048,
+            "height": 1536
+          }
+        ],
+        "conversation_count": 5,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:49:56.080Z"
     },
     {
       "id": "archive-1351326975646785537",
@@ -17,7 +188,58 @@
       "fullText": "本年度の演習のオンライン対応のために作った資料から講義部分を削除して Blender の使い方だけをまとめた PDF (1,419ページ、288MB)。実は Blender あんまり知らなかった（昨年度は Maya だった）から間違ってたり無駄なことしてたりするところがあると思います。\nhttps://t.co/oqJTg6xGH7",
       "expandedUrl": "https://twitter.com/i/web/status/1351326975646785537",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 7136,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-19T00:33:52.000Z",
+        "display_text_range": [
+          0,
+          167
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "web.wakayama-u.ac.jp/~tokoi/cgpe202…",
+              "expanded_url": "http://web.wakayama-u.ac.jp/~tokoi/cgpe2020.pdf",
+              "indices": [
+                144,
+                167
+              ],
+              "url": "https://t.co/oqJTg6xGH7"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1351326975646785537",
+        "text": "本年度の演習のオンライン対応のために作った資料から講義部分を削除して Blender の使い方だけをまとめた PDF (1,419ページ、288MB)。実は Blender あんまり知らなかった（昨年度は Maya だった）から間違ってたり無駄なことしてたりするところがあると思います。\nhttps://t.co/oqJTg6xGH7",
+        "user": {
+          "id_str": "59102895",
+          "name": "床井浩平",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/749767724792815617/pO7Hy-IU_normal.jpg",
+          "screen_name": "tokoik",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1351326975646785537"
+          ],
+          "editable_until_msecs": "1611018232092",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 28,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:49:57.245Z"
     },
     {
       "id": "archive-1350388046353469443",
@@ -25,7 +247,196 @@
       "fullText": "GLSLスクールの発表課題でNuxt.js+WebGL(Thee.js)で３Dスライドショーを作成してみました。\n複数のアニメーションをランダムに発火させたり、ページ遷移時にシームレスにアニメーションを発火させたりして遊びました。\n\n#nuxtjs #webgl #threejs #glsl https://t.co/i9Y54LEtWy",
       "expandedUrl": "https://twitter.com/i/web/status/1350388046353469443",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 242,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-16T10:22:53.000Z",
+        "display_text_range": [
+          0,
+          146
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                117,
+                124
+              ],
+              "text": "nuxtjs"
+            },
+            {
+              "indices": [
+                125,
+                131
+              ],
+              "text": "webgl"
+            },
+            {
+              "indices": [
+                132,
+                140
+              ],
+              "text": "threejs"
+            },
+            {
+              "indices": [
+                141,
+                146
+              ],
+              "text": "glsl"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/i9Y54LEtWy",
+              "expanded_url": "https://x.com/2UsOd67oBkit2ac/status/1350388046353469443/video/1",
+              "indices": [
+                147,
+                170
+              ],
+              "url": "https://t.co/i9Y54LEtWy"
+            }
+          ]
+        },
+        "id_str": "1350388046353469443",
+        "text": "GLSLスクールの発表課題でNuxt.js+WebGL(Thee.js)で３Dスライドショーを作成してみました。\n複数のアニメーションをランダムに発火させたり、ページ遷移時にシームレスにアニメーションを発火させたりして遊びました。\n\n#nuxtjs #webgl #threejs #glsl https://t.co/i9Y54LEtWy",
+        "user": {
+          "id_str": "1138055410156417025",
+          "name": "$tomo",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1138056047241785344/Dgv0k4Jc_normal.jpg",
+          "screen_name": "2UsOd67oBkit2ac",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1350388046353469443"
+          ],
+          "editable_until_msecs": "1610794373904",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/i9Y54LEtWy",
+            "expanded_url": "https://x.com/2UsOd67oBkit2ac/status/1350388046353469443/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              147,
+              170
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1350387928443228162/pu/img/gVkFE01arCQvix4P.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1032,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1032
+              },
+              "medium": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1032
+              },
+              "small": {
+                "h": 474,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/i9Y54LEtWy",
+            "video_info": {
+              "aspect_ratio": [
+                43,
+                30
+              ],
+              "duration_millis": 21408,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1350387928443228162/pu/pl/XC8emPFPVCx-lrTP.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1350387928443228162/pu/vid/386x270/84ZlPiCAijyk7onj.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1350387928443228162/pu/vid/516x360/4Gg_BnRmI5aTes15.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1350387928443228162/pu/vid/1032x720/59xfthz8_yO6wZzt.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            43,
+            30
+          ],
+          "contentType": "media_entity",
+          "durationMs": 21408,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1350387928443228162/pu/img/gVkFE01arCQvix4P.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1350387928443228162/pu/pl/XC8emPFPVCx-lrTP.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1350387928443228162/pu/vid/386x270/84ZlPiCAijyk7onj.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1350387928443228162/pu/vid/516x360/4Gg_BnRmI5aTes15.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1350387928443228162/pu/vid/1032x720/59xfthz8_yO6wZzt.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1350388046353469443"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:49:58.425Z"
     },
     {
       "id": "archive-1348791751205474305",
@@ -33,7 +444,160 @@
       "fullText": "【重要】『「中国スパイ集団」異例の摘発　ウイグル独立派対策で活動か―アフガン』\n\n■拘束された集団は中国の情報機関である国家安全省と関係があり…\n■国境を接する中国新疆の独立派、東トルキスタン・イスラム運動（ETIM）の戦闘員対策を行っていた可能性も浮上した\nhttps://t.co/UKHGy35KyD",
       "expandedUrl": "https://twitter.com/i/web/status/1348791751205474305",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "in_reply_to_screen_name": "bci_",
+        "in_reply_to_status_id_str": "1344680900722716673",
+        "in_reply_to_user_id_str": "44386311",
+        "lang": "ja",
+        "favorite_count": 76,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-12T00:39:47.000Z",
+        "display_text_range": [
+          0,
+          153
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "jiji.com/jc/article?k=2…",
+              "expanded_url": "https://www.jiji.com/jc/article?k=2021011100358&g=int",
+              "indices": [
+                130,
+                153
+              ],
+              "url": "https://t.co/UKHGy35KyD"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1348791751205474305",
+        "text": "【重要】『「中国スパイ集団」異例の摘発　ウイグル独立派対策で活動か―アフガン』\n\n■拘束された集団は中国の情報機関である国家安全省と関係があり…\n■国境を接する中国新疆の独立派、東トルキスタン・イスラム運動（ETIM）の戦闘員対策を行っていた可能性も浮上した\nhttps://t.co/UKHGy35KyD",
+        "user": {
+          "id_str": "44386311",
+          "name": "黒色中国",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1616332776323829760/D6gOQtFu_normal.jpg",
+          "screen_name": "bci_",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1348791751205474305"
+          ],
+          "editable_until_msecs": "1610413787483",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "parent": {
+          "in_reply_to_screen_name": "bci_",
+          "in_reply_to_status_id_str": "1343756868926066688",
+          "in_reply_to_user_id_str": "44386311",
+          "lang": "ja",
+          "reply_count": 1,
+          "retweet_count": 19,
+          "favorite_count": 36,
+          "possibly_sensitive": false,
+          "created_at": "2020-12-31T16:24:44.000Z",
+          "display_text_range": [
+            0,
+            120
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "afpbb.com/articles/-/332…",
+                "expanded_url": "https://www.afpbb.com/articles/-/3324051",
+                "indices": [
+                  97,
+                  120
+                ],
+                "url": "https://t.co/na5u7rOUWQ"
+              }
+            ],
+            "user_mentions": [],
+            "symbols": []
+          },
+          "id_str": "1344680900722716673",
+          "text": "【中国との新条約にウイグル人引き渡しの懸念、トルコが「火消し」】\n\nトルコ側はまだ同条約を批准していないが、中国側が批准したことによって推計5万人の在トルコウイグル人の間で不安が高まっている。\nhttps://t.co/na5u7rOUWQ",
+          "user": {
+            "id_str": "44386311",
+            "name": "黒色中国",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1616332776323829760/D6gOQtFu_normal.jpg",
+            "screen_name": "bci_",
+            "verified": false,
+            "is_blue_verified": true,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1344680900722716673"
+            ],
+            "editable_until_msecs": "1609433684352",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "card": {
+            "card_platform": {
+              "platform": {
+                "audience": {
+                  "name": "production"
+                },
+                "device": {
+                  "name": "iPhone",
+                  "version": "13"
+                }
+              }
+            },
+            "name": "summary_large_image",
+            "url": "https://t.co/na5u7rOUWQ",
+            "binding_values": {
+              "description": {
+                "string_value": "【12月31日 AFP】トルコは30日、中国との新たな犯罪人引き渡し条約によって大勢のトルコ在住ウイグル人が中国に送還されることになるとの懸念を払拭（ふっしょく）した。",
+                "type": "STRING"
+              },
+              "domain": {
+                "string_value": "www.afpbb.com",
+                "type": "STRING"
+              },
+              "site": {
+                "scribe_key": "publisher_id",
+                "type": "USER",
+                "user_value": {
+                  "id_str": "90841111",
+                  "path": []
+                }
+              },
+              "vanity_url": {
+                "scribe_key": "vanity_url",
+                "string_value": "afpbb.com",
+                "type": "STRING"
+              },
+              "title": {
+                "string_value": "中国との新条約にウイグル人引き渡しの懸念、トルコが「火消し」",
+                "type": "STRING"
+              },
+              "card_url": {
+                "scribe_key": "card_url",
+                "string_value": "https://t.co/na5u7rOUWQ",
+                "type": "STRING"
+              }
+            }
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:49:59.599Z"
     },
     {
       "id": "archive-1348464697398362115",
@@ -41,7 +605,178 @@
       "fullText": "https://t.co/zahDbfcs8P",
       "expandedUrl": "https://twitter.com/i/web/status/1348464697398362115",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "zxx",
+        "favorite_count": 41348,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-11T03:00:11.000Z",
+        "display_text_range": [
+          0,
+          0
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/zahDbfcs8P",
+              "expanded_url": "https://x.com/k_marudashi/status/1348464697398362115/photo/1",
+              "indices": [
+                0,
+                23
+              ],
+              "url": "https://t.co/zahDbfcs8P"
+            }
+          ]
+        },
+        "id_str": "1348464697398362115",
+        "text": "https://t.co/zahDbfcs8P",
+        "user": {
+          "id_str": "96606239",
+          "name": "大石浩二",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/790200426/icon1_normal.jpg",
+          "screen_name": "k_marudashi",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1348464697398362115"
+          ],
+          "editable_until_msecs": "1610335811779",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/zahDbfcs8P",
+            "expanded_url": "https://x.com/k_marudashi/status/1348464697398362115/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              0,
+              23
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/Era1fgsVkAQU_AQ.jpg",
+            "original_info": {
+              "height": 2048,
+              "width": 1445,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1445,
+                  "h": 809
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1445,
+                  "h": 1445
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1445,
+                  "h": 1647
+                },
+                {
+                  "x": 210,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1445,
+                  "h": 2048
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 1445
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 847
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 480
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/zahDbfcs8P"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1445,
+                "h": 809
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1445,
+                "h": 1445
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1445,
+                "h": 1647
+              },
+              {
+                "x": 210,
+                "y": 0,
+                "w": 1024,
+                "h": 2048
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1445,
+                "h": 2048
+              }
+            ],
+            "expandedUrl": "https://x.com/k_marudashi/status/1348464697398362115/photo/1",
+            "url": "https://pbs.twimg.com/media/Era1fgsVkAQU_AQ.jpg",
+            "width": 1445,
+            "height": 2048
+          }
+        ],
+        "conversation_count": 147,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:00.766Z"
     },
     {
       "id": "archive-1348333911613468675",
@@ -49,7 +784,147 @@
       "fullText": "p=30,t=0,draw=(T=translate,R=rotateX)=&gt;{t||createCanvas(540,540,WEBGL);background(0);rotateY(PI/2);T(-200,0);for(i=z=x=0;i&lt;25*40*p;i++,z=i%25,T(0,0,-o),0,R(TAU/25),z||(x++,T(52.5/p,0),R(PI/25/p)))T(0,0,o=240),(x+t)%p||ellipse(0,0,70,70,z&gt;25/2?6:3);t++}\n// #つぶやきProcessing https://t.co/PGSuCTTFC6",
       "expandedUrl": "https://twitter.com/i/web/status/1348333911613468675",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 131,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-10T18:20:30.000Z",
+        "display_text_range": [
+          0,
+          280
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                265,
+                280
+              ],
+              "text": "つぶやきProcessing"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/PGSuCTTFC6",
+              "expanded_url": "https://x.com/yuruyurau/status/1348333911613468675/photo/1",
+              "indices": [
+                281,
+                304
+              ],
+              "url": "https://t.co/PGSuCTTFC6"
+            }
+          ]
+        },
+        "id_str": "1348333911613468675",
+        "text": "p=30,t=0,draw=(T=translate,R=rotateX)=&gt;{t||createCanvas(540,540,WEBGL);background(0);rotateY(PI/2);T(-200,0);for(i=z=x=0;i&lt;25*40*p;i++,z=i%25,T(0,0,-o),0,R(TAU/25),z||(x++,T(52.5/p,0),R(PI/25/p)))T(0,0,o=240),(x+t)%p||ellipse(0,0,70,70,z&gt;25/2?6:3);t++}\n// #つぶやきProcessing https://t.co/PGSuCTTFC6",
+        "user": {
+          "id_str": "534780961",
+          "name": "ア",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000771146453/3ce1d7f804d141445ac11cf637f6e549_normal.png",
+          "screen_name": "yuruyurau",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1348333911613468675"
+          ],
+          "editable_until_msecs": "1610304630018",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/PGSuCTTFC6",
+            "expanded_url": "https://x.com/yuruyurau/status/1348333911613468675/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              281,
+              304
+            ],
+            "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/ErY-gq4U0AEAGxB.jpg",
+            "original_info": {
+              "height": 540,
+              "width": 540,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 540,
+                "resize": "fit",
+                "w": 540
+              },
+              "medium": {
+                "h": 540,
+                "resize": "fit",
+                "w": 540
+              },
+              "small": {
+                "h": 540,
+                "resize": "fit",
+                "w": 540
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "animated_gif",
+            "url": "https://t.co/PGSuCTTFC6",
+            "video_info": {
+              "aspect_ratio": [
+                1,
+                1
+              ],
+              "variants": [
+                {
+                  "bitrate": 0,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/tweet_video/ErY-gq4U0AEAGxB.mp4"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            1,
+            1
+          ],
+          "contentType": "gif",
+          "durationMs": 0,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/tweet_video_thumb/ErY-gq4U0AEAGxB.jpg",
+          "variants": [
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/tweet_video/ErY-gq4U0AEAGxB.mp4"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1348333911613468675"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:01.929Z"
     },
     {
       "id": "archive-1348304684612689921",
@@ -57,7 +932,188 @@
       "fullText": "山之阿——三霊獣（塗装済完成品）\n前売りを始める！！！\n原型制作：山人 @zfshanren \n\nhttps://t.co/6HOhTV2Yax https://t.co/3Y4uTppNmS",
       "expandedUrl": "https://twitter.com/i/web/status/1348304684612689921",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 70,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-10T16:24:21.000Z",
+        "display_text_range": [
+          0,
+          72
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "lepstudio.booth.pm/items/2667648",
+              "expanded_url": "https://lepstudio.booth.pm/items/2667648",
+              "indices": [
+                49,
+                72
+              ],
+              "url": "https://t.co/6HOhTV2Yax"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/3Y4uTppNmS",
+              "expanded_url": "https://x.com/jackroywxh/status/1348304684612689921/photo/1",
+              "indices": [
+                73,
+                96
+              ],
+              "url": "https://t.co/3Y4uTppNmS"
+            }
+          ]
+        },
+        "id_str": "1348304684612689921",
+        "text": "山之阿——三霊獣（塗装済完成品）\n前売りを始める！！！\n原型制作：山人 @zfshanren \n\nhttps://t.co/6HOhTV2Yax https://t.co/3Y4uTppNmS",
+        "user": {
+          "id_str": "814491693898604545",
+          "name": "王学瀚Lep-studio, 通販してるよ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/931143724427386880/OFGscMnP_normal.jpg",
+          "screen_name": "LepStudio",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1348304684612689921"
+          ],
+          "editable_until_msecs": "1610297661758",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/3Y4uTppNmS",
+            "expanded_url": "https://x.com/jackroywxh/status/1348304684612689921/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              73,
+              96
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/ErYjUA_U0AYlOeZ.jpg",
+            "original_info": {
+              "height": 3172,
+              "width": 4096,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 878,
+                  "w": 4096,
+                  "h": 2294
+                },
+                {
+                  "x": 924,
+                  "y": 0,
+                  "w": 3172,
+                  "h": 3172
+                },
+                {
+                  "x": 1314,
+                  "y": 0,
+                  "w": 2782,
+                  "h": 3172
+                },
+                {
+                  "x": 2174,
+                  "y": 0,
+                  "w": 1586,
+                  "h": 3172
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 4096,
+                  "h": 3172
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1586,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 929,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 527,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/3Y4uTppNmS"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 878,
+                "w": 4096,
+                "h": 2294
+              },
+              {
+                "x": 924,
+                "y": 0,
+                "w": 3172,
+                "h": 3172
+              },
+              {
+                "x": 1314,
+                "y": 0,
+                "w": 2782,
+                "h": 3172
+              },
+              {
+                "x": 2174,
+                "y": 0,
+                "w": 1586,
+                "h": 3172
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 4096,
+                "h": 3172
+              }
+            ],
+            "expandedUrl": "https://x.com/jackroywxh/status/1348304684612689921/photo/1",
+            "url": "https://pbs.twimg.com/media/ErYjUA_U0AYlOeZ.jpg",
+            "width": 4096,
+            "height": 3172
+          }
+        ],
+        "conversation_count": 7,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:03.315Z"
     },
     {
       "id": "archive-1348153899983650819",
@@ -65,7 +1121,293 @@
       "fullText": "どうしよう…。\n歩道で寝てる…。\n\nあと、めっちゃ可愛い https://t.co/vtUIwcNufT",
       "expandedUrl": "https://twitter.com/i/web/status/1348153899983650819",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 357627,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-10T06:25:11.000Z",
+        "display_text_range": [
+          0,
+          28
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/vtUIwcNufT",
+              "expanded_url": "https://x.com/tatutututu/status/1348153899983650819/photo/1",
+              "indices": [
+                29,
+                52
+              ],
+              "url": "https://t.co/vtUIwcNufT"
+            }
+          ]
+        },
+        "id_str": "1348153899983650819",
+        "text": "どうしよう…。\n歩道で寝てる…。\n\nあと、めっちゃ可愛い https://t.co/vtUIwcNufT",
+        "user": {
+          "id_str": "144197806",
+          "name": "国場のポッチャ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1880461427661762565/O3iGggZ1_normal.jpg",
+          "screen_name": "tatutututu",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1348153899983650819"
+          ],
+          "editable_until_msecs": "1610261711901",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/vtUIwcNufT",
+            "expanded_url": "https://x.com/tatutututu/status/1348153899983650819/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              29,
+              52
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/ErWa0dFUUAIluS7.jpg",
+            "original_info": {
+              "height": 2048,
+              "width": 1536,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 1188,
+                  "w": 1536,
+                  "h": 860
+                },
+                {
+                  "x": 0,
+                  "y": 512,
+                  "w": 1536,
+                  "h": 1536
+                },
+                {
+                  "x": 0,
+                  "y": 297,
+                  "w": 1536,
+                  "h": 1751
+                },
+                {
+                  "x": 512,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 2048
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 1536
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 900
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 510
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/vtUIwcNufT"
+          },
+          {
+            "display_url": "pic.x.com/vtUIwcNufT",
+            "expanded_url": "https://x.com/tatutututu/status/1348153899983650819/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              29,
+              52
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/ErWa0dGU0AAyQyV.jpg",
+            "original_info": {
+              "height": 2048,
+              "width": 1536,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 440,
+                  "w": 1536,
+                  "h": 860
+                },
+                {
+                  "x": 0,
+                  "y": 102,
+                  "w": 1536,
+                  "h": 1536
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 1751
+                },
+                {
+                  "x": 51,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 2048
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 1536
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 900
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 510
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/vtUIwcNufT"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 1188,
+                "w": 1536,
+                "h": 860
+              },
+              {
+                "x": 0,
+                "y": 512,
+                "w": 1536,
+                "h": 1536
+              },
+              {
+                "x": 0,
+                "y": 297,
+                "w": 1536,
+                "h": 1751
+              },
+              {
+                "x": 512,
+                "y": 0,
+                "w": 1024,
+                "h": 2048
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 2048
+              }
+            ],
+            "expandedUrl": "https://x.com/tatutututu/status/1348153899983650819/photo/1",
+            "url": "https://pbs.twimg.com/media/ErWa0dFUUAIluS7.jpg",
+            "width": 1536,
+            "height": 2048
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 440,
+                "w": 1536,
+                "h": 860
+              },
+              {
+                "x": 0,
+                "y": 102,
+                "w": 1536,
+                "h": 1536
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 1751
+              },
+              {
+                "x": 51,
+                "y": 0,
+                "w": 1024,
+                "h": 2048
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 2048
+              }
+            ],
+            "expandedUrl": "https://x.com/tatutututu/status/1348153899983650819/photo/1",
+            "url": "https://pbs.twimg.com/media/ErWa0dGU0AAyQyV.jpg",
+            "width": 1536,
+            "height": 2048
+          }
+        ],
+        "conversation_count": 359,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:04.486Z"
     },
     {
       "id": "archive-1348028869060685824",
@@ -73,7 +1415,47 @@
       "fullText": "やったー！自分のサーバーで新しいドメイン取って、案件用のサブドメインつくって、ベーシック認証かけるところまでできた(´･ω･`)！！朝からあたらしいことして息切れ...ツイートする余裕まるでなかったw\n\nちなみにサーバーはmixhostです|･ω･`)✨",
       "expandedUrl": "https://twitter.com/i/web/status/1348028869060685824",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 84,
+        "created_at": "2021-01-09T22:08:22.000Z",
+        "display_text_range": [
+          0,
+          127
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1348028869060685824",
+        "text": "やったー！自分のサーバーで新しいドメイン取って、案件用のサブドメインつくって、ベーシック認証かけるところまでできた(´･ω･`)！！朝からあたらしいことして息切れ...ツイートする余裕まるでなかったw\n\nちなみにサーバーはmixhostです|･ω･`)✨",
+        "user": {
+          "id_str": "1242285647374630912",
+          "name": "はる🌸アルテガ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1843205868307025920/Ex1IOesM_normal.jpg",
+          "screen_name": "fuwafuwahappy",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1348028869060685824"
+          ],
+          "editable_until_msecs": "1610231902206",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 4,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:05.671Z"
     },
     {
       "id": "archive-1347842850440966148",
@@ -81,7 +1463,188 @@
       "fullText": "話題の味の素が開発した絶縁体のページ\n\nABFフィルム ミクロのフィルムで絶縁をコントロール 「層間絶縁材料ABFフィルム」\n\nhttps://t.co/wfx8T9ralk https://t.co/ybaEgYxbsZ",
       "expandedUrl": "https://twitter.com/i/web/status/1347842850440966148",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 7,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-09T09:49:11.000Z",
+        "display_text_range": [
+          0,
+          87
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "ajinomoto.co.jp/company/jp/rd/…",
+              "expanded_url": "https://www.ajinomoto.co.jp/company/jp/rd/our_innovation/abf/",
+              "indices": [
+                64,
+                87
+              ],
+              "url": "https://t.co/wfx8T9ralk"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/ybaEgYxbsZ",
+              "expanded_url": "https://x.com/gam0022/status/1347842850440966148/photo/1",
+              "indices": [
+                88,
+                111
+              ],
+              "url": "https://t.co/ybaEgYxbsZ"
+            }
+          ]
+        },
+        "id_str": "1347842850440966148",
+        "text": "話題の味の素が開発した絶縁体のページ\n\nABFフィルム ミクロのフィルムで絶縁をコントロール 「層間絶縁材料ABFフィルム」\n\nhttps://t.co/wfx8T9ralk https://t.co/ybaEgYxbsZ",
+        "user": {
+          "id_str": "1557785593",
+          "name": "がむ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1024640222246535168/D0JhkuoJ_normal.jpg",
+          "screen_name": "gam0022",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1347842850440966148"
+          ],
+          "editable_until_msecs": "1610187551911",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/ybaEgYxbsZ",
+            "expanded_url": "https://x.com/gam0022/status/1347842850440966148/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              88,
+              111
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/ErR_KSXVgAApOU8.jpg",
+            "original_info": {
+              "height": 914,
+              "width": 1307,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1307,
+                  "h": 732
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 914,
+                  "h": 914
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 802,
+                  "h": 914
+                },
+                {
+                  "x": 131,
+                  "y": 0,
+                  "w": 457,
+                  "h": 914
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1307,
+                  "h": 914
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 914,
+                "resize": "fit",
+                "w": 1307
+              },
+              "medium": {
+                "h": 839,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 476,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/ybaEgYxbsZ"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1307,
+                "h": 732
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 914,
+                "h": 914
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 802,
+                "h": 914
+              },
+              {
+                "x": 131,
+                "y": 0,
+                "w": 457,
+                "h": 914
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1307,
+                "h": 914
+              }
+            ],
+            "expandedUrl": "https://x.com/gam0022/status/1347842850440966148/photo/1",
+            "url": "https://pbs.twimg.com/media/ErR_KSXVgAApOU8.jpg",
+            "width": 1307,
+            "height": 914
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:06.830Z"
     },
     {
       "id": "archive-1347832689391398912",
@@ -89,7 +1652,293 @@
       "fullText": "2000年に訪れたチベットのラサ。懐かしい。あの頃は平和だった…&gt;RT https://t.co/LlvNBYH4Al",
       "expandedUrl": "https://twitter.com/i/web/status/1347832689391398912",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 87,
+        "possibly_sensitive": false,
+        "created_at": "2021-01-09T09:08:49.000Z",
+        "display_text_range": [
+          0,
+          38
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/LlvNBYH4Al",
+              "expanded_url": "https://x.com/mangaryukyu/status/1347832689391398912/photo/1",
+              "indices": [
+                39,
+                62
+              ],
+              "url": "https://t.co/LlvNBYH4Al"
+            }
+          ]
+        },
+        "id_str": "1347832689391398912",
+        "text": "2000年に訪れたチベットのラサ。懐かしい。あの頃は平和だった…&gt;RT https://t.co/LlvNBYH4Al",
+        "user": {
+          "id_str": "3069720793",
+          "name": "琉球史マンガ@上里隆史",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1642288752394665984/FtJ2QlDJ_normal.jpg",
+          "screen_name": "mangaryukyu",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1347832689391398912"
+          ],
+          "editable_until_msecs": "1610185129328",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/LlvNBYH4Al",
+            "expanded_url": "https://x.com/mangaryukyu/status/1347832689391398912/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              39,
+              62
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/ErR2kzHVgAAqu7Z.jpg",
+            "original_info": {
+              "height": 1023,
+              "width": 1462,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 204,
+                  "w": 1462,
+                  "h": 819
+                },
+                {
+                  "x": 183,
+                  "y": 0,
+                  "w": 1023,
+                  "h": 1023
+                },
+                {
+                  "x": 246,
+                  "y": 0,
+                  "w": 897,
+                  "h": 1023
+                },
+                {
+                  "x": 438,
+                  "y": 0,
+                  "w": 512,
+                  "h": 1023
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1462,
+                  "h": 1023
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1023,
+                "resize": "fit",
+                "w": 1462
+              },
+              "medium": {
+                "h": 840,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 476,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/LlvNBYH4Al"
+          },
+          {
+            "display_url": "pic.x.com/LlvNBYH4Al",
+            "expanded_url": "https://x.com/mangaryukyu/status/1347832689391398912/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              39,
+              62
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/ErR2lo0UYAA_lUL.jpg",
+            "original_info": {
+              "height": 1023,
+              "width": 1462,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 204,
+                  "w": 1462,
+                  "h": 819
+                },
+                {
+                  "x": 439,
+                  "y": 0,
+                  "w": 1023,
+                  "h": 1023
+                },
+                {
+                  "x": 565,
+                  "y": 0,
+                  "w": 897,
+                  "h": 1023
+                },
+                {
+                  "x": 803,
+                  "y": 0,
+                  "w": 512,
+                  "h": 1023
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1462,
+                  "h": 1023
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1023,
+                "resize": "fit",
+                "w": 1462
+              },
+              "medium": {
+                "h": 840,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 476,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/LlvNBYH4Al"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 204,
+                "w": 1462,
+                "h": 819
+              },
+              {
+                "x": 183,
+                "y": 0,
+                "w": 1023,
+                "h": 1023
+              },
+              {
+                "x": 246,
+                "y": 0,
+                "w": 897,
+                "h": 1023
+              },
+              {
+                "x": 438,
+                "y": 0,
+                "w": 512,
+                "h": 1023
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1462,
+                "h": 1023
+              }
+            ],
+            "expandedUrl": "https://x.com/mangaryukyu/status/1347832689391398912/photo/1",
+            "url": "https://pbs.twimg.com/media/ErR2kzHVgAAqu7Z.jpg",
+            "width": 1462,
+            "height": 1023
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 204,
+                "w": 1462,
+                "h": 819
+              },
+              {
+                "x": 439,
+                "y": 0,
+                "w": 1023,
+                "h": 1023
+              },
+              {
+                "x": 565,
+                "y": 0,
+                "w": 897,
+                "h": 1023
+              },
+              {
+                "x": 803,
+                "y": 0,
+                "w": 512,
+                "h": 1023
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1462,
+                "h": 1023
+              }
+            ],
+            "expandedUrl": "https://x.com/mangaryukyu/status/1347832689391398912/photo/1",
+            "url": "https://pbs.twimg.com/media/ErR2lo0UYAA_lUL.jpg",
+            "width": 1462,
+            "height": 1023
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:08.265Z"
     },
     {
       "id": "archive-1347174746639634434",
@@ -97,7 +1946,47 @@
       "fullText": "『多喝热水』 は、女性が男性から言われたら嫌な言葉だそうです🫖知らなかった",
       "expandedUrl": "https://twitter.com/i/web/status/1347174746639634434",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 1,
+        "created_at": "2021-01-07T13:34:23.000Z",
+        "display_text_range": [
+          0,
+          38
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1347174746639634434",
+        "text": "『多喝热水』 は、女性が男性から言われたら嫌な言葉だそうです🫖知らなかった",
+        "user": {
+          "id_str": "1173200034180956160",
+          "name": "しゃんしゃお🐪",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1189914054237839361/BfxYzgth_normal.jpg",
+          "screen_name": "shanxiao_",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1347174746639634434"
+          ],
+          "editable_until_msecs": "1610028263552",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:09.527Z"
     },
     {
       "id": "archive-1346718413998018561",
@@ -105,7 +1994,8 @@
       "fullText": "本日、香港版国安法違反(終身刑の可能性あり)で逮捕された約50名のうち、20人をまとめました。\n\n20代が少なくとも9人、鄺俊宇〜毛孟靜は2020年まで立法会議員でした。日本人には馴染みの無い顔だと思いますが、香港では凄く有名な活動家達です。是非、名前と顔を覚えて頂きたいです。 https://t.co/NsAGucCbXC",
       "expandedUrl": "https://twitter.com/i/web/status/1346718413998018561",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "private": true
     },
     {
       "id": "archive-1346541471021867011",
@@ -113,7 +2003,8 @@
       "fullText": "don't mind me, just having a normal one https://t.co/IXa9e3OkXd",
       "expandedUrl": "https://twitter.com/i/web/status/1346541471021867011",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "private": true
     },
     {
       "id": "archive-1343067169513345029",
@@ -121,7 +2012,182 @@
       "fullText": "2020artworks https://t.co/jhCaZX6xwp",
       "expandedUrl": "https://twitter.com/i/web/status/1343067169513345029",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "place": {
+          "full_name": "New Taipei City, Taiwan",
+          "id": "019a3137395a2973"
+        },
+        "favorite_count": 43,
+        "possibly_sensitive": false,
+        "created_at": "2020-12-27T05:32:20.000Z",
+        "display_text_range": [
+          0,
+          12
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/jhCaZX6xwp",
+              "expanded_url": "https://x.com/rbenstudio/status/1343067169513345029/photo/1",
+              "indices": [
+                13,
+                36
+              ],
+              "url": "https://t.co/jhCaZX6xwp"
+            }
+          ]
+        },
+        "id_str": "1343067169513345029",
+        "text": "2020artworks https://t.co/jhCaZX6xwp",
+        "user": {
+          "id_str": "1931926075",
+          "name": "RBen studio",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1265011680687173633/w1LTob3X_normal.jpg",
+          "screen_name": "rbenstudio",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1343067169513345029"
+          ],
+          "editable_until_msecs": "1609048940850",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/jhCaZX6xwp",
+            "expanded_url": "https://x.com/rbenstudio/status/1343067169513345029/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              13,
+              36
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqOIdvgVEAIkR7e.jpg",
+            "original_info": {
+              "height": 1800,
+              "width": 1800,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 792,
+                  "w": 1800,
+                  "h": 1008
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1800,
+                  "h": 1800
+                },
+                {
+                  "x": 221,
+                  "y": 0,
+                  "w": 1579,
+                  "h": 1800
+                },
+                {
+                  "x": 900,
+                  "y": 0,
+                  "w": 900,
+                  "h": 1800
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1800,
+                  "h": 1800
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1800,
+                "resize": "fit",
+                "w": 1800
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/jhCaZX6xwp"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 792,
+                "w": 1800,
+                "h": 1008
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1800,
+                "h": 1800
+              },
+              {
+                "x": 221,
+                "y": 0,
+                "w": 1579,
+                "h": 1800
+              },
+              {
+                "x": 900,
+                "y": 0,
+                "w": 900,
+                "h": 1800
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1800,
+                "h": 1800
+              }
+            ],
+            "expandedUrl": "https://x.com/rbenstudio/status/1343067169513345029/photo/1",
+            "url": "https://pbs.twimg.com/media/EqOIdvgVEAIkR7e.jpg",
+            "width": 1800,
+            "height": 1800
+          }
+        ],
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:13.015Z"
     },
     {
       "id": "archive-1342860703783211010",
@@ -129,7 +2195,47 @@
       "fullText": "今日はLPIC201受かったしいい1日だった☺️\n資格勉強って面倒だけど、やっぱり受かった時は勉強の辛い日々が報われて充実した日々という記憶に塗り替えられる気がするよ✨\n\nおやすみなさい😴",
       "expandedUrl": "https://twitter.com/i/web/status/1342860703783211010",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 57,
+        "created_at": "2020-12-26T15:51:55.000Z",
+        "display_text_range": [
+          0,
+          95
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1342860703783211010",
+        "text": "今日はLPIC201受かったしいい1日だった☺️\n資格勉強って面倒だけど、やっぱり受かった時は勉強の辛い日々が報われて充実した日々という記憶に塗り替えられる気がするよ✨\n\nおやすみなさい😴",
+        "user": {
+          "id_str": "770777149171044352",
+          "name": "syacyo",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1136270237672722434/9V5bmmPJ_normal.jpg",
+          "screen_name": "syacyo_twit",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1342860703783211010"
+          ],
+          "editable_until_msecs": "1608999715584",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:14.172Z"
     },
     {
       "id": "archive-1342815178262376448",
@@ -137,7 +2243,178 @@
       "fullText": "いつも来世は世界中の人に国家として認められる国に生まれたいと思いながら､やっぱり来世でもまた台湾人になりたいと思う自分がいる https://t.co/STfpR8FW1G",
       "expandedUrl": "https://twitter.com/i/web/status/1342815178262376448",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 524,
+        "possibly_sensitive": false,
+        "created_at": "2020-12-26T12:51:01.000Z",
+        "display_text_range": [
+          0,
+          62
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/STfpR8FW1G",
+              "expanded_url": "https://x.com/sj332132/status/1342815178262376448/photo/1",
+              "indices": [
+                63,
+                86
+              ],
+              "url": "https://t.co/STfpR8FW1G"
+            }
+          ]
+        },
+        "id_str": "1342815178262376448",
+        "text": "いつも来世は世界中の人に国家として認められる国に生まれたいと思いながら､やっぱり来世でもまた台湾人になりたいと思う自分がいる https://t.co/STfpR8FW1G",
+        "user": {
+          "id_str": "131544595",
+          "name": "台湾人名古屋滞在中",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1122866093150707712/o9pR35nF_normal.jpg",
+          "screen_name": "sj332132",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1342815178262376448"
+          ],
+          "editable_until_msecs": "1608988861454",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/STfpR8FW1G",
+            "expanded_url": "https://x.com/sj332132/status/1342815178262376448/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              63,
+              86
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqKjR44VEAE5UiY.jpg",
+            "original_info": {
+              "height": 744,
+              "width": 1318,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1318,
+                  "h": 738
+                },
+                {
+                  "x": 187,
+                  "y": 0,
+                  "w": 744,
+                  "h": 744
+                },
+                {
+                  "x": 233,
+                  "y": 0,
+                  "w": 653,
+                  "h": 744
+                },
+                {
+                  "x": 373,
+                  "y": 0,
+                  "w": 372,
+                  "h": 744
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1318,
+                  "h": 744
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 744,
+                "resize": "fit",
+                "w": 1318
+              },
+              "medium": {
+                "h": 677,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 384,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/STfpR8FW1G"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1318,
+                "h": 738
+              },
+              {
+                "x": 187,
+                "y": 0,
+                "w": 744,
+                "h": 744
+              },
+              {
+                "x": 233,
+                "y": 0,
+                "w": 653,
+                "h": 744
+              },
+              {
+                "x": 373,
+                "y": 0,
+                "w": 372,
+                "h": 744
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1318,
+                "h": 744
+              }
+            ],
+            "expandedUrl": "https://x.com/sj332132/status/1342815178262376448/photo/1",
+            "url": "https://pbs.twimg.com/media/EqKjR44VEAE5UiY.jpg",
+            "width": 1318,
+            "height": 744
+          }
+        ],
+        "conversation_count": 12,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:15.358Z"
     },
     {
       "id": "archive-1342620430696284161",
@@ -145,7 +2422,526 @@
       "fullText": "生産性を上げてくれるGoogle Chrome拡張機能を16個あげてみました。 https://t.co/fPZKP2YsaB",
       "expandedUrl": "https://twitter.com/i/web/status/1342620430696284161",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 58672,
+        "conversation_control": {
+          "policy": "ByInvitation"
+        },
+        "possibly_sensitive": false,
+        "created_at": "2020-12-25T23:57:10.000Z",
+        "display_text_range": [
+          0,
+          39
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/fPZKP2YsaB",
+              "expanded_url": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+              "indices": [
+                40,
+                63
+              ],
+              "url": "https://t.co/fPZKP2YsaB"
+            }
+          ]
+        },
+        "id_str": "1342620430696284161",
+        "text": "生産性を上げてくれるGoogle Chrome拡張機能を16個あげてみました。 https://t.co/fPZKP2YsaB",
+        "user": {
+          "id_str": "1212614540820566017",
+          "name": "たいよう(籾山英輝） 📱Google 認定トレーナー",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1852613031534252032/fIFXawka_normal.jpg",
+          "screen_name": "shiningtaiyou",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1342620430696284161"
+          ],
+          "editable_until_msecs": "1608942430016",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/fPZKP2YsaB",
+            "expanded_url": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              40,
+              63
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqHyKhWU0AA5djK.jpg",
+            "original_info": {
+              "height": 750,
+              "width": 1334,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1334,
+                  "h": 747
+                },
+                {
+                  "x": 584,
+                  "y": 0,
+                  "w": 750,
+                  "h": 750
+                },
+                {
+                  "x": 637,
+                  "y": 0,
+                  "w": 658,
+                  "h": 750
+                },
+                {
+                  "x": 779,
+                  "y": 0,
+                  "w": 375,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1334,
+                  "h": 750
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 750,
+                "resize": "fit",
+                "w": 1334
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 382,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/fPZKP2YsaB"
+          },
+          {
+            "display_url": "pic.x.com/fPZKP2YsaB",
+            "expanded_url": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              40,
+              63
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqHyKhWVQAEgB4u.jpg",
+            "original_info": {
+              "height": 750,
+              "width": 1334,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1334,
+                  "h": 747
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 750,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 658,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 375,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1334,
+                  "h": 750
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 750,
+                "resize": "fit",
+                "w": 1334
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 382,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/fPZKP2YsaB"
+          },
+          {
+            "display_url": "pic.x.com/fPZKP2YsaB",
+            "expanded_url": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              40,
+              63
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqHyKhWVgAEayTo.jpg",
+            "original_info": {
+              "height": 750,
+              "width": 1334,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1334,
+                  "h": 747
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 750,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 658,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 375,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1334,
+                  "h": 750
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 750,
+                "resize": "fit",
+                "w": 1334
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 382,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/fPZKP2YsaB"
+          },
+          {
+            "display_url": "pic.x.com/fPZKP2YsaB",
+            "expanded_url": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              40,
+              63
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqHyKhXUUAAsqES.jpg",
+            "original_info": {
+              "height": 750,
+              "width": 1334,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 3,
+                  "w": 1334,
+                  "h": 747
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 750,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 658,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 375,
+                  "h": 750
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1334,
+                  "h": 750
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 750,
+                "resize": "fit",
+                "w": 1334
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 382,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/fPZKP2YsaB"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1334,
+                "h": 747
+              },
+              {
+                "x": 584,
+                "y": 0,
+                "w": 750,
+                "h": 750
+              },
+              {
+                "x": 637,
+                "y": 0,
+                "w": 658,
+                "h": 750
+              },
+              {
+                "x": 779,
+                "y": 0,
+                "w": 375,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1334,
+                "h": 750
+              }
+            ],
+            "expandedUrl": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+            "url": "https://pbs.twimg.com/media/EqHyKhWU0AA5djK.jpg",
+            "width": 1334,
+            "height": 750
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1334,
+                "h": 747
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 750,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 658,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 375,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1334,
+                "h": 750
+              }
+            ],
+            "expandedUrl": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+            "url": "https://pbs.twimg.com/media/EqHyKhWVQAEgB4u.jpg",
+            "width": 1334,
+            "height": 750
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1334,
+                "h": 747
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 750,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 658,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 375,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1334,
+                "h": 750
+              }
+            ],
+            "expandedUrl": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+            "url": "https://pbs.twimg.com/media/EqHyKhWVgAEayTo.jpg",
+            "width": 1334,
+            "height": 750
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 3,
+                "w": 1334,
+                "h": 747
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 750,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 658,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 375,
+                "h": 750
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1334,
+                "h": 750
+              }
+            ],
+            "expandedUrl": "https://x.com/shiningtaiyou/status/1342620430696284161/photo/1",
+            "url": "https://pbs.twimg.com/media/EqHyKhXUUAAsqES.jpg",
+            "width": 1334,
+            "height": 750
+          }
+        ],
+        "conversation_count": 22,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:16.514Z"
     },
     {
       "id": "archive-1342472509866708994",
@@ -153,7 +2949,523 @@
       "fullText": "知っておくと役立つかもしれない、あの映像の名前 https://t.co/YBeF8qthOS",
       "expandedUrl": "https://twitter.com/i/web/status/1342472509866708994",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 60995,
+        "possibly_sensitive": false,
+        "created_at": "2020-12-25T14:09:22.000Z",
+        "display_text_range": [
+          0,
+          23
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/YBeF8qthOS",
+              "expanded_url": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+              "indices": [
+                24,
+                47
+              ],
+              "url": "https://t.co/YBeF8qthOS"
+            }
+          ]
+        },
+        "id_str": "1342472509866708994",
+        "text": "知っておくと役立つかもしれない、あの映像の名前 https://t.co/YBeF8qthOS",
+        "user": {
+          "id_str": "946959734329958400",
+          "name": "ふじけん",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1908542394448175105/d0UquZjp_normal.jpg",
+          "screen_name": "fujiken2g",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1342472509866708994"
+          ],
+          "editable_until_msecs": "1608907162942",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/YBeF8qthOS",
+            "expanded_url": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              24,
+              47
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqFrj4YUwAA36Sz.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1075
+                },
+                {
+                  "x": 564,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1080
+                },
+                {
+                  "x": 631,
+                  "y": 0,
+                  "w": 947,
+                  "h": 1080
+                },
+                {
+                  "x": 834,
+                  "y": 0,
+                  "w": 540,
+                  "h": 1080
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1080
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/YBeF8qthOS"
+          },
+          {
+            "display_url": "pic.x.com/YBeF8qthOS",
+            "expanded_url": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              24,
+              47
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqFrlaAVoAEBb0G.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 5,
+                  "w": 1920,
+                  "h": 1075
+                },
+                {
+                  "x": 468,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1080
+                },
+                {
+                  "x": 535,
+                  "y": 0,
+                  "w": 947,
+                  "h": 1080
+                },
+                {
+                  "x": 738,
+                  "y": 0,
+                  "w": 540,
+                  "h": 1080
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1080
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/YBeF8qthOS"
+          },
+          {
+            "display_url": "pic.x.com/YBeF8qthOS",
+            "expanded_url": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              24,
+              47
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqFrmPFUUAEga_k.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 5,
+                  "w": 1920,
+                  "h": 1075
+                },
+                {
+                  "x": 372,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1080
+                },
+                {
+                  "x": 439,
+                  "y": 0,
+                  "w": 947,
+                  "h": 1080
+                },
+                {
+                  "x": 642,
+                  "y": 0,
+                  "w": 540,
+                  "h": 1080
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1080
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/YBeF8qthOS"
+          },
+          {
+            "display_url": "pic.x.com/YBeF8qthOS",
+            "expanded_url": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              24,
+              47
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EqFrm-SVEAALE03.jpg",
+            "original_info": {
+              "height": 1080,
+              "width": 1920,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1075
+                },
+                {
+                  "x": 468,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 1080
+                },
+                {
+                  "x": 535,
+                  "y": 0,
+                  "w": 947,
+                  "h": 1080
+                },
+                {
+                  "x": 738,
+                  "y": 0,
+                  "w": 540,
+                  "h": 1080
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1920,
+                  "h": 1080
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1080,
+                "resize": "fit",
+                "w": 1920
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/YBeF8qthOS"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1075
+              },
+              {
+                "x": 564,
+                "y": 0,
+                "w": 1080,
+                "h": 1080
+              },
+              {
+                "x": 631,
+                "y": 0,
+                "w": 947,
+                "h": 1080
+              },
+              {
+                "x": 834,
+                "y": 0,
+                "w": 540,
+                "h": 1080
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1080
+              }
+            ],
+            "expandedUrl": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+            "url": "https://pbs.twimg.com/media/EqFrj4YUwAA36Sz.jpg",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 5,
+                "w": 1920,
+                "h": 1075
+              },
+              {
+                "x": 468,
+                "y": 0,
+                "w": 1080,
+                "h": 1080
+              },
+              {
+                "x": 535,
+                "y": 0,
+                "w": 947,
+                "h": 1080
+              },
+              {
+                "x": 738,
+                "y": 0,
+                "w": 540,
+                "h": 1080
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1080
+              }
+            ],
+            "expandedUrl": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+            "url": "https://pbs.twimg.com/media/EqFrlaAVoAEBb0G.jpg",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 5,
+                "w": 1920,
+                "h": 1075
+              },
+              {
+                "x": 372,
+                "y": 0,
+                "w": 1080,
+                "h": 1080
+              },
+              {
+                "x": 439,
+                "y": 0,
+                "w": 947,
+                "h": 1080
+              },
+              {
+                "x": 642,
+                "y": 0,
+                "w": 540,
+                "h": 1080
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1080
+              }
+            ],
+            "expandedUrl": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+            "url": "https://pbs.twimg.com/media/EqFrmPFUUAEga_k.jpg",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1075
+              },
+              {
+                "x": 468,
+                "y": 0,
+                "w": 1080,
+                "h": 1080
+              },
+              {
+                "x": 535,
+                "y": 0,
+                "w": 947,
+                "h": 1080
+              },
+              {
+                "x": 738,
+                "y": 0,
+                "w": 540,
+                "h": 1080
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1920,
+                "h": 1080
+              }
+            ],
+            "expandedUrl": "https://x.com/fujiken2g/status/1342472509866708994/photo/1",
+            "url": "https://pbs.twimg.com/media/EqFrm-SVEAALE03.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        ],
+        "conversation_count": 20,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:17.675Z"
     },
     {
       "id": "archive-1342163331700948997",
@@ -161,7 +3473,229 @@
       "fullText": "The Throwback Before Christmas, Part IV\n\nDark Haze (2016) \n\nhttps://t.co/EGT7XoGn2f\n\n#webgl #threejs with @marpistudio, @gloom303 and @cbuyukberber\n for @christmasxp https://t.co/bofZvU8kR1",
       "expandedUrl": "https://twitter.com/i/web/status/1342163331700948997",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.913Z"
+      "processedAt": "2025-06-09T12:50:22.913Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "en",
+        "favorite_count": 43,
+        "possibly_sensitive": false,
+        "created_at": "2020-12-24T17:40:49.000Z",
+        "display_text_range": [
+          0,
+          165
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                85,
+                91
+              ],
+              "text": "webgl"
+            },
+            {
+              "indices": [
+                92,
+                100
+              ],
+              "text": "threejs"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "christmasexperiments.com/2016/24/dark-h…",
+              "expanded_url": "https://christmasexperiments.com/2016/24/dark-haze/",
+              "indices": [
+                60,
+                83
+              ],
+              "url": "https://t.co/EGT7XoGn2f"
+            }
+          ],
+          "user_mentions": [
+            {
+              "id_str": "21390252",
+              "indices": [
+                106,
+                118
+              ],
+              "name": "Marpi Studio",
+              "screen_name": "marpistudio"
+            },
+            {
+              "id_str": "14844367",
+              "indices": [
+                120,
+                129
+              ],
+              "name": "Bent Stamnes",
+              "screen_name": "gloom303"
+            },
+            {
+              "id_str": "894600388887826433",
+              "indices": [
+                134,
+                147
+              ],
+              "name": "Can Buyukberber, MFA",
+              "screen_name": "cbuyukberber"
+            },
+            {
+              "id_str": "985708068",
+              "indices": [
+                153,
+                165
+              ],
+              "name": "ChristmasXP",
+              "screen_name": "christmasxp"
+            }
+          ],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/bofZvU8kR1",
+              "expanded_url": "https://x.com/thespite/status/1342163331700948997/video/1",
+              "indices": [
+                166,
+                189
+              ],
+              "url": "https://t.co/bofZvU8kR1"
+            }
+          ]
+        },
+        "id_str": "1342163331700948997",
+        "text": "The Throwback Before Christmas, Part IV\n\nDark Haze (2016) \n\nhttps://t.co/EGT7XoGn2f\n\n#webgl #threejs with @marpistudio, @gloom303 and @cbuyukberber\n for @christmasxp https://t.co/bofZvU8kR1",
+        "user": {
+          "id_str": "20048140",
+          "name": "Jaume Sanchez Elias 🇺🇦",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1323375254312550404/HH4hVJO9_normal.png",
+          "screen_name": "thespite",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1342163331700948997"
+          ],
+          "editable_until_msecs": "1608833449123",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/bofZvU8kR1",
+            "expanded_url": "https://x.com/thespite/status/1342163331700948997/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              166,
+              189
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1342162587157467136/pu/img/hxOO-d8sJnHzTJL5.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/bofZvU8kR1",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 13417,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1342162587157467136/pu/pl/cCqABnHiaJFtFWid.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1342162587157467136/pu/vid/480x270/WNNKL8wRZfY8Izv-.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1342162587157467136/pu/vid/640x360/14RBMXJotdBtlBRy.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1342162587157467136/pu/vid/1280x720/mOKlB5Q4_-FWGMrg.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 13417,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1342162587157467136/pu/img/hxOO-d8sJnHzTJL5.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1342162587157467136/pu/pl/cCqABnHiaJFtFWid.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1342162587157467136/pu/vid/480x270/WNNKL8wRZfY8Izv-.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1342162587157467136/pu/vid/640x360/14RBMXJotdBtlBRy.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1342162587157467136/pu/vid/1280x720/mOKlB5Q4_-FWGMrg.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1342163331700948997"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:50:18.845Z"
     }
   ]
 }

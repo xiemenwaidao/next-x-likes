@@ -9,7 +9,188 @@
       "fullText": "セグメントトレーシングのサンプルが Shadertoy で少しずつ増えて来てて、大抵、元のスフィアトレーシングと速度は大差ないんだけど、これは 1.5-2 倍程度高速化されてる。\nhttps://t.co/dHQ32ti9i5 https://t.co/HTlmySE2ak",
       "expandedUrl": "https://twitter.com/i/web/status/1317182276967436289",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 8,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-16T19:15:01.000Z",
+        "display_text_range": [
+          0,
+          113
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "shadertoy.com/view/3dVcWW",
+              "expanded_url": "https://www.shadertoy.com/view/3dVcWW",
+              "indices": [
+                90,
+                113
+              ],
+              "url": "https://t.co/dHQ32ti9i5"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/HTlmySE2ak",
+              "expanded_url": "https://x.com/IY0YI/status/1317182276967436289/photo/1",
+              "indices": [
+                114,
+                137
+              ],
+              "url": "https://t.co/HTlmySE2ak"
+            }
+          ]
+        },
+        "id_str": "1317182276967436289",
+        "text": "セグメントトレーシングのサンプルが Shadertoy で少しずつ増えて来てて、大抵、元のスフィアトレーシングと速度は大差ないんだけど、これは 1.5-2 倍程度高速化されてる。\nhttps://t.co/dHQ32ti9i5 https://t.co/HTlmySE2ak",
+        "user": {
+          "id_str": "911175828",
+          "name": "ꕯჄ⚉Ⴤꕯ",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1118709573001469952/rbA-Vgev_normal.jpg",
+          "screen_name": "IY0YI",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1317182276967436289"
+          ],
+          "editable_until_msecs": "1602877501549",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/HTlmySE2ak",
+            "expanded_url": "https://x.com/IY0YI/status/1317182276967436289/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              114,
+              137
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkeRDBOUYAAsrjo.jpg",
+            "original_info": {
+              "height": 607,
+              "width": 1080,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "w": 1080,
+                  "h": 605
+                },
+                {
+                  "x": 473,
+                  "y": 0,
+                  "w": 607,
+                  "h": 607
+                },
+                {
+                  "x": 548,
+                  "y": 0,
+                  "w": 532,
+                  "h": 607
+                },
+                {
+                  "x": 776,
+                  "y": 0,
+                  "w": 304,
+                  "h": 607
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1080,
+                  "h": 607
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 607,
+                "resize": "fit",
+                "w": 1080
+              },
+              "medium": {
+                "h": 607,
+                "resize": "fit",
+                "w": 1080
+              },
+              "small": {
+                "h": 382,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/HTlmySE2ak"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 2,
+                "w": 1080,
+                "h": 605
+              },
+              {
+                "x": 473,
+                "y": 0,
+                "w": 607,
+                "h": 607
+              },
+              {
+                "x": 548,
+                "y": 0,
+                "w": 532,
+                "h": 607
+              },
+              {
+                "x": 776,
+                "y": 0,
+                "w": 304,
+                "h": 607
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1080,
+                "h": 607
+              }
+            ],
+            "expandedUrl": "https://x.com/IY0YI/status/1317182276967436289/photo/1",
+            "url": "https://pbs.twimg.com/media/EkeRDBOUYAAsrjo.jpg",
+            "width": 1080,
+            "height": 607
+          }
+        ],
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:20.154Z"
     },
     {
       "id": "archive-1317133141891371009",
@@ -17,7 +198,171 @@
       "fullText": "@tokoik Discordで会議を繰り返したり、Slackで進捗を上げてはチーム内でたくさん誉め合ったりしてモチベーションを維持してました\n\nCGPで共通のGoogleドライブもあったおかげで、そこでファイルのやり取りができたのも大きな要因です\n\n余談ですが、チームメンバー一度もオフラインで合っていません",
       "expandedUrl": "https://twitter.com/i/web/status/1317133141891371009",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "in_reply_to_screen_name": "tokoik",
+        "in_reply_to_status_id_str": "1317129989804863488",
+        "in_reply_to_user_id_str": "59102895",
+        "lang": "ja",
+        "favorite_count": 5,
+        "created_at": "2020-10-16T15:59:46.000Z",
+        "display_text_range": [
+          8,
+          155
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [
+            {
+              "id_str": "59102895",
+              "indices": [
+                0,
+                7
+              ],
+              "name": "床井浩平",
+              "screen_name": "tokoik"
+            }
+          ],
+          "symbols": []
+        },
+        "id_str": "1317133141891371009",
+        "text": "@tokoik Discordで会議を繰り返したり、Slackで進捗を上げてはチーム内でたくさん誉め合ったりしてモチベーションを維持してました\n\nCGPで共通のGoogleドライブもあったおかげで、そこでファイルのやり取りができたのも大きな要因です\n\n余談ですが、チームメンバー一度もオフラインで合っていません",
+        "user": {
+          "id_str": "942664282570768384",
+          "name": "mitt",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1175652333457309696/qX5DO2FC_normal.jpg",
+          "screen_name": "mimimi_K1",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1317133141891371009"
+          ],
+          "editable_until_msecs": "1602865786834",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "parent": {
+          "lang": "ja",
+          "reply_count": 3,
+          "retweet_count": 3,
+          "favorite_count": 21,
+          "created_at": "2020-10-16T15:47:15.000Z",
+          "display_text_range": [
+            0,
+            48
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [],
+            "symbols": []
+          },
+          "id_str": "1317129989804863488",
+          "text": "CGPの１年生チームって、まだろくに大学に来れてないんだよな。よくプロジェクト回しなたって思う。",
+          "user": {
+            "id_str": "59102895",
+            "name": "床井浩平",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/749767724792815617/pO7Hy-IU_normal.jpg",
+            "screen_name": "tokoik",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1317129989804863488"
+            ],
+            "editable_until_msecs": "1602865035318",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "quoted_tweet": {
+            "lang": "ja",
+            "reply_count": 1,
+            "retweet_count": 19,
+            "favorite_count": 47,
+            "possibly_sensitive": false,
+            "created_at": "2020-10-16T12:01:00.000Z",
+            "display_text_range": [
+              0,
+              191
+            ],
+            "entities": {
+              "hashtags": [
+                {
+                  "indices": [
+                    167,
+                    181
+                  ],
+                  "text": "madewithunity"
+                },
+                {
+                  "indices": [
+                    183,
+                    191
+                  ],
+                  "text": "gamedev"
+                }
+              ],
+              "urls": [
+                {
+                  "display_url": "unityroom.com/games/honeycom…",
+                  "expanded_url": "https://unityroom.com/games/honeycombtrinity",
+                  "indices": [
+                    143,
+                    166
+                  ],
+                  "url": "https://t.co/G17nPwUEOz"
+                }
+              ],
+              "user_mentions": [
+                {
+                  "id_str": "1240922927207333888",
+                  "indices": [
+                    65,
+                    76
+                  ],
+                  "name": "さかねみゆう@たびの計画アプリTRIPLATEリリースしました！",
+                  "screen_name": "ma_ma_hima"
+                },
+                {
+                  "id_str": "748899852784836608",
+                  "indices": [
+                    107,
+                    121
+                  ],
+                  "name": "Shiba",
+                  "screen_name": "Shiba27021117"
+                }
+              ],
+              "symbols": []
+            },
+            "id_str": "1317073052522328064",
+            "text": "和歌山大学CGPの1回生チームで制作した「はにかむとりにてぃ」を公開しました！\n\n自分はUnityで実装を担当しました\nデザインは@ma_ma_hima、BGMは@SilverMarron16、キャラの3Dモデルは@Shiba27021117が担当しました！\n\n是非遊んでください！！\nhttps://t.co/G17nPwUEOz\n#madewithunity  #gamedev",
+            "user": {
+              "id_str": "942664282570768384",
+              "name": "mitt",
+              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1175652333457309696/qX5DO2FC_normal.jpg",
+              "screen_name": "mimimi_K1",
+              "verified": false,
+              "is_blue_verified": false,
+              "profile_image_shape": "Circle"
+            }
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:21.344Z"
     },
     {
       "id": "archive-1317096368138153985",
@@ -25,7 +370,178 @@
       "fullText": "保存名適当過ぎやろ過去の私。お伺いをたてるな https://t.co/1O3n4um2hS",
       "expandedUrl": "https://twitter.com/i/web/status/1317096368138153985",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 75038,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-16T13:33:39.000Z",
+        "display_text_range": [
+          0,
+          22
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/1O3n4um2hS",
+              "expanded_url": "https://x.com/yukihigashiura/status/1317096368138153985/photo/1",
+              "indices": [
+                23,
+                46
+              ],
+              "url": "https://t.co/1O3n4um2hS"
+            }
+          ]
+        },
+        "id_str": "1317096368138153985",
+        "text": "保存名適当過ぎやろ過去の私。お伺いをたてるな https://t.co/1O3n4um2hS",
+        "user": {
+          "id_str": "3281211986",
+          "name": "東裏友希",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1646462959168917504/QRID_d3o_normal.jpg",
+          "screen_name": "yukihigashiura",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1317096368138153985"
+          ],
+          "editable_until_msecs": "1602857019288",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/1O3n4um2hS",
+            "expanded_url": "https://x.com/yukihigashiura/status/1317096368138153985/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              23,
+              46
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkdCGgSUYAIBHq4.jpg",
+            "original_info": {
+              "height": 319,
+              "width": 457,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 457,
+                  "h": 256
+                },
+                {
+                  "x": 80,
+                  "y": 0,
+                  "w": 319,
+                  "h": 319
+                },
+                {
+                  "x": 99,
+                  "y": 0,
+                  "w": 280,
+                  "h": 319
+                },
+                {
+                  "x": 159,
+                  "y": 0,
+                  "w": 160,
+                  "h": 319
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 457,
+                  "h": 319
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 319,
+                "resize": "fit",
+                "w": 457
+              },
+              "medium": {
+                "h": 319,
+                "resize": "fit",
+                "w": 457
+              },
+              "small": {
+                "h": 319,
+                "resize": "fit",
+                "w": 457
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/1O3n4um2hS"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 457,
+                "h": 256
+              },
+              {
+                "x": 80,
+                "y": 0,
+                "w": 319,
+                "h": 319
+              },
+              {
+                "x": 99,
+                "y": 0,
+                "w": 280,
+                "h": 319
+              },
+              {
+                "x": 159,
+                "y": 0,
+                "w": 160,
+                "h": 319
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 457,
+                "h": 319
+              }
+            ],
+            "expandedUrl": "https://x.com/yukihigashiura/status/1317096368138153985/photo/1",
+            "url": "https://pbs.twimg.com/media/EkdCGgSUYAIBHq4.jpg",
+            "width": 457,
+            "height": 319
+          }
+        ],
+        "conversation_count": 41,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:22.508Z"
     },
     {
       "id": "archive-1317095399199371265",
@@ -33,7 +549,354 @@
       "fullText": "前回作ったもの（https://t.co/PNvR23z3H3）を、next.js + socket\\.io で作ってみた。\nhttps://t.co/i5XelX1ORm\n使用した画像は手元にあった、メガネ拭きを撮影したもの https://t.co/KIhEZ09HMf",
       "expandedUrl": "https://twitter.com/i/web/status/1317095399199371265",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 20,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-16T13:29:48.000Z",
+        "display_text_range": [
+          0,
+          113
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "x.com/noliaki/status…",
+              "expanded_url": "https://x.com/noliaki/status/1303866685628137473",
+              "indices": [
+                8,
+                31
+              ],
+              "url": "https://t.co/PNvR23z3H3"
+            },
+            {
+              "display_url": "real-time-particle.vercel.app",
+              "expanded_url": "https://real-time-particle.vercel.app/",
+              "indices": [
+                63,
+                86
+              ],
+              "url": "https://t.co/i5XelX1ORm"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/KIhEZ09HMf",
+              "expanded_url": "https://x.com/noliaki/status/1317095399199371265/video/1",
+              "indices": [
+                114,
+                137
+              ],
+              "url": "https://t.co/KIhEZ09HMf"
+            }
+          ]
+        },
+        "id_str": "1317095399199371265",
+        "text": "前回作ったもの（https://t.co/PNvR23z3H3）を、next.js + socket\\.io で作ってみた。\nhttps://t.co/i5XelX1ORm\n使用した画像は手元にあった、メガネ拭きを撮影したもの https://t.co/KIhEZ09HMf",
+        "user": {
+          "id_str": "157403213",
+          "name": "noriaki yamada",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/562833041324642304/f5IbkweJ_normal.jpeg",
+          "screen_name": "noliaki",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1317095399199371265"
+          ],
+          "editable_until_msecs": "1602856788275",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/KIhEZ09HMf",
+            "expanded_url": "https://x.com/noliaki/status/1317095399199371265/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              114,
+              137
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1317092905966735362/pu/img/h5xuRu-GjjBLbLdJ.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/KIhEZ09HMf",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 36187,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1317092905966735362/pu/pl/8nAD6avKzGbe7JWq.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1317092905966735362/pu/vid/480x270/7t-jmNlBkO_DTu1h.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1317092905966735362/pu/vid/640x360/69JWSF_02oEkTSu1.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1317092905966735362/pu/vid/1280x720/eDaMcCiGueA7wtpu.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 36187,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1317092905966735362/pu/img/h5xuRu-GjjBLbLdJ.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1317092905966735362/pu/pl/8nAD6avKzGbe7JWq.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1317092905966735362/pu/vid/480x270/7t-jmNlBkO_DTu1h.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1317092905966735362/pu/vid/640x360/69JWSF_02oEkTSu1.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1317092905966735362/pu/vid/1280x720/eDaMcCiGueA7wtpu.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1317095399199371265"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "quoted_tweet": {
+          "lang": "ja",
+          "reply_count": 3,
+          "retweet_count": 17,
+          "favorite_count": 89,
+          "possibly_sensitive": false,
+          "created_at": "2020-09-10T01:23:37.000Z",
+          "display_text_range": [
+            0,
+            57
+          ],
+          "entities": {
+            "hashtags": [],
+            "urls": [
+              {
+                "display_url": "elastic-perlman-58225d.netlify.app",
+                "expanded_url": "https://elastic-perlman-58225d.netlify.app/",
+                "indices": [
+                  34,
+                  57
+                ],
+                "url": "https://t.co/0PVDK5LTeY"
+              }
+            ],
+            "user_mentions": [],
+            "symbols": [],
+            "media": [
+              {
+                "display_url": "pic.x.com/MfmL883Ssa",
+                "expanded_url": "https://x.com/noliaki/status/1303866685628137473/video/1",
+                "indices": [
+                  58,
+                  81
+                ],
+                "url": "https://t.co/MfmL883Ssa"
+              }
+            ]
+          },
+          "id_str": "1303866685628137473",
+          "text": "テキストと声だけじゃなく、画像にも対応できたので とりあえず、公開\nhttps://t.co/0PVDK5LTeY https://t.co/MfmL883Ssa",
+          "user": {
+            "id_str": "157403213",
+            "name": "noriaki yamada",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/562833041324642304/f5IbkweJ_normal.jpeg",
+            "screen_name": "noliaki",
+            "verified": false,
+            "is_blue_verified": false,
+            "profile_image_shape": "Circle"
+          },
+          "edit_control": {
+            "edit_tweet_ids": [
+              "1303866685628137473"
+            ],
+            "editable_until_msecs": "1599702817182",
+            "is_edit_eligible": true,
+            "edits_remaining": "5"
+          },
+          "mediaDetails": [
+            {
+              "additional_media_info": {},
+              "display_url": "pic.x.com/MfmL883Ssa",
+              "expanded_url": "https://x.com/noliaki/status/1303866685628137473/video/1",
+              "ext_media_availability": {
+                "status": "Available"
+              },
+              "indices": [
+                58,
+                81
+              ],
+              "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1303866499099029504/pu/img/kfcKR4WMVZlJ-jI2.jpg",
+              "original_info": {
+                "height": 720,
+                "width": 752,
+                "focus_rects": []
+              },
+              "sizes": {
+                "large": {
+                  "h": 720,
+                  "resize": "fit",
+                  "w": 752
+                },
+                "medium": {
+                  "h": 720,
+                  "resize": "fit",
+                  "w": 752
+                },
+                "small": {
+                  "h": 651,
+                  "resize": "fit",
+                  "w": 680
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "video",
+              "url": "https://t.co/MfmL883Ssa",
+              "video_info": {
+                "aspect_ratio": [
+                  47,
+                  45
+                ],
+                "duration_millis": 31783,
+                "variants": [
+                  {
+                    "content_type": "application/x-mpegURL",
+                    "url": "https://video.twimg.com/ext_tw_video/1303866499099029504/pu/pl/s-HeygvxAlbVTqgB.m3u8?tag=10"
+                  },
+                  {
+                    "bitrate": 256000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1303866499099029504/pu/vid/282x270/sOa0eFAH_0ez7N-t.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 832000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1303866499099029504/pu/vid/376x360/-vz-Ye_-4FeuXgl-.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 2176000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1303866499099029504/pu/vid/752x720/jXdsSAHlwtmS8aDB.mp4?tag=10"
+                  }
+                ]
+              }
+            }
+          ],
+          "photos": [],
+          "video": {
+            "aspectRatio": [
+              47,
+              45
+            ],
+            "contentType": "media_entity",
+            "durationMs": 31783,
+            "mediaAvailability": {
+              "status": "available"
+            },
+            "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1303866499099029504/pu/img/kfcKR4WMVZlJ-jI2.jpg",
+            "variants": [
+              {
+                "type": "application/x-mpegURL",
+                "src": "https://video.twimg.com/ext_tw_video/1303866499099029504/pu/pl/s-HeygvxAlbVTqgB.m3u8?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1303866499099029504/pu/vid/282x270/sOa0eFAH_0ez7N-t.mp4?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1303866499099029504/pu/vid/376x360/-vz-Ye_-4FeuXgl-.mp4?tag=10"
+              },
+              {
+                "type": "video/mp4",
+                "src": "https://video.twimg.com/ext_tw_video/1303866499099029504/pu/vid/752x720/jXdsSAHlwtmS8aDB.mp4?tag=10"
+              }
+            ],
+            "videoId": {
+              "type": "tweet",
+              "id": "1303866685628137473"
+            },
+            "viewCount": 0
+          },
+          "isEdited": false,
+          "isStaleEdit": false
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:23.690Z"
     },
     {
       "id": "archive-1317028811083452417",
@@ -41,7 +904,47 @@
       "fullText": "稀によく見る海外の 3D 系のウェブサービス・スタートアップで、我々のプロダクトはこんなにすごいんだよ☆みたいな感じのことを散々書いておいて中身が three.js まんまでしたみたいなの本当にどうかと思っちゃう。まあお金稼げるならそれは必ずしも間違いではないのかもしれんが……",
       "expandedUrl": "https://twitter.com/i/web/status/1317028811083452417",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 3,
+        "created_at": "2020-10-16T09:05:12.000Z",
+        "display_text_range": [
+          0,
+          139
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1317028811083452417",
+        "text": "稀によく見る海外の 3D 系のウェブサービス・スタートアップで、我々のプロダクトはこんなにすごいんだよ☆みたいな感じのことを散々書いておいて中身が three.js まんまでしたみたいなの本当にどうかと思っちゃう。まあお金稼げるならそれは必ずしも間違いではないのかもしれんが……",
+        "user": {
+          "id_str": "153079194",
+          "name": "h_doxas",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1133019079/doxas_smile_normal.jpg",
+          "screen_name": "h_doxas",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1317028811083452417"
+          ],
+          "editable_until_msecs": "1602840912431",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:24.851Z"
     },
     {
       "id": "archive-1316740858629160960",
@@ -49,7 +952,373 @@
       "fullText": "グラフィックスプログラミング入門本、増刷されるらしいです。\n買ってくれたみなさん、本当にありがとう……\n\n[ゲーム&amp;モダンJavaScript文法で2倍楽しい]グラフィックスプログラミング入門 ——リアルタイムに動く画面を描く。プログラマー直伝の基本 (WEB+DB PRESS plus)   https://t.co/8Ma4dGfKAs",
       "expandedUrl": "https://twitter.com/i/web/status/1316740858629160960",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 171,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-15T14:00:59.000Z",
+        "display_text_range": [
+          0,
+          175
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "amazon.co.jp/dp/4297110857",
+              "expanded_url": "https://www.amazon.co.jp/dp/4297110857",
+              "indices": [
+                152,
+                175
+              ],
+              "url": "https://t.co/8Ma4dGfKAs"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1316740858629160960",
+        "text": "グラフィックスプログラミング入門本、増刷されるらしいです。\n買ってくれたみなさん、本当にありがとう……\n\n[ゲーム&amp;モダンJavaScript文法で2倍楽しい]グラフィックスプログラミング入門 ——リアルタイムに動く画面を描く。プログラマー直伝の基本 (WEB+DB PRESS plus)   https://t.co/8Ma4dGfKAs",
+        "user": {
+          "id_str": "153079194",
+          "name": "h_doxas",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1133019079/doxas_smile_normal.jpg",
+          "screen_name": "h_doxas",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316740858629160960"
+          ],
+          "editable_until_msecs": "1602772259216",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 2,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/8Ma4dGfKAs",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 147,
+                "width": 280,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "楽しく遊べる2Dゲームの開発を進めながら、 グラフィックスプログラミングの基本が学べる入門書。 一度習得すると、ゲームや映像生成、動的可視化をはじめ、 幅広い分野で長く役立つグラフィックスプログラミングの基礎。 本書では、リアルタイムに動く画像を描くために求められる技術や考え方を平易に解説します。 開発言語として、エディタとブラウザがあれば開発ができるJavaScriptを採用し、...",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "www.amazon.co.jp",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=600x600"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 1000,
+                "width": 1910,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "site": {
+              "scribe_key": "publisher_id",
+              "type": "USER",
+              "user_value": {
+                "id_str": "20793816",
+                "path": []
+              }
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 75,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "creator": {
+              "type": "USER",
+              "user_value": {
+                "id_str": "20793816",
+                "path": []
+              }
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 1000,
+                "width": 1910,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 1000,
+                "width": 1910,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "amazon.co.jp",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 96.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 165,
+                      "green": 204,
+                      "red": 245
+                    },
+                    "percentage": 0.85
+                  },
+                  {
+                    "rgb": {
+                      "blue": 58,
+                      "green": 59,
+                      "red": 60
+                    },
+                    "percentage": 0.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 59,
+                      "green": 164,
+                      "red": 247
+                    },
+                    "percentage": 0.4
+                  },
+                  {
+                    "rgb": {
+                      "blue": 88,
+                      "green": 183,
+                      "red": 193
+                    },
+                    "percentage": 0.29
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "[ゲーム&モダンJavaScript文法で2倍楽しい]グラフィックスプログラミング入門 ——リアルタイムに動く画面を描く。プログラマー直伝の基本 (WEB+DB PRESS plus)",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 96.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 165,
+                      "green": 204,
+                      "red": 245
+                    },
+                    "percentage": 0.85
+                  },
+                  {
+                    "rgb": {
+                      "blue": 58,
+                      "green": 59,
+                      "red": 60
+                    },
+                    "percentage": 0.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 59,
+                      "green": 164,
+                      "red": 247
+                    },
+                    "percentage": 0.4
+                  },
+                  {
+                    "rgb": {
+                      "blue": 88,
+                      "green": 183,
+                      "red": 193
+                    },
+                    "percentage": 0.29
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 1000,
+                "width": 1910,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 255,
+                      "green": 255,
+                      "red": 255
+                    },
+                    "percentage": 96.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 165,
+                      "green": 204,
+                      "red": 245
+                    },
+                    "percentage": 0.85
+                  },
+                  {
+                    "rgb": {
+                      "blue": 58,
+                      "green": 59,
+                      "red": 60
+                    },
+                    "percentage": 0.63
+                  },
+                  {
+                    "rgb": {
+                      "blue": 59,
+                      "green": 164,
+                      "red": 247
+                    },
+                    "percentage": 0.4
+                  },
+                  {
+                    "rgb": {
+                      "blue": 88,
+                      "green": 183,
+                      "red": 193
+                    },
+                    "percentage": 0.29
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 1000,
+                "width": 1910,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/8Ma4dGfKAs",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 1000,
+                "width": 1910,
+                "url": "https://pbs.twimg.com/card_img/1930668553512087552/vSvyBntQ?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:26.031Z"
     },
     {
       "id": "archive-1316737289863622656",
@@ -57,7 +1326,47 @@
       "fullText": "20XX年、マナー講師たちによって作られるマナーの数は増加の一途をたどり、人類に許される行動は等速直線運動のみになっていた。",
       "expandedUrl": "https://twitter.com/i/web/status/1316737289863622656",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 18147,
+        "created_at": "2020-10-15T13:46:48.000Z",
+        "display_text_range": [
+          0,
+          62
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1316737289863622656",
+        "text": "20XX年、マナー講師たちによって作られるマナーの数は増加の一途をたどり、人類に許される行動は等速直線運動のみになっていた。",
+        "user": {
+          "id_str": "118228689",
+          "name": "ざん",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/781053988397543424/94-ZYfEo_normal.jpg",
+          "screen_name": "zhanpon",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316737289863622656"
+          ],
+          "editable_until_msecs": "1602771408356",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 16,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:27.197Z"
     },
     {
       "id": "archive-1316693083321372672",
@@ -65,7 +1374,182 @@
       "fullText": "ワニはこのように浮かんでいます。 https://t.co/wqfZE1D1aw",
       "expandedUrl": "https://twitter.com/i/web/status/1316693083321372672",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "place": {
+          "full_name": "New Taipei City, Taiwan",
+          "id": "019a3137395a2973"
+        },
+        "favorite_count": 18,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-15T10:51:08.000Z",
+        "display_text_range": [
+          0,
+          16
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/wqfZE1D1aw",
+              "expanded_url": "https://x.com/rbenstudio/status/1316693083321372672/photo/1",
+              "indices": [
+                17,
+                40
+              ],
+              "url": "https://t.co/wqfZE1D1aw"
+            }
+          ]
+        },
+        "id_str": "1316693083321372672",
+        "text": "ワニはこのように浮かんでいます。 https://t.co/wqfZE1D1aw",
+        "user": {
+          "id_str": "1931926075",
+          "name": "RBen studio",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1265011680687173633/w1LTob3X_normal.jpg",
+          "screen_name": "rbenstudio",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316693083321372672"
+          ],
+          "editable_until_msecs": "1602760868695",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/wqfZE1D1aw",
+            "expanded_url": "https://x.com/rbenstudio/status/1316693083321372672/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              17,
+              40
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkXVX6SVgAAnKxk.jpg",
+            "original_info": {
+              "height": 2048,
+              "width": 1536,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 542,
+                  "w": 1536,
+                  "h": 860
+                },
+                {
+                  "x": 0,
+                  "y": 204,
+                  "w": 1536,
+                  "h": 1536
+                },
+                {
+                  "x": 0,
+                  "y": 97,
+                  "w": 1536,
+                  "h": 1751
+                },
+                {
+                  "x": 153,
+                  "y": 0,
+                  "w": 1024,
+                  "h": 2048
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1536,
+                  "h": 2048
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 2048,
+                "resize": "fit",
+                "w": 1536
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 900
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 510
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/wqfZE1D1aw"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 542,
+                "w": 1536,
+                "h": 860
+              },
+              {
+                "x": 0,
+                "y": 204,
+                "w": 1536,
+                "h": 1536
+              },
+              {
+                "x": 0,
+                "y": 97,
+                "w": 1536,
+                "h": 1751
+              },
+              {
+                "x": 153,
+                "y": 0,
+                "w": 1024,
+                "h": 2048
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1536,
+                "h": 2048
+              }
+            ],
+            "expandedUrl": "https://x.com/rbenstudio/status/1316693083321372672/photo/1",
+            "url": "https://pbs.twimg.com/media/EkXVX6SVgAAnKxk.jpg",
+            "width": 1536,
+            "height": 2048
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:28.359Z"
     },
     {
       "id": "archive-1316635084045332483",
@@ -73,7 +1557,48 @@
       "fullText": "[お知らせ]2020年に発売を予定しておりましたNintendo Switchソフト『ファミコン探偵倶楽部 消えた後継者』『ファミコン探偵倶楽部 うしろに立つ少女』は、さらなる品質向上のため、発売時期を2021年に延期することにいたしました。何卒ご理解くださいますようお願い申し上げます。",
       "expandedUrl": "https://twitter.com/i/web/status/1316635084045332483",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 6067,
+        "created_at": "2020-10-15T07:00:40.000Z",
+        "display_text_range": [
+          0,
+          144
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1316635084045332483",
+        "text": "[お知らせ]2020年に発売を予定しておりましたNintendo Switchソフト『ファミコン探偵倶楽部 消えた後継者』『ファミコン探偵倶楽部 うしろに立つ少女』は、さらなる品質向上のため、発売時期を2021年に延期することにいたしました。何卒ご理解くださいますようお願い申し上げます。",
+        "user": {
+          "id_str": "307902310",
+          "name": "任天堂株式会社",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/823439425593954305/j0L7_KyW_normal.jpg",
+          "screen_name": "Nintendo",
+          "verified": false,
+          "verified_type": "Business",
+          "is_blue_verified": true,
+          "profile_image_shape": "Square"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316635084045332483"
+          ],
+          "editable_until_msecs": "1602747040590",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 88,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:29.526Z"
     },
     {
       "id": "archive-1316258284366565376",
@@ -81,7 +1606,199 @@
       "fullText": "Bijuu\n〒600-8019 京都府京都市下京区船頭町１９４\n075-353-0802\nhttps://t.co/pOPR5j9iBT\n#KYOTOGRAPHIE2020 #touchdesigner #motiontracking https://t.co/XhekwFLhBf",
       "expandedUrl": "https://twitter.com/i/web/status/1316258284366565376",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 16,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-14T06:03:24.000Z",
+        "display_text_range": [
+          0,
+          117
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                69,
+                86
+              ],
+              "text": "KYOTOGRAPHIE2020"
+            },
+            {
+              "indices": [
+                87,
+                101
+              ],
+              "text": "touchdesigner"
+            },
+            {
+              "indices": [
+                102,
+                117
+              ],
+              "text": "motiontracking"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "goo.gl/maps/sbhkfuVch…",
+              "expanded_url": "https://goo.gl/maps/sbhkfuVch7eKyKYEA",
+              "indices": [
+                45,
+                68
+              ],
+              "url": "https://t.co/pOPR5j9iBT"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/XhekwFLhBf",
+              "expanded_url": "https://x.com/mogamogamachine/status/1316258284366565376/video/1",
+              "indices": [
+                118,
+                141
+              ],
+              "url": "https://t.co/XhekwFLhBf"
+            }
+          ]
+        },
+        "id_str": "1316258284366565376",
+        "text": "Bijuu\n〒600-8019 京都府京都市下京区船頭町１９４\n075-353-0802\nhttps://t.co/pOPR5j9iBT\n#KYOTOGRAPHIE2020 #touchdesigner #motiontracking https://t.co/XhekwFLhBf",
+        "user": {
+          "id_str": "107563023",
+          "name": "Toyoshi Morioka",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1239242263311466496/TbeBbChS_normal.jpg",
+          "screen_name": "mogamogamachine",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316258284366565376"
+          ],
+          "editable_until_msecs": "1602657204546",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/XhekwFLhBf",
+            "expanded_url": "https://x.com/mogamogamachine/status/1316258284366565376/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              118,
+              141
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1316258212098662400/pu/img/0nrUGMvhxQh3p2O9.jpg",
+            "original_info": {
+              "height": 720,
+              "width": 1280,
+              "focus_rects": []
+            },
+            "sizes": {
+              "large": {
+                "h": 720,
+                "resize": "fit",
+                "w": 1280
+              },
+              "medium": {
+                "h": 675,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/XhekwFLhBf",
+            "video_info": {
+              "aspect_ratio": [
+                16,
+                9
+              ],
+              "duration_millis": 32127,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1316258212098662400/pu/pl/7qav65lFcqZGwM3C.m3u8?tag=10"
+                },
+                {
+                  "bitrate": 256000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1316258212098662400/pu/vid/480x270/uUpGTYTEBhU84M46.mp4?tag=10"
+                },
+                {
+                  "bitrate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1316258212098662400/pu/vid/640x360/_vqUysvXgGjTrftR.mp4?tag=10"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1316258212098662400/pu/vid/1280x720/KZPxadDTpSBs-VwS.mp4?tag=10"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "video": {
+          "aspectRatio": [
+            16,
+            9
+          ],
+          "contentType": "media_entity",
+          "durationMs": 32127,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1316258212098662400/pu/img/0nrUGMvhxQh3p2O9.jpg",
+          "variants": [
+            {
+              "type": "application/x-mpegURL",
+              "src": "https://video.twimg.com/ext_tw_video/1316258212098662400/pu/pl/7qav65lFcqZGwM3C.m3u8?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1316258212098662400/pu/vid/480x270/uUpGTYTEBhU84M46.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1316258212098662400/pu/vid/640x360/_vqUysvXgGjTrftR.mp4?tag=10"
+            },
+            {
+              "type": "video/mp4",
+              "src": "https://video.twimg.com/ext_tw_video/1316258212098662400/pu/vid/1280x720/KZPxadDTpSBs-VwS.mp4?tag=10"
+            }
+          ],
+          "videoId": {
+            "type": "tweet",
+            "id": "1316258284366565376"
+          },
+          "viewCount": 0
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:30.702Z"
     },
     {
       "id": "archive-1316257461486129152",
@@ -89,7 +1806,447 @@
       "fullText": "📘『digital ライティング＆レンダリング 第3版』\nhttps://t.co/35SeyDMSXf\n\n3DCG制作の中でも特に重要度の高い“ライティング”と“レンダリング”に焦点をあて、より完成度の高い作品に仕上げるための基礎知識を解説\n\n#ライティング #レンダリング #3DCG #CG制作 https://t.co/0HCMclYx01",
       "expandedUrl": "https://twitter.com/i/web/status/1316257461486129152",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 4,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-14T06:00:08.000Z",
+        "display_text_range": [
+          0,
+          151
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                123,
+                130
+              ],
+              "text": "ライティング"
+            },
+            {
+              "indices": [
+                131,
+                138
+              ],
+              "text": "レンダリング"
+            },
+            {
+              "indices": [
+                139,
+                144
+              ],
+              "text": "3DCG"
+            },
+            {
+              "indices": [
+                145,
+                150
+              ],
+              "text": "CG制作"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "amazon.co.jp/dp/4862462308/",
+              "expanded_url": "https://www.amazon.co.jp/dp/4862462308/",
+              "indices": [
+                29,
+                52
+              ],
+              "url": "https://t.co/35SeyDMSXf"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/0HCMclYx01",
+              "expanded_url": "https://x.com/bd_publishing/status/1316257461486129152/photo/1",
+              "indices": [
+                151,
+                174
+              ],
+              "url": "https://t.co/0HCMclYx01"
+            }
+          ]
+        },
+        "id_str": "1316257461486129152",
+        "text": "📘『digital ライティング＆レンダリング 第3版』\nhttps://t.co/35SeyDMSXf\n\n3DCG制作の中でも特に重要度の高い“ライティング”と“レンダリング”に焦点をあて、より完成度の高い作品に仕上げるための基礎知識を解説\n\n#ライティング #レンダリング #3DCG #CG制作 https://t.co/0HCMclYx01",
+        "user": {
+          "id_str": "437368873",
+          "name": "ボーンデジタル出版事業部",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/875530129581068288/KNwFdP1M_normal.jpg",
+          "screen_name": "bd_publishing",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316257461486129152"
+          ],
+          "editable_until_msecs": "1602657008356",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/0HCMclYx01",
+            "expanded_url": "https://x.com/bd_publishing/status/1316257461486129152/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              151,
+              174
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkRJL3nXcAAQTHe.jpg",
+            "original_info": {
+              "height": 1200,
+              "width": 847,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 847,
+                  "h": 474
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 847,
+                  "h": 847
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 847,
+                  "h": 966
+                },
+                {
+                  "x": 247,
+                  "y": 0,
+                  "w": 600,
+                  "h": 1200
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 847,
+                  "h": 1200
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 847
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 847
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 480
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/0HCMclYx01"
+          },
+          {
+            "display_url": "pic.x.com/0HCMclYx01",
+            "expanded_url": "https://x.com/bd_publishing/status/1316257461486129152/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              151,
+              174
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkRJL5UWAAEqmGv.jpg",
+            "original_info": {
+              "height": 793,
+              "width": 1136,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 108,
+                  "w": 1136,
+                  "h": 636
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 793,
+                  "h": 793
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 696,
+                  "h": 793
+                },
+                {
+                  "x": 114,
+                  "y": 0,
+                  "w": 397,
+                  "h": 793
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1136,
+                  "h": 793
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 793,
+                "resize": "fit",
+                "w": 1136
+              },
+              "medium": {
+                "h": 793,
+                "resize": "fit",
+                "w": 1136
+              },
+              "small": {
+                "h": 475,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/0HCMclYx01"
+          },
+          {
+            "display_url": "pic.x.com/0HCMclYx01",
+            "expanded_url": "https://x.com/bd_publishing/status/1316257461486129152/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              151,
+              174
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkRJL4BXYAAVvYv.jpg",
+            "original_info": {
+              "height": 793,
+              "width": 1136,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1136,
+                  "h": 636
+                },
+                {
+                  "x": 343,
+                  "y": 0,
+                  "w": 793,
+                  "h": 793
+                },
+                {
+                  "x": 440,
+                  "y": 0,
+                  "w": 696,
+                  "h": 793
+                },
+                {
+                  "x": 739,
+                  "y": 0,
+                  "w": 397,
+                  "h": 793
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1136,
+                  "h": 793
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 793,
+                "resize": "fit",
+                "w": 1136
+              },
+              "medium": {
+                "h": 793,
+                "resize": "fit",
+                "w": 1136
+              },
+              "small": {
+                "h": 475,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/0HCMclYx01"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 847,
+                "h": 474
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 847,
+                "h": 847
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 847,
+                "h": 966
+              },
+              {
+                "x": 247,
+                "y": 0,
+                "w": 600,
+                "h": 1200
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 847,
+                "h": 1200
+              }
+            ],
+            "expandedUrl": "https://x.com/bd_publishing/status/1316257461486129152/photo/1",
+            "url": "https://pbs.twimg.com/media/EkRJL3nXcAAQTHe.jpg",
+            "width": 847,
+            "height": 1200
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 108,
+                "w": 1136,
+                "h": 636
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 793,
+                "h": 793
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 696,
+                "h": 793
+              },
+              {
+                "x": 114,
+                "y": 0,
+                "w": 397,
+                "h": 793
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1136,
+                "h": 793
+              }
+            ],
+            "expandedUrl": "https://x.com/bd_publishing/status/1316257461486129152/photo/1",
+            "url": "https://pbs.twimg.com/media/EkRJL5UWAAEqmGv.jpg",
+            "width": 1136,
+            "height": 793
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1136,
+                "h": 636
+              },
+              {
+                "x": 343,
+                "y": 0,
+                "w": 793,
+                "h": 793
+              },
+              {
+                "x": 440,
+                "y": 0,
+                "w": 696,
+                "h": 793
+              },
+              {
+                "x": 739,
+                "y": 0,
+                "w": 397,
+                "h": 793
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1136,
+                "h": 793
+              }
+            ],
+            "expandedUrl": "https://x.com/bd_publishing/status/1316257461486129152/photo/1",
+            "url": "https://pbs.twimg.com/media/EkRJL4BXYAAVvYv.jpg",
+            "width": 1136,
+            "height": 793
+          }
+        ],
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:32.154Z"
     },
     {
       "id": "archive-1316200809122746368",
@@ -97,7 +2254,59 @@
       "fullText": "中国版Twitterの「微博（ウェイボー）」で300万人のフォロワーをもつなど、たった2年で“美容系KOL”のトップクラスに上り詰めた女性がいる。（アーカイヴ記事）https://t.co/lh2ePHRiBe",
       "expandedUrl": "https://twitter.com/i/web/status/1316200809122746368",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 11,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-14T02:15:01.000Z",
+        "display_text_range": [
+          0,
+          105
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "bit.ly/2XjSXb9",
+              "expanded_url": "http://bit.ly/2XjSXb9",
+              "indices": [
+                82,
+                105
+              ],
+              "url": "https://t.co/lh2ePHRiBe"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1316200809122746368",
+        "text": "中国版Twitterの「微博（ウェイボー）」で300万人のフォロワーをもつなど、たった2年で“美容系KOL”のトップクラスに上り詰めた女性がいる。（アーカイヴ記事）https://t.co/lh2ePHRiBe",
+        "user": {
+          "id_str": "9396072",
+          "name": "WIRED.jp",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1605821808347082752/aymalKvn_normal.jpg",
+          "screen_name": "wired_jp",
+          "verified": false,
+          "verified_type": "Business",
+          "is_blue_verified": false,
+          "profile_image_shape": "Square"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316200809122746368"
+          ],
+          "editable_until_msecs": "1602643501380",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:33.325Z"
     },
     {
       "id": "archive-1316194655977971712",
@@ -105,7 +2314,99 @@
       "fullText": "【仏教とIT】第32回　お寺体験、ニューノーマル時代へhttps://t.co/pTogq2OOeZ　#仏教　#まいまい京都　#ZOOM　#池口龍法",
       "expandedUrl": "https://twitter.com/i/web/status/1316194655977971712",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 6,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-14T01:50:34.000Z",
+        "display_text_range": [
+          0,
+          74
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                51,
+                54
+              ],
+              "text": "仏教"
+            },
+            {
+              "indices": [
+                55,
+                62
+              ],
+              "text": "まいまい京都"
+            },
+            {
+              "indices": [
+                63,
+                68
+              ],
+              "text": "ZOOM"
+            },
+            {
+              "indices": [
+                69,
+                74
+              ],
+              "text": "池口龍法"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "rbbtoday.com/article/2020/1…",
+              "expanded_url": "https://www.rbbtoday.com/article/2020/10/14/182984.html",
+              "indices": [
+                27,
+                50
+              ],
+              "url": "https://t.co/pTogq2OOeZ"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1316194655977971712",
+        "text": "【仏教とIT】第32回　お寺体験、ニューノーマル時代へhttps://t.co/pTogq2OOeZ　#仏教　#まいまい京都　#ZOOM　#池口龍法",
+        "user": {
+          "id_str": "86282544",
+          "name": "RBB TODAY",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/631407167497617408/6ZtJthIi_normal.png",
+          "screen_name": "RBBTODAY",
+          "verified": false,
+          "verified_type": "Business",
+          "highlighted_label": {
+            "description": "レスポンス",
+            "badge": {
+              "url": "https://pbs.twimg.com/profile_images/876408687220240385/v4cxV_Ri_bigger.jpg"
+            },
+            "url": {
+              "url": "https://twitter.com/responsejp",
+              "url_type": "DeepLink"
+            },
+            "user_label_type": "BusinessLabel",
+            "user_label_display_type": "Badge"
+          },
+          "is_blue_verified": true
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316194655977971712"
+          ],
+          "editable_until_msecs": "1602642034356",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:34.469Z"
     },
     {
       "id": "archive-1316035123863719936",
@@ -113,7 +2414,47 @@
       "fullText": "千代田区 web図書館\n図書館に行かずとも本読めるの最の高",
       "expandedUrl": "https://twitter.com/i/web/status/1316035123863719936",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 2,
+        "created_at": "2020-10-13T15:16:38.000Z",
+        "display_text_range": [
+          0,
+          29
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1316035123863719936",
+        "text": "千代田区 web図書館\n図書館に行かずとも本読めるの最の高",
+        "user": {
+          "id_str": "1513219158",
+          "name": "まりーな",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1607056752411054080/OPiAS8hz_normal.jpg",
+          "screen_name": "marina10172013",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1316035123863719936"
+          ],
+          "editable_until_msecs": "1602603998936",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:35.648Z"
     },
     {
       "id": "archive-1315948150197084160",
@@ -121,7 +2462,119 @@
       "fullText": "2020年最新版！無料Photoshop/Lightroomチュートリアル40選【映画のような効果も！？/モックアップ】\nhttps://t.co/y2BmrmoZ9x\n#チュートリアル #テキストエフェクト #フォトショップ",
       "expandedUrl": "https://twitter.com/i/web/status/1315948150197084160",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 4,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-13T09:31:02.000Z",
+        "display_text_range": [
+          0,
+          113
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                85,
+                93
+              ],
+              "text": "チュートリアル"
+            },
+            {
+              "indices": [
+                94,
+                104
+              ],
+              "text": "テキストエフェクト"
+            },
+            {
+              "indices": [
+                105,
+                113
+              ],
+              "text": "フォトショップ"
+            }
+          ],
+          "urls": [
+            {
+              "display_url": "webdesignfacts.net/entry/photosho…",
+              "expanded_url": "http://www.webdesignfacts.net/entry/photoshop-tutorial-may2018",
+              "indices": [
+                61,
+                84
+              ],
+              "url": "https://t.co/y2BmrmoZ9x"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1315948150197084160",
+        "text": "2020年最新版！無料Photoshop/Lightroomチュートリアル40選【映画のような効果も！？/モックアップ】\nhttps://t.co/y2BmrmoZ9x\n#チュートリアル #テキストエフェクト #フォトショップ",
+        "user": {
+          "id_str": "986106360570961920",
+          "name": "𝐖𝐞𝐛𝐃𝐞𝐬𝐢𝐠𝐧𝐅𝐚𝐜𝐭𝐬 / デザインに関わるアナタのためのメディア",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1116508654281183232/m7rAUMfg_normal.png",
+          "screen_name": "webdesignfacts",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1315948150197084160"
+          ],
+          "editable_until_msecs": "1602583262798",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/y2BmrmoZ9x",
+          "binding_values": {
+            "description": {
+              "string_value": "Photoshopのチュートリアルは良いものを作れるだけではなくPhotoshop自体の機能の使い方を学ぶことも出来、大変良いものです。 特に最新のチュートリアルは最新の機能も駆使しているため、すごく勉強になります。 そ ...",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "webdesignfacts.net",
+              "type": "STRING"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "webdesignfacts.net",
+              "type": "STRING"
+            },
+            "title": {
+              "string_value": "2021年最新版！無料Photoshop/Lightroomチュートリアル40選【映画のような効果も！？/モックアップ】",
+              "type": "STRING"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/y2BmrmoZ9x",
+              "type": "STRING"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:36.824Z"
     },
     {
       "id": "archive-1315925266468761600",
@@ -129,7 +2582,8 @@
       "fullText": "📢お知らせ📢\n\n #NintendoSwitch 専用『#魔女の泉 3 Re:Fine』\nあす❗️早期購入特典のデザインを公開します‼️\n\n⬇️早期購入特典はコチラ\n📀『Complete SoundTrack CD』\n📕『CONCEPT＆ART BOOK』\n収納ボックス付きです💖\n\nぜひ楽しみにお待ちくださいね💞 https://t.co/simC999ux4",
       "expandedUrl": "https://twitter.com/i/web/status/1315925266468761600",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "private": true
     },
     {
       "id": "archive-1315816235104305152",
@@ -137,7 +2591,193 @@
       "fullText": "カラーイメージ作成しました。\n#zbrush  #Keyshot https://t.co/ZcVdgT4T8n",
       "expandedUrl": "https://twitter.com/i/web/status/1315816235104305152",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 186,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-13T00:46:51.000Z",
+        "display_text_range": [
+          0,
+          32
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                15,
+                22
+              ],
+              "text": "zbrush"
+            },
+            {
+              "indices": [
+                24,
+                32
+              ],
+              "text": "Keyshot"
+            }
+          ],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/ZcVdgT4T8n",
+              "expanded_url": "https://x.com/oogamitakehiko3/status/1315816235104305152/photo/1",
+              "indices": [
+                33,
+                56
+              ],
+              "url": "https://t.co/ZcVdgT4T8n"
+            }
+          ]
+        },
+        "id_str": "1315816235104305152",
+        "text": "カラーイメージ作成しました。\n#zbrush  #Keyshot https://t.co/ZcVdgT4T8n",
+        "user": {
+          "id_str": "479500816",
+          "name": "gami",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1796247069/1_normal.jpg",
+          "screen_name": "oogamitakehiko3",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1315816235104305152"
+          ],
+          "editable_until_msecs": "1602551811789",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/ZcVdgT4T8n",
+            "expanded_url": "https://x.com/oogamitakehiko3/status/1315816235104305152/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              33,
+              56
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkK31YQVcAA8d0x.jpg",
+            "original_info": {
+              "height": 2042,
+              "width": 3597,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3597,
+                  "h": 2014
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 2042,
+                  "h": 2042
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 1791,
+                  "h": 2042
+                },
+                {
+                  "x": 297,
+                  "y": 0,
+                  "w": 1021,
+                  "h": 2042
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3597,
+                  "h": 2042
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 1163,
+                "resize": "fit",
+                "w": 2048
+              },
+              "medium": {
+                "h": 681,
+                "resize": "fit",
+                "w": 1200
+              },
+              "small": {
+                "h": 386,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/ZcVdgT4T8n"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3597,
+                "h": 2014
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 2042,
+                "h": 2042
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 1791,
+                "h": 2042
+              },
+              {
+                "x": 297,
+                "y": 0,
+                "w": 1021,
+                "h": 2042
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 3597,
+                "h": 2042
+              }
+            ],
+            "expandedUrl": "https://x.com/oogamitakehiko3/status/1315816235104305152/photo/1",
+            "url": "https://pbs.twimg.com/media/EkK31YQVcAA8d0x.jpg",
+            "width": 3597,
+            "height": 2042
+          }
+        ],
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:39.163Z"
     },
     {
       "id": "archive-1315689785747406854",
@@ -145,7 +2785,418 @@
       "fullText": "任天堂の職種紹介、地味にめっちゃゲーム作りで重要なこと書いてあったり貴重な制作資料置いてある……\nhttps://t.co/l2C6VyQRu0 https://t.co/l2MUMBCfQV",
       "expandedUrl": "https://twitter.com/i/web/status/1315689785747406854",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 20538,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-12T16:24:23.000Z",
+        "display_text_range": [
+          0,
+          72
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "nintendo.co.jp/jobs/introduct…",
+              "expanded_url": "https://www.nintendo.co.jp/jobs/introduction/design/work01.html",
+              "indices": [
+                49,
+                72
+              ],
+              "url": "https://t.co/l2C6VyQRu0"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/l2MUMBCfQV",
+              "expanded_url": "https://x.com/eiki_okuma/status/1315689785747406854/photo/1",
+              "indices": [
+                73,
+                96
+              ],
+              "url": "https://t.co/l2MUMBCfQV"
+            }
+          ]
+        },
+        "id_str": "1315689785747406854",
+        "text": "任天堂の職種紹介、地味にめっちゃゲーム作りで重要なこと書いてあったり貴重な制作資料置いてある……\nhttps://t.co/l2C6VyQRu0 https://t.co/l2MUMBCfQV",
+        "user": {
+          "id_str": "55749597",
+          "name": "EIKI`@illuCalab.",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/787990224148148225/QXf7rSzU_normal.jpg",
+          "screen_name": "eiki_okuma",
+          "verified": false,
+          "is_blue_verified": true,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1315689785747406854"
+          ],
+          "editable_until_msecs": "1602521663913",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/l2MUMBCfQV",
+            "expanded_url": "https://x.com/eiki_okuma/status/1315689785747406854/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              73,
+              96
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkJD90DU8AAmf--.png",
+            "original_info": {
+              "height": 411,
+              "width": 718,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 718,
+                  "h": 402
+                },
+                {
+                  "x": 207,
+                  "y": 0,
+                  "w": 411,
+                  "h": 411
+                },
+                {
+                  "x": 232,
+                  "y": 0,
+                  "w": 361,
+                  "h": 411
+                },
+                {
+                  "x": 309,
+                  "y": 0,
+                  "w": 206,
+                  "h": 411
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 718,
+                  "h": 411
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 411,
+                "resize": "fit",
+                "w": 718
+              },
+              "medium": {
+                "h": 411,
+                "resize": "fit",
+                "w": 718
+              },
+              "small": {
+                "h": 389,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/l2MUMBCfQV"
+          },
+          {
+            "display_url": "pic.x.com/l2MUMBCfQV",
+            "expanded_url": "https://x.com/eiki_okuma/status/1315689785747406854/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              73,
+              96
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkJEECWU8AAAy9z.png",
+            "original_info": {
+              "height": 510,
+              "width": 800,
+              "focus_rects": [
+                {
+                  "x": 0,
+                  "y": 62,
+                  "w": 800,
+                  "h": 448
+                },
+                {
+                  "x": 290,
+                  "y": 0,
+                  "w": 510,
+                  "h": 510
+                },
+                {
+                  "x": 353,
+                  "y": 0,
+                  "w": 447,
+                  "h": 510
+                },
+                {
+                  "x": 493,
+                  "y": 0,
+                  "w": 255,
+                  "h": 510
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 800,
+                  "h": 510
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 510,
+                "resize": "fit",
+                "w": 800
+              },
+              "medium": {
+                "h": 510,
+                "resize": "fit",
+                "w": 800
+              },
+              "small": {
+                "h": 434,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/l2MUMBCfQV"
+          },
+          {
+            "display_url": "pic.x.com/l2MUMBCfQV",
+            "expanded_url": "https://x.com/eiki_okuma/status/1315689785747406854/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              73,
+              96
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/EkJEFwwVgAEpLy6.png",
+            "original_info": {
+              "height": 400,
+              "width": 800,
+              "focus_rects": [
+                {
+                  "x": 86,
+                  "y": 0,
+                  "w": 714,
+                  "h": 400
+                },
+                {
+                  "x": 400,
+                  "y": 0,
+                  "w": 400,
+                  "h": 400
+                },
+                {
+                  "x": 449,
+                  "y": 0,
+                  "w": 351,
+                  "h": 400
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "w": 200,
+                  "h": 400
+                },
+                {
+                  "x": 0,
+                  "y": 0,
+                  "w": 800,
+                  "h": 400
+                }
+              ]
+            },
+            "sizes": {
+              "large": {
+                "h": 400,
+                "resize": "fit",
+                "w": 800
+              },
+              "medium": {
+                "h": 400,
+                "resize": "fit",
+                "w": 800
+              },
+              "small": {
+                "h": 340,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/l2MUMBCfQV"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 0,
+                "w": 718,
+                "h": 402
+              },
+              {
+                "x": 207,
+                "y": 0,
+                "w": 411,
+                "h": 411
+              },
+              {
+                "x": 232,
+                "y": 0,
+                "w": 361,
+                "h": 411
+              },
+              {
+                "x": 309,
+                "y": 0,
+                "w": 206,
+                "h": 411
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 718,
+                "h": 411
+              }
+            ],
+            "expandedUrl": "https://x.com/eiki_okuma/status/1315689785747406854/photo/1",
+            "url": "https://pbs.twimg.com/media/EkJD90DU8AAmf--.png",
+            "width": 718,
+            "height": 411
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 0,
+                "y": 62,
+                "w": 800,
+                "h": 448
+              },
+              {
+                "x": 290,
+                "y": 0,
+                "w": 510,
+                "h": 510
+              },
+              {
+                "x": 353,
+                "y": 0,
+                "w": 447,
+                "h": 510
+              },
+              {
+                "x": 493,
+                "y": 0,
+                "w": 255,
+                "h": 510
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 800,
+                "h": 510
+              }
+            ],
+            "expandedUrl": "https://x.com/eiki_okuma/status/1315689785747406854/photo/1",
+            "url": "https://pbs.twimg.com/media/EkJEECWU8AAAy9z.png",
+            "width": 800,
+            "height": 510
+          },
+          {
+            "backgroundColor": {
+              "red": 204,
+              "green": 214,
+              "blue": 221
+            },
+            "cropCandidates": [
+              {
+                "x": 86,
+                "y": 0,
+                "w": 714,
+                "h": 400
+              },
+              {
+                "x": 400,
+                "y": 0,
+                "w": 400,
+                "h": 400
+              },
+              {
+                "x": 449,
+                "y": 0,
+                "w": 351,
+                "h": 400
+              },
+              {
+                "x": 600,
+                "y": 0,
+                "w": 200,
+                "h": 400
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "w": 800,
+                "h": 400
+              }
+            ],
+            "expandedUrl": "https://x.com/eiki_okuma/status/1315689785747406854/photo/1",
+            "url": "https://pbs.twimg.com/media/EkJEFwwVgAEpLy6.png",
+            "width": 800,
+            "height": 400
+          }
+        ],
+        "conversation_count": 1,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:40.331Z"
     },
     {
       "id": "archive-1315460464038432769",
@@ -153,7 +3204,411 @@
       "fullText": "書きました。30年以上前の画像処理が今年になって焼き直されているという / 古くて新しい2値化画像処理を動かしてみる(ECCV 2020論文)\nhttps://t.co/XiZxyfpNfx",
       "expandedUrl": "https://twitter.com/i/web/status/1315460464038432769",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 167,
+        "possibly_sensitive": false,
+        "created_at": "2020-10-12T01:13:09.000Z",
+        "display_text_range": [
+          0,
+          95
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [
+            {
+              "display_url": "tech-blog.optim.co.jp/entry/2020/10/…",
+              "expanded_url": "https://tech-blog.optim.co.jp/entry/2020/10/12/090000",
+              "indices": [
+                72,
+                95
+              ],
+              "url": "https://t.co/XiZxyfpNfx"
+            }
+          ],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1315460464038432769",
+        "text": "書きました。30年以上前の画像処理が今年になって焼き直されているという / 古くて新しい2値化画像処理を動かしてみる(ECCV 2020論文)\nhttps://t.co/XiZxyfpNfx",
+        "user": {
+          "id_str": "141976906",
+          "name": "Yuji Tokuda",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1155797135/maskippa_normal.jpg",
+          "screen_name": "dakuton",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1315460464038432769"
+          ],
+          "editable_until_msecs": "1602466989357",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "card": {
+          "card_platform": {
+            "platform": {
+              "audience": {
+                "name": "production"
+              },
+              "device": {
+                "name": "iPhone",
+                "version": "13"
+              }
+            }
+          },
+          "name": "summary_large_image",
+          "url": "https://t.co/XiZxyfpNfx",
+          "binding_values": {
+            "photo_image_full_size_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "app_star_rating": {
+              "string_value": "5.0",
+              "type": "STRING"
+            },
+            "thumbnail_image": {
+              "image_value": {
+                "height": 147,
+                "width": 280,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=280x150"
+              },
+              "type": "IMAGE"
+            },
+            "description": {
+              "string_value": "R&D チームの徳田（@dakuton）です。 今年の8月に開催されたECCV 2020のacceptされた論文のなかに、使い古された2値化画像処理をもとにした論文(+実装)があり気になったので、今回はそちらを少し調べて動かしてみた結果をご紹介します。 対象論文 A Generalization of Otsu’s M…",
+              "type": "STRING"
+            },
+            "domain": {
+              "string_value": "tech-blog.optim.co.jp",
+              "type": "STRING"
+            },
+            "app_is_free": {
+              "string_value": "true",
+              "type": "STRING"
+            },
+            "thumbnail_image_large": {
+              "image_value": {
+                "height": 315,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=600x600"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_original": {
+              "image_value": {
+                "height": 683,
+                "width": 1300,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "site": {
+              "scribe_key": "publisher_id",
+              "type": "USER",
+              "user_value": {
+                "id_str": "1110450648623898624",
+                "path": []
+              }
+            },
+            "photo_image_full_size_small": {
+              "image_value": {
+                "height": 202,
+                "width": 386,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=386x202"
+              },
+              "type": "IMAGE"
+            },
+            "app_url_resolved": {
+              "string_value": "hatenablog:///open?uri=https%3A%2F%2Ftech-blog.optim.co.jp%2Fentry%2F2020%2F10%2F12%2F090000",
+              "type": "STRING"
+            },
+            "summary_photo_image_large": {
+              "image_value": {
+                "height": 419,
+                "width": 800,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=800x419"
+              },
+              "type": "IMAGE"
+            },
+            "thumbnail_image_small": {
+              "image_value": {
+                "height": 76,
+                "width": 144,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=144x144"
+              },
+              "type": "IMAGE"
+            },
+            "app_num_ratings": {
+              "string_value": "5",
+              "type": "STRING"
+            },
+            "app_price_amount": {
+              "string_value": "0.0",
+              "type": "STRING"
+            },
+            "thumbnail_image_x_large": {
+              "image_value": {
+                "height": 683,
+                "width": 1300,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_original": {
+              "image_value": {
+                "height": 683,
+                "width": 1300,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_alt_text": {
+              "string_value": "古くて新しい2値化画像処理を動かしてみる(ECCV 2020論文) - OPTiM TECH BLOG",
+              "type": "STRING"
+            },
+            "vanity_url": {
+              "scribe_key": "vanity_url",
+              "string_value": "tech-blog.optim.co.jp",
+              "type": "STRING"
+            },
+            "photo_image_full_size": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "app_name": {
+              "string_value": "はてなブログ",
+              "type": "STRING"
+            },
+            "summary_photo_image_alt_text": {
+              "string_value": "古くて新しい2値化画像処理を動かしてみる(ECCV 2020論文) - OPTiM TECH BLOG",
+              "type": "STRING"
+            },
+            "app_id": {
+              "scribe_key": "publisher_app_id",
+              "string_value": "583299321",
+              "type": "STRING"
+            },
+            "thumbnail_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 47,
+                      "green": 27,
+                      "red": 2
+                    },
+                    "percentage": 63.58
+                  },
+                  {
+                    "rgb": {
+                      "blue": 148,
+                      "green": 122,
+                      "red": 6
+                    },
+                    "percentage": 23.88
+                  },
+                  {
+                    "rgb": {
+                      "blue": 113,
+                      "green": 80,
+                      "red": 3
+                    },
+                    "percentage": 7.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 232,
+                      "green": 207,
+                      "red": 172
+                    },
+                    "percentage": 1.55
+                  },
+                  {
+                    "rgb": {
+                      "blue": 121,
+                      "green": 91,
+                      "red": 4
+                    },
+                    "percentage": 1.43
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "title": {
+              "string_value": "古くて新しい2値化画像処理を動かしてみる(ECCV 2020論文) - OPTiM TECH BLOG",
+              "type": "STRING"
+            },
+            "app_price_currency": {
+              "string_value": "USD",
+              "type": "STRING"
+            },
+            "summary_photo_image_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 47,
+                      "green": 27,
+                      "red": 2
+                    },
+                    "percentage": 63.58
+                  },
+                  {
+                    "rgb": {
+                      "blue": 148,
+                      "green": 122,
+                      "red": 6
+                    },
+                    "percentage": 23.88
+                  },
+                  {
+                    "rgb": {
+                      "blue": 113,
+                      "green": 80,
+                      "red": 3
+                    },
+                    "percentage": 7.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 232,
+                      "green": 207,
+                      "red": 172
+                    },
+                    "percentage": 1.55
+                  },
+                  {
+                    "rgb": {
+                      "blue": 121,
+                      "green": 91,
+                      "red": 4
+                    },
+                    "percentage": 1.43
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "app_url": {
+              "string_value": "https://t.co/redirect?url=hatenablog%3A%2F%2F%2Fopen%3Furi%3Dhttps%253A%252F%252Ftech-blog.optim.co.jp%252Fentry%252F2020%252F10%252F12%252F090000&sig=785f3a885a980e7d13e85e00e061d363a863b805&ssr=true&slug=XiZxyfpNfx",
+              "type": "STRING"
+            },
+            "summary_photo_image_x_large": {
+              "image_value": {
+                "height": 683,
+                "width": 1300,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "summary_photo_image": {
+              "image_value": {
+                "height": 314,
+                "width": 600,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=600x314"
+              },
+              "type": "IMAGE"
+            },
+            "photo_image_full_size_color": {
+              "image_color_value": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "blue": 47,
+                      "green": 27,
+                      "red": 2
+                    },
+                    "percentage": 63.58
+                  },
+                  {
+                    "rgb": {
+                      "blue": 148,
+                      "green": 122,
+                      "red": 6
+                    },
+                    "percentage": 23.88
+                  },
+                  {
+                    "rgb": {
+                      "blue": 113,
+                      "green": 80,
+                      "red": 3
+                    },
+                    "percentage": 7.29
+                  },
+                  {
+                    "rgb": {
+                      "blue": 232,
+                      "green": 207,
+                      "red": 172
+                    },
+                    "percentage": 1.55
+                  },
+                  {
+                    "rgb": {
+                      "blue": 121,
+                      "green": 91,
+                      "red": 4
+                    },
+                    "percentage": 1.43
+                  }
+                ]
+              },
+              "type": "IMAGE_COLOR"
+            },
+            "photo_image_full_size_x_large": {
+              "image_value": {
+                "height": 683,
+                "width": 1300,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=png&name=2048x2048_2_exp"
+              },
+              "type": "IMAGE"
+            },
+            "card_url": {
+              "scribe_key": "card_url",
+              "string_value": "https://t.co/XiZxyfpNfx",
+              "type": "STRING"
+            },
+            "summary_photo_image_original": {
+              "image_value": {
+                "height": 683,
+                "width": 1300,
+                "url": "https://pbs.twimg.com/card_img/1931530337936707584/P5rnDE2G?format=jpg&name=orig"
+              },
+              "type": "IMAGE"
+            }
+          }
+        },
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:41.523Z"
     },
     {
       "id": "archive-1315327353195622400",
@@ -161,7 +3616,47 @@
       "fullText": "WebGLでむちゃくちゃなことやってる人のことを親だと思ってついていく傾向があります",
       "expandedUrl": "https://twitter.com/i/web/status/1315327353195622400",
       "isArchive": true,
-      "processedAt": "2025-06-09T12:50:22.914Z"
+      "processedAt": "2025-06-09T12:50:22.914Z",
+      "react_tweet_data": {
+        "__typename": "Tweet",
+        "lang": "ja",
+        "favorite_count": 8,
+        "created_at": "2020-10-11T16:24:13.000Z",
+        "display_text_range": [
+          0,
+          42
+        ],
+        "entities": {
+          "hashtags": [],
+          "urls": [],
+          "user_mentions": [],
+          "symbols": []
+        },
+        "id_str": "1315327353195622400",
+        "text": "WebGLでむちゃくちゃなことやってる人のことを親だと思ってついていく傾向があります",
+        "user": {
+          "id_str": "2695879465",
+          "name": "halmiran",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1859200378849665024/az_2gfBA_normal.jpg",
+          "screen_name": "h4lmiran",
+          "verified": false,
+          "is_blue_verified": false,
+          "profile_image_shape": "Circle"
+        },
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1315327353195622400"
+          ],
+          "editable_until_msecs": "1602435253259",
+          "is_edit_eligible": true,
+          "edits_remaining": "5"
+        },
+        "conversation_count": 0,
+        "news_action_type": "conversation",
+        "isEdited": false,
+        "isStaleEdit": false
+      },
+      "fetchedAt": "2025-06-09T23:52:42.691Z"
     }
   ]
 }
