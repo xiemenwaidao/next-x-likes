@@ -5,24 +5,20 @@ import { CustomTweet } from '@/components/custom-tweet';
 import { DayJson } from '@/types/like';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { notFound } from 'next/navigation';
 
 type Props = {
   params: Promise<{
-    year: string;
-    month: string;
-    day: string;
+    date: string;
   }>;
 };
 
-// export const dynamic = 'force-static';
-// export const revalidate = false;
-
-// 静的パスを生成する関数
+// 静的パスを生成する関数（フラットな構造で高速化）
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'src', 'content', 'likes');
-  const years = await fs.readdir(contentDir);
-
   const paths = [];
+
+  const years = await fs.readdir(contentDir);
 
   for (const year of years) {
     const yearPath = path.join(contentDir, year);
@@ -33,11 +29,11 @@ export async function generateStaticParams() {
       const days = await fs.readdir(monthPath);
 
       for (const day of days) {
-        paths.push({
-          year,
-          month,
-          day: day.replace('.json', ''),
-        });
+        if (day.endsWith('.json')) {
+          paths.push({
+            date: `${year}-${month}-${day.replace('.json', '')}`,
+          });
+        }
       }
     }
   }
@@ -45,8 +41,15 @@ export async function generateStaticParams() {
   return paths;
 }
 
-async function getContentData(year: string, month: string, day: string) {
+async function getContentData(date: string) {
   try {
+    // date形式: "2025-01-10" を分解
+    const [year, month, day] = date.split('-');
+    
+    if (!year || !month || !day) {
+      return null;
+    }
+
     const filePath = path.join(
       process.cwd(),
       'src',
@@ -68,12 +71,15 @@ async function getContentData(year: string, month: string, day: string) {
 }
 
 export default async function DayPage({ params }: Props) {
-  const { year, month, day } = await Promise.resolve(params);
+  const { date } = await params;
+  const content: DayJson = await getContentData(date);
 
-  const content: DayJson = await getContentData(year, month, day);
-  // if (!content) {
-  //   return notFound();
-  // }
+  if (!content) {
+    notFound();
+  }
+
+  // 表示用に日付をフォーマット
+  const [year, month, day] = date.split('-');
 
   return (
     <div className="">
@@ -85,7 +91,8 @@ export default async function DayPage({ params }: Props) {
             <span className="text-gray-200">{year}/{month}/{day}</span>
           </h1>
         </div>
-        {content?.body.map(
+        
+        {content.body.map(
           (tweet) =>
             tweet.tweet_id && (
               <CustomTweet
@@ -96,12 +103,6 @@ export default async function DayPage({ params }: Props) {
                 isNotFound={tweet.notfound}
               />
             ),
-        )}
-
-        {content === null && (
-          <div className="text-center italic text-lg underline underline-offset-8">
-            Not Found : (ง ˙ω˙)ว{' '}
-          </div>
         )}
       </div>
     </div>
