@@ -36,7 +36,22 @@ export function CalendarPicker({
 
   // URLから日付を設定
   useEffect(() => {
-    if (params.year && params.month && params.day) {
+    // 新しいURL形式をチェック: /likes/2025-01-10
+    if (params.date && typeof params.date === 'string') {
+      const [year, month, day] = params.date.split('-').map(Number);
+      if (year && month && day) {
+        const dateFromUrl = new Date(year, month - 1, day);
+        if (!isNaN(dateFromUrl.getTime())) {
+          setSelectedDate(dateFromUrl);
+          setDisplayMonth(new Date(year, month - 1, 1));
+        } else {
+          setSelectedDate(undefined);
+          setDisplayMonth(undefined);
+        }
+      }
+    }
+    // 旧URL形式をチェック（後方互換性のため）
+    else if (params.year && params.month && params.day) {
       const dateFromUrl = new Date(
         Number(params.year),
         Number(params.month) - 1,
@@ -57,7 +72,7 @@ export function CalendarPicker({
       const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
       setDisplayMonth(new Date(nowJapan.getFullYear(), nowJapan.getMonth(), 1));
     }
-  }, [params.year, params.month, params.day, setSelectedDate, setDisplayMonth]);
+  }, [params.date, params.year, params.month, params.day, setSelectedDate, setDisplayMonth]);
 
   // 日付選択時のナビゲーション
   const handleSelect = useCallback(
@@ -67,9 +82,9 @@ export function CalendarPicker({
         router.push('/');
         return;
       }
-      const formattedDate = `/${date.getFullYear()}/${String(
+      const formattedDate = `/likes/${date.getFullYear()}-${String(
         date.getMonth() + 1,
-      ).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}`;
+      ).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
       router.push(formattedDate);
     },
     [router, setSelectedDate],

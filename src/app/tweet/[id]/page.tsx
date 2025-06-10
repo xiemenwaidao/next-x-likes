@@ -147,7 +147,7 @@ export default async function TweetPage({ params }: Props) {
 
         <div className="text-center mt-8">
           <Link
-            href={`/${year}/${month}/${day}`}
+            href={`/likes/${year}-${month}-${day}`}
             className="text-blue-500 hover:underline"
           >
             View all tweets from {year}/{month}/{day}
