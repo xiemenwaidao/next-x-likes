@@ -3,6 +3,7 @@
 import { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { CalendarPicker } from './calendar-picker';
+import { FloatingDateSelector } from './floating-date-selector-custom';
 // import { SiteAnnounce } from './site-announce';
 import { DateInfo } from '@/types/like';
 
@@ -21,6 +22,9 @@ export function Main({
 
   // トップページではカレンダーとchildrenを特別にレイアウト
   const isHomePage = pathname === '/';
+  
+  // 日付ページでは浮動カレンダーを表示
+  const showFloatingCalendar = pathname.startsWith('/likes/');
 
   if (isHomePage) {
     return (
@@ -39,6 +43,7 @@ export function Main({
       {/* <SiteAnnounce /> */}
       {showCalendar && <CalendarPicker allDates={allDates} />}
       {children}
+      {showFloatingCalendar && <FloatingDateSelector allDates={allDates} />}
     </main>
   );
 }
