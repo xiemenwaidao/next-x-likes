@@ -119,9 +119,10 @@ export function CalendarPicker({
             'w-full rounded-md text-muted-foreground text-sm font-normal',
           row: 'flex w-full mt-2',
           cell: 'w-full text-center text-sm p-0 relative focus-within:relative focus-within:z-20',
-          day: 'h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-accent hover:rounded-sm rounded-sm mx-auto',
+          day: 'h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-accent hover:rounded-sm rounded-sm mx-auto cursor-pointer disabled:cursor-not-allowed',
           day_selected:
             'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground rounded-full',
+          day_disabled: 'text-muted-foreground opacity-50 cursor-not-allowed hover:bg-transparent',
           nav: 'space-x-1 flex items-center justify-center',
           nav_button:
             'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
