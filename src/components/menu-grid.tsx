@@ -7,12 +7,7 @@ import { AnnouncementList } from './announcements';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import {
   Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
-  DialogOverlay,
-  DialogPortal,
 } from '@/components/ui/dialog';
 
 export function MenuGrid() {
