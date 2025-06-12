@@ -1,14 +1,7 @@
 import { LogoSVG } from './logo-svg';
-import { CircleHelp, LinkIcon, Archive } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
 import Link from 'next/link';
 import { SearchBox } from './search';
-import { AnnouncementList } from './announcements';
+import { MenuGrid } from './menu-grid';
 
 export const Header = () => {
   return (
@@ -21,27 +14,8 @@ export const Header = () => {
             </Link>
           </h1>
           <div className="grow"></div>
-          <Button variant="ghost" size="icon" asChild className="flex-none">
-            <Link href="/archive/1" title="アーカイブ">
-              <Archive className="h-5 w-5" />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild className="flex-none">
-            <Link href="/urls/1" title="URL一覧">
-              <LinkIcon className="h-5 w-5" />
-            </Link>
-          </Button>
           <SearchBox />
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="ghost" size="icon" className="flex-none cursor-pointer">
-                <CircleHelp />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-64 p-3">
-              <AnnouncementList />
-            </PopoverContent>
-          </Popover>
+          <MenuGrid />
         </div>
       </div>
     </header>

@@ -72,6 +72,13 @@ This project uses **shadcn/ui** for UI components. shadcn/ui is a collection of 
 pnpm dlx shadcn@latest add [component-name]
 ```
 
+#### Design Guidelines:
+- **Always prefer shadcn/ui components** when implementing new UI elements (dialogs, modals, dropdowns, etc.)
+- Check existing shadcn components before creating custom solutions
+- Use shadcn's Dialog component for modals and popups
+- Use shadcn's DropdownMenu for navigation menus
+- Maintain consistency with existing shadcn styling patterns
+
 ### Important Considerations
 - All pages use static generation with `force-static` and `revalidate: false`
 - Japan timezone (Asia/Tokyo) is used for date processing
