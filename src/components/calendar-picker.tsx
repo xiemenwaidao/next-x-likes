@@ -15,7 +15,8 @@ export function CalendarPicker({
   allDates: DateInfo[];
   isFooter?: boolean;
 }) {
-  const { selectedDate, setSelectedDate, displayMonth, setDisplayMonth } = useCalendarStore();
+  const { selectedDate, setSelectedDate, displayMonth, setDisplayMonth } =
+    useCalendarStore();
   const params = useParams();
   const router = useTransitionRouter();
   const pathname = usePathname();
@@ -61,7 +62,9 @@ export function CalendarPicker({
       if (!isNaN(dateFromUrl.getTime())) {
         setSelectedDate(dateFromUrl);
         // カレンダーの表示月も同じ月に設定
-        setDisplayMonth(new Date(Number(params.year), Number(params.month) - 1, 1));
+        setDisplayMonth(
+          new Date(Number(params.year), Number(params.month) - 1, 1),
+        );
       } else {
         setSelectedDate(undefined);
         setDisplayMonth(undefined);
@@ -72,7 +75,14 @@ export function CalendarPicker({
       const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
       setDisplayMonth(new Date(nowJapan.getFullYear(), nowJapan.getMonth(), 1));
     }
-  }, [params.date, params.year, params.month, params.day, setSelectedDate, setDisplayMonth]);
+  }, [
+    params.date,
+    params.year,
+    params.month,
+    params.day,
+    setSelectedDate,
+    setDisplayMonth,
+  ]);
 
   // 日付選択時のナビゲーション
   const handleSelect = useCallback(
@@ -104,8 +114,8 @@ export function CalendarPicker({
   return (
     <div
       className={`flex items-center justify-center ${
-        isRootPath ? 'h-full' : ''
-      } ${isRootPath && isFooter ? 'hidden' : ''}`}
+        isRootPath && isFooter ? 'hidden' : ''
+      }`}
     >
       <Calendar
         mode="single"
@@ -122,10 +132,10 @@ export function CalendarPicker({
           day: 'h-9 w-9 p-0 font-normal aria-selected:opacity-100 hover:bg-accent hover:rounded-sm rounded-sm mx-auto cursor-pointer disabled:cursor-not-allowed',
           day_selected:
             'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground rounded-full',
-          day_disabled: 'text-muted-foreground opacity-50 cursor-not-allowed hover:bg-transparent',
+          day_disabled:
+            'text-muted-foreground opacity-50 cursor-not-allowed hover:bg-transparent',
           nav: 'space-x-1 flex items-center justify-center',
-          nav_button:
-            'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+          nav_button: 'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
           nav_button_previous: 'absolute left-1',
           nav_button_next: 'absolute right-1',
           caption: 'flex justify-center py-2 relative items-center',

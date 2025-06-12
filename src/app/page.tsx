@@ -101,11 +101,8 @@ export default async function Home() {
   const activityData = await getRecentActivityData();
 
   return (
-    <div className="flex flex-col items-center justify-center py-8">
-      {/* グラフセクション */}
-      <div className="w-full">
-        <RecentActivityGraph activityData={activityData} />
-      </div>
+    <div className="w-full">
+      <RecentActivityGraph activityData={activityData} />
     </div>
   );
 }

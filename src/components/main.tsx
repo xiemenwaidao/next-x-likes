@@ -18,11 +18,13 @@ export function Main({
 
   // /tweet/[id] と /urls と /archive パスではカレンダーを表示しない
   const showCalendar =
-    !pathname.startsWith('/tweet/') && !pathname.startsWith('/urls') && !pathname.startsWith('/archive');
+    !pathname.startsWith('/tweet/') &&
+    !pathname.startsWith('/urls') &&
+    !pathname.startsWith('/archive');
 
   // トップページではカレンダーとchildrenを特別にレイアウト
   const isHomePage = pathname === '/';
-  
+
   // 日付ページでは浮動カレンダーを表示
   const showFloatingCalendar = pathname.startsWith('/likes/');
 
@@ -30,7 +32,7 @@ export function Main({
     return (
       <main className="container mx-auto px-4 py-4 flex flex-col">
         {/* <SiteAnnounce /> */}
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col gap-4">
           <CalendarPicker allDates={allDates} />
           {children}
         </div>
