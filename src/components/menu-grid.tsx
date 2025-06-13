@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { Archive, LinkIcon, CircleHelp } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Archive, LinkIcon, CircleHelp, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import { AnnouncementList } from './announcements';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import {
@@ -13,6 +14,34 @@ import {
 export function MenuGrid() {
   const [showHelp, setShowHelp] = useState(false);
   const [open, setOpen] = useState(false);
+  const [navigatingTo, setNavigatingTo] = useState<string | null>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // パスが変わったらローディングを解除
+  useEffect(() => {
+    if (navigatingTo && pathname === navigatingTo) {
+      setNavigatingTo(null);
+      setOpen(false);
+    }
+  }, [pathname, navigatingTo]);
+
+  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    // すでに同じページにいる場合は何もしない
+    if (pathname === href) {
+      setOpen(false);
+      return;
+    }
+    
+    setNavigatingTo(href);
+    
+    // 少し遅延を入れてからナビゲート（ローディング表示を見せるため）
+    setTimeout(() => {
+      router.push(href);
+    }, 100);
+  };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -40,7 +69,9 @@ export function MenuGrid() {
           <DialogPrimitive.Description className="sr-only">
             アーカイブ、URL、ヘルプへのアクセスメニュー
           </DialogPrimitive.Description>
-          <div className="glass-container">
+          <div className={`glass-container transition-all duration-300 ${
+            navigatingTo ? 'scale-98 opacity-90' : ''
+          }`}>
             <div className="glass-wave-overlay" />
             
             <div className="relative z-10 p-4 pb-2 border-b border-gray-700/30">
@@ -59,41 +90,57 @@ export function MenuGrid() {
             <div className="relative z-10 p-4 space-y-2">
               <Link
                 href="/archive/1"
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors group w-full"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleNavigation(e, '/archive/1')}
+                className={`flex items-center gap-3 p-3 rounded-lg transition-all group w-full ${
+                  navigatingTo === '/archive/1' 
+                    ? 'bg-white/20 scale-95' 
+                    : 'hover:bg-white/10'
+                }`}
               >
-                <div className="w-10 h-10 rounded-lg bg-gray-800/50 flex items-center justify-center">
-                  <Archive className="h-5 w-5 text-gray-400" />
+                <div className="w-10 h-10 rounded-lg bg-gray-800/50 flex items-center justify-center transition-transform group-hover:scale-110">
+                  {navigatingTo === '/archive/1' ? (
+                    <Loader2 className="h-5 w-5 text-white animate-spin" />
+                  ) : (
+                    <Archive className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
+                  )}
                 </div>
                 <div className="flex-1 text-left">
-                  <div className="font-medium text-white" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Archive</div>
+                  <div className="font-medium text-white transition-colors" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Archive</div>
                   <div className="text-sm text-gray-400" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Past liked tweets</div>
                 </div>
               </Link>
               
               <Link
                 href="/urls/1"
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors group w-full"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleNavigation(e, '/urls/1')}
+                className={`flex items-center gap-3 p-3 rounded-lg transition-all group w-full ${
+                  navigatingTo === '/urls/1' 
+                    ? 'bg-white/20 scale-95' 
+                    : 'hover:bg-white/10'
+                }`}
               >
-                <div className="w-10 h-10 rounded-lg bg-gray-800/50 flex items-center justify-center">
-                  <LinkIcon className="h-5 w-5 text-gray-400" />
+                <div className="w-10 h-10 rounded-lg bg-gray-800/50 flex items-center justify-center transition-transform group-hover:scale-110">
+                  {navigatingTo === '/urls/1' ? (
+                    <Loader2 className="h-5 w-5 text-white animate-spin" />
+                  ) : (
+                    <LinkIcon className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
+                  )}
                 </div>
                 <div className="flex-1 text-left">
-                  <div className="font-medium text-white" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>URLs</div>
+                  <div className="font-medium text-white transition-colors" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>URLs</div>
                   <div className="text-sm text-gray-400" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Shared links collection</div>
                 </div>
               </Link>
               
               <button
                 onClick={() => setShowHelp(!showHelp)}
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors group w-full cursor-pointer"
+                className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-all group w-full cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-lg bg-gray-800/50 flex items-center justify-center">
-                  <CircleHelp className="h-5 w-5 text-gray-400" />
+                <div className="w-10 h-10 rounded-lg bg-gray-800/50 flex items-center justify-center transition-transform group-hover:scale-110">
+                  <CircleHelp className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
                 </div>
                 <div className="flex-1 text-left">
-                  <div className="font-medium text-white" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Help</div>
+                  <div className="font-medium text-white transition-colors" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Help</div>
                   <div className="text-sm text-gray-400" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Announcements & guide</div>
                 </div>
               </button>
@@ -206,6 +253,10 @@ export function MenuGrid() {
           100% {
             transform: translate(0%, 0%) rotate(360deg);
           }
+        }
+        
+        .scale-98 {
+          transform: scale(0.98);
         }
       `}</style>
     </Dialog>
