@@ -29,6 +29,8 @@ pnpm json:remove-raw-duplicates # Remove duplicate files from raw S3 data
 pnpm json:build-activity        # Build activity data for recent activity graph
 pnpm json:process-archive       # Process Twitter archive files (like-twitter-*.js)
 pnpm json:fetch-archive         # Fetch tweet data for archive tweets
+pnpm json:build-algolia         # Build Algolia search index (full rebuild)
+pnpm json:update-algolia        # Update Algolia search index (incremental)
 
 # Git Commits
 pnpm commit       # Create standardized commit with gitmoji
@@ -94,10 +96,18 @@ To update the site with new liked tweets:
 2. Run `pnpm json:conv` to process into daily files
 3. Run `pnpm json:fetch-tweet` to enrich with tweet data
 4. Run `pnpm json:build-index` to create tweet ID index for individual tweet pages
-5. Run `pnpm build` to regenerate static pages (includes search index generation)
+5. Run `pnpm json:update-algolia` to update Algolia search index incrementally (or `pnpm json:build-algolia` for full rebuild)
+6. Run `pnpm build` to regenerate static pages
+
+Note: The old local search index generation (`pnpm json:build-search`) is now replaced by Algolia integration.
 
 ## Environment Variables
 
 Required for data sync operations:
 - AWS credentials for S3 access (see sync-x-likes.ts)
 - X/Twitter API access may be needed for enrichment
+
+Required for Algolia search integration:
+- `NEXT_PUBLIC_ALGOLIA_APP_ID` - Your Algolia application ID
+- `NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY` - Search-only API key for client-side search
+- `ALGOLIA_ADMIN_API_KEY` - Admin API key for updating the search index (server-side only)

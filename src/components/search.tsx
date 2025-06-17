@@ -1,19 +1,24 @@
 'use client';
 
-import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { Search, X, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useRouter } from 'next/navigation';
 import { useCombobox } from 'downshift';
+import { algoliasearch } from 'algoliasearch';
 
-interface SearchIndexItem {
-  id: string;
+interface SearchResult {
+  objectID: string;
   text: string;
   username: string;
   date: string;
   path: string;
+  _highlightResult?: {
+    text?: { value: string };
+    username?: { value: string };
+  };
 }
 
 type SearchTarget = 'all' | 'text' | 'username';
@@ -29,12 +34,28 @@ const searchFilters: SearchFilter[] = [
   { target: 'username', label: 'ユーザー名' },
 ];
 
+// Initialize Algolia client
+const getAlgoliaClient = () => {
+  const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
+  const searchKey = process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY;
+
+  if (!appId || !searchKey) {
+    console.error('Missing Algolia credentials');
+    return null;
+  }
+
+  return algoliasearch(appId, searchKey);
+};
+
 const SearchModal = ({ onClose }: { onClose: () => void }) => {
-  const [searchIndex, setSearchIndex] = useState<SearchIndexItem[]>([]);
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [searchTarget, setSearchTarget] = useState<SearchTarget>('all');
   const [showFilters, setShowFilters] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
   const router = useRouter();
+  const algoliaClient = useRef(getAlgoliaClient());
+  const searchTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
   
   // IME composition状態を追跡するref（issue #1452の解決策）
   const onComposition = useRef(false);
@@ -66,83 +87,63 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
     []
   );
 
+  // Algolia search with debounce
   useEffect(() => {
-    fetch('/search-index.json')
-      .then((res) => res.json())
-      .then((data: SearchIndexItem[]) => {
-        setSearchIndex(data);
-      })
-      .catch(console.error);
-  }, []);
+    if (!algoliaClient.current) {
+      console.error('Algolia client not initialized');
+      return;
+    }
 
-  // フィルタリングされた結果
-  const filteredItems = useMemo(() => {
-    if (!inputValue.trim()) return [];
+    if (!inputValue.trim()) {
+      setSearchResults([]);
+      return;
+    }
 
-    // ひらがなをカタカナに変換
-    const toKatakana = (str: string) => {
-      return str.replace(/[\u3041-\u3096]/g, (match) => {
-        const chr = match.charCodeAt(0) + 0x60;
-        return String.fromCharCode(chr);
-      });
-    };
+    // Clear existing timeout
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+    }
 
-    // カタカナをひらがなに変換
-    const toHiragana = (str: string) => {
-      return str.replace(/[\u30A1-\u30F6]/g, (match) => {
-        const chr = match.charCodeAt(0) - 0x60;
-        return String.fromCharCode(chr);
-      });
-    };
+    // Set new timeout for debounced search
+    searchTimeoutRef.current = setTimeout(async () => {
+      setIsSearching(true);
+      try {
+        // Build search options based on target
+        const searchOptions: {
+          indexName: string;
+          query: string;
+          hitsPerPage: number;
+          restrictSearchableAttributes?: string[];
+        } = {
+          indexName: 'tweets',
+          query: inputValue,
+          hitsPerPage: 100,
+        };
 
-    // ひらがな/カタカナの両方のパターンでマッチングを試みる
-    const matchesKanaVariations = (text: string, query: string) => {
-      const lowerText = text.toLowerCase();
-      const lowerQuery = query.toLowerCase();
-
-      // 元のクエリでマッチ
-      if (lowerText.includes(lowerQuery)) return true;
-
-      // クエリをひらがなに変換してマッチ
-      const hiraganaQuery = toHiragana(lowerQuery);
-      if (lowerText.includes(hiraganaQuery)) return true;
-
-      // クエリをカタカナに変換してマッチ
-      const katakanaQuery = toKatakana(lowerQuery);
-      if (lowerText.includes(katakanaQuery)) return true;
-
-      // テキストをひらがなに変換してマッチ
-      const hiraganaText = toHiragana(lowerText);
-      if (hiraganaText.includes(lowerQuery)) return true;
-
-      // テキストをカタカナに変換してマッチ
-      const katakanaText = toKatakana(lowerText);
-      if (katakanaText.includes(lowerQuery)) return true;
-
-      return false;
-    };
-
-    const queries = inputValue.split(/\s+/).filter((q) => q);
-
-    return searchIndex
-      .filter((item) => {
-        let searchText: string;
-        switch (searchTarget) {
-          case 'text':
-            searchText = item.text;
-            break;
-          case 'username':
-            searchText = item.username;
-            break;
-          case 'all':
-          default:
-            searchText = `${item.text} ${item.username}`;
-            break;
+        if (searchTarget !== 'all') {
+          searchOptions.restrictSearchableAttributes = [searchTarget];
         }
-        return queries.every((q) => matchesKanaVariations(searchText, q));
-      })
-      .slice(0, 100);
-  }, [inputValue, searchIndex, searchTarget]);
+
+        const { results } = await algoliaClient.current!.search([searchOptions]);
+        if (results && results[0] && 'hits' in results[0]) {
+          setSearchResults(results[0].hits as SearchResult[]);
+        } else {
+          setSearchResults([]);
+        }
+      } catch (error) {
+        console.error('Search error:', error);
+        setSearchResults([]);
+      } finally {
+        setIsSearching(false);
+      }
+    }, 300); // 300ms debounce
+
+    return () => {
+      if (searchTimeoutRef.current) {
+        clearTimeout(searchTimeoutRef.current);
+      }
+    };
+  }, [inputValue, searchTarget]);
 
   // IME対応版 (issue #1452の解決策)
   const {
@@ -152,7 +153,7 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
     getItemProps,
     highlightedIndex,
   } = useCombobox({
-    items: filteredItems,
+    items: searchResults,
     inputValue,
     // Downshift側では値を制御しない（手動で管理）
     onInputValueChange: () => {
@@ -178,6 +179,27 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
       return changes;
     },
   });
+
+  // Highlight text helper
+  const renderHighlightedText = (result: SearchResult, field: 'text' | 'username') => {
+    const highlightedValue = result._highlightResult?.[field]?.value;
+    if (!highlightedValue) {
+      return result[field];
+    }
+
+    // Parse highlighted text and render with proper styling
+    const parts = highlightedValue.split(/(<em>|<\/em>)/);
+    return parts.map((part, index) => {
+      if (part === '<em>') return null;
+      if (part === '</em>') return null;
+      const isHighlighted = parts[index - 1] === '<em>';
+      return isHighlighted ? (
+        <mark key={index} className="bg-yellow-500/30 text-inherit">{part}</mark>
+      ) : (
+        part
+      );
+    });
+  };
 
   return (
     <>
@@ -209,6 +231,9 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
                   value: inputValue,
                 })}
               />
+              {isSearching && (
+                <div className="mr-2 text-gray-400 text-sm">検索中...</div>
+              )}
               <Button
                 variant="ghost"
                 size="icon"
@@ -254,11 +279,11 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
           </div>
 
           <div {...getMenuProps()}>
-            {comboboxIsOpen && filteredItems.length > 0 && (
+            {comboboxIsOpen && searchResults.length > 0 && (
               <div className="max-h-96 overflow-y-auto">
-                {filteredItems.map((item, index) => (
+                {searchResults.map((item, index) => (
                   <div
-                    key={item.id}
+                    key={item.objectID}
                     {...getItemProps({ item, index })}
                     className={`w-full p-3 sm:p-4 text-left transition-colors border-b border-gray-700/50 last:border-b-0 cursor-pointer ${
                       highlightedIndex === index
@@ -267,10 +292,10 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
                     }`}
                   >
                     <div className="text-xs sm:text-sm text-gray-400 mb-1 truncate">
-                      @{item.username} · {item.date}
+                      @{renderHighlightedText(item, 'username')} · {item.date}
                     </div>
                     <div className="text-white line-clamp-2 text-sm sm:text-base">
-                      {item.text}
+                      {renderHighlightedText(item, 'text')}
                     </div>
                   </div>
                 ))}
@@ -278,13 +303,13 @@ const SearchModal = ({ onClose }: { onClose: () => void }) => {
             )}
           </div>
 
-          {inputValue && filteredItems.length === 0 && (
+          {inputValue && searchResults.length === 0 && !isSearching && (
             <div className="p-6 sm:p-8 text-center text-gray-400 text-sm sm:text-base">
               「{inputValue}」に一致するツイートは見つかりませんでした
             </div>
           )}
 
-          {filteredItems.length > 0 && (
+          {searchResults.length > 0 && (
             <div className="p-2 text-xs text-gray-500 text-center border-t border-gray-700 hidden sm:block">
               ↑↓ で選択 · Enter で開く · Esc で閉じる
             </div>

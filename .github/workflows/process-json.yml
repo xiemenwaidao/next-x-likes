@@ -59,14 +59,18 @@ jobs:
       - name: '📇 Build tweet index'
         run: pnpm json:build-index
 
-      - name: '🔍 Build search index'
-        run: pnpm json:build-search
-
       - name: '🔗 Extract URLs from tweets'
         run: pnpm json:extract-urls
 
       - name: '📊 Build activity data'
         run: pnpm json:build-activity
+
+      - name: '🔍 Update Algolia search index'
+        run: pnpm json:update-algolia
+        env:
+          NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
+          NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY }}
+          ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
 
       - name: '🧀 Commit and push if changed'
         run: |
