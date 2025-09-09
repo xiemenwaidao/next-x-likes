@@ -2,6 +2,7 @@ import {
   S3Client,
   ListObjectsV2Command,
   GetObjectCommand,
+  DeleteObjectCommand,
 } from '@aws-sdk/client-s3';
 import { promises as fs } from 'fs';
 import { join, basename } from 'path';
@@ -215,6 +216,39 @@ async function downloadNewFiles() {
     console.log(`Downloaded: ${downloadedCount}`);
     console.log(`Skipped (file exists): ${skippedCount}`);
     console.log(`Skipped (already liked): ${duplicateCount}`);
+
+    // 古いファイルの削除処理
+    console.log('\nChecking for old files to delete from S3...');
+    const localFiles = await fs.readdir(tweetsV2Dir);
+    const localFileSet = new Set(localFiles.filter(f => f.endsWith('.json')));
+    
+    // lastSyncTime以前のS3ファイルで、既にローカルに存在するものを削除
+    const oldFiles = Contents.filter(
+      (file) => new Date(file.LastModified!) <= lastSyncTime
+    );
+    
+    let deletedCount = 0;
+    for (const file of oldFiles) {
+      const fileName = basename(file.Key!);
+      
+      // ローカルに存在するファイルのみ削除対象とする
+      if (localFileSet.has(fileName)) {
+        try {
+          const deleteCommand = new DeleteObjectCommand({
+            Bucket: process.env.AWS_BUCKET_NAME,
+            Key: file.Key,
+          });
+          
+          await s3Client.send(deleteCommand);
+          console.log(`Deleted from S3: ${fileName}`);
+          deletedCount++;
+        } catch (error) {
+          console.error(`Failed to delete ${fileName}:`, error);
+        }
+      }
+    }
+    
+    console.log(`\nDeleted ${deletedCount} old files from S3`);
 
     // 最終同期日時を更新（日本時間で記録）
     try {
