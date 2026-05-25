@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsx src/scripts/build-search-assets.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -25,9 +26,13 @@
     "ai:next-batch": "tsx src/scripts/db/next-batch.ts",
     "ai:upsert-result": "tsx src/scripts/db/upsert-result.ts",
     "ai:fetch-media": "tsx src/scripts/fetch-media.ts",
+    "ai:embed": "tsx src/scripts/embed-likes.ts",
+    "ai:build-search": "tsx src/scripts/build-search-assets.ts",
+    "ai:search": "tsx src/scripts/search-cli.ts",
     "prepare": "husky"
   },
   "dependencies": {
+    "@huggingface/transformers": "^4.2.0",
     "@libsql/client": "^0.17.3",
     "@next/third-parties": "^15.0.4",
     "@radix-ui/react-dialog": "^1.1.14",
@@ -41,6 +46,7 @@
     "date-fns-tz": "^3.2.0",
     "downshift": "^9.0.9",
     "lucide-react": "^0.465.0",
+    "minisearch": "^7.2.0",
     "next": "15.4.8",
     "next-view-transitions": "^0.3.4",
     "react": "19.0.0-rc-66855b96-20241106",
