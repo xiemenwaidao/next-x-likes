@@ -22,6 +22,9 @@
     "json:update-algolia": "tsx -r dotenv/config src/scripts/build-algolia-index-incremental.ts",
     "db:init": "tsx src/scripts/db/init-db.ts",
     "db:migrate": "tsx src/scripts/migrate-json-to-sqlite.ts",
+    "ai:next-batch": "tsx src/scripts/db/next-batch.ts",
+    "ai:upsert-result": "tsx src/scripts/db/upsert-result.ts",
+    "ai:fetch-media": "tsx src/scripts/fetch-media.ts",
     "prepare": "husky"
   },
   "dependencies": {
