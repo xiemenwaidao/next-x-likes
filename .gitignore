@@ -45,5 +45,10 @@ next-env.d.ts
 like-twitter-*.js
 src/content/archive/archive-likes-enriched.json
 
+# SQLite transient files (data/likes.db 本体はコミットする)
+*.db-shm
+*.db-wal
+*.db-journal
+
 # Claude Code settings
 .claude/

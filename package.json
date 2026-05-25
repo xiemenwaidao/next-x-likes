@@ -20,9 +20,12 @@
     "json:fetch-archive": "tsx src/scripts/fetch-archive-tweets.ts",
     "json:build-algolia": "tsx -r dotenv/config src/scripts/build-algolia-index.ts",
     "json:update-algolia": "tsx -r dotenv/config src/scripts/build-algolia-index-incremental.ts",
+    "db:init": "tsx src/scripts/db/init-db.ts",
+    "db:migrate": "tsx src/scripts/migrate-json-to-sqlite.ts",
     "prepare": "husky"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.3",
     "@next/third-parties": "^15.0.4",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-popover": "^1.1.2",
