@@ -84,5 +84,10 @@
     "cz-customizable": {
       "config": ".cz-config.cts"
     }
+  },
+  "pnpm": {
+    "neverBuiltDependencies": [
+      "onnxruntime-node"
+    ]
   }
 }
