@@ -2,15 +2,8 @@
 
 import { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
-import { DateInfo } from '@/types/like';
 
-export function Main({
-  children,
-  allDates: _allDates,
-}: {
-  children: ReactNode;
-  allDates: DateInfo[];
-}) {
+export function Main({ children }: { children: ReactNode }) {
   // 各ルートが独自レイアウトを持つようになったので、Main は単純な main 要素に。
   // /tweet/[id] と /likes/[date] は削除済み (検索/カテゴリに統合)。
   const pathname = usePathname();
