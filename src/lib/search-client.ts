@@ -130,6 +130,37 @@ export async function loadSearchAssets(opts?: {
   return { miniSearch, meta, metaById, embeddings, embedOrder, embedIndexById };
 }
 
+/** 既存の SearchAssets に embeddings を後追いで読み込む。Phase 3 (semantic/hybrid モード) 用。
+ *  戻り値は新しい SearchAssets オブジェクト (元のものは変更しない)。
+ */
+export async function loadEmbeddingsAddon(
+  assets: SearchAssets,
+  opts?: { baseUrl?: string },
+): Promise<SearchAssets> {
+  if (assets.embeddings) return assets; // 既にロード済み
+
+  const base = opts?.baseUrl ?? '/data';
+  const [bin, order] = await Promise.all([
+    fetchGz(`${base}/embeddings.bin.gz`),
+    fetchGzJson<string[]>(`${base}/embeddings-meta.json.gz`),
+  ]);
+  const embeddings = new Float32Array(bin);
+  const embedOrder = order;
+  const embedIndexById = new Map<string, number>();
+  for (let i = 0; i < order.length; i++) embedIndexById.set(order[i], i);
+  if (embeddings.length !== order.length * EMBED_DIM) {
+    throw new Error(
+      `embeddings size mismatch: floats=${embeddings.length} expected=${order.length * EMBED_DIM}`,
+    );
+  }
+  return {
+    ...assets,
+    embeddings,
+    embedOrder,
+    embedIndexById,
+  };
+}
+
 export function searchFts(
   assets: SearchAssets,
   query: string,
