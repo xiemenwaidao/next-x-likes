@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Archive, LinkIcon, CircleHelp, Loader2 } from 'lucide-react';
+import { Archive, LinkIcon, CircleHelp, Loader2, Search as SearchIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { AnnouncementList } from './announcements';
@@ -89,11 +89,33 @@ export function MenuGrid() {
             
             <div className="relative z-10 p-4 space-y-2">
               <Link
+                href="/search"
+                onClick={(e) => handleNavigation(e, '/search')}
+                className={`flex items-center gap-3 p-3 rounded-lg transition-all group w-full ${
+                  navigatingTo === '/search'
+                    ? 'bg-white/20 scale-95'
+                    : 'hover:bg-white/10'
+                }`}
+              >
+                <div className="w-10 h-10 rounded-lg bg-gray-800/50 flex items-center justify-center transition-transform group-hover:scale-110">
+                  {navigatingTo === '/search' ? (
+                    <Loader2 className="h-5 w-5 text-white animate-spin" />
+                  ) : (
+                    <SearchIcon className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
+                  )}
+                </div>
+                <div className="flex-1 text-left">
+                  <div className="font-medium text-white transition-colors" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Search</div>
+                  <div className="text-sm text-gray-400" style={{ fontFamily: '"SF Pro Display", -apple-system, system-ui, sans-serif' }}>Category & full-text search</div>
+                </div>
+              </Link>
+
+              <Link
                 href="/archive/1"
                 onClick={(e) => handleNavigation(e, '/archive/1')}
                 className={`flex items-center gap-3 p-3 rounded-lg transition-all group w-full ${
-                  navigatingTo === '/archive/1' 
-                    ? 'bg-white/20 scale-95' 
+                  navigatingTo === '/archive/1'
+                    ? 'bg-white/20 scale-95'
                     : 'hover:bg-white/10'
                 }`}
               >
