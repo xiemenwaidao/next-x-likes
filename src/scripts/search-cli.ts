@@ -149,8 +149,8 @@ async function main() {
   const docs = await loadDocs();
   process.stderr.write(`[load] ${docs.length} docs, ${docs.filter((d) => d.embedding).length} with embedding\n`);
 
-  let ftsScores = new Map<string, number>();
-  let semScores = new Map<string, number>();
+  const ftsScores = new Map<string, number>();
+  const semScores = new Map<string, number>();
 
   if (args.mode === 'fts' || args.mode === 'hybrid') {
     const ms = new MiniSearch({
