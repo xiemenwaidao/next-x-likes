@@ -144,11 +144,26 @@ body::before {
   z-index: 0;
 }
 
-/* single-column container */
+/* single-column container.
+ * Note: flex item の場合 min-width: auto がデフォルトで、子の min-content が
+ * viewport を超えると拡大してしまう (Calendar の table 等)。明示的に
+ * min-width: 0 を入れてモバイル幅でも縮むようにする。width: 100% で flex
+ * 親に対しても親幅を維持する。 */
 .col-28 {
+  width: 100%;
   max-width: 28rem;
+  min-width: 0;
   margin-inline: auto;
   padding-inline: 16px;
+  box-sizing: border-box;
+}
+
+/* Safety net: モバイルで意図しない横スクロールを抑止。
+ * カード内の widgets.js iframe や table 等が局所的にはみ出しても
+ * ページ全体が横スクロールしないようにする。 */
+html,
+body {
+  overflow-x: hidden;
 }
 
 /* Card primitives */
