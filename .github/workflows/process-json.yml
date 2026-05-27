@@ -65,12 +65,9 @@ jobs:
       - name: '📊 Build activity data'
         run: pnpm json:build-activity
 
-      - name: '🔍 Update Algolia search index'
-        run: pnpm json:update-algolia
-        env:
-          NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
-          NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY }}
-          ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+      # SQLite (data/likes.db) への取り込み・embedding 生成・サイトビルドは
+      # ここでは行わない。ローカルで `pnpm db:migrate && pnpm ai:embed && pnpm build`
+      # をまとめて流す運用 (溜まったときに手動)。
 
       - name: '🧀 Commit and push if changed'
         run: |
