@@ -152,14 +152,53 @@ pnpm json:build-activity  # 直近 7 日のアクティビティグラフ用
 
 ### Stage 2: ローカルで手動 (溜まったら気づいた時)
 
-新ツイートを **検索・カテゴリ閲覧で見えるようにする** ためには、ローカルで以下を流す:
+新ツイートを **検索・カテゴリ閲覧で見えるようにする** ためには、ローカルで以下を流す。
+ユーザーは Claude に **「いいね同期して」** または **「ローカル同期」** と一言で依頼する。
+Claude は以下を順に実行する (全自動でよい、確認は最初の残件数報告のみ)。
 
+```bash
+# 0. main 切替 + pull (GH Actions の自動 commit を取り込む)
+git checkout main && git pull --ff-only origin main
+
+# 1. 現状確認 (この数字をユーザーに最初に共有する)
+sqlite3 data/likes.db "SELECT
+  COUNT(*) AS total,
+  SUM(CASE WHEN parent_category IS NULL AND manual_override=0 AND private=0 AND notfound=0 THEN 1 ELSE 0 END) AS unclassified,
+  SUM(CASE WHEN embedding IS NULL THEN 1 ELSE 0 END) AS no_embedding
+FROM likes;"
+
+# 2. JSON → SQLite 取り込み (idempotent)
+pnpm db:migrate
+
+# 3. AI 分類 (未分類があれば like-classifier サブエージェントで処理)
+#    - 件数が 50 件以下なら 1 バッチで実行
+#    - 100 件超は /loop next-x-likes の Phase 2 一括分類タスク を提案
+
+# 4. 未 embedding 行に embedding 付与
+pnpm ai:embed
+
+# 5. 検索アセット再生成 (prebuild で public/data/*.gz 更新)
+pnpm build
+
+# 6. data/likes.db の差分をコミット + push
+git add data/likes.db
+git commit -m "🔧 chore: ローカル DB 同期 (+N 件)"
+git push origin main
+
+# 7. ★必須: 本番 CDN への反映を確認
+curl -sL "https://z.xiemen.me/data/likes-meta.json.gz" | gunzip | \
+  python3 -c "import json,sys; d=json.load(sys.stdin); \
+  print('latest:', max(m['l'] for m in d), 'total:', len(d))"
 ```
-pnpm db:migrate           # JSON → SQLite (tweet_id 主キーで idempotent upsert)
-pnpm ai:embed             # 未 embedding 行のみ multilingual-e5-small で生成
-                          # (AI 分類は別途 ai:next-batch + サブエージェント運用)
-pnpm build                # prebuild が public/data/*.gz を再生成 → 静的ページ生成
-```
+
+**gitlint の罠**: コミットメッセージ本文に `pnpm db:migrate` などの `xxx:yyy` 形式を
+書くと commitlint-config-gitmoji が `:migrate:` を gitmoji shortcode と誤認して
+弾く。本文では `pnpm db migrate` のようにコロンを抜くか、テキストを言い換える。
+
+**親 worktree との eslint 衝突**: `pnpm build` を流す前に `.eslintrc.json` が
+親階層 (`/Users/kadowakimichinori/claude-dev/x-likes/.eslintrc.json`) と衝突して
+lint がスキップされることがある。Vercel と同条件で lint を回したい場合は
+親側を `mv` で一時退避し、build 後に戻す。push 前に必ずこの手順で lint 通過を確認する。
 
 ### 取り扱い注意
 
