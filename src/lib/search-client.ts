@@ -43,7 +43,10 @@ export type SearchAssets = {
 };
 
 async function fetchGz(url: string): Promise<ArrayBuffer> {
-  const res = await fetch(url, { cache: 'force-cache' });
+  // cache: 'default' で HTTP の cache-control (Vercel から `max-age=0,
+  // must-revalidate`) に従う。force-cache だとデプロイ更新後もブラウザが
+  // 古い gz を返し続けて新ツイートが見えなくなる。
+  const res = await fetch(url, { cache: 'default' });
   if (!res.ok) throw new Error(`fetch ${url} -> ${res.status}`);
   const blob = await res.blob();
   const ds = new DecompressionStream('gzip');
