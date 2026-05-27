@@ -103,6 +103,10 @@ export function loadWidgets(): Promise<Twttr> {
 /**
  * 指定 tweet を container に埋め込む。
  * 戻り値の Promise は iframe 要素 (成功時) または null (削除済み等) を解決。
+ *
+ * conversation: 'all' を渡すと、対象 tweet が返信 (reply) のときに親ツイートも
+ * 同時に表示される (reply でない単独 tweet では何も足されない)。返信元の文脈を
+ * 失わずに眺められる利点があるので、デフォルトを 'all' にしている。
  */
 export async function createTweetEmbed(
   tweetId: string,
@@ -113,7 +117,7 @@ export async function createTweetEmbed(
   return twttr.widgets.createTweet(tweetId, container, {
     theme: 'dark',
     dnt: true,
-    conversation: 'none',
+    conversation: 'all',
     ...options,
   });
 }

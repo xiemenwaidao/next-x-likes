@@ -9,6 +9,15 @@ export interface Announcement {
 
 export const announcements: Announcement[] = [
   {
+    id: 'reply-conversation-2026-05-28',
+    icon: '💬',
+    title: '返信ツイートで親も表示',
+    description:
+      'いいねしたツイートが返信 (reply) のとき、X 公式埋め込みで親ツイートも同時に出すように切替。文脈を失わずに見返せます。',
+    isNew: true,
+    date: '2026-05-28',
+  },
+  {
     id: 'mobile-polish-2026-05-28',
     icon: '📱',
     title: 'モバイル UX を整備',
