@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
-import Link from 'next/link';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import {
   Search as SearchIcon,
   X,
@@ -9,9 +9,9 @@ import {
   Settings as GearIcon,
   Sparkles,
   Download,
-  ExternalLink,
+  CalendarDays,
 } from 'lucide-react';
-import { CATEGORIES, CATEGORY_BY_NAME } from '@/data/categories';
+import { CATEGORIES } from '@/data/categories';
 import {
   loadSearchAssets,
   loadEmbeddingsAddon,
@@ -21,14 +21,20 @@ import {
   type SearchAssets,
   type SearchHit,
 } from '@/lib/search-client';
+import { TweetEmbedCard } from '@/components/tweet-embed-card';
 
 const PAGE_SIZE = 12;
 const ONBOARDING_KEY = 'zk_onboarding_dismissed_v1';
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 type Mode = 'fts' | 'semantic' | 'hybrid';
 
 export function SearchPageClient() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
   // ---- アセット (FTS) ----
   const [assets, setAssets] = useState<SearchAssets | null>(null);
   const [loadState, setLoadState] = useState<LoadState>('idle');
@@ -38,13 +44,14 @@ export function SearchPageClient() {
   const [inputValue, setInputValue] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [category, setCategory] = useState<string | null>(null);
+  const [dateFilter, setDateFilter] = useState<string | null>(null);
   const [pageLimit, setPageLimit] = useState(PAGE_SIZE);
 
   // ---- モード ----
-  const [mode, setMode] = useState<Mode>('hybrid'); // デフォルト hybrid
-  const [hybridWeight, setHybridWeight] = useState(0.6); // semantic 寄り
+  const [mode, setMode] = useState<Mode>('hybrid');
+  const [hybridWeight, setHybridWeight] = useState(0.6);
 
-  // ---- 設定パネル (歯車) ----
+  // ---- 設定パネル ----
   const [showSettings, setShowSettings] = useState(false);
 
   // ---- onboarding ----
@@ -52,7 +59,7 @@ export function SearchPageClient() {
     'hidden' | 'idle' | 'downloading' | 'ready'
   >('hidden');
 
-  // ---- Semantic / embedder の lazy ロード状態 ----
+  // ---- Semantic / embedder lazy ロード ----
   const [embedAssetsState, setEmbedAssetsState] = useState<LoadState>('idle');
   const [embedderState, setEmbedderState] = useState<LoadState>('idle');
   const [embedderProgress, setEmbedderProgress] = useState<number>(0);
@@ -62,16 +69,32 @@ export function SearchPageClient() {
   const onComposition = useRef(false);
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // ---- localStorage から onboarding 状態を読み出し ----
+  // ---- URL の ?date= を初期化時に読む ----
+  useEffect(() => {
+    const d = searchParams?.get('date');
+    if (d && DATE_RE.test(d)) {
+      setDateFilter(d);
+    } else {
+      setDateFilter(null);
+    }
+  }, [searchParams]);
+
+  const clearDateFilter = useCallback(() => {
+    setDateFilter(null);
+    setPageLimit(PAGE_SIZE);
+    // URL からも除去
+    const sp = new URLSearchParams(searchParams?.toString() ?? '');
+    sp.delete('date');
+    const qs = sp.toString();
+    router.replace(qs ? `${pathname}?${qs}` : pathname);
+  }, [router, pathname, searchParams]);
+
+  // ---- localStorage から onboarding 状態 ----
   useEffect(() => {
     if (typeof window === 'undefined') return;
     try {
       const dismissed = window.localStorage.getItem(ONBOARDING_KEY);
-      if (dismissed === '1') {
-        setOnboardingState('hidden');
-      } else {
-        setOnboardingState('idle');
-      }
+      setOnboardingState(dismissed === '1' ? 'hidden' : 'idle');
     } catch {
       setOnboardingState('idle');
     }
@@ -86,7 +109,7 @@ export function SearchPageClient() {
     }
   }, []);
 
-  // ---- アセットのロード (FTS 用) ----
+  // ---- アセットロード ----
   useEffect(() => {
     let cancelled = false;
     setLoadState('loading');
@@ -107,7 +130,7 @@ export function SearchPageClient() {
     };
   }, []);
 
-  // ---- onboarding 完了済み or "準備する" 押下時に embeddings + モデルをロード ----
+  // ---- semantic bootstrap ----
   const startSemanticBootstrap = useCallback(() => {
     if (!assets || loadState !== 'ready') return;
     if (embedAssetsState === 'idle' && !assets.embeddings) {
@@ -128,9 +151,7 @@ export function SearchPageClient() {
       import('@/lib/query-embedder')
         .then(({ loadQueryEmbedder }) =>
           loadQueryEmbedder((p) => {
-            if (p.fraction !== null) {
-              setEmbedderProgress(p.fraction);
-            }
+            if (p.fraction !== null) setEmbedderProgress(p.fraction);
           }),
         )
         .then(() => {
@@ -144,23 +165,17 @@ export function SearchPageClient() {
     }
   }, [assets, loadState, embedAssetsState, embedderState]);
 
-  // ---- Hybrid モード (デフォルト) では、onboarding が dismissed 済みなら裏で起動 ----
   useEffect(() => {
     if (mode === 'fts') return;
     if (loadState !== 'ready') return;
-    // onboarding が「あとで」されている場合のみ自動起動 (新規ユーザーには banner で同意を求める)
-    if (onboardingState === 'hidden') {
-      startSemanticBootstrap();
-    }
+    if (onboardingState === 'hidden') startSemanticBootstrap();
   }, [mode, loadState, onboardingState, startSemanticBootstrap]);
 
-  // ---- onboarding の "準備する" を押した時 ----
   const handleStartDownload = useCallback(() => {
     setOnboardingState('downloading');
     startSemanticBootstrap();
   }, [startSemanticBootstrap]);
 
-  // ---- embedder/embeddings ready になったら onboarding を ready 状態へ ----
   useEffect(() => {
     if (
       onboardingState === 'downloading' &&
@@ -171,7 +186,7 @@ export function SearchPageClient() {
     }
   }, [onboardingState, embedderState, embedAssetsState]);
 
-  // ---- デバウンス (200ms) ----
+  // ---- デバウンス ----
   useEffect(() => {
     if (debounceTimer.current) clearTimeout(debounceTimer.current);
     debounceTimer.current = setTimeout(() => {
@@ -183,7 +198,7 @@ export function SearchPageClient() {
     };
   }, [inputValue]);
 
-  // ---- クエリを embedder で encode ----
+  // ---- クエリ encode ----
   useEffect(() => {
     if (mode === 'fts') {
       setQueryVec(null);
@@ -216,48 +231,65 @@ export function SearchPageClient() {
     };
   }, [debouncedQuery, mode, embedderState]);
 
-  // ---- 検索結果 ----
+  // ---- 検索結果 + date filter ----
   const results = useMemo<SearchHit[]>(() => {
     if (!assets || loadState !== 'ready') return [];
-    if (!debouncedQuery && !category) return [];
 
-    if (!debouncedQuery && category) {
+    // date のみ指定 (クエリ・カテゴリなし)
+    if (!debouncedQuery && !category && dateFilter) {
       const hits: SearchHit[] = [];
       for (const m of assets.meta) {
-        if (m.c !== category) continue;
+        if (m.l.slice(0, 10) !== dateFilter) continue;
         hits.push({ tweet_id: m.i, score: 0, matchedBy: 'fts', meta: m });
         if (hits.length >= 500) break;
       }
       return hits;
     }
 
+    if (!debouncedQuery && !category) return [];
+
+    // カテゴリのみ
+    if (!debouncedQuery && category) {
+      const hits: SearchHit[] = [];
+      for (const m of assets.meta) {
+        if (m.c !== category) continue;
+        if (dateFilter && m.l.slice(0, 10) !== dateFilter) continue;
+        hits.push({ tweet_id: m.i, score: 0, matchedBy: 'fts', meta: m });
+        if (hits.length >= 500) break;
+      }
+      return hits;
+    }
+
+    let baseHits: SearchHit[];
     if (mode === 'fts') {
-      return searchFts(assets, debouncedQuery, {
-        limit: 500,
+      baseHits = searchFts(assets, debouncedQuery, {
+        limit: 1000,
         category: category ?? undefined,
+      });
+    } else if (!queryVec || !assets.embeddings) {
+      baseHits = searchFts(assets, debouncedQuery, {
+        limit: 1000,
+        category: category ?? undefined,
+      });
+    } else if (mode === 'semantic') {
+      baseHits = searchSemantic(assets, queryVec, {
+        limit: 1000,
+        category: category ?? undefined,
+      });
+    } else {
+      baseHits = searchHybrid(assets, debouncedQuery, queryVec, {
+        limit: 1000,
+        category: category ?? undefined,
+        ftsWeight: 1 - hybridWeight,
+        semanticWeight: hybridWeight,
       });
     }
 
-    if (!queryVec || !assets.embeddings) {
-      return searchFts(assets, debouncedQuery, {
-        limit: 500,
-        category: category ?? undefined,
-      });
+    if (dateFilter) {
+      return baseHits.filter((h) => h.meta.l.slice(0, 10) === dateFilter).slice(0, 500);
     }
-
-    if (mode === 'semantic') {
-      return searchSemantic(assets, queryVec, {
-        limit: 500,
-        category: category ?? undefined,
-      });
-    }
-    return searchHybrid(assets, debouncedQuery, queryVec, {
-      limit: 500,
-      category: category ?? undefined,
-      ftsWeight: 1 - hybridWeight,
-      semanticWeight: hybridWeight,
-    });
-  }, [assets, loadState, debouncedQuery, category, mode, queryVec, hybridWeight]);
+    return baseHits.slice(0, 500);
+  }, [assets, loadState, debouncedQuery, category, dateFilter, mode, queryVec, hybridWeight]);
 
   const visibleResults = results.slice(0, pageLimit);
   const totalHits = results.length;
@@ -271,6 +303,7 @@ export function SearchPageClient() {
     if (!debouncedQuery) {
       for (const m of assets.meta) {
         if (!m.c) continue;
+        if (dateFilter && m.l.slice(0, 10) !== dateFilter) continue;
         counts.set(m.c, (counts.get(m.c) ?? 0) + 1);
       }
       return counts;
@@ -279,16 +312,15 @@ export function SearchPageClient() {
     for (const h of all) {
       const c = h.meta.c;
       if (!c) continue;
+      if (dateFilter && h.meta.l.slice(0, 10) !== dateFilter) continue;
       counts.set(c, (counts.get(c) ?? 0) + 1);
     }
     return counts;
-  }, [assets, loadState, debouncedQuery]);
+  }, [assets, loadState, debouncedQuery, dateFilter]);
 
-  // ---- 入力ハンドラ (IME 対応) ----
+  // ---- 入力ハンドラ ----
   const handleInputChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setInputValue(e.currentTarget.value);
-    },
+    (e: React.ChangeEvent<HTMLInputElement>) => setInputValue(e.currentTarget.value),
     [],
   );
   const handleCompositionStart = useCallback(() => {
@@ -302,9 +334,7 @@ export function SearchPageClient() {
     [],
   );
 
-  const semanticReady =
-    embedAssetsState === 'ready' && embedderState === 'ready';
-
+  const semanticReady = embedAssetsState === 'ready' && embedderState === 'ready';
   const modeLabel: Record<Mode, string> = {
     fts: 'キーワード',
     semantic: '意味',
@@ -320,7 +350,7 @@ export function SearchPageClient() {
   return (
     <div className="col-28" style={{ padding: '16px 16px 60px', display: 'flex', flexDirection: 'column', gap: 14 }}>
       {/* タイトル */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: '4px 2px 0' }}>
+      <div className="flex flex-col gap-1.5" style={{ padding: '4px 2px 0' }}>
         <div className="zk-section-label">search</div>
         <h1 style={{ fontSize: 18, fontWeight: 600, color: 'var(--text-0)', margin: 0 }}>
           検索
@@ -336,162 +366,40 @@ export function SearchPageClient() {
 
       {/* Onboarding banner */}
       {onboardingState === 'idle' && (
-        <div className="zk-banner">
-          <div className="flex items-start gap-3">
-            <div
-              className="flex items-center justify-center flex-shrink-0"
-              style={{
-                width: 32,
-                height: 32,
-                borderRadius: 8,
-                background: 'var(--zk-accent-soft)',
-                color: 'var(--zk-accent)',
-                boxShadow: 'inset 0 0 0 0.5px var(--zk-accent-line)',
-              }}
-            >
-              <Sparkles size={16} strokeWidth={1.5} />
-            </div>
-            <div className="flex-1 min-w-0">
-              <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--text-0)', lineHeight: 1.4 }}>
-                「意味で探す」を使えるようにする
-              </div>
-              <div style={{ fontSize: 11.5, color: 'var(--text-2)', marginTop: 4, lineHeight: 1.5 }}>
-                文章で似た内容を探せるようになります。
-                <br />
-                初回のみ <span className="font-mono" style={{ color: 'var(--text-1)' }}>25 MB</span> のモデルを端末に保存します — 一度きりです。
-              </div>
-              <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
-                <button
-                  type="button"
-                  onClick={handleStartDownload}
-                  style={{
-                    background: 'var(--zk-accent)',
-                    color: 'var(--zk-accent-fg)',
-                    border: 0,
-                    height: 32,
-                    padding: '0 14px',
-                    borderRadius: 8,
-                    fontSize: 12.5,
-                    fontWeight: 500,
-                    cursor: 'pointer',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 6,
-                  }}
-                >
-                  <Download size={13} strokeWidth={1.75} /> 準備する (25 MB)
-                </button>
-                <button
-                  type="button"
-                  onClick={dismissOnboarding}
-                  style={{
-                    background: 'transparent',
-                    color: 'var(--text-2)',
-                    border: 0,
-                    height: 32,
-                    padding: '0 12px',
-                    borderRadius: 8,
-                    fontSize: 12.5,
-                    cursor: 'pointer',
-                  }}
-                >
-                  あとで
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <OnboardingBanner onStart={handleStartDownload} onLater={dismissOnboarding} />
       )}
-
-      {/* DL 進行中 */}
       {onboardingState === 'downloading' && (
-        <div className="zk-banner">
-          <div className="flex items-start gap-3">
-            <div
-              className="flex items-center justify-center flex-shrink-0"
-              style={{
-                width: 32,
-                height: 32,
-                borderRadius: 8,
-                background: 'var(--zk-accent-soft)',
-                color: 'var(--zk-accent)',
-                boxShadow: 'inset 0 0 0 0.5px var(--zk-accent-line)',
-              }}
-            >
-              <Loader2 size={16} strokeWidth={1.5} className="animate-spin" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--text-0)' }}>
-                モデルを準備しています…
-              </div>
-              <div
-                style={{
-                  marginTop: 10,
-                  height: 4,
-                  borderRadius: 2,
-                  background: 'oklch(28% 0.012 250)',
-                  overflow: 'hidden',
-                }}
-              >
-                <div
-                  style={{
-                    height: '100%',
-                    width: `${Math.min(100, Math.round(embedderProgress * 100))}%`,
-                    background: 'var(--zk-accent)',
-                    transition: 'width .12s linear',
-                  }}
-                />
-              </div>
-              <div
-                className="font-mono flex justify-between"
-                style={{ fontSize: 10.5, color: 'var(--text-3)', marginTop: 6 }}
-              >
-                <span>multilingual-e5-small</span>
-                <span>{Math.min(100, Math.round(embedderProgress * 100))}%</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <DownloadingBanner progress={embedderProgress} />
+      )}
+      {onboardingState === 'ready' && (
+        <ReadyBanner onClose={dismissOnboarding} />
       )}
 
-      {/* 準備完了 success notification */}
-      {onboardingState === 'ready' && (
+      {/* date filter chip */}
+      {dateFilter && (
         <div
           className="flex items-center gap-2"
           style={{
-            fontSize: 11.5,
-            color: 'oklch(70% 0.13 160)',
             padding: '8px 12px',
-            borderRadius: 8,
-            background: 'oklch(20% 0.04 160 / 0.4)',
-            boxShadow: 'inset 0 0 0 0.5px oklch(50% 0.12 160 / 0.4)',
+            borderRadius: 10,
+            background: 'var(--zk-accent-soft)',
+            color: 'var(--text-0)',
+            boxShadow: 'inset 0 0 0 0.5px var(--zk-accent-line)',
+            fontSize: 12.5,
           }}
         >
-          <span
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: '50%',
-              background: 'oklch(70% 0.18 160)',
-              boxShadow: '0 0 8px oklch(70% 0.18 160 / 0.6)',
-            }}
-          />
-          意味検索が使えるようになりました
+          <CalendarDays size={14} strokeWidth={1.75} style={{ color: 'var(--zk-accent)' }} />
+          <span className="font-mono">{dateFilter}</span>
+          <span style={{ color: 'var(--text-2)' }}>のいいねに絞り込み中</span>
           <span className="flex-1" />
           <button
             type="button"
-            onClick={dismissOnboarding}
-            className="font-mono"
-            style={{
-              background: 'transparent',
-              border: 0,
-              color: 'inherit',
-              cursor: 'pointer',
-              opacity: 0.7,
-              fontSize: 10.5,
-            }}
+            onClick={clearDateFilter}
+            className="zk-icon-btn"
+            style={{ width: 24, height: 24 }}
+            aria-label="日付フィルタを解除"
           >
-            ✕
+            <X size={12} strokeWidth={1.75} />
           </button>
         </div>
       )}
@@ -542,7 +450,7 @@ export function SearchPageClient() {
         </button>
       </div>
 
-      {/* Settings sheet (gear-hidden) */}
+      {/* Settings sheet */}
       {showSettings && (
         <div className="zk-sheet">
           <div className="flex items-center justify-between" style={{ paddingBottom: 4, borderBottom: '0.5px solid var(--line-soft)', marginBottom: 2 }}>
@@ -557,24 +465,8 @@ export function SearchPageClient() {
             </div>
             <div className="seg">
               <button type="button" data-on={mode === 'fts' ? '1' : '0'} onClick={() => setMode('fts')}>FTS</button>
-              <button
-                type="button"
-                data-on={mode === 'semantic' ? '1' : '0'}
-                onClick={() => semanticReady && setMode('semantic')}
-                disabled={!semanticReady}
-                style={{ opacity: semanticReady ? 1 : 0.4 }}
-              >
-                Semantic
-              </button>
-              <button
-                type="button"
-                data-on={mode === 'hybrid' ? '1' : '0'}
-                onClick={() => semanticReady && setMode('hybrid')}
-                disabled={!semanticReady}
-                style={{ opacity: semanticReady ? 1 : 0.4 }}
-              >
-                Hybrid
-              </button>
+              <button type="button" data-on={mode === 'semantic' ? '1' : '0'} onClick={() => semanticReady && setMode('semantic')} disabled={!semanticReady} style={{ opacity: semanticReady ? 1 : 0.4 }}>Semantic</button>
+              <button type="button" data-on={mode === 'hybrid' ? '1' : '0'} onClick={() => semanticReady && setMode('hybrid')} disabled={!semanticReady} style={{ opacity: semanticReady ? 1 : 0.4 }}>Hybrid</button>
             </div>
           </div>
 
@@ -627,12 +519,7 @@ export function SearchPageClient() {
       {/* カテゴリチップ */}
       {loadState === 'ready' && (
         <div className="flex flex-wrap gap-1.5" style={{ marginTop: 2 }}>
-          <button
-            type="button"
-            className="zk-pill"
-            data-on={category === null ? '1' : '0'}
-            onClick={() => setCategory(null)}
-          >
+          <button type="button" className="zk-pill" data-on={category === null ? '1' : '0'} onClick={() => setCategory(null)}>
             すべて
             <span className="count">{totalDocs.toLocaleString()}</span>
           </button>
@@ -667,7 +554,7 @@ export function SearchPageClient() {
         </div>
       )}
 
-      {/* Result meta line */}
+      {/* Result meta */}
       {loadState === 'ready' && (
         <div className="flex items-center gap-2" style={{ padding: '4px 4px', fontSize: 11, color: 'var(--text-3)' }}>
           <span className="font-mono">{totalHits.toLocaleString()} 件</span>
@@ -680,7 +567,7 @@ export function SearchPageClient() {
             </>
           )}
           <span className="flex-1" />
-          {totalHits > 0 && <span className="font-mono">関連度順</span>}
+          {totalHits > 0 && <span className="font-mono">{dateFilter ? '日付順' : '関連度順'}</span>}
         </div>
       )}
 
@@ -701,7 +588,7 @@ export function SearchPageClient() {
       {/* Results */}
       {loadState === 'ready' && (
         <>
-          {totalHits === 0 && (debouncedQuery || category) ? (
+          {totalHits === 0 && (debouncedQuery || category || dateFilter) ? (
             <div className="zk-empty">
               <div style={{ fontSize: 24, opacity: 0.4 }}>—</div>
               <div style={{ fontSize: 12 }}>該当するいいねが見つかりませんでした</div>
@@ -709,12 +596,25 @@ export function SearchPageClient() {
           ) : totalHits === 0 ? (
             <div className="zk-empty">
               <div style={{ fontSize: 24, opacity: 0.4 }}>—</div>
-              <div style={{ fontSize: 12 }}>キーワードを入力するか、カテゴリを選択してください</div>
+              <div style={{ fontSize: 12 }}>キーワードを入力するか、カテゴリ・日付で絞り込んでください</div>
             </div>
           ) : (
             <div className="flex flex-col gap-2.5">
               {visibleResults.map((hit) => (
-                <SearchResultCard key={hit.tweet_id} hit={hit} mode={mode} />
+                <TweetEmbedCard
+                  key={hit.tweet_id}
+                  meta={{
+                    tweet_id: hit.meta.i,
+                    username: hit.meta.u,
+                    liked_at: hit.meta.l,
+                    category: hit.meta.c,
+                    summary_ja: hit.meta.s,
+                    sub_tags: hit.meta.g,
+                    text: hit.meta.t,
+                    score: hit.score,
+                    showScore: mode !== 'fts',
+                  }}
+                />
               ))}
             </div>
           )}
@@ -744,106 +644,160 @@ export function SearchPageClient() {
   );
 }
 
-function Score({ value }: { value: number }) {
-  const tier = value >= 0.85 ? 3 : value >= 0.7 ? 2 : 1;
+function OnboardingBanner({ onStart, onLater }: { onStart: () => void; onLater: () => void }) {
   return (
-    <span className="zk-score-stars" aria-label={`関連度 ${tier}/3`}>
-      <i />
-      <i className={tier < 2 ? 'dim' : ''} />
-      <i className={tier < 3 ? 'dim' : ''} />
-    </span>
-  );
-}
-
-function SearchResultCard({ hit, mode }: { hit: SearchHit; mode: Mode }) {
-  const { meta } = hit;
-  const date = meta.l ? meta.l.slice(0, 10) : '';
-  const cat = meta.c ? CATEGORY_BY_NAME[meta.c] : undefined;
-  const showScore = mode !== 'fts' && hit.score > 0;
-
-  return (
-    <article
-      className="zk-card"
-      style={{
-        padding: '16px 16px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 10,
-      }}
-    >
-      {/* meta row */}
-      <div className="flex items-center gap-2 flex-wrap">
-        <span className="font-mono" style={{ fontSize: 11.5, color: 'var(--text-2)' }}>
-          @{meta.u}
-        </span>
-        <span style={{ color: 'var(--text-3)', fontSize: 11 }}>·</span>
-        {date && (
-          <span className="font-mono" style={{ fontSize: 11, color: 'var(--text-3)' }}>
-            {date}
-          </span>
-        )}
-        {cat && (
-          <span className="zk-pill-xs" style={{ ['--hue' as never]: cat.hue }}>
-            <i
-              style={{
-                width: 6,
-                height: 6,
-                borderRadius: '50%',
-                background: `oklch(60% 0.18 ${cat.hue})`,
-              }}
-            />
-            {cat.label_ja}
-          </span>
-        )}
-        <span className="flex-1" />
-        {showScore && <Score value={hit.score} />}
-      </div>
-
-      {/* summary (bold white) */}
-      {meta.s && (
+    <div className="zk-banner">
+      <div className="flex items-start gap-3">
         <div
+          className="flex items-center justify-center flex-shrink-0"
           style={{
-            fontSize: 15,
-            fontWeight: 500,
-            color: 'var(--text-0)',
-            lineHeight: 1.55,
-            textWrap: 'pretty',
+            width: 32,
+            height: 32,
+            borderRadius: 8,
+            background: 'var(--zk-accent-soft)',
+            color: 'var(--zk-accent)',
+            boxShadow: 'inset 0 0 0 0.5px var(--zk-accent-line)',
           }}
         >
-          {meta.s}
+          <Sparkles size={16} strokeWidth={1.5} />
         </div>
-      )}
-
-      {/* body */}
-      <div
-        style={{
-          fontSize: 13.5,
-          color: 'var(--text-2)',
-          lineHeight: 1.7,
-          textWrap: 'pretty',
-        }}
-      >
-        {meta.t}
+        <div className="flex-1 min-w-0">
+          <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--text-0)', lineHeight: 1.4 }}>
+            「意味で探す」を使えるようにする
+          </div>
+          <div style={{ fontSize: 11.5, color: 'var(--text-2)', marginTop: 4, lineHeight: 1.5 }}>
+            文章で似た内容を探せるようになります。
+            <br />
+            初回のみ <span className="font-mono" style={{ color: 'var(--text-1)' }}>25 MB</span> のモデルを端末に保存します — 一度きりです。
+          </div>
+          <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+            <button
+              type="button"
+              onClick={onStart}
+              style={{
+                background: 'var(--zk-accent)',
+                color: 'var(--zk-accent-fg)',
+                border: 0,
+                height: 32,
+                padding: '0 14px',
+                borderRadius: 8,
+                fontSize: 12.5,
+                fontWeight: 500,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+              }}
+            >
+              <Download size={13} strokeWidth={1.75} /> 準備する (25 MB)
+            </button>
+            <button
+              type="button"
+              onClick={onLater}
+              style={{
+                background: 'transparent',
+                color: 'var(--text-2)',
+                border: 0,
+                height: 32,
+                padding: '0 12px',
+                borderRadius: 8,
+                fontSize: 12.5,
+                cursor: 'pointer',
+              }}
+            >
+              あとで
+            </button>
+          </div>
+        </div>
       </div>
-
-      {/* footer: tags + open icon */}
-      <div className="flex items-center gap-1.5 flex-wrap" style={{ marginTop: 2 }}>
-        {meta.g.slice(0, 4).map((t) => (
-          <span key={t} className="zk-tag">
-            #{t}
-          </span>
-        ))}
-        <span className="flex-1" />
-        <Link
-          href={`/tweet/${meta.i}`}
-          className="zk-icon-btn"
-          style={{ width: 28, height: 28, color: 'var(--text-3)' }}
-          aria-label="開く"
-        >
-          <ExternalLink size={12} strokeWidth={1.75} />
-        </Link>
-      </div>
-    </article>
+    </div>
   );
 }
 
+function DownloadingBanner({ progress }: { progress: number }) {
+  return (
+    <div className="zk-banner">
+      <div className="flex items-start gap-3">
+        <div
+          className="flex items-center justify-center flex-shrink-0"
+          style={{
+            width: 32,
+            height: 32,
+            borderRadius: 8,
+            background: 'var(--zk-accent-soft)',
+            color: 'var(--zk-accent)',
+            boxShadow: 'inset 0 0 0 0.5px var(--zk-accent-line)',
+          }}
+        >
+          <Loader2 size={16} strokeWidth={1.5} className="animate-spin" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--text-0)' }}>
+            モデルを準備しています…
+          </div>
+          <div
+            style={{
+              marginTop: 10,
+              height: 4,
+              borderRadius: 2,
+              background: 'oklch(28% 0.012 250)',
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              style={{
+                height: '100%',
+                width: `${Math.min(100, Math.round(progress * 100))}%`,
+                background: 'var(--zk-accent)',
+                transition: 'width .12s linear',
+              }}
+            />
+          </div>
+          <div
+            className="font-mono flex justify-between"
+            style={{ fontSize: 10.5, color: 'var(--text-3)', marginTop: 6 }}
+          >
+            <span>multilingual-e5-small</span>
+            <span>{Math.min(100, Math.round(progress * 100))}%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ReadyBanner({ onClose }: { onClose: () => void }) {
+  return (
+    <div
+      className="flex items-center gap-2"
+      style={{
+        fontSize: 11.5,
+        color: 'oklch(70% 0.13 160)',
+        padding: '8px 12px',
+        borderRadius: 8,
+        background: 'oklch(20% 0.04 160 / 0.4)',
+        boxShadow: 'inset 0 0 0 0.5px oklch(50% 0.12 160 / 0.4)',
+      }}
+    >
+      <span
+        style={{
+          width: 6,
+          height: 6,
+          borderRadius: '50%',
+          background: 'oklch(70% 0.18 160)',
+          boxShadow: '0 0 8px oklch(70% 0.18 160 / 0.6)',
+        }}
+      />
+      意味検索が使えるようになりました
+      <span className="flex-1" />
+      <button
+        type="button"
+        onClick={onClose}
+        className="font-mono"
+        style={{ background: 'transparent', border: 0, color: 'inherit', cursor: 'pointer', opacity: 0.7, fontSize: 10.5 }}
+      >
+        ✕
+      </button>
+    </div>
+  );
+}

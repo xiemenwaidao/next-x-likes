@@ -2,8 +2,9 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, ExternalLink } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import type { Category } from '@/data/categories';
+import { TweetEmbedCard } from '@/components/tweet-embed-card';
 import type { CategoryTweet } from './page';
 
 type Props = {
@@ -192,7 +193,19 @@ export function CategoryPageClient({ category, count, total, tweets, subTags }: 
         ) : (
           <div className="flex flex-col gap-2.5">
             {visible.map((t) => (
-              <CategoryResultCard key={t.tweet_id} tweet={t} category={category} />
+              <TweetEmbedCard
+                key={t.tweet_id}
+                meta={{
+                  tweet_id: t.tweet_id,
+                  username: t.username,
+                  liked_at: t.liked_at,
+                  category: category.name,
+                  summary_ja: t.summary_ja,
+                  sub_tags: t.sub_tags,
+                  text: t.text,
+                  showScore: false,
+                }}
+              />
             ))}
           </div>
         )}
@@ -221,91 +234,3 @@ export function CategoryPageClient({ category, count, total, tweets, subTags }: 
   );
 }
 
-function CategoryResultCard({
-  tweet,
-  category,
-}: {
-  tweet: CategoryTweet;
-  category: Category;
-}) {
-  const date = tweet.liked_at ? tweet.liked_at.slice(0, 10) : '';
-
-  return (
-    <article
-      className="zk-card"
-      style={{
-        padding: '16px 16px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 10,
-      }}
-    >
-      <div className="flex items-center gap-2 flex-wrap">
-        <span className="font-mono" style={{ fontSize: 11.5, color: 'var(--text-2)' }}>
-          @{tweet.username}
-        </span>
-        {date && (
-          <>
-            <span style={{ color: 'var(--text-3)', fontSize: 11 }}>·</span>
-            <span className="font-mono" style={{ fontSize: 11, color: 'var(--text-3)' }}>
-              {date}
-            </span>
-          </>
-        )}
-        <span className="zk-pill-xs">
-          <i
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: '50%',
-              background: `oklch(60% 0.18 ${category.hue})`,
-            }}
-          />
-          {category.label_ja}
-        </span>
-      </div>
-
-      {tweet.summary_ja && (
-        <div
-          style={{
-            fontSize: 15,
-            fontWeight: 500,
-            color: 'var(--text-0)',
-            lineHeight: 1.55,
-            textWrap: 'pretty',
-          }}
-        >
-          {tweet.summary_ja}
-        </div>
-      )}
-
-      <div
-        style={{
-          fontSize: 13.5,
-          color: 'var(--text-2)',
-          lineHeight: 1.7,
-          textWrap: 'pretty',
-        }}
-      >
-        {tweet.text}
-      </div>
-
-      <div className="flex items-center gap-1.5 flex-wrap" style={{ marginTop: 2 }}>
-        {tweet.sub_tags.slice(0, 4).map((t) => (
-          <span key={t} className="zk-tag">
-            #{t}
-          </span>
-        ))}
-        <span className="flex-1" />
-        <Link
-          href={`/tweet/${tweet.tweet_id}`}
-          className="zk-icon-btn"
-          style={{ width: 28, height: 28, color: 'var(--text-3)' }}
-          aria-label="開く"
-        >
-          <ExternalLink size={12} strokeWidth={1.75} />
-        </Link>
-      </div>
-    </article>
-  );
-}
