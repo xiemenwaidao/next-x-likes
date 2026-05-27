@@ -84,7 +84,7 @@ export function CalendarPicker({
     setDisplayMonth,
   ]);
 
-  // 日付選択時のナビゲーション
+  // 日付選択時のナビゲーション (/search?date=YYYY-MM-DD に遷移)
   const handleSelect = useCallback(
     (date: Date | undefined) => {
       setSelectedDate(date);
@@ -92,10 +92,11 @@ export function CalendarPicker({
         router.push('/');
         return;
       }
-      const formattedDate = `/likes/${date.getFullYear()}-${String(
-        date.getMonth() + 1,
-      ).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-      router.push(formattedDate);
+      const ymd = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(
+        2,
+        '0',
+      )}-${String(date.getDate()).padStart(2, '0')}`;
+      router.push(`/search?date=${ymd}`);
     },
     [router, setSelectedDate],
   );

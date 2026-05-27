@@ -1,22 +1,46 @@
-import { LogoSVG } from './logo-svg';
+'use client';
+
 import Link from 'next/link';
-import { SearchBox } from './search';
+import { usePathname } from 'next/navigation';
+import { Search as SearchIcon } from 'lucide-react';
+import { LogoSVG } from './logo-svg';
 import { MenuGrid } from './menu-grid';
 
 export const Header = () => {
+  const pathname = usePathname();
+  const onSearch = pathname?.startsWith('/search');
+
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-gray-900/50 border-b border-gray-700/30">
-      <div className="max-w-[28rem] mx-auto px-4">
-        <div className="flex items-center h-16">
-          <h1 className="flex-none">
-            <Link href="/">
-              <LogoSVG width={80} />
-            </Link>
-          </h1>
-          <div className="grow"></div>
-          <SearchBox />
-          <MenuGrid />
-        </div>
+    <header
+      className="sticky top-0 z-30 w-full"
+      style={{
+        background: 'oklch(15% 0.012 250 / 0.7)',
+        backdropFilter: 'blur(18px) saturate(160%)',
+        WebkitBackdropFilter: 'blur(18px) saturate(160%)',
+        borderBottom: '0.5px solid var(--line-soft)',
+      }}
+    >
+      <div className="col-28 flex items-center gap-2" style={{ height: 56 }}>
+        <Link
+          href="/"
+          aria-label="ホーム"
+          className="zk-icon-btn"
+          style={{ marginLeft: -8, width: 'auto', padding: '0 8px' }}
+        >
+          <span className="flex items-baseline gap-1.5">
+            <LogoSVG width={80} />
+          </span>
+        </Link>
+        <div className="flex-1" />
+        <Link
+          href="/search"
+          aria-label="検索"
+          className="zk-icon-btn"
+          data-active={onSearch ? '1' : '0'}
+        >
+          <SearchIcon size={17} strokeWidth={1.75} />
+        </Link>
+        <MenuGrid />
       </div>
     </header>
   );

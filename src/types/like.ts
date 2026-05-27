@@ -1,4 +1,4 @@
-import { Tweet } from 'react-tweet/api';
+import type { Tweet } from 'react-tweet/api';
 
 export interface TweetWithCard extends Tweet {
   card?: {

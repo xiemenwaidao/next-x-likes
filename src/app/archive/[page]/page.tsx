@@ -1,17 +1,15 @@
 import { notFound } from 'next/navigation';
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { CustomTweet } from '@/components/custom-tweet';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Archive, CircleHelp } from 'lucide-react';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { Archive, CircleHelp } from 'lucide-react';
-import { Tweet } from 'react-tweet/api';
+import { Button } from '@/components/ui/button';
 import { Pagination } from '@/components/pagination';
+import { TweetEmbedCard } from '@/components/tweet-embed-card';
 
 export const dynamic = 'force-static';
 export const revalidate = false;
@@ -23,7 +21,12 @@ interface ArchiveLike {
   expandedUrl: string;
   isArchive: true;
   processedAt: string;
-  react_tweet_data?: Tweet;
+  // 旧 react_tweet_data は最小限の互換用に残す
+  react_tweet_data?: {
+    user?: { screen_name?: string };
+    text?: string;
+    created_at?: string;
+  };
   private?: boolean;
   notfound?: boolean;
   fetchedAt?: string;
@@ -51,7 +54,6 @@ export async function generateStaticParams() {
     const pageFiles = files.filter(
       (f) => f.startsWith('page-') && f.endsWith('.json'),
     );
-
     return pageFiles.map((file) => ({
       page: file.replace('page-', '').replace('.json', ''),
     }));
@@ -78,19 +80,17 @@ export default async function ArchivePageView({ params }: Props) {
   const { page: pageParam } = await params;
   const pageData = await getPageData(pageParam);
 
-  if (!pageData) {
-    notFound();
-  }
+  if (!pageData) notFound();
 
   const { page, totalPages, totalLikes, likes } = pageData;
   const startIndex = (page - 1) * ITEMS_PER_PAGE;
   const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, totalLikes);
 
   return (
-    <div className="max-w-md mx-auto">
-      <div className="flex items-center justify-center gap-2 mb-2">
-        <Archive className="h-5 w-5" />
-        <h1 className="text-xl font-bold text-center">Archive</h1>
+    <div className="col-28" style={{ padding: '16px 16px 60px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <div className="flex items-center justify-center gap-2 mb-1">
+        <Archive className="h-5 w-5" style={{ color: 'var(--text-2)' }} />
+        <h1 style={{ fontSize: 18, fontWeight: 600, color: 'var(--text-0)', margin: 0 }}>Archive</h1>
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="ghost" size="icon" className="h-6 w-6 cursor-pointer">
@@ -98,90 +98,48 @@ export default async function ArchivePageView({ params }: Props) {
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-64 p-3">
-            <p className="text-sm text-gray-300">
+            <p className="text-sm" style={{ color: 'var(--text-2)' }}>
               2024年11月以前（本プロジェクト開始前）にいいねしたツイート一覧
             </p>
           </PopoverContent>
         </Popover>
       </div>
-      <p className="text-gray-400 mb-4 text-center text-sm">
-        計 {totalLikes.toLocaleString()} 件中 {startIndex + 1}-{endIndex}{' '}
-        件を表示
-      </p>
-
-      {/* 上部ページネーション */}
-      <div className="mb-6">
-        <Pagination
-          currentPage={page}
-          totalPages={totalPages}
-          basePath="/archive"
-        />
+      <div className="text-center" style={{ fontSize: 12, color: 'var(--text-3)' }}>
+        計 {totalLikes.toLocaleString()} 件中 {startIndex + 1}-{endIndex} 件
       </div>
 
-      {/* Tweets */}
-      <div className="w-full max-w-md mx-auto space-y-4 py-4 p-0 relative">
-        {/* Sticky header */}
-        <div className="sticky top-[4.25rem] z-40 text-center mb-6">
-          <h2 className="inline-flex items-center gap-2 px-4 py-1.5 backdrop-blur-md bg-gray-800/60 border border-gray-700/50 rounded-full text-sm font-medium text-gray-300 shadow-lg">
-            <Archive className="h-4 w-4" />
-            <span className="text-gray-200">Archive Page {page}</span>
-          </h2>
-        </div>
+      <Pagination currentPage={page} totalPages={totalPages} basePath="/archive" />
 
+      <div className="flex flex-col gap-2.5">
         {likes.map((like) => {
-          if (like.react_tweet_data) {
-            return (
-              <CustomTweet
-                key={like.id}
-                tweetId={like.tweetId}
-                tweetData={like.react_tweet_data}
-                isPrivate={!!like.private}
-                isNotFound={!!like.notfound}
-              />
-            );
-          } else if (like.private || like.notfound) {
-            return (
-              <Card key={like.id} className="opacity-60">
-                <CardContent className="pt-6">
-                  <p className="text-sm text-muted-foreground mb-2">
-                    {like.private ? 'This tweet is private' : 'Tweet not found'}
-                    : {like.tweetId}
-                  </p>
-                  {like.fullText && <p className="text-sm">{like.fullText}</p>}
-                  <a
-                    href={like.expandedUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-blue-500 hover:underline mt-2 inline-block"
-                  >
-                    View on Twitter →
-                  </a>
-                </CardContent>
-              </Card>
-            );
-          }
-          return null;
+          const username = like.react_tweet_data?.user?.screen_name ?? 'unknown';
+          const likedAt = like.fetchedAt ?? like.processedAt ?? '';
+          return (
+            <TweetEmbedCard
+              key={like.id}
+              meta={{
+                tweet_id: like.tweetId,
+                username,
+                liked_at: likedAt,
+                category: null,
+                summary_ja: null,
+                sub_tags: [],
+                text: like.fullText ?? like.react_tweet_data?.text ?? '',
+                showScore: false,
+              }}
+            />
+          );
         })}
 
         {likes.length === 0 && (
-          <Card>
-            <CardContent className="pt-6">
-              <p className="text-center text-muted-foreground">
-                No tweets available on this page.
-              </p>
-            </CardContent>
-          </Card>
+          <div className="zk-empty">
+            <div>—</div>
+            <div>このページにはツイートがありません</div>
+          </div>
         )}
       </div>
 
-      {/* 下部ページネーション */}
-      <div className="mt-8">
-        <Pagination
-          currentPage={page}
-          totalPages={totalPages}
-          basePath="/archive"
-        />
-      </div>
+      <Pagination currentPage={page} totalPages={totalPages} basePath="/archive" />
     </div>
   );
 }
