@@ -11,9 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function SearchPage() {
-  return (
-    <div className="w-full">
-      <SearchPageClient />
-    </div>
-  );
+  return <SearchPageClient />;
 }

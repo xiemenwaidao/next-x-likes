@@ -1,14 +1,19 @@
-import { RecentActivityGraph } from '@/components/recent-activity-graph';
-import { ActivityData } from '@/lib/activity-helper';
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 import path from 'path';
 import { readdir, readFile } from 'fs/promises';
 import { cache } from 'react';
 import { toZonedTime, format } from 'date-fns-tz';
+import { ActivityData } from '@/lib/activity-helper';
+import { getDb } from '@/lib/db';
+import { HomeTabs } from '@/components/home-tabs';
+import type { DateInfo } from '@/types/like';
 
-const getAllDates = cache(async () => {
+const getAllDates = cache(async (): Promise<DateInfo[]> => {
   const contentPath = path.join(process.cwd(), 'src/content/likes');
   const years = await readdir(contentPath);
-  const dates = [];
+  const dates: DateInfo[] = [];
 
   for (const year of years) {
     const monthsPath = path.join(contentPath, year);
@@ -33,13 +38,14 @@ const getAllDates = cache(async () => {
   return dates;
 });
 
-
 const getRecentActivityData = cache(async (): Promise<ActivityData[]> => {
   try {
-    // 本番環境では静的に生成されたactivity-data.jsonを使用
     const activityFilePath = path.join(process.cwd(), 'public/activity-data.json');
-    
-    if (await readFile(activityFilePath, 'utf-8').then(() => true).catch(() => false)) {
+    if (
+      await readFile(activityFilePath, 'utf-8')
+        .then(() => true)
+        .catch(() => false)
+    ) {
       const activityCache = JSON.parse(await readFile(activityFilePath, 'utf-8'));
       return activityCache.activities || [];
     }
@@ -47,25 +53,22 @@ const getRecentActivityData = cache(async (): Promise<ActivityData[]> => {
     console.log('Static activity data not found, generating dynamically...');
   }
 
-  // フォールバック: 動的にデータを生成（開発環境など）
   const allDates = await getAllDates();
   const activityData: ActivityData[] = [];
-  
-  // 当日のデータを除外して完全性を保証
+
   const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
   const todayJapan = format(nowJapan, 'yyyy-MM-dd', { timeZone: 'Asia/Tokyo' });
-  
-  // 利用可能な日付から当日を除外して最新の7日分を取得
+
   const sortedDates = allDates
-    .map(d => ({
+    .map((d) => ({
       ...d,
       dateObj: new Date(Number(d.year), Number(d.month) - 1, Number(d.day)),
-      dateString: `${d.year}-${d.month.padStart(2, '0')}-${d.day.padStart(2, '0')}`
+      dateString: `${d.year}-${d.month.padStart(2, '0')}-${d.day.padStart(2, '0')}`,
     }))
-    .filter(d => d.dateString < todayJapan) // 当日のデータを除外
+    .filter((d) => d.dateString < todayJapan)
     .sort((a, b) => b.dateObj.getTime() - a.dateObj.getTime())
     .slice(0, 7);
-  
+
   for (const dateInfo of sortedDates) {
     try {
       const filePath = path.join(
@@ -73,36 +76,66 @@ const getRecentActivityData = cache(async (): Promise<ActivityData[]> => {
         'src/content/likes',
         dateInfo.year,
         dateInfo.month.padStart(2, '0'),
-        `${dateInfo.day.padStart(2, '0')}.json`
+        `${dateInfo.day.padStart(2, '0')}.json`,
       );
-      
+
       const fileContent = await readFile(filePath, 'utf-8');
       const tweets = JSON.parse(fileContent);
       const count = Array.isArray(tweets.body) ? tweets.body.length : 0;
-      
+
       const dayNames = ['日', '月', '火', '水', '木', '金', '土'];
       const dayName = dayNames[dateInfo.dateObj.getDay()];
-      
+
       activityData.push({
         date: dateInfo.dateString,
         count,
-        dayName
+        dayName,
       });
     } catch (error) {
       console.error(`Error reading file for ${dateInfo.year}/${dateInfo.month}/${dateInfo.day}:`, error);
     }
   }
-  
-  // 日付順にソート（古い順）
+
   return activityData.sort((a, b) => a.date.localeCompare(b.date));
 });
 
+const getCategoryCounts = cache(
+  async (): Promise<{
+    counts: { name: string; count: number }[];
+    total: number;
+  }> => {
+    const db = getDb();
+    const res = await db.execute(
+      `SELECT parent_category AS name, COUNT(*) AS n
+       FROM likes
+       WHERE private = 0 AND notfound = 0 AND parent_category IS NOT NULL
+       GROUP BY parent_category`,
+    );
+    const counts = res.rows.map((r) => ({
+      name: String(r.name),
+      count: Number(r.n ?? 0),
+    }));
+    const totalRes = await db.execute(
+      `SELECT COUNT(*) AS n FROM likes WHERE private = 0 AND notfound = 0`,
+    );
+    const total = Number(totalRes.rows[0]?.n ?? 0);
+    return { counts, total };
+  },
+);
+
 export default async function Home() {
-  const activityData = await getRecentActivityData();
+  const [allDates, activityData, categoryData] = await Promise.all([
+    getAllDates(),
+    getRecentActivityData(),
+    getCategoryCounts(),
+  ]);
 
   return (
-    <div className="w-full">
-      <RecentActivityGraph activityData={activityData} />
-    </div>
+    <HomeTabs
+      allDates={allDates}
+      activityData={activityData}
+      categoryCounts={categoryData.counts}
+      totalCount={categoryData.total}
+    />
   );
 }

@@ -16,33 +16,26 @@ export function Main({
 }) {
   const pathname = usePathname();
 
-  // /tweet/[id] と /urls と /archive パスではカレンダーを表示しない
+  // 検索 / カテゴリ / トップは独自レイアウトを使うので Main 側ではカレンダー描画しない
+  const isHomePage = pathname === '/';
+  const isSearchOrCategories =
+    pathname.startsWith('/search') || pathname.startsWith('/categories');
   const showCalendar =
+    !isHomePage &&
+    !isSearchOrCategories &&
     !pathname.startsWith('/tweet/') &&
     !pathname.startsWith('/urls') &&
     !pathname.startsWith('/archive');
 
-  // トップページではカレンダーとchildrenを特別にレイアウト
-  const isHomePage = pathname === '/';
-
   // 日付ページでは浮動カレンダーを表示
   const showFloatingCalendar = pathname.startsWith('/likes/');
 
-  if (isHomePage) {
-    return (
-      <main className="container mx-auto px-4 py-4 flex flex-col">
-        {/* <SiteAnnounce /> */}
-        <div className="flex-1 flex flex-col gap-4">
-          <CalendarPicker allDates={allDates} />
-          {children}
-        </div>
-      </main>
-    );
+  if (isHomePage || isSearchOrCategories) {
+    return <main className="flex-1 flex flex-col">{children}</main>;
   }
 
   return (
     <main className="container mx-auto px-4 py-4 space-y-8">
-      {/* <SiteAnnounce /> */}
       {showCalendar && <CalendarPicker allDates={allDates} />}
       {children}
       {showFloatingCalendar && <FloatingDateSelector allDates={allDates} />}
