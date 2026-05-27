@@ -166,6 +166,15 @@ body {
   overflow-x: hidden;
 }
 
+/* iOS Safari は input の font-size が 16px 未満だとタップ時に自動 zoom する。
+ * グローバルに 16px 以上を強制してこれを抑止 (見た目は letter-spacing で
+ * 微調整、視覚的にはほぼ変わらない)。 */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
 /* Card primitives */
 .zk-card {
   background: linear-gradient(180deg, oklch(20% 0.012 250) 0%, oklch(18% 0.012 250) 100%);
@@ -416,7 +425,8 @@ body {
   border: 0;
   outline: 0;
   color: var(--text-0);
-  font-size: 14px;
+  /* iOS の auto-zoom 防止のため 16px 以上を維持 */
+  font-size: 16px;
 }
 .zk-search-shell input::placeholder {
   color: var(--text-3);

@@ -4,23 +4,23 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { CalendarDays, LayoutGrid, ArrowRight, Search as SearchIcon } from 'lucide-react';
 import { CalendarPicker } from './calendar-picker';
-import { RecentActivityGraph } from './recent-activity-graph';
+import { HomeInsights } from './home-insights';
 import { CATEGORIES } from '@/data/categories';
 import type { DateInfo } from '@/types/like';
-import type { ActivityData } from '@/lib/activity-helper';
+import type { HomeInsightsData } from '@/app/page';
 
 type CategoryCount = { name: string; count: number };
 
 export function HomeTabs({
   allDates,
-  activityData,
   categoryCounts,
   totalCount,
+  insights,
 }: {
   allDates: DateInfo[];
-  activityData: ActivityData[];
   categoryCounts: CategoryCount[];
   totalCount: number;
+  insights: HomeInsightsData;
 }) {
   const [tab, setTab] = useState<'calendar' | 'categories'>('calendar');
   const thumbRef = useRef<HTMLDivElement | null>(null);
@@ -94,12 +94,9 @@ export function HomeTabs({
 
       {/* Tab content */}
       {tab === 'calendar' && (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           <CalendarPicker allDates={allDates} />
-          <div className="flex flex-col gap-2">
-            <div className="zk-section-label" style={{ padding: '0 2px' }}>recent</div>
-            <RecentActivityGraph activityData={activityData} />
-          </div>
+          <HomeInsights data={insights} />
         </div>
       )}
 

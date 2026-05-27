@@ -2,10 +2,8 @@ export const dynamic = 'force-static';
 export const revalidate = false;
 
 import path from 'path';
-import { readdir, readFile } from 'fs/promises';
+import { readdir } from 'fs/promises';
 import { cache } from 'react';
-import { toZonedTime, format } from 'date-fns-tz';
-import { ActivityData } from '@/lib/activity-helper';
 import { getDb } from '@/lib/db';
 import { HomeTabs } from '@/components/home-tabs';
 import type { DateInfo } from '@/types/like';
@@ -38,67 +36,6 @@ const getAllDates = cache(async (): Promise<DateInfo[]> => {
   return dates;
 });
 
-const getRecentActivityData = cache(async (): Promise<ActivityData[]> => {
-  try {
-    const activityFilePath = path.join(process.cwd(), 'public/activity-data.json');
-    if (
-      await readFile(activityFilePath, 'utf-8')
-        .then(() => true)
-        .catch(() => false)
-    ) {
-      const activityCache = JSON.parse(await readFile(activityFilePath, 'utf-8'));
-      return activityCache.activities || [];
-    }
-  } catch {
-    console.log('Static activity data not found, generating dynamically...');
-  }
-
-  const allDates = await getAllDates();
-  const activityData: ActivityData[] = [];
-
-  const nowJapan = toZonedTime(new Date(), 'Asia/Tokyo');
-  const todayJapan = format(nowJapan, 'yyyy-MM-dd', { timeZone: 'Asia/Tokyo' });
-
-  const sortedDates = allDates
-    .map((d) => ({
-      ...d,
-      dateObj: new Date(Number(d.year), Number(d.month) - 1, Number(d.day)),
-      dateString: `${d.year}-${d.month.padStart(2, '0')}-${d.day.padStart(2, '0')}`,
-    }))
-    .filter((d) => d.dateString < todayJapan)
-    .sort((a, b) => b.dateObj.getTime() - a.dateObj.getTime())
-    .slice(0, 7);
-
-  for (const dateInfo of sortedDates) {
-    try {
-      const filePath = path.join(
-        process.cwd(),
-        'src/content/likes',
-        dateInfo.year,
-        dateInfo.month.padStart(2, '0'),
-        `${dateInfo.day.padStart(2, '0')}.json`,
-      );
-
-      const fileContent = await readFile(filePath, 'utf-8');
-      const tweets = JSON.parse(fileContent);
-      const count = Array.isArray(tweets.body) ? tweets.body.length : 0;
-
-      const dayNames = ['日', '月', '火', '水', '木', '金', '土'];
-      const dayName = dayNames[dateInfo.dateObj.getDay()];
-
-      activityData.push({
-        date: dateInfo.dateString,
-        count,
-        dayName,
-      });
-    } catch (error) {
-      console.error(`Error reading file for ${dateInfo.year}/${dateInfo.month}/${dateInfo.day}:`, error);
-    }
-  }
-
-  return activityData.sort((a, b) => a.date.localeCompare(b.date));
-});
-
 const getCategoryCounts = cache(
   async (): Promise<{
     counts: { name: string; count: number }[];
@@ -123,19 +60,101 @@ const getCategoryCounts = cache(
   },
 );
 
+export type HomeInsightsData = {
+  /** 直近 30 日のいいね件数 */
+  last30: number;
+  /** その前の 30 日 (= 31〜60 日前) のいいね件数。前月比 delta 計算用 */
+  prev30: number;
+  /** 直近 30 日に新規分類されたカテゴリ Top 3 (件数で並べる) */
+  hotCategories: { name: string; count: number }[];
+  /** 直近 30 日に最もよくいいねしたユーザー Top 5 */
+  topUsers: { username: string; count: number }[];
+  /** 直近 6 ヶ月の月別件数 (古い順) */
+  monthly: { ym: string; count: number }[];
+};
+
+const getHomeInsights = cache(async (): Promise<HomeInsightsData> => {
+  const db = getDb();
+
+  // 直近 30 日と前 30 日 (件数の delta 用)
+  const [last30Res, prev30Res] = await Promise.all([
+    db.execute(
+      `SELECT COUNT(*) AS n FROM likes
+       WHERE private = 0 AND notfound = 0
+         AND liked_at >= datetime('now', '-30 days')`,
+    ),
+    db.execute(
+      `SELECT COUNT(*) AS n FROM likes
+       WHERE private = 0 AND notfound = 0
+         AND liked_at >= datetime('now', '-60 days')
+         AND liked_at <  datetime('now', '-30 days')`,
+    ),
+  ]);
+  const last30 = Number(last30Res.rows[0]?.n ?? 0);
+  const prev30 = Number(prev30Res.rows[0]?.n ?? 0);
+
+  // 直近 30 日の hot カテゴリ Top 3
+  const hotRes = await db.execute(
+    `SELECT parent_category AS name, COUNT(*) AS n
+     FROM likes
+     WHERE private = 0 AND notfound = 0
+       AND parent_category IS NOT NULL
+       AND liked_at >= datetime('now', '-30 days')
+     GROUP BY parent_category
+     ORDER BY n DESC
+     LIMIT 3`,
+  );
+  const hotCategories = hotRes.rows.map((r) => ({
+    name: String(r.name),
+    count: Number(r.n ?? 0),
+  }));
+
+  // 直近 30 日の頻度上位ユーザー Top 5
+  const usersRes = await db.execute(
+    `SELECT username, COUNT(*) AS n
+     FROM likes
+     WHERE private = 0 AND notfound = 0
+       AND username != ''
+       AND liked_at >= datetime('now', '-30 days')
+     GROUP BY username
+     ORDER BY n DESC
+     LIMIT 5`,
+  );
+  const topUsers = usersRes.rows.map((r) => ({
+    username: String(r.username ?? ''),
+    count: Number(r.n ?? 0),
+  }));
+
+  // 直近 6 ヶ月の月別 (古い順)
+  const monthlyRes = await db.execute(
+    `SELECT strftime('%Y-%m', liked_at) AS ym, COUNT(*) AS n
+     FROM likes
+     WHERE private = 0 AND notfound = 0
+       AND liked_at >= datetime('now', '-6 months')
+     GROUP BY ym
+     ORDER BY ym ASC`,
+  );
+  const monthly = monthlyRes.rows.map((r) => ({
+    ym: String(r.ym ?? ''),
+    count: Number(r.n ?? 0),
+  }));
+
+  return { last30, prev30, hotCategories, topUsers, monthly };
+});
+
 export default async function Home() {
-  const [allDates, activityData, categoryData] = await Promise.all([
+  const [allDates, categoryData, insights] = await Promise.all([
     getAllDates(),
-    getRecentActivityData(),
     getCategoryCounts(),
+    getHomeInsights(),
   ]);
 
   return (
     <HomeTabs
       allDates={allDates}
-      activityData={activityData}
       categoryCounts={categoryData.counts}
       totalCount={categoryData.total}
+      insights={insights}
     />
   );
 }

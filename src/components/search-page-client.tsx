@@ -89,16 +89,40 @@ export function SearchPageClient() {
     router.replace(qs ? `${pathname}?${qs}` : pathname);
   }, [router, pathname, searchParams]);
 
+  // ---- iOS / iOS PWA 判定 (一度だけ) ----
+  // iOS Safari / PWA は transformers.js (WASM + IndexedDB) が不安定で、
+  // モデル DL が 100% で white-out するなど壊れる事例が継続発生中。
+  // 当面 iOS では semantic / hybrid を無効化し、FTS のみ提供する。
+  const [isIosLike, setIsIosLike] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const ua = navigator.userAgent || '';
+    const isIosUa = /iPad|iPhone|iPod/.test(ua);
+    // iPadOS は Mac とほぼ同じ UA を返すので touch 数で判定補正
+    const isIpadOs =
+      ua.includes('Macintosh') &&
+      typeof navigator.maxTouchPoints === 'number' &&
+      navigator.maxTouchPoints > 1;
+    if (isIosUa || isIpadOs) {
+      setIsIosLike(true);
+      setMode('fts');
+    }
+  }, []);
+
   // ---- localStorage から onboarding 状態 ----
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    if (isIosLike) {
+      setOnboardingState('hidden');
+      return;
+    }
     try {
       const dismissed = window.localStorage.getItem(ONBOARDING_KEY);
       setOnboardingState(dismissed === '1' ? 'hidden' : 'idle');
     } catch {
       setOnboardingState('idle');
     }
-  }, []);
+  }, [isIosLike]);
 
   const dismissOnboarding = useCallback(() => {
     setOnboardingState('hidden');
@@ -465,12 +489,44 @@ export function SearchPageClient() {
             </div>
             <div className="seg">
               <button type="button" data-on={mode === 'fts' ? '1' : '0'} onClick={() => setMode('fts')}>FTS</button>
-              <button type="button" data-on={mode === 'semantic' ? '1' : '0'} onClick={() => semanticReady && setMode('semantic')} disabled={!semanticReady} style={{ opacity: semanticReady ? 1 : 0.4 }}>Semantic</button>
-              <button type="button" data-on={mode === 'hybrid' ? '1' : '0'} onClick={() => semanticReady && setMode('hybrid')} disabled={!semanticReady} style={{ opacity: semanticReady ? 1 : 0.4 }}>Hybrid</button>
+              <button
+                type="button"
+                data-on={mode === 'semantic' ? '1' : '0'}
+                onClick={() => !isIosLike && semanticReady && setMode('semantic')}
+                disabled={isIosLike || !semanticReady}
+                style={{ opacity: !isIosLike && semanticReady ? 1 : 0.4 }}
+              >
+                Semantic
+              </button>
+              <button
+                type="button"
+                data-on={mode === 'hybrid' ? '1' : '0'}
+                onClick={() => !isIosLike && semanticReady && setMode('hybrid')}
+                disabled={isIosLike || !semanticReady}
+                style={{ opacity: !isIosLike && semanticReady ? 1 : 0.4 }}
+              >
+                Hybrid
+              </button>
             </div>
           </div>
 
-          {mode === 'hybrid' && (
+          {isIosLike && (
+            <div
+              style={{
+                fontSize: 11,
+                color: 'var(--text-3)',
+                padding: '6px 10px',
+                borderRadius: 6,
+                background: 'oklch(20% 0.012 250 / 0.4)',
+                boxShadow: 'inset 0 0 0 0.5px var(--line-soft)',
+                lineHeight: 1.5,
+              }}
+            >
+              iOS では端末側の制約でモデル読み込みが不安定なため、意味検索は一時的に無効です。キーワード検索 (FTS) のみご利用いただけます。
+            </div>
+          )}
+
+          {mode === 'hybrid' && !isIosLike && (
             <div className="row">
               <div>
                 <div style={{ color: 'var(--text-1)', fontSize: 12.5, fontWeight: 500 }}>意味の重み</div>
@@ -489,30 +545,32 @@ export function SearchPageClient() {
             </div>
           )}
 
-          <div className="row">
-            <div>
-              <div style={{ color: 'var(--text-1)', fontSize: 12.5, fontWeight: 500 }}>セマンティックモデル</div>
-              <div className="font-mono" style={{ fontSize: 10.5, color: 'var(--text-3)', marginTop: 2 }}>
-                multilingual-e5-small · 384 dim
+          {!isIosLike && (
+            <div className="row">
+              <div>
+                <div style={{ color: 'var(--text-1)', fontSize: 12.5, fontWeight: 500 }}>セマンティックモデル</div>
+                <div className="font-mono" style={{ fontSize: 10.5, color: 'var(--text-3)', marginTop: 2 }}>
+                  multilingual-e5-small · 384 dim
+                </div>
               </div>
-            </div>
-            <span
-              className="zk-pill-xs"
-              style={{
-                color: semanticReady
-                  ? 'oklch(70% 0.13 160)'
+              <span
+                className="zk-pill-xs"
+                style={{
+                  color: semanticReady
+                    ? 'oklch(70% 0.13 160)'
+                    : embedderState === 'loading'
+                      ? 'var(--text-2)'
+                      : 'var(--text-3)',
+                }}
+              >
+                {semanticReady
+                  ? '準備済み'
                   : embedderState === 'loading'
-                    ? 'var(--text-2)'
-                    : 'var(--text-3)',
-              }}
-            >
-              {semanticReady
-                ? '準備済み'
-                : embedderState === 'loading'
-                  ? `DL ${Math.round(embedderProgress * 100)}%`
-                  : '未 DL'}
-            </span>
-          </div>
+                    ? `DL ${Math.round(embedderProgress * 100)}%`
+                    : '未 DL'}
+              </span>
+            </div>
+          )}
         </div>
       )}
 
