@@ -30,6 +30,8 @@
     "ai:search": "tsx src/scripts/search-cli.ts",
     "podcast:fetch": "tsx src/scripts/podcast/fetch-period.ts",
     "podcast:pick-persona": "tsx src/scripts/podcast/pick-persona.ts",
+    "podcast:extract-links": "tsx src/scripts/podcast/extract-links.ts",
+    "podcast:upsert-link-cache": "tsx src/scripts/podcast/upsert-link-cache.ts",
     "prepare": "husky"
   },
   "dependencies": {
