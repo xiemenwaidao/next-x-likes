@@ -11,6 +11,7 @@ import {
   Download,
   CalendarDays,
   ChevronDown,
+  History as HistoryIcon,
 } from 'lucide-react';
 import { CATEGORIES } from '@/data/categories';
 import {
@@ -33,6 +34,11 @@ import {
 const PAGE_SIZE = 12;
 const ONBOARDING_KEY = 'zk_onboarding_dismissed_v1';
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const HISTORY_KEY = 'zk_search_history_v1';
+const HISTORY_MAX = 5;
+// 「キーストロークごとの中間クエリ (c, cl, clau...) を履歴に積まない」ため、
+// debouncedQuery が安定してから追加で待つ時間 (ms)
+const HISTORY_STABLE_MS = 1500;
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 type Mode = 'fts' | 'semantic' | 'hybrid';
@@ -75,6 +81,100 @@ export function SearchPageClient() {
 
   const onComposition = useRef(false);
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // 検索インデックスのロードが完了したら input に focus。
+  // autoFocus 属性は disabled な要素を focus できないので、ready 遷移で
+  // 明示的に focus し直す。これで「/search に着いたらすぐ打ち始められる」
+  // 体験になる。
+  useEffect(() => {
+    if (loadState === 'ready') {
+      inputRef.current?.focus();
+    }
+  }, [loadState]);
+
+  // X クリアボタンで入力を空にしたら、すぐ次の入力に移れるように focus を
+  // input に戻す。
+  const handleClearInput = useCallback(() => {
+    setInputValue('');
+    inputRef.current?.focus();
+  }, []);
+
+  // ---- 検索履歴 (localStorage、ブラウザ単位) ----
+  const [searchHistory, setSearchHistory] = useState<string[]>([]);
+
+  // 初回マウント時に localStorage から読み込む
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const raw = window.localStorage.getItem(HISTORY_KEY);
+      if (!raw) return;
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        setSearchHistory(
+          parsed
+            .filter((s): s is string => typeof s === 'string' && s.length > 0)
+            .slice(0, HISTORY_MAX),
+        );
+      }
+    } catch {
+      /* corrupt JSON → ignore */
+    }
+  }, []);
+
+  // 履歴の永続化
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      window.localStorage.setItem(HISTORY_KEY, JSON.stringify(searchHistory));
+    } catch {
+      /* quota / private mode → ignore */
+    }
+  }, [searchHistory]);
+
+  // debouncedQuery が安定してから HISTORY_STABLE_MS 待って履歴に積む。
+  // 入力中の "c" → "cl" → "clau" → "claude" は途中で timer がリセットされる
+  // ので "claude" だけが保存される。さらに prefix dedup でうっかり "cl" が
+  // 残った場合も次の "clau" / "claude" 保存時に追い出される。
+  useEffect(() => {
+    const q = debouncedQuery.trim();
+    if (q.length === 0) return;
+    // ASCII (Latin/数字/記号) は 2 文字未満を skip (= "j" 等の入力途中ノイズ
+    // を抑止)。「魚」「猫」「あ」のような CJK / かな単漢字検索は length 1
+    // でも意味があるので通す。
+    if (q.length === 1 && /^[\x00-\x7F]$/.test(q)) return;
+    const t = window.setTimeout(() => {
+      setSearchHistory((prev) => {
+        const next = prev.filter((x) => {
+          if (x === q) return false;
+          // x は q の prefix (= 短い途中入力) → 追い出す
+          if (q.startsWith(x) && q.length > x.length) return false;
+          // q は x の prefix (= 新クエリの方が短い、別検索でない可能性が高い)
+          //   → x を残し、後で q を先頭に置くと x が下がるが OK
+          return true;
+        });
+        return [q, ...next].slice(0, HISTORY_MAX);
+      });
+    }, HISTORY_STABLE_MS);
+    return () => window.clearTimeout(t);
+  }, [debouncedQuery]);
+
+  // 履歴アイテム click → input に流し込んで focus
+  const applyHistoryItem = useCallback((q: string) => {
+    setInputValue(q);
+    inputRef.current?.focus();
+  }, []);
+
+  // 個別 1 件削除
+  const removeHistoryItem = useCallback((q: string) => {
+    setSearchHistory((prev) => prev.filter((x) => x !== q));
+  }, []);
+
+  // 全削除
+  const clearAllHistory = useCallback(() => {
+    setSearchHistory([]);
+    inputRef.current?.focus();
+  }, []);
 
   // ---- URL の ?date= を初期化時に読む ----
   useEffect(() => {
@@ -545,6 +645,7 @@ export function SearchPageClient() {
       <div className="zk-search-shell">
         <SearchIcon size={16} strokeWidth={1.75} style={{ color: 'var(--text-2)' }} />
         <input
+          ref={inputRef}
           type="text"
           value={inputValue}
           onChange={handleInputChange}
@@ -552,7 +653,6 @@ export function SearchPageClient() {
           onCompositionEnd={handleCompositionEnd}
           placeholder={placeholder}
           style={{ marginLeft: 10 }}
-          autoFocus
           disabled={loadState !== 'ready'}
         />
         {encodingState === 'loading' && (
@@ -568,7 +668,7 @@ export function SearchPageClient() {
             type="button"
             className="zk-icon-btn"
             style={{ width: 28, height: 28, marginRight: -4 }}
-            onClick={() => setInputValue('')}
+            onClick={handleClearInput}
             aria-label="クリア"
           >
             <X size={12} strokeWidth={1.75} />
@@ -586,6 +686,46 @@ export function SearchPageClient() {
           <GearIcon size={14} strokeWidth={1.5} />
         </button>
       </div>
+
+      {/* 検索履歴 — 入力欄が空のときだけ、検索 shell 直下に横並びで控えめに */}
+      {!inputValue && searchHistory.length > 0 && (
+        <div className="zk-history">
+          <span className="zk-history-label" aria-hidden>
+            <HistoryIcon size={10.5} strokeWidth={1.75} /> 最近
+          </span>
+          <ul className="zk-history-list">
+            {searchHistory.map((q) => (
+              <li key={q} className="zk-history-item">
+                <button
+                  type="button"
+                  className="zk-history-pick"
+                  onClick={() => applyHistoryItem(q)}
+                  title={q}
+                >
+                  <span className="zk-history-text">{q}</span>
+                </button>
+                <button
+                  type="button"
+                  className="zk-history-remove"
+                  onClick={() => removeHistoryItem(q)}
+                  aria-label={`「${q}」を履歴から削除`}
+                >
+                  <X size={10} strokeWidth={1.75} />
+                </button>
+              </li>
+            ))}
+          </ul>
+          <button
+            type="button"
+            onClick={clearAllHistory}
+            className="zk-history-clear"
+            aria-label="検索履歴をすべて消去"
+            title="すべて消去"
+          >
+            <X size={11} strokeWidth={1.75} />
+          </button>
+        </div>
+      )}
 
       {/* Settings sheet */}
       {showSettings && (

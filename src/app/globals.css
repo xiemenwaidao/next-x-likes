@@ -732,3 +732,123 @@ select {
     color: var(--text-2);
   }
 }
+
+/* ============================================================
+   Search history (検索欄直下、横並びでこそっと)
+   入力が空のときだけ表示。長文クエリは pill 内で ellipsis、
+   max-width で抑えてレイアウト崩れ防止。pill が多い時は wrap で折り返し。
+   ============================================================ */
+.zk-history {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: -6px; /* 検索 shell とギュッと寄せる */
+  padding: 0 2px;
+  min-width: 0;
+}
+.zk-history-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+.zk-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.zk-history-item {
+  display: inline-flex;
+  align-items: stretch;
+  max-width: 160px;
+  background: oklch(20% 0.012 250 / 0.55);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 0.5px var(--line-soft);
+  transition: background 120ms ease, box-shadow 120ms ease;
+}
+.zk-history-item:hover {
+  background: oklch(24% 0.012 250 / 0.7);
+}
+.zk-history-pick {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 4px 0 10px;
+  border: 0;
+  background: transparent;
+  color: var(--text-1);
+  font-size: 11.5px;
+  cursor: pointer;
+  text-align: left;
+  transition: color 120ms ease;
+}
+.zk-history-pick:hover {
+  color: var(--text-0);
+}
+.zk-history-text {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.zk-history-remove {
+  flex-shrink: 0;
+  width: 22px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: var(--text-3);
+  border-radius: 0 999px 999px 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 120ms ease, color 120ms ease;
+}
+.zk-history-item:hover .zk-history-remove,
+.zk-history-remove:focus-visible {
+  opacity: 0.85;
+}
+.zk-history-remove:hover {
+  color: var(--text-1);
+  opacity: 1;
+}
+.zk-history-clear {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: var(--text-3);
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 120ms ease, color 120ms ease, background 120ms ease;
+}
+.zk-history-clear:hover {
+  opacity: 1;
+  color: var(--text-1);
+  background: oklch(20% 0.012 250 / 0.55);
+}
+/* タッチデバイスは hover が無いので個別 × を常時うっすら */
+@media (hover: none) {
+  .zk-history-remove {
+    opacity: 0.5;
+  }
+}
