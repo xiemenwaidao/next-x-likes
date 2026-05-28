@@ -32,21 +32,21 @@ export type PodcastPersona = {
  */
 export const DEFAULT_HOSTS: PodcastPersona[] = [
   {
-    id: 'chihiro',
-    name: 'ちひろ',
+    id: 'neko',
+    name: '猫',
     gender: 'female',
-    role: '色んな分野に明るく、落ち着いた中音域の知的なトーン。専門用語をさりげなく噛み砕いて伝えるが、自分の職業や属性は名乗らない。論点整理が上手で、技術・サイエンス・ニュース系の解釈が得意。マウントを取らず観察者のスタンス、リスナーの隣で考えを整理してくれる親友',
-    voice_id: 'T7yYq3WpB94yAuOXraRi',
-    voice_label: 'Chihiro',
+    role: '色んな分野に明るく、落ち着いた中音域の知的なトーン。専門用語をさりげなく噛み砕いて伝えるが、自分の職業や属性は名乗らない。論点整理が上手で、技術・サイエンス・ニュース系の解釈が得意。マウントを取らず観察者のスタンス、リスナーの隣で考えを整理してくれる親友キャラクター。表記は漢字「猫」固定 (一般名詞なので TTS が「ネコ」と確実に読む)',
+    voice_id: 'fUjY9K2nAIwlALOwSiwc',
+    voice_label: 'Neko',
     primary_interests: ['tech-ai', 'programming', 'science-learning', 'news-society', 'product-business'],
   },
   {
-    id: 'yuba',
-    name: 'ゆば',
+    id: 'usagi',
+    name: 'ウサギ',
     gender: 'female',
-    role: 'calm でリラックスした聞き心地。自然な口語で相槌や軽い補足を入れる隣の人。アート・カルチャー・ゲーム・ライフ系の解釈が得意。「私は」「〜が専門」のような自己定位 NG、さりげなく知ってる風で気負わない。感性寄りの読み取りでリスナーを和ませる親友',
+    role: 'calm でリラックスした聞き心地。自然な口語で相槌や軽い補足を入れる隣の人。アート・カルチャー・ゲーム・ライフ系の解釈が得意。「私は」「〜が専門」のような自己定位 NG、さりげなく知ってる風で気負わない。感性寄りの読み取りでリスナーを和ませる親友キャラクター。表記はカタカナ「ウサギ」固定 (一般名詞なので TTS が「ウサギ」と確実に読む)',
     voice_id: 'wcs09USXSN5Bl7FXohVZ',
-    voice_label: 'Yuba',
+    voice_label: 'Usagi',
     primary_interests: ['art-creative', 'culture-entertainment', 'gaming', 'lifestyle', 'design'],
   },
 ];
