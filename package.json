@@ -32,6 +32,7 @@
     "podcast:pick-persona": "tsx src/scripts/podcast/pick-persona.ts",
     "podcast:extract-links": "tsx src/scripts/podcast/extract-links.ts",
     "podcast:upsert-link-cache": "tsx src/scripts/podcast/upsert-link-cache.ts",
+    "podcast:build-news-queries": "tsx src/scripts/podcast/build-news-queries.ts",
     "prepare": "husky"
   },
   "dependencies": {
