@@ -744,9 +744,13 @@ export function SearchPageClient() {
 
       {/* Loading / Error */}
       {loadState === 'loading' && (
-        <div className="zk-empty">
-          <Loader2 size={20} strokeWidth={1.5} className="animate-spin" />
-          <div>検索インデックスを読み込み中…</div>
+        <div className="zk-loading">
+          <div className="zk-loading-bar" aria-hidden>
+            <div className="zk-loading-bar-fill" />
+          </div>
+          <div className="zk-loading-text" aria-live="polite">
+            検索インデックスを準備中
+          </div>
         </div>
       )}
       {loadState === 'error' && (

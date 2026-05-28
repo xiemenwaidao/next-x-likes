@@ -650,3 +650,85 @@ select {
     opacity: 0;
   }
 }
+
+/* ============================================================
+   Loading states — 不定進捗バー + 静かに脈打つテキスト
+   検索アセットの読み込みなど、数秒〜の処理を待つ間に出す。
+   Stripe / Linear 系の上品な往復スイープ。
+   ============================================================ */
+.zk-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 48px 16px 56px;
+}
+.zk-loading-bar {
+  position: relative;
+  width: 220px;
+  max-width: 60%;
+  height: 2px;
+  background: oklch(22% 0.01 250 / 0.55);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.zk-loading-bar-fill {
+  position: absolute;
+  inset: 0;
+  /* 中央ピーク・両端透明のグラデーション帯 */
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--zk-accent, oklch(70% 0.18 220)) 50%,
+    transparent 100%
+  );
+  /* 影で軽く光らせる */
+  filter: drop-shadow(0 0 6px oklch(70% 0.18 220 / 0.45));
+  animation: zk-loading-bar-sweep 1.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  will-change: transform;
+}
+@keyframes zk-loading-bar-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.zk-loading-text {
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  /* 文字自体に薄いグラデーションシマー */
+  background: linear-gradient(
+    90deg,
+    var(--text-3) 0%,
+    var(--text-0) 50%,
+    var(--text-3) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: zk-loading-text-shimmer 2.6s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+@keyframes zk-loading-text-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zk-loading-bar-fill,
+  .zk-loading-text {
+    animation: none;
+  }
+  .zk-loading-text {
+    background: none;
+    -webkit-text-fill-color: var(--text-2);
+    color: var(--text-2);
+  }
+}
