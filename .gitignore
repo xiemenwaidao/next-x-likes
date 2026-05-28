@@ -59,9 +59,11 @@ src/content/archive/archive-likes-enriched.json
 !.claude/commands/
 
 # Podcast 生成物
-# - mp3 は外部 storage (R2 / S3 など) 移行検討中。当面 gitignore で repo を肥らせない
-# - transcript JSON (.script.json) は軽いので commit してアーカイブ
-# - BGM (public/podcasts/bgm/) はユーザー提供の長期 asset、commit する
-/public/podcasts/*.mp3
+# - mp3 / show notes は別 repo (x-likes-radio, Yattecast fork) に出力するため本 repo
+#   では追跡しない。x-likes-radio はサブディレクトリに clone される (submodule 化はしない)
+# - transcript JSON / TTS セグメント cache / 外部 URL 要約は本 repo の data/ 配下に
+#   永続化するが再生成可能なので gitignore
+# - BGM (public/podcasts/bgm/) はユーザー提供の長期 asset、commit する (gitignore 対象外)
+/x-likes-radio/
 /data/podcasts/
 /data/podcast-link-cache.json
