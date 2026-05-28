@@ -550,3 +550,82 @@ select {
   text-transform: uppercase;
   color: var(--text-3);
 }
+
+/* ============================================================
+   Logo (集讚館) アニメーション
+   - draw-on: 初回マウントから 1 度だけストロークが描かれて、その後 fill がフェードイン
+   - shimmer: path 内を 6s 間隔でハイライトが左→右へ通過
+   - hover: マウス時に subtle scale up
+   ============================================================ */
+.zk-logo {
+  display: block;
+  overflow: visible; /* shimmer の rect が viewBox 外で待機できるように */
+  transition: width 220ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              height 220ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              filter 200ms ease;
+  filter: drop-shadow(0 0 0 transparent);
+}
+.zk-logo:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.18));
+}
+
+/* (1) ベース塗り — 最初は透明、draw-on 後にフェードイン */
+.zk-logo .zk-logo-fill {
+  opacity: 0;
+  transition: opacity 480ms cubic-bezier(0.22, 0.61, 0.36, 1) 760ms;
+}
+.zk-logo[data-drawn='1'] .zk-logo-fill {
+  opacity: 1;
+}
+
+/* (2) draw-on ストローク */
+.zk-logo .zk-logo-stroke {
+  /* pathLength=1 で正規化済み。dasharray=1 1 で隙間 1、表示 1 の状態に
+     し、最初はオフセット 1 で見えない */
+  stroke-dashoffset: 1;
+  opacity: 0.9;
+  transition: stroke-dashoffset 1100ms cubic-bezier(0.65, 0, 0.35, 1),
+              opacity 360ms ease 1100ms;
+}
+.zk-logo[data-drawn='1'] .zk-logo-stroke {
+  stroke-dashoffset: 0;
+  opacity: 0; /* fill が出るタイミングでストロークは消す */
+}
+
+/* (3) shimmer — 等間隔ループ。draw-on 完了 (~1.3s) 後から走らせる。
+   mask 内の rect を x = -186 → 186 にトランスレート */
+.zk-logo .zk-logo-shimmer {
+  opacity: 0;
+}
+.zk-logo[data-drawn='1'] .zk-logo-shimmer {
+  opacity: 1;
+  animation: zk-logo-shimmer 6s cubic-bezier(0.5, 0, 0.5, 1) 1.6s infinite;
+}
+@keyframes zk-logo-shimmer {
+  0% {
+    transform: translateX(0);
+  }
+  /* シュッと走る区間は全体の 18% (約 1.08s) だけ、残り 82% は余韻 */
+  18% {
+    transform: translateX(372px);
+  }
+  100% {
+    transform: translateX(372px);
+  }
+}
+
+/* prefers-reduced-motion を尊重して、シマー / draw-on を切る */
+@media (prefers-reduced-motion: reduce) {
+  .zk-logo .zk-logo-fill {
+    opacity: 1;
+    transition: none;
+  }
+  .zk-logo .zk-logo-stroke {
+    opacity: 0;
+    transition: none;
+  }
+  .zk-logo .zk-logo-shimmer {
+    animation: none;
+    opacity: 0;
+  }
+}
