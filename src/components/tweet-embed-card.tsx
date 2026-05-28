@@ -115,11 +115,23 @@ export function TweetEmbedCard({ meta }: { meta: TweetEmbedMeta }) {
           )}
           {meta.sub_tags && meta.sub_tags.length > 0 && (
             <div className="flex items-center gap-1.5 flex-wrap">
-              {meta.sub_tags.slice(0, 6).map((t) => (
-                <span key={t} className="zk-tag">
-                  #{t}
-                </span>
-              ))}
+              {meta.sub_tags.slice(0, 6).map((t) =>
+                meta.category ? (
+                  // 親カテゴリが分かっているなら /categories/[cat]?tag=... に
+                  // 飛ばして sub-tag 絞り込み済みの一覧を見せる
+                  <Link
+                    key={t}
+                    href={`/categories/${meta.category}?tag=${encodeURIComponent(t)}`}
+                    className="zk-tag zk-tag-link"
+                  >
+                    #{t}
+                  </Link>
+                ) : (
+                  <span key={t} className="zk-tag">
+                    #{t}
+                  </span>
+                ),
+              )}
             </div>
           )}
         </div>

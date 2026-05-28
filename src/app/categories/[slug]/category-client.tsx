@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { ChevronLeft } from 'lucide-react';
 import type { Category } from '@/data/categories';
 import { TweetEmbedCard } from '@/components/tweet-embed-card';
@@ -20,6 +21,21 @@ const PAGE_SIZE = 20;
 export function CategoryPageClient({ category, count, total, tweets, subTags }: Props) {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [pageLimit, setPageLimit] = useState(PAGE_SIZE);
+
+  // ツイートカードのハッシュタグから ?tag=foo で飛んできたら、その tag を
+  // 初期選択する。subTags に存在しない tag は無視 (typo / 廃止された tag)。
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const t = searchParams?.get('tag');
+    if (!t) {
+      setSelectedTag(null);
+      return;
+    }
+    if (subTags.some((s) => s.tag === t)) {
+      setSelectedTag(t);
+      setPageLimit(PAGE_SIZE);
+    }
+  }, [searchParams, subTags]);
 
   const filtered = useMemo(() => {
     if (!selectedTag) return tweets;

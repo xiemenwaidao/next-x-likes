@@ -259,6 +259,17 @@ select {
   font-family: 'Geist Mono', ui-monospace, monospace;
   letter-spacing: -0.01em;
 }
+/* クリック可能な tag (Link 化したやつ) は hover で少し明るく */
+.zk-tag-link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 120ms ease, color 120ms ease, box-shadow 120ms ease;
+}
+.zk-tag-link:hover {
+  color: var(--text-0);
+  background: oklch(20% 0.012 250 / 0.75);
+  box-shadow: inset 0 0 0 0.5px var(--line-strong, var(--line-soft));
+}
 
 /* Icon button */
 .zk-icon-btn {
