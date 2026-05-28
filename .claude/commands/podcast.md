@@ -38,12 +38,12 @@ push して公開する。
 - ✅ **P2**: 外部リンク fetch (podcast-link-fetcher サブエージェント経由)
 - ✅ **P3**: 関連ニュース取得 (podcast-news-fetcher サブエージェント経由)
 - ✅ **P4**: 脚本生成 (podcast-scriptwriter サブエージェント) — **`--dry-run` 完成**
-- ⏳ **P5**: TTS 合成 (ElevenLabs)、未実装
+- ✅ **P5**: TTS 合成 (ElevenLabs eleven_multilingual_v2、3並列、cache 付き)
 - ⏳ **P6**: ffmpeg mix (BGM ducking)、未実装
 - ⏳ **P7**: show notes 生成 + x-likes-radio へ commit + push、未実装
 
-`--dry-run` ありなら Stage 6 で終了。`--dry-run` なしで呼ばれた場合は現状
-「P5/P6/P7 未実装」を伝えて止まる。
+`--dry-run` ありなら Stage 6 で終了。`--dry-run` なしで呼ばれた場合は
+Stage 7 (TTS) まで走るが P6/P7 未実装なので mp3 mix と公開はまだできない。
 
 ## 出力ファイルの行き先 (整理)
 
@@ -188,16 +188,31 @@ stderr に人間可読サマリ。ユーザーへの最終レポート:
 
 `--dry-run` フラグなしで呼ばれた場合は、ここで「P5/P6/P7 未実装」を案内して終了。
 
-### Stage 7: TTS 合成 (P5 で実装)
-
-**現状未実装。P5 で以下を追加予定:**
+### Stage 7: TTS 合成
 
 ```bash
-pnpm tsx src/scripts/podcast/synthesize-tts.ts --script "$SCRIPT_PATH"
+pnpm tsx -r dotenv/config src/scripts/podcast/synthesize-tts.ts --script "$SCRIPT_PATH" > /tmp/podcast-tts-result.json
 ```
 
-ElevenLabs API でセリフ単位に合成、`data/podcasts/cache/<sha256(text+voice)>.mp3` に
-キャッシュ。同じセリフ・声の組み合わせは再生成しない。
+(`-r dotenv/config` で `.env` の `ELEVENLABS_API_KEY` を自動 load する。
+`pnpm podcast:tts` alias 経由だと pnpm 9 が `--dry-run` 等の flag を食う場合があるので
+podcast.md からは tsx を直接呼ぶ形に統一)
+
+挙動:
+
+- ElevenLabs API (`eleven_multilingual_v2`、stability 0.5 / similarity_boost 0.75) で line 単位に合成
+- 並列度 3、429/5xx は指数バックオフで最大 3 回リトライ
+- cache key = `sha256(voice_id + ":" + text).slice(0, 16)`、`data/podcasts/cache/<hash>.mp3` に保存
+- 同じ {voice_id, text} は二度生成しない (台本微修正・リトライ時に既存資産再利用)
+- `--dry-run` を渡すと API 呼ばずに cache hit/miss だけ報告 (コスト発生なし)
+
+エラー:
+
+- 401/403/404: 致命的、即終了
+- 4xx (上記以外): その line だけ skip 継続、最終的に exit 2
+- 空 text: skip (API call なし)
+
+出力 (`/tmp/podcast-tts-result.json`) は line ごとの hash と path を含み、Stage 8 mix が参照する。
 
 ### Stage 8: ffmpeg mix (P6 で実装)
 

@@ -34,6 +34,7 @@
     "podcast:upsert-link-cache": "tsx src/scripts/podcast/upsert-link-cache.ts",
     "podcast:build-news-queries": "tsx src/scripts/podcast/build-news-queries.ts",
     "podcast:verify-script": "tsx src/scripts/podcast/verify-script.ts",
+    "podcast:tts": "tsx -r dotenv/config src/scripts/podcast/synthesize-tts.ts",
     "prepare": "husky"
   },
   "dependencies": {
