@@ -9,6 +9,12 @@ function formatDate(dateString: string): string {
   return `${year}/${month}/${day}`;
 }
 
+// data/announcements.ts の配列順に依存せず、必ず日付の新しい順で表示。
+// date は YYYY-MM-DD 文字列なので辞書順比較で OK。
+const sortedAnnouncements = [...announcements].sort((a, b) =>
+  a.date < b.date ? 1 : a.date > b.date ? -1 : 0,
+);
+
 export function AnnouncementList() {
   return (
     <div className="space-y-3">
@@ -16,9 +22,9 @@ export function AnnouncementList() {
         <p>いいねの備忘録。</p>
         <p>毎朝5時過ぎに自動更新。</p>
       </div>
-      
+
       <div className="space-y-1.5 max-h-64 overflow-y-auto">
-        {announcements.map((item) => (
+        {sortedAnnouncements.map((item) => (
           <div 
             key={item.id}
             className="group hover:bg-muted/50 rounded-md p-1.5 transition-colors"
