@@ -10,6 +10,7 @@ import {
   Sparkles,
   Download,
   CalendarDays,
+  ChevronDown,
 } from 'lucide-react';
 import { CATEGORIES } from '@/data/categories';
 import {
@@ -22,6 +23,12 @@ import {
   type SearchHit,
 } from '@/lib/search-client';
 import { TweetEmbedCard } from '@/components/tweet-embed-card';
+import { Calendar } from '@/components/ui/calendar';
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from '@/components/ui/popover';
 
 const PAGE_SIZE = 12;
 const ONBOARDING_KEY = 'zk_onboarding_dismissed_v1';
@@ -88,6 +95,26 @@ export function SearchPageClient() {
     const qs = sp.toString();
     router.replace(qs ? `${pathname}?${qs}` : pathname);
   }, [router, pathname, searchParams]);
+
+  // 日付チップから別の日付に切り替えるとき用。assets が読まれた後は
+  // 利用可能な日付のみ enable する Calendar を popover に出す。
+  const [datePickerOpen, setDatePickerOpen] = useState(false);
+  const changeDate = useCallback(
+    (next: Date | undefined) => {
+      if (!next) return;
+      const ymd = `${next.getFullYear()}-${String(next.getMonth() + 1).padStart(
+        2,
+        '0',
+      )}-${String(next.getDate()).padStart(2, '0')}`;
+      setDateFilter(ymd);
+      setPageLimit(PAGE_SIZE);
+      const sp = new URLSearchParams(searchParams?.toString() ?? '');
+      sp.set('date', ymd);
+      router.replace(`${pathname}?${sp.toString()}`);
+      setDatePickerOpen(false);
+    },
+    [router, pathname, searchParams],
+  );
 
   // ---- iOS / iOS PWA 判定 (一度だけ) ----
   // iOS Safari / PWA は transformers.js (WASM + IndexedDB) が不安定で、
@@ -371,6 +398,46 @@ export function SearchPageClient() {
         ? '文章で意味検索 (例: 余白の使い方について)'
         : 'キーワードや文章を入力';
 
+  // 日付ピッカー用: assets.meta から「いいねがある YYYY-MM-DD」の集合と
+  // 日付範囲 (最古〜最新) を導出する。assets ロード前は空集合 = どの日も
+  // 無効化されないが選択は可能 (空ヒットでも UX 上クラッシュしない)。
+  const { availableDateSet, fromDate, toDate } = useMemo(() => {
+    if (!assets) {
+      return {
+        availableDateSet: new Set<string>(),
+        fromDate: undefined as Date | undefined,
+        toDate: undefined as Date | undefined,
+      };
+    }
+    const set = new Set<string>();
+    let minMs = Number.POSITIVE_INFINITY;
+    let maxMs = 0;
+    for (const m of assets.meta) {
+      if (m.p === 1 || m.n === 1) continue;
+      const ymd = (m.l || '').slice(0, 10);
+      if (!ymd) continue;
+      set.add(ymd);
+      const t = Date.parse(ymd);
+      if (Number.isFinite(t)) {
+        if (t < minMs) minMs = t;
+        if (t > maxMs) maxMs = t;
+      }
+    }
+    return {
+      availableDateSet: set,
+      fromDate: Number.isFinite(minMs) ? new Date(minMs) : undefined,
+      toDate: maxMs ? new Date(maxMs) : undefined,
+    };
+  }, [assets]);
+
+  // dateFilter (YYYY-MM-DD string) を Calendar が期待する Date に変換
+  const dateFilterAsDate = useMemo(() => {
+    if (!dateFilter) return undefined;
+    const [y, m, d] = dateFilter.split('-').map(Number);
+    if (!y || !m || !d) return undefined;
+    return new Date(y, m - 1, d);
+  }, [dateFilter]);
+
   return (
     <div className="col-28" style={{ padding: '16px 16px 60px', display: 'flex', flexDirection: 'column', gap: 14 }}>
       {/* タイトル */}
@@ -399,7 +466,8 @@ export function SearchPageClient() {
         <ReadyBanner onClose={dismissOnboarding} />
       )}
 
-      {/* date filter chip */}
+      {/* date filter chip — 日付テキスト自体が Popover トリガーになり、
+          別の日付に切り替えるカレンダーを開ける */}
       {dateFilter && (
         <div
           className="flex items-center gap-2"
@@ -413,7 +481,52 @@ export function SearchPageClient() {
           }}
         >
           <CalendarDays size={14} strokeWidth={1.75} style={{ color: 'var(--zk-accent)' }} />
-          <span className="font-mono">{dateFilter}</span>
+          <Popover open={datePickerOpen} onOpenChange={setDatePickerOpen}>
+            <PopoverTrigger asChild>
+              <button
+                type="button"
+                className="inline-flex items-center gap-1"
+                style={{
+                  padding: '2px 6px',
+                  margin: '-2px -2px -2px -6px',
+                  borderRadius: 6,
+                  background: 'transparent',
+                  color: 'inherit',
+                  fontSize: 'inherit',
+                  cursor: 'pointer',
+                  transition: 'background 120ms ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                }}
+                aria-label="別の日付を選ぶ"
+              >
+                <span className="font-mono">{dateFilter}</span>
+                <ChevronDown size={11} strokeWidth={1.75} style={{ opacity: 0.6 }} />
+              </button>
+            </PopoverTrigger>
+            <PopoverContent align="start" className="w-auto p-2">
+              <Calendar
+                mode="single"
+                selected={dateFilterAsDate}
+                onSelect={changeDate}
+                disabled={(date) => {
+                  // assets 未ロード時は無効化しない (set が空 = 全部 enable)
+                  if (availableDateSet.size === 0) return false;
+                  const ymd = `${date.getFullYear()}-${String(
+                    date.getMonth() + 1,
+                  ).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+                  return !availableDateSet.has(ymd);
+                }}
+                fromDate={fromDate}
+                toDate={toDate}
+                defaultMonth={dateFilterAsDate}
+              />
+            </PopoverContent>
+          </Popover>
           <span style={{ color: 'var(--text-2)' }}>のいいねに絞り込み中</span>
           <span className="flex-1" />
           <button
