@@ -23,19 +23,14 @@ export function CategoryPageClient({ category, count, total, tweets, subTags }: 
   const [pageLimit, setPageLimit] = useState(PAGE_SIZE);
 
   // ツイートカードのハッシュタグから ?tag=foo で飛んできたら、その tag を
-  // 初期選択する。subTags に存在しない tag は無視 (typo / 廃止された tag)。
+  // 初期選択する。subTags の top-30 表示には載らないマイナーな tag でも
+  // URL を信用して filter を適用 (= 0 件なら空表示)。
   const searchParams = useSearchParams();
   useEffect(() => {
     const t = searchParams?.get('tag');
-    if (!t) {
-      setSelectedTag(null);
-      return;
-    }
-    if (subTags.some((s) => s.tag === t)) {
-      setSelectedTag(t);
-      setPageLimit(PAGE_SIZE);
-    }
-  }, [searchParams, subTags]);
+    setSelectedTag(t || null);
+    setPageLimit(PAGE_SIZE);
+  }, [searchParams]);
 
   const filtered = useMemo(() => {
     if (!selectedTag) return tweets;
@@ -218,7 +213,6 @@ export function CategoryPageClient({ category, count, total, tweets, subTags }: 
                   category: category.name,
                   summary_ja: t.summary_ja,
                   sub_tags: t.sub_tags,
-                  text: t.text,
                   showScore: false,
                 }}
               />
