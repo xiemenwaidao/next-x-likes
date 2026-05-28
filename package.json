@@ -28,6 +28,8 @@
     "ai:embed": "tsx src/scripts/embed-likes.ts",
     "ai:build-search": "tsx src/scripts/build-search-assets.ts",
     "ai:search": "tsx src/scripts/search-cli.ts",
+    "podcast:fetch": "tsx src/scripts/podcast/fetch-period.ts",
+    "podcast:pick-persona": "tsx src/scripts/podcast/pick-persona.ts",
     "prepare": "husky"
   },
   "dependencies": {

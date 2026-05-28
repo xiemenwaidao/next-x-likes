@@ -57,3 +57,11 @@ src/content/archive/archive-likes-enriched.json
 .claude/*
 !.claude/agents/
 !.claude/commands/
+
+# Podcast 生成物
+# - mp3 は外部 storage (R2 / S3 など) 移行検討中。当面 gitignore で repo を肥らせない
+# - transcript JSON (.script.json) は軽いので commit してアーカイブ
+# - BGM (public/podcasts/bgm/) はユーザー提供の長期 asset、commit する
+/public/podcasts/*.mp3
+/data/podcasts/
+/data/podcast-link-cache.json
