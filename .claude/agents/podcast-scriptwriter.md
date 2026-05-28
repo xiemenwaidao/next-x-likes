@@ -45,8 +45,8 @@ model: sonnet
   "segments": [
     {
       "type": "intro",
-      "bgm": "bgm/intro.mp3",
-      "bgm_volume": 0.18,
+      "bgm": "bgm/bed.mp3",
+      "bgm_volume": 0.12,
       "lines": [
         { "speaker": "<host.id>", "text": "...", "pause_after_ms": 300 }
       ]
@@ -64,8 +64,8 @@ model: sonnet
     },
     {
       "type": "outro",
-      "bgm": "bgm/outro.mp3",
-      "bgm_volume": 0.20,
+      "bgm": "bgm/bed.mp3",
+      "bgm_volume": 0.12,
       "lines": [...]
     }
   ]
@@ -134,7 +134,8 @@ intro の挨拶では名前だけ名乗る (「ホストのちひろです」「
 - `source_tweet_id`: ツイート言及時に必ず付ける (検証可能性 + あとで script を読み返すため)
 - `source_link_url`: リンク要約を言及した line に付ける
 - `pause_after_ms`: 文の切れ目で 200-400ms、章境界で 600-1200ms、ホスト交代直後で 100-200ms
-- `bgm`: intro/outro は専用 BGM、章は `bgm/bed.mp3`、transition (使うなら) は null
+- `bgm`: 全 segment で `"bgm/bed.mp3"` (1 曲をエピソード全編で流す方式)。transition (使うなら) は null
+- `bgm_volume`: 0.12 統一 (発話中に -12dB 程度になるよう mix 側で ducking する前提)
 
 ### 7. 月の言及
 

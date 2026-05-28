@@ -27,7 +27,9 @@ push して公開する。
 - `./x-likes-radio/` が clone 済み (= `/podcast-init` 実行済み)。存在しなければ skill を中断して案内
 - `data/likes.db` が読める (リポジトリルートで実行する前提)
 - `.env` に `ELEVENLABS_API_KEY` (P5 以降)
-- BGM ファイルが `public/podcasts/bgm/{intro,outro,bed}.mp3` に置いてある (P6 以降)
+- BGM ファイルが `public/podcasts/bgm/bed.mp3` に置いてある (P6 以降。1 曲をエピソード全編で流す方式)。
+  実運用では実体 mp3 を `public/podcasts/bgm/*.mp3` に複数置き、`bed.mp3` を symlink にする:
+  `cd public/podcasts/bgm && ln -sfn <target>.mp3 bed.mp3`
 - ffmpeg が `/opt/homebrew/bin/ffmpeg` 等で見える (P6 以降)
 
 ## 実装進捗 (このセッション時点)
@@ -51,7 +53,7 @@ push して公開する。
 | TTS 個別セグメント mp3 | `data/podcasts/cache/<hash>.mp3` | next-x-likes、gitignore |
 | 完成 mp3 | `x-likes-radio/audio/{slug}.mp3` | x-likes-radio、commit |
 | show notes (md) | `x-likes-radio/_posts/YYYY-MM-DD-{slug}.md` | x-likes-radio、commit |
-| BGM | `public/podcasts/bgm/{intro,outro,bed}.mp3` | next-x-likes、commit (固定 asset) |
+| BGM (実体 + symlink) | `public/podcasts/bgm/*.mp3` + `bed.mp3` symlink | **gitignore** (著作権配慮 + repo 肥大回避)、ローカルで管理 |
 
 slug は `{from}_to_{to}` (例: `2026-05-22_to_2026-05-28`)。
 
@@ -206,8 +208,8 @@ pnpm tsx src/scripts/podcast/mix-audio.ts --script "$SCRIPT_PATH" --out "./x-lik
 ```
 
 - 発話 mp3 を `pause_after_ms` 込みで concat
-- `bgm/bed.mp3` を全編裏で流して ducking (発話被り部分のみ -12dB)
-- intro/outro は専用 BGM
+- `bgm/bed.mp3` 1 曲をエピソード全編で流し、発話被り部分のみ自動 ducking (-12dB)
+- BGM がエピソード長より短い場合はループ
 - LUFS -16 normalize
 - 出力: `x-likes-radio/audio/{slug}.mp3`
 
