@@ -160,10 +160,17 @@ body::before {
 
 /* Safety net: モバイルで意図しない横スクロールを抑止。
  * カード内の widgets.js iframe や table 等が局所的にはみ出しても
- * ページ全体が横スクロールしないようにする。 */
+ * ページ全体が横スクロールしないようにする。
+ *
+ * 注: `overflow-x: hidden` は overflow-y を `visible` から `auto` に
+ * 自動昇格させて html/body を scroll container にしてしまう副作用がある
+ * (= 内側の position: sticky が壊れる)。`overflow-x: clip` は scroll
+ * container を作らないので sticky を維持できる。古い Safari (< 16) は
+ * clip を解さず hidden に fallback。 */
 html,
 body {
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* iOS Safari は input の font-size が 16px 未満だとタップ時に自動 zoom する。
@@ -558,7 +565,10 @@ select {
    - hover: マウス時に subtle scale up
    ============================================================ */
 .zk-logo {
-  display: block;
+  /* footer の `<Link>@ <LogoSVG />` のようにインライン文脈で並ぶ箇所もあるので
+     inline-block を採用 (block にすると @ と分離する) */
+  display: inline-block;
+  vertical-align: middle;
   overflow: visible; /* shimmer の rect が viewBox 外で待機できるように */
   transition: width 220ms cubic-bezier(0.22, 0.61, 0.36, 1),
               height 220ms cubic-bezier(0.22, 0.61, 0.36, 1),
