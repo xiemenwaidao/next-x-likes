@@ -1,24 +1,26 @@
 /**
- * PodcastTweetBundle (stdin) を読み、カテゴリ分布から動的にホスト候補 3-4 案を組み立てて stdout に出す。
+ * PodcastTweetBundle (stdin) を読み、固定 2 名ホスト (DEFAULT_HOSTS = ちひろ + ゆば)
+ * の中で「その週の主導役と補佐役」を提案するスクリプト。
  *
  * Usage:
  *   pnpm tsx src/scripts/podcast/fetch-period.ts | pnpm tsx src/scripts/podcast/pick-persona.ts
  *
  * 出力 (stdout, JSON):
  *   {
- *     stats: CategoryStat[],         // 全カテゴリの分布
- *     candidates: PersonaCandidate[] // 3-4 案 (AskUserQuestion に渡せる形)
+ *     period: PeriodSpec,
+ *     stats: CategoryStat[],
+ *     candidates: PersonaCandidate[]    // 主導/補佐の入れ替え案 (2-3 案)
  *   }
  *
  * 設計:
- *   - 上位カテゴリの比率で「1人ホスト / 2人ホスト」を切り替える
- *   - 2人の場合は必ず男女混合 (聴き分けやすさ + ユーザー要望の「IT 男 + ゲーム好き女」を満たす)
- *   - 候補は (a) 推奨案、(b) 1人ホストパターン、(c) 別の組み合わせ、(d) other フォールバック の 4 案
+ *   - ホストは DEFAULT_HOSTS の 2 名固定 (2026-05-29 確定)
+ *   - top1 カテゴリが Persona.primary_interests に含まれる方を「主導 (lead)」に
+ *   - 候補: (a) 推奨案 (主導+補佐)、(b) 入れ替え案、(c) 2 人均等案
  */
 import {
-  PODCAST_PERSONAS,
-  getPersonasForCategory,
-  pickOppositeGenderHost,
+  DEFAULT_HOSTS,
+  leadHostForCategory,
+  partnerOf,
   type PodcastPersona,
 } from '../../data/podcast-personas';
 import type {
@@ -38,15 +40,16 @@ function readStdin(): Promise<string> {
   });
 }
 
-function toSelection(p: PodcastPersona): PersonaSelection {
+function toSelection(p: PodcastPersona, weeklyRole: 'lead' | 'support'): PersonaSelection {
   return {
     id: p.id,
     name: p.name,
-    category: p.category,
     gender: p.gender,
     role: p.role,
     voice_id: p.voice_id,
     voice_label: p.voice_label,
+    primary_interests: p.primary_interests,
+    weekly_role: weeklyRole,
   };
 }
 
@@ -57,115 +60,47 @@ function computeStats(bundle: PodcastTweetBundle): CategoryStat[] {
     counter.set(c, (counter.get(c) ?? 0) + 1);
   }
   const total = bundle.tweets.length || 1;
-  const stats: CategoryStat[] = [...counter.entries()]
+  return [...counter.entries()]
     .map(([category, count]) => ({ category, count, ratio: count / total }))
     .sort((a, b) => b.count - a.count);
-  return stats;
 }
 
 function buildCandidates(stats: CategoryStat[]): PersonaCandidate[] {
-  const candidates: PersonaCandidate[] = [];
   const top1 = stats[0];
+  // top1 が誰の interests か → 主導 (lead) を決定
+  const lead = top1 ? leadHostForCategory(top1.category) : DEFAULT_HOSTS[0];
+  const support = partnerOf(lead);
+
+  const top1Label = top1 ? `${top1.category} (${(top1.ratio * 100).toFixed(0)}%)` : 'データ少';
   const top2 = stats[1];
+  const top2Label = top2 ? `${top2.category} (${(top2.ratio * 100).toFixed(0)}%)` : null;
 
-  if (!top1) {
-    // 期間内 0 件
-    candidates.push({
-      label: 'other フォールバック (1人)',
-      description: '今期はいいねが見つからなかったので、雑食 MC が短く回す',
-      hosts: [toSelection(PODCAST_PERSONAS.other[0])],
-    });
-    return candidates;
-  }
+  const candidates: PersonaCandidate[] = [
+    {
+      label: `${lead.name} 主導 + ${support.name} 補佐 (推奨)`,
+      description: `${top1Label}${top2Label ? ' + ' + top2Label : ''}${
+        top1 && lead.primary_interests.includes(top1.category)
+          ? ` — ${lead.name} の得意領域なので主導役に`
+          : ` — ${lead.name} がリード`
+      }`,
+      hosts: [toSelection(lead, 'lead'), toSelection(support, 'support')],
+    },
+    {
+      label: `入れ替え: ${support.name} 主導 + ${lead.name} 補佐`,
+      description: `逆パターン。${support.name} を前面にして、${lead.name} が裏で支える構成`,
+      hosts: [toSelection(support, 'lead'), toSelection(lead, 'support')],
+    },
+    {
+      label: `バランス: ${lead.name} + ${support.name} (主導なし、ほぼ 50/50)`,
+      description: '主導/補佐を区別せず、2 人で対等に振り返る。話題が分散した週向け',
+      hosts: [
+        { ...toSelection(lead, 'lead'), weekly_role: undefined },
+        { ...toSelection(support, 'support'), weekly_role: undefined },
+      ],
+    },
+  ];
 
-  const primary = getPersonasForCategory(top1.category)[0];
-  const ratioTop1 = top1.ratio;
-  const ratioTop2 = top2?.ratio ?? 0;
-
-  // 推奨案 (一番上)
-  if (ratioTop1 >= 0.55) {
-    // 1 人ホスト推奨
-    candidates.push({
-      label: `1人ホスト: ${primary.name} (${top1.category})`,
-      description: `${top1.category} が ${(ratioTop1 * 100).toFixed(0)}% を占めるので、専門ホスト 1 人で深掘り`,
-      hosts: [toSelection(primary)],
-    });
-    // 代替: 2 人にしてみる
-    if (top2) {
-      const secondary = getPersonasForCategory(top2.category)[0];
-      const adjusted =
-        secondary.gender === primary.gender
-          ? pickOppositeGenderHost(primary, top2.category)
-          : secondary;
-      candidates.push({
-        label: `2人ホスト: ${primary.name} + ${adjusted.name}`,
-        description: `${top1.category} メインに ${top2.category} の視点を ${adjusted.name} (${adjusted.voice_label}) で添える`,
-        hosts: [toSelection(primary), toSelection(adjusted)],
-      });
-    }
-  } else if (ratioTop2 >= 0.2 && top2) {
-    // 2 人ホスト推奨
-    const secondary = getPersonasForCategory(top2.category)[0];
-    const adjusted =
-      secondary.gender === primary.gender
-        ? pickOppositeGenderHost(primary, top2.category)
-        : secondary;
-    candidates.push({
-      label: `2人ホスト: ${primary.name} + ${adjusted.name}`,
-      description: `${top1.category} (${(ratioTop1 * 100).toFixed(0)}%) と ${top2.category} (${(ratioTop2 * 100).toFixed(0)}%) の混合回。${adjusted.voice_label} がサブを担当`,
-      hosts: [toSelection(primary), toSelection(adjusted)],
-    });
-    // 代替: 1 人ホストで主役だけに絞る
-    candidates.push({
-      label: `1人ホスト: ${primary.name} (${top1.category} のみ)`,
-      description: `${primary.name} 1 人で全カテゴリ捌く。シンプル & 短め`,
-      hosts: [toSelection(primary)],
-    });
-  } else {
-    // 分散しすぎ → 雑食 MC + 上位カテゴリの専門家
-    const other = PODCAST_PERSONAS.other[0];
-    const adjusted =
-      primary.gender === other.gender
-        ? pickOppositeGenderHost(other, top1.category)
-        : primary;
-    candidates.push({
-      label: `2人ホスト: ${other.name} + ${adjusted.name}`,
-      description: `話題が分散しているので雑食 MC ${other.name} と ${top1.category} 担当 ${adjusted.name} の構成`,
-      hosts: [toSelection(other), toSelection(adjusted)],
-    });
-    candidates.push({
-      label: `1人ホスト: ${other.name}`,
-      description: '雑食 MC が全部回す',
-      hosts: [toSelection(other)],
-    });
-  }
-
-  // 代替候補: 上位 2 カテゴリの「もう一つの voice」を試す
-  if (top2 && PODCAST_PERSONAS[top1.category]?.length > 1) {
-    const alt = PODCAST_PERSONAS[top1.category][1];
-    const secondary = getPersonasForCategory(top2.category)[0];
-    const adjusted =
-      secondary.gender === alt.gender
-        ? pickOppositeGenderHost(alt, top2.category)
-        : secondary;
-    candidates.push({
-      label: `代替: ${alt.name} + ${adjusted.name}`,
-      description: `${top1.category} の別 voice (${alt.voice_label}) で雰囲気を変える`,
-      hosts: [toSelection(alt), toSelection(adjusted)],
-    });
-  }
-
-  // フォールバック: 4 案に達していなければ other を埋める
-  while (candidates.length < 3) {
-    const other = PODCAST_PERSONAS.other[0];
-    candidates.push({
-      label: `フォールバック: ${other.name} 1人`,
-      description: '安全策。雑食 MC が単独で回す',
-      hosts: [toSelection(other)],
-    });
-  }
-
-  return candidates.slice(0, 4);
+  return candidates;
 }
 
 async function main() {
@@ -191,9 +126,9 @@ async function main() {
     `[pick-persona] top3=${stats
       .slice(0, 3)
       .map((s) => `${s.category}:${s.count}`)
-      .join(' ')} candidates=${candidates.length}\n`,
+      .join(' ')} candidates=${candidates.length} (lead=${candidates[0]?.hosts[0]?.name ?? 'n/a'})\n`,
   );
-  process.stdout.write(JSON.stringify({ stats, candidates }, null, 2));
+  process.stdout.write(JSON.stringify({ period: bundle.period, stats, candidates }, null, 2));
 }
 
 main().catch((e) => {

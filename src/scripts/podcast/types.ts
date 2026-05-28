@@ -55,11 +55,16 @@ export type NewsContext = {
 export type PersonaSelection = {
   id: string;
   name: string;
-  category: string;
+  /** 旧設計 (カテゴリ別ペルソナ) との互換。新設計 (2 名固定) では `lead_for` を使う */
+  category?: string;
   gender: 'male' | 'female' | 'neutral';
   role: string;
   voice_id: string;
   voice_label: string;
+  /** 主導役にしやすい得意領域 (CATEGORIES[].name の集合) */
+  primary_interests?: string[];
+  /** その回の主導/補佐役。"lead" or "support"。指定なければ hosts 配列の順 (hosts[0] が lead) */
+  weekly_role?: 'lead' | 'support';
 };
 
 export type CategoryStat = {
