@@ -50,7 +50,7 @@ src/content/archive/archive-likes-enriched.json
 *.db-wal
 *.db-journal
 
-# 検索アセット (SQLite から build-search-assets で再生成、prebuild で自動)
+# 検索アセット (SQLite から build-search-assets で再生成、pnpm build の先頭で自動)
 /public/data/
 
 # Claude Code settings (ディレクトリ配下の各エントリを除外しつつ agents/ だけ通す)
