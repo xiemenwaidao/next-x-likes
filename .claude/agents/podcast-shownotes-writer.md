@@ -20,6 +20,7 @@ model: sonnet
 - link cache (`data/podcast-link-cache.json`) — URL → {title, summary}
 - news (`/tmp/podcast-news.json`) — 関連ニュース (任意)
 - mp3 のメタ (呼び出し prompt で `audio_file_path` / `audio_file_size` (bytes) / `duration` ("MM:SS") / `date` (YYYY-MM-DD) を渡される)
+- `episode_number` (呼び出し prompt で渡される。1 始まりの通し番号。タイトルの「第N回」に使う)
 - ホスト (`/tmp/podcast-selected-hosts.json`) — actor id
 
 カテゴリ label_ja が必要なら `src/data/categories.ts` を Read。
@@ -92,7 +93,9 @@ description: "<1-2 文サマリ、120 字以内>"
   (例: `2026-05-29 21:00:00 +0900`) をそのまま使う。**振り返り対象週の日付ではない**
   (週情報は title / description / 本文で表す)。これにより Apple/Spotify で正しく新着扱いされる
 - `duration`: "MM:SS" (呼び出しで渡された値、引用符あり)
-- `title`: 「いいねダイジェスト YYYY-MM-DD週 (上位2カテゴリ label_ja)」形式。例:「いいねダイジェスト 2024-11-18週 (アート / プログラミング)」
+- `title`: **「いいねダイジェスト YYYY-MM-DD週 第N回 (上位2カテゴリ label_ja)」形式**。
+  「第N回」は呼び出し prompt で渡される `episode_number` を必ず入れる (全エピソードで統一)。
+  例:「いいねダイジェスト 2024-11-18週 第2回 (アート / プログラミング)」
 - `description`: その回の要約 1-2 文、120 字以内。時制 NG ワード (今週/今回/最近) 禁止
 
 ### body 冒頭の注意 (layout が自動描画する要素を重複させない)

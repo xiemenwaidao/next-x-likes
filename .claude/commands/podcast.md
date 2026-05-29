@@ -296,10 +296,19 @@ DUR_SEC=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT")
 DUR_MMSS=$(python3 -c "s=int(float('$DUR_SEC')); print(f'{s//60:02d}:{s%60:02d}')")
 # RSS pubDate = 実際の公開日時 (振り返り対象週ではない)。Date.now() は使えないので JST 現在時刻を生成
 PUBLISH_DT=$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S +0900')
+
+# ★ 通し番号 (第N回)。週は古い順に作る前提なので「既存 _posts のうち今回より前の週の数 + 1」。
+#   ファイル名 "YYYY-MM-DD-{from}_to_{to}.md" の {from} 部分 (12文字目以降の先頭10文字) で比較。
+EP_NO=$(( $(ls x-likes-radio/_posts/*.md 2>/dev/null \
+  | sed -E 's#.*/[0-9]{4}-[0-9]{2}-[0-9]{2}-([0-9]{4}-[0-9]{2}-[0-9]{2})_to_.*#\1#' \
+  | awk -v f="$PERIOD_FROM" '$1 < f' | wc -l | tr -d ' ') + 1 ))
+echo "[publish] episode_number = $EP_NO"
 ```
 
 `podcast-shownotes-writer` サブエージェントを起動 (PodcastScript・tweets・link cache・news・
-mp3 メタ・hosts・**publish_datetime (`$PUBLISH_DT`)** を渡す)。出力: `x-likes-radio/_posts/{PUBLISH_DATE}-{slug}.md`
+mp3 メタ・hosts・**publish_datetime (`$PUBLISH_DT`)**・**episode_number (`$EP_NO`)** を渡す)。
+タイトルは必ず「いいねダイジェスト {from}週 第${EP_NO}回 (上位2カテゴリ)」形式で統一。
+出力: `x-likes-radio/_posts/{PUBLISH_DATE}-{slug}.md`
 (Yattecast 形式。ファイル名の日付プレフィックスも公開日 `$PUBLISH_DT` の日付部分を使う)。
 **`audio_file_path` には Stage 8.5 で決めた `$AUDIO_PATH` を渡す** (env 未設定なら `/audio/{slug}.mp3`、
 外部ストレージ移行後は R2/S3 の絶対 URL)。
