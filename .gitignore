@@ -57,3 +57,16 @@ src/content/archive/archive-likes-enriched.json
 .claude/*
 !.claude/agents/
 !.claude/commands/
+
+# Podcast 生成物
+# - mp3 / show notes は別 repo (x-likes-radio, Yattecast fork) に出力するため本 repo
+#   では追跡しない。x-likes-radio はサブディレクトリに clone される (submodule 化はしない)
+# - transcript JSON / TTS セグメント cache / 外部 URL 要約は本 repo の data/ 配下に
+#   永続化するが再生成可能なので gitignore
+# - BGM はユーザーがローカルに置く asset。著作権配慮 + repo 肥大回避で全部 gitignore。
+#   実体ファイルを複数置き、bed.mp3 を symlink にすることで切り替え運用:
+#   `cd public/podcasts/bgm && ln -sfn <target>.mp3 bed.mp3`
+/x-likes-radio/
+/data/podcasts/
+/data/podcast-link-cache.json
+/public/podcasts/bgm/

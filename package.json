@@ -28,6 +28,16 @@
     "ai:embed": "tsx src/scripts/embed-likes.ts",
     "ai:build-search": "tsx src/scripts/build-search-assets.ts",
     "ai:search": "tsx src/scripts/search-cli.ts",
+    "podcast:fetch": "tsx src/scripts/podcast/fetch-period.ts",
+    "podcast:pick-persona": "tsx src/scripts/podcast/pick-persona.ts",
+    "podcast:extract-links": "tsx src/scripts/podcast/extract-links.ts",
+    "podcast:upsert-link-cache": "tsx src/scripts/podcast/upsert-link-cache.ts",
+    "podcast:build-news-queries": "tsx src/scripts/podcast/build-news-queries.ts",
+    "podcast:verify-script": "tsx src/scripts/podcast/verify-script.ts",
+    "podcast:tts": "tsx -r dotenv/config src/scripts/podcast/synthesize-tts.ts",
+    "podcast:mix": "tsx src/scripts/podcast/mix-audio.ts",
+    "podcast:upload-audio": "tsx -r dotenv/config src/scripts/podcast/upload-audio.ts",
+    "podcast:build-index": "tsx src/scripts/podcast/build-episode-index.ts",
     "prepare": "husky"
   },
   "dependencies": {

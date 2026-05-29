@@ -10,6 +10,7 @@ import { Footer } from '@/components/footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Main } from '@/components/main';
 import { ScrollTopButton } from '@/components/scroll-top-button';
+import { PodcastPlayer } from '@/components/podcast-player';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -79,6 +80,7 @@ export default function RootLayout({
               <ScrollTopButton />
             </Footer>
           </div>
+          <PodcastPlayer />
         </body>
       </html>
     </ViewTransitions>
