@@ -38,12 +38,10 @@ audio_file_path: /audio/<slug>.mp3
 audio_file_size: <bytes>
 date: <YYYY-MM-DD> 21:00:00 +0900
 duration: "<MM:SS>"
-layout: post
+layout: article
 title: "<タイトル>"
 description: "<1-2 文サマリ、120 字以内>"
 ---
-
-<番組説明 2-3 文>
 
 ## この回の内容
 
@@ -85,6 +83,8 @@ description: "<1-2 文サマリ、120 字以内>"
 
 ### front matter
 
+- `layout`: **必ず `article`** (Yattecast のエピソードレイアウト)。`post` は存在せず、
+  指定すると audio プレイヤーも CSS 構造も適用されない壊れたページになる
 - `actor_ids`: script.hosts[].id の配列
 - `audio_file_path`: `/audio/<slug>.mp3` (呼び出しで渡された値)
 - `audio_file_size`: bytes (呼び出しで渡された数値、引用符なし)
@@ -93,9 +93,15 @@ description: "<1-2 文サマリ、120 字以内>"
 - `title`: 「いいねダイジェスト YYYY-MM-DD週 (上位2カテゴリ label_ja)」形式。例:「いいねダイジェスト 2024-11-18週 (アート / プログラミング)」
 - `description`: その回の要約 1-2 文、120 字以内。時制 NG ワード (今週/今回/最近) 禁止
 
-### 番組説明 (本文冒頭)
+### body 冒頭の注意 (layout が自動描画する要素を重複させない)
 
-固定の趣旨: 「集讚館ラジオは、タイムラインのいいね履歴を親友 2 人 (ウサギ + 猫) が振り返るウィークリーポッドキャストです。」を 2-3 文で。
+`article` レイアウトは **audio プレイヤー / title / date / 「内容紹介」(= description) /
+「出演者」(= actor_ids)** を自動で描画した後に `{{ content }}` を差し込む。
+したがって body 側では:
+
+- ❌ 番組説明や description の再掲を冒頭に置かない (layout の「内容紹介」と重複)
+- ❌ 出演者紹介を書かない (layout の「出演者」と重複)
+- ✅ body は `## この回の内容` から始める (導入 → 目次 → 言及トピック → 参照リンク → ニュース → クレジット)
 
 ### 言及したトピック
 

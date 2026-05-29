@@ -262,7 +262,7 @@ DUR_MMSS=$(python3 -c "s=int(float('$DUR_SEC')); print(f'{s//60:02d}:{s%60:02d}'
 mp3 メタ・hosts を渡す)。出力: `x-likes-radio/_posts/{PERIOD_FROM}-{slug}.md` (Yattecast 形式)。
 
 front matter: `actor_ids` / `audio_file_path: /audio/{slug}.mp3` / `audio_file_size` (bytes) /
-`date` (期間開始日 21:00:00 +0900) / `duration` ("MM:SS") / `layout: post` / `title` / `description`。
+`date` (期間開始日 21:00:00 +0900) / `duration` ("MM:SS") / `layout: article` (★必須、post は存在しない) / `title` / `description`。
 body: 番組説明 + 目次 + 言及ツイート (章別、@user → x.com URL) + 参照リンク + 関連ニュース + クレジット。
 
 x-likes-radio の `_config.yml` の `actors` に今回ホスト (usagi / neko) が居なければ追加。
