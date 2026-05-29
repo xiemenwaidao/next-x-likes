@@ -38,12 +38,13 @@ push して公開する。
 - ✅ **P2**: 外部リンク fetch (podcast-link-fetcher サブエージェント経由)
 - ✅ **P3**: 関連ニュース取得 (podcast-news-fetcher サブエージェント経由)
 - ✅ **P4**: 脚本生成 (podcast-scriptwriter サブエージェント) — **`--dry-run` 完成**
-- ✅ **P5**: TTS 合成 (ElevenLabs eleven_multilingual_v2、3並列、cache 付き)
-- ⏳ **P6**: ffmpeg mix (BGM ducking)、未実装
-- ⏳ **P7**: show notes 生成 + x-likes-radio へ commit + push、未実装
+- ✅ **P5**: TTS 合成 (ElevenLabs **eleven_v3**、3並列、model 込み cache)
+- ✅ **P6**: ffmpeg mix (BGM ducking + 間奏 boost + 末尾フェード)
+- ✅ **P7**: show notes 生成 (podcast-shownotes-writer サブエージェント) + x-likes-radio へ commit + push
 
-`--dry-run` ありなら Stage 6 で終了。`--dry-run` なしで呼ばれた場合は
-Stage 7 (TTS) まで走るが P6/P7 未実装なので mp3 mix と公開はまだできない。
+`--dry-run` ありなら Stage 6 で終了。`--dry-run` なしなら Stage 7-9 (TTS → mix → publish)
+まで走る。ただし Stage 9 の publish は `./x-likes-radio/` が clone 済み (= `/podcast-init`
+実行済み) であることが前提。未 clone なら mix まで実行して mp3 path を案内し publish は skip。
 
 ## 出力ファイルの行き先 (整理)
 
@@ -214,65 +215,84 @@ podcast.md からは tsx を直接呼ぶ形に統一)
 
 出力 (`/tmp/podcast-tts-result.json`) は line ごとの hash と path を含み、Stage 8 mix が参照する。
 
-### Stage 8: ffmpeg mix (P6 で実装)
+### Stage 8: ffmpeg mix
 
-**現状未実装。P6 で以下を追加予定:**
+mp3 出力先は x-likes-radio が clone 済みなら repo 配下、無ければ一時パス:
 
 ```bash
-pnpm tsx src/scripts/podcast/mix-audio.ts --script "$SCRIPT_PATH" --out "./x-likes-radio/audio/${SLUG}.mp3"
+SLUG="${PERIOD_FROM}_to_${PERIOD_TO}"
+if [ -d ./x-likes-radio ]; then OUT="./x-likes-radio/audio/${SLUG}.mp3"; else OUT="data/podcasts/out/${SLUG}.mp3"; fi
+mkdir -p "$(dirname "$OUT")"
+
+pnpm tsx src/scripts/podcast/mix-audio.ts \
+  --script "$SCRIPT_PATH" \
+  --tts-result /tmp/podcast-tts-result.json \
+  --out "$OUT" \
+  --intro-pad 5 --outro-pad 10 --inter-segment-pad 4 --fade-out 4 \
+  --bgm-volume 0.12 --interlude-volume 0.28 \
+  > /tmp/podcast-mix-result.json
 ```
 
-- 発話 mp3 を `pause_after_ms` 込みで concat
-- `bgm/bed.mp3` 1 曲をエピソード全編で流し、発話被り部分のみ自動 ducking (-12dB)
-- BGM がエピソード長より短い場合はループ
-- LUFS -16 normalize
-- 出力: `x-likes-radio/audio/{slug}.mp3`
+挙動 (2 pass):
 
-### Stage 9: show notes 生成 + x-likes-radio へ commit + push (P7 で実装)
+- **Pass 1**: 発話 mp3 を `pause_after_ms` 込みで concat。先頭に intro pad、末尾に outro pad、
+  各 segment 末尾に inter-segment pad の無音を挿入 (ラジオの「間」)
+- **Pass 2**: `bgm/bed.mp3` を全編ループで流し、
+  - 発話被り部分は `sidechaincompress` で自動 ducking (-12dB)
+  - **間奏区間 (intro / 章間 / outro) は BGM を base 0.12 → 0.28 に持ち上げ** (台形 0.5s フェード)。
+    各 line mp3 の実時間を ffprobe で測って間奏 timestamp を正確に計算
+  - `loudnorm I=-16:LRA=11:TP=-1.5` でラウドネス正規化
+  - 末尾 `--fade-out` 秒をフェードアウト (ブツ切れ防止 + 余韻)
+- 出力: `<OUT>` (例 `x-likes-radio/audio/{slug}.mp3`)
 
-**現状未実装。P7 で以下を追加予定:**
+### Stage 9: show notes 生成 + x-likes-radio へ commit + push
 
-`podcast-shownotes-writer` (新規サブエージェント) または専用 TS スクリプトで、
-脚本 (`SCRIPT_PATH`) と関連ツイート/リンクから show notes を組み立てる:
+`./x-likes-radio/` が無ければこの Stage を skip し、「`/podcast-init` 実行後に publish 可能」
+と案内して mp3 path を提示して終了。
 
-- ファイル: `x-likes-radio/_posts/{date}-{slug}.md`
-- front matter:
-  - `actor_ids: [host1_id, host2_id]`
-  - `audio_file_path: /audio/{slug}.mp3`
-  - `audio_file_size: <bytes>` (Stage 8 で生成した mp3 から `fs.statSync`)
-  - `date: <ISO8601>` (今日)
-  - `duration: "MM:SS"` (verify-script 出力の estimated_duration_sec から)
-  - `layout: post`
-  - `title: "今週のいいねダイジェスト ({from} 〜 {to})"`
-  - `description: "<1-2 文サマリ>"`
-- body: 章ごとの見出し + 言及ツイート URL + 言及外部リンク URL を関連リンクとして列挙
+ある場合、mp3 メタを集める:
 
-x-likes-radio の `_config.yml` の `actors` セクションに今回ホストが居なければ追加。
+```bash
+SIZE=$(stat -f%z "$OUT")
+DUR_SEC=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT")
+DUR_MMSS=$(python3 -c "s=int(float('$DUR_SEC')); print(f'{s//60:02d}:{s%60:02d}')")
+```
+
+`podcast-shownotes-writer` サブエージェントを起動 (PodcastScript・tweets・link cache・news・
+mp3 メタ・hosts を渡す)。出力: `x-likes-radio/_posts/{PERIOD_FROM}-{slug}.md` (Yattecast 形式)。
+
+front matter: `actor_ids` / `audio_file_path: /audio/{slug}.mp3` / `audio_file_size` (bytes) /
+`date` (期間開始日 21:00:00 +0900) / `duration` ("MM:SS") / `layout: post` / `title` / `description`。
+body: 番組説明 + 目次 + 言及ツイート (章別、@user → x.com URL) + 参照リンク + 関連ニュース + クレジット。
+
+x-likes-radio の `_config.yml` の `actors` に今回ホスト (usagi / neko) が居なければ追加。
 
 その後:
 
 ```bash
 cd x-likes-radio
-git add audio/${SLUG}.mp3 _posts/${DATE}-${SLUG}.md _config.yml
+git add audio/${SLUG}.mp3 _posts/${PERIOD_FROM}-${SLUG}.md _config.yml
 git commit -m "🎙️ feat: ${SLUG} エピソード公開"
 git push
 cd ..
 ```
 
-GitHub Pages の自動 build (Jekyll) が走り、数分で `https://xiemenwaidao.github.io/x-likes-radio/` に反映。
-RSS は `https://xiemenwaidao.github.io/x-likes-radio/feed.xml` で配信される。
+GitHub Pages の Jekyll build が走り、数分で `https://xiemenwaidao.github.io/x-likes-radio/` に反映。
+RSS は `https://xiemenwaidao.github.io/x-likes-radio/feed.xml`。
 
-## 実行フロー (P4 時点)
+## 実行フロー (全 stage 実装済み)
 
 1. 引数を解釈して期間 (`from` / `to`) を確定
-2. `./x-likes-radio/` が無ければ「`/podcast-init` を先に実行してください」と案内して exit
-3. Stage 1 を実行、件数を確認 (0 件なら exit)
-4. Stage 2 を実行 (need_fetch > 0 なら podcast-link-fetcher → upsert)
-5. Stage 3 を実行 (queries > 0 なら podcast-news-fetcher)
-6. Stage 4 を実行、AskUserQuestion でペルソナ承認 → `/tmp/podcast-selected-hosts.json`
-7. Stage 5 を実行、podcast-scriptwriter で `data/podcasts/scripts/{slug}.script.json` 生成
-8. Stage 6: verify-script でコスト見積もり、ユーザーに最終レポート
-9. `--dry-run` なしなら「P5/P6/P7 未実装のため TTS+mix+公開はまだ走れません」と案内して終了
+2. Stage 1: 期間内ツイート取得 (0 件なら exit)
+3. Stage 2: need_fetch > 0 なら podcast-link-fetcher → upsert
+4. Stage 3: queries > 0 なら podcast-news-fetcher
+5. Stage 4: AskUserQuestion でペルソナ承認 → `/tmp/podcast-selected-hosts.json`
+6. Stage 5: podcast-scriptwriter で脚本生成
+7. Stage 6: verify-script でコスト見積もり報告
+8. `--dry-run` ならここで終了
+9. Stage 7: synthesize-tts で TTS 合成 (eleven_v3、cache)
+10. Stage 8: mix-audio で mp3 完成 (間奏 boost + フェード)
+11. Stage 9: x-likes-radio があれば show notes 生成 + commit + push、無ければ skip して mp3 path 案内
 
 ## エラー処理
 
