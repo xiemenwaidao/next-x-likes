@@ -12,7 +12,8 @@ export function Main({ children }: { children: ReactNode }) {
     pathname.startsWith('/search') ||
     pathname.startsWith('/categories') ||
     pathname.startsWith('/archive') ||
-    pathname.startsWith('/urls');
+    pathname.startsWith('/urls') ||
+    pathname.startsWith('/podcast');
 
   if (isWideRoute) {
     return <main className="flex-1 flex flex-col">{children}</main>;

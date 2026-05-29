@@ -2,6 +2,7 @@
 
 import { Calendar } from '@/components/ui/calendar';
 import { useCalendarStore } from '@/store/calendar-store';
+import { buildPodcastDateSet, toYmd } from '@/lib/podcast-episodes';
 import { DateInfo } from '@/types/like';
 import { toZonedTime } from 'date-fns-tz';
 import { useTransitionRouter } from 'next-view-transitions';
@@ -17,6 +18,12 @@ export function CalendarPicker({
 }) {
   const { selectedDate, setSelectedDate, displayMonth, setDisplayMonth } =
     useCalendarStore();
+  // podcast がある週の日付を ● でマークする
+  const podcastDateSet = useMemo(() => buildPodcastDateSet(), []);
+  const isPodcastDate = useCallback(
+    (date: Date) => podcastDateSet.has(toYmd(date)),
+    [podcastDateSet],
+  );
   const params = useParams();
   const router = useTransitionRouter();
   const pathname = usePathname();
@@ -144,6 +151,8 @@ export function CalendarPicker({
         selected={selectedDate}
         onSelect={handleSelect}
         disabled={isDateDisabled}
+        modifiers={{ podcast: isPodcastDate }}
+        modifiersClassNames={{ podcast: 'zk-day-podcast' }}
         fromDate={useMemo(() => {
           const [firstDate] = [...allDates]
             .sort((a, b) => {

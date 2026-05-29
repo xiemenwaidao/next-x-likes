@@ -9,6 +9,7 @@ import {
   Search as SearchIcon,
   CalendarDays,
   LayoutGrid,
+  Headphones,
   X as CloseIcon,
   ChevronRight,
   Sparkles,
@@ -52,6 +53,14 @@ const MENU_ITEMS: MenuItem[] = [
     href: '/?tab=categories',
     icon: <LayoutGrid size={18} strokeWidth={1.75} />,
     match: (p) => p.startsWith('/categories'),
+  },
+  {
+    id: 'podcast',
+    title: '集讚館ラジオ',
+    sub: '週まとめを聞きながら眺める',
+    href: '/podcast',
+    icon: <Headphones size={18} strokeWidth={1.75} />,
+    match: (p) => p.startsWith('/podcast'),
   },
   {
     id: 'archive',

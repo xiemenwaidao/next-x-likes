@@ -24,6 +24,8 @@ import {
   type SearchHit,
 } from '@/lib/search-client';
 import { TweetEmbedCard } from '@/components/tweet-embed-card';
+import { PodcastWeekCard } from '@/components/podcast-week-card';
+import { buildPodcastDateSet, toYmd } from '@/lib/podcast-episodes';
 import { Calendar } from '@/components/ui/calendar';
 import {
   Popover,
@@ -199,6 +201,8 @@ export function SearchPageClient() {
   // 日付チップから別の日付に切り替えるとき用。assets が読まれた後は
   // 利用可能な日付のみ enable する Calendar を popover に出す。
   const [datePickerOpen, setDatePickerOpen] = useState(false);
+  // podcast がある週の日付を ● マーク
+  const podcastDateSet = useMemo(() => buildPodcastDateSet(), []);
   const changeDate = useCallback(
     (next: Date | undefined) => {
       if (!next) return;
@@ -613,6 +617,8 @@ export function SearchPageClient() {
                 mode="single"
                 selected={dateFilterAsDate}
                 onSelect={changeDate}
+                modifiers={{ podcast: (date) => podcastDateSet.has(toYmd(date)) }}
+                modifiersClassNames={{ podcast: 'zk-day-podcast' }}
                 disabled={(date) => {
                   // assets 未ロード時は無効化しない (set が空 = 全部 enable)
                   if (availableDateSet.size === 0) return false;
@@ -640,6 +646,9 @@ export function SearchPageClient() {
           </button>
         </div>
       )}
+
+      {/* この週のポッドキャスト (episode があれば再生カード) */}
+      <PodcastWeekCard dateYmd={dateFilter} />
 
       {/* 検索入力 */}
       <div className="zk-search-shell">

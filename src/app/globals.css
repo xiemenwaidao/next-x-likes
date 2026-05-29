@@ -852,3 +852,179 @@ select {
     opacity: 0.5;
   }
 }
+
+/* ===== Podcast 永続プレイヤー (WeChat 風フローティング) ===== */
+.zk-player {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  width: min(28rem, calc(100vw - 24px));
+  background: oklch(20% 0.012 250 / 0.86);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 0.5px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px oklch(0% 0 0 / 0.45), inset 0 0 0 0.5px oklch(100% 0 0 / 0.04);
+  z-index: 60;
+  overflow: hidden;
+  animation: zk-player-in 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes zk-player-in {
+  from { transform: translateX(-50%) translateY(16px); opacity: 0; }
+  to   { transform: translateX(-50%) translateY(0);    opacity: 1; }
+}
+
+/* 進捗バー (上辺) */
+.zk-player-progress {
+  position: relative;
+  height: 3px;
+  background: var(--line-soft);
+  cursor: pointer;
+}
+.zk-player-progress-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: oklch(70% 0.17 250);
+  border-radius: 0 2px 2px 0;
+  transition: width 0.15s linear;
+}
+
+/* mini bar */
+.zk-player-mini {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+}
+.zk-player-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.zk-player-title {
+  font-size: 12.5px;
+  color: var(--text-0);
+  line-height: 1.3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.zk-player-time {
+  font-size: 10.5px;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+.zk-player-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-1);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.zk-player-btn:hover { background: var(--bg-3); color: var(--text-0); }
+.zk-player-play {
+  background: oklch(70% 0.17 250);
+  color: oklch(18% 0.02 250);
+}
+.zk-player-play:hover { background: oklch(74% 0.17 250); color: oklch(15% 0.02 250); }
+
+/* expanded full */
+.zk-player-expanded { width: min(28rem, calc(100vw - 24px)); }
+.zk-player-full {
+  padding: 10px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.zk-player-full-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.zk-player-full-label {
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.08em;
+}
+.zk-player-full-title {
+  font-size: 14px;
+  color: var(--text-0);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.zk-player-full-times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+.zk-player-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 4px 0;
+}
+.zk-player-play-lg {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: oklch(70% 0.17 250);
+  color: oklch(18% 0.02 250);
+}
+.zk-player-play-lg:hover { background: oklch(74% 0.17 250); }
+.zk-player-rate {
+  min-width: 38px;
+  height: 30px;
+  border: 0.5px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-1);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+.zk-player-rate:hover { background: var(--bg-3); }
+.zk-player-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: center;
+  font-size: 11.5px;
+  color: var(--text-2);
+}
+.zk-player-link:hover { color: var(--text-0); }
+
+/* カレンダー: podcast がある日に下ドット */
+.zk-day-podcast {
+  position: relative;
+}
+.zk-day-podcast::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: oklch(72% 0.17 250);
+  box-shadow: 0 0 5px oklch(72% 0.17 250 / 0.6);
+  pointer-events: none;
+}
