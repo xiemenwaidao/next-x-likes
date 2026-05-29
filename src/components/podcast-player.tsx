@@ -117,7 +117,16 @@ export function PodcastPlayer() {
 
       <div className={`zk-player ${expanded ? 'zk-player-expanded' : ''}`} role="region" aria-label="ポッドキャストプレイヤー">
         {/* 進捗バー (mini/expanded 共通、上辺) */}
-        <div className="zk-player-progress" onClick={onSeekBar} role="slider" aria-label="再生位置" tabIndex={0}>
+        <div
+          className="zk-player-progress"
+          onClick={onSeekBar}
+          role="slider"
+          aria-label="再生位置"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(pct)}
+          tabIndex={0}
+        >
           <div className="zk-player-progress-fill" style={{ width: `${pct}%` }} />
         </div>
 

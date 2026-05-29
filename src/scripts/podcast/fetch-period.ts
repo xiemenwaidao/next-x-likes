@@ -43,7 +43,7 @@ function daysAgo(baseYmd: string, n: number): string {
 }
 
 function resolvePeriod(args: Args): PeriodSpec {
-  let to = args.to ?? todayJST();
+  const to = args.to ?? todayJST();
   let from = args.from;
   if (!from) {
     const days = args.days && Number.isFinite(args.days) && args.days > 0 ? args.days : 7;
