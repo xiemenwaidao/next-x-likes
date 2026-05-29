@@ -35,6 +35,7 @@
     "podcast:build-news-queries": "tsx src/scripts/podcast/build-news-queries.ts",
     "podcast:verify-script": "tsx src/scripts/podcast/verify-script.ts",
     "podcast:tts": "tsx -r dotenv/config src/scripts/podcast/synthesize-tts.ts",
+    "podcast:mix": "tsx src/scripts/podcast/mix-audio.ts",
     "prepare": "husky"
   },
   "dependencies": {
