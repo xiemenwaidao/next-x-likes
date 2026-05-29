@@ -24,11 +24,12 @@ export type PodcastPersona = {
 };
 
 /**
- * デフォルトのホスト 2 名。
+ * ホストのロースター。
  *
- * primary_interests は両者を「補完的に」配置し、上位カテゴリで主導役が自動的に
- * 切り替わるようにする。両者の interests に重複しない category (other 等) は
- * どちらでも担当できる扱い。
+ * neko + usagi(うさぴょむ) が基本ペア。auto 選択 (leadHostForCategory/partnerOf) は
+ * この 2 名のみを対象にし、上位カテゴリで主導役が切り替わる。
+ * gorilla 以降はゲスト枠で、回ごとに手動で起用する (selected-hosts に直接指定)。
+ * usagi は 2026-05-30 に呼称を「うさぴょむ」へ変更 (voice_id は据え置き)。
  */
 export const DEFAULT_HOSTS: PodcastPersona[] = [
   {
@@ -42,12 +43,21 @@ export const DEFAULT_HOSTS: PodcastPersona[] = [
   },
   {
     id: 'usagi',
-    name: 'ウサギ',
+    name: 'うさぴょむ',
     gender: 'female',
-    role: 'calm でリラックスした聞き心地。自然な口語で相槌や軽い補足を入れる隣の人。アート・カルチャー・ゲーム・ライフ系の解釈が得意。「私は」「〜が専門」のような自己定位 NG、さりげなく知ってる風で気負わない。感性寄りの読み取りでリスナーを和ませる親友キャラクター。表記はカタカナ「ウサギ」固定 (一般名詞なので TTS が「ウサギ」と確実に読む)',
+    role: 'calm でリラックスした聞き心地。自然な口語で相槌や軽い補足を入れる隣の人。アート・カルチャー・ゲーム・ライフ系の解釈が得意。「私は」「〜が専門」のような自己定位 NG、さりげなく知ってる風で気負わない。感性寄りの読み取りでリスナーを和ませる親友キャラクター。呼称はひらがな「うさぴょむ」固定 (台本でもこの表記を使う)',
     voice_id: 'wcs09USXSN5Bl7FXohVZ',
-    voice_label: 'Usagi',
+    voice_label: 'Usapyomu',
     primary_interests: ['art-creative', 'culture-entertainment', 'gaming', 'lifestyle', 'design'],
+  },
+  {
+    id: 'gorilla',
+    name: 'ゴリラ',
+    gender: 'male',
+    role: '低めで落ち着いた知的なトーン。専門用語をさりげなく噛み砕いて伝えるが、自分の職業や属性は名乗らない。論点整理が上手で、技術・サイエンス・ニュース系の解釈が得意。マウントを取らず観察者のスタンスで、どっしり構えてリスナーの隣で考えを整理してくれる親友キャラクター。表記はカタカナ「ゴリラ」固定 (一般名詞なので TTS が「ゴリラ」と確実に読む)',
+    voice_id: '3JDquces8E8bkmvbh6Bc',
+    voice_label: 'Gorilla',
+    primary_interests: ['tech-ai', 'programming', 'science-learning', 'news-society', 'product-business'],
   },
 ];
 
