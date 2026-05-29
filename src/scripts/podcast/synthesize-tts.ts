@@ -24,7 +24,7 @@ import type { PodcastScript, ScriptLine } from './types';
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'podcasts', 'cache');
 const API_BASE = 'https://api.elevenlabs.io/v1/text-to-speech';
-const DEFAULT_MODEL_ID = 'eleven_multilingual_v2';
+const DEFAULT_MODEL_ID = 'eleven_v3';
 const VOICE_SETTINGS = {
   stability: 0.5,
   similarity_boost: 0.75,

@@ -1,15 +1,21 @@
 ---
-description: 期間内のいいねから動的ペルソナのポッドキャストを生成し、x-likes-radio (Yattecast) 別 repo に push して公開する (--dry-run で脚本まで)
+description: 期間内のいいねから動的ペルソナのポッドキャストを生成し、x-likes-radio (Yattecast) 別 repo に push して公開し、本体サイト (next-x-likes) のエピソード index にも反映する (--dry-run で脚本まで)
 ---
 
 # /podcast — いいねダイジェスト・ポッドキャスト生成
 
 期間内 (デフォルト直近 7 日) のいいねを集めて、カテゴリ分布に応じた
-動的ペルソナで掛け合い台本を作り、ElevenLabs で音声合成、BGM (全編 ducking)
+動的ペルソナで掛け合い台本を作り、ElevenLabs (**eleven_v3**) で音声合成、BGM (全編 ducking)
 と mix した mp3 + show notes を **`x-likes-radio` (Yattecast fork) 別 repo** に
-push して公開する。
+push して公開し、さらに **本体サイト (next-x-likes) のエピソード index に反映**して
+カレンダー/プレイヤーに載せるところまで一気通貫で行う。
 
 公開先: `https://xiemenwaidao.github.io/x-likes-radio/` + RSS から Apple Podcasts / Spotify 登録可。
+本体サイト: `https://z.xiemen.me/podcast` (一覧) + カレンダー日付選択 + 永続プレイヤー。
+
+**「一貫してやって」= dry-run なしで呼べば Stage 1→10 まで全自動**
+(生成 → TTS → mix → x-likes-radio 公開 → 本体 index 反映 → 両 repo push)。
+コミット前に毎回ユーザーへ確認する運用ルールは維持する。
 
 ## 引数
 
@@ -38,13 +44,16 @@ push して公開する。
 - ✅ **P2**: 外部リンク fetch (podcast-link-fetcher サブエージェント経由)
 - ✅ **P3**: 関連ニュース取得 (podcast-news-fetcher サブエージェント経由)
 - ✅ **P4**: 脚本生成 (podcast-scriptwriter サブエージェント) — **`--dry-run` 完成**
-- ✅ **P5**: TTS 合成 (ElevenLabs **eleven_v3**、3並列、model 込み cache)
+- ✅ **P5**: TTS 合成 (ElevenLabs **eleven_v3**、3並列、model 込み cache)。`synthesize-tts.ts` の
+  デフォルト model_id は `eleven_v3` (v2 は品質却下済み。`--model` を渡さなければ v3)
 - ✅ **P6**: ffmpeg mix (BGM ducking + 間奏 boost + 末尾フェード)
 - ✅ **P7**: show notes 生成 (podcast-shownotes-writer サブエージェント) + x-likes-radio へ commit + push
+- ✅ **P8**: 本体サイト反映 (`build-episode-index.ts` で `src/data/podcast-episodes.json` 再生成 →
+  next-x-likes へ commit + push → Vercel デプロイでカレンダー/プレイヤーに反映)
 
-`--dry-run` ありなら Stage 6 で終了。`--dry-run` なしなら Stage 7-9 (TTS → mix → publish)
-まで走る。ただし Stage 9 の publish は `./x-likes-radio/` が clone 済み (= `/podcast-init`
-実行済み) であることが前提。未 clone なら mix まで実行して mp3 path を案内し publish は skip。
+`--dry-run` ありなら Stage 6 で終了。`--dry-run` なしなら Stage 7-10 (TTS → mix → x-likes-radio 公開
+→ 本体 index 反映) まで走る。ただし Stage 9-10 は `./x-likes-radio/` が clone 済み (= `/podcast-init`
+実行済み) であることが前提。未 clone なら mix まで実行して mp3 path を案内し publish/反映は skip。
 
 ## 出力ファイルの行き先 (整理)
 
@@ -54,6 +63,7 @@ push して公開する。
 | TTS 個別セグメント mp3 | `data/podcasts/cache/<hash>.mp3` | next-x-likes、gitignore |
 | 完成 mp3 | `x-likes-radio/audio/{slug}.mp3` | x-likes-radio、commit |
 | show notes (md) | `x-likes-radio/_posts/YYYY-MM-DD-{slug}.md` | x-likes-radio、commit |
+| エピソード index | `src/data/podcast-episodes.json` | **next-x-likes、commit** (本体サイトのカレンダー/プレイヤーが読む) |
 | BGM (実体 + symlink) | `public/podcasts/bgm/*.mp3` + `bed.mp3` symlink | **gitignore** (著作権配慮 + repo 肥大回避)、ローカルで管理 |
 
 slug は `{from}_to_{to}` (例: `2026-05-22_to_2026-05-28`)。
@@ -201,10 +211,11 @@ podcast.md からは tsx を直接呼ぶ形に統一)
 
 挙動:
 
-- ElevenLabs API (`eleven_multilingual_v2`、stability 0.5 / similarity_boost 0.75) で line 単位に合成
+- ElevenLabs API (**`eleven_v3`** がデフォルト、stability 0.5 / similarity_boost 0.75) で line 単位に合成。
+  v2 は品質却下済みなので `--model` は付けない (付けるなら必ず `eleven_v3`)
 - 並列度 3、429/5xx は指数バックオフで最大 3 回リトライ
-- cache key = `sha256(voice_id + ":" + text).slice(0, 16)`、`data/podcasts/cache/<hash>.mp3` に保存
-- 同じ {voice_id, text} は二度生成しない (台本微修正・リトライ時に既存資産再利用)
+- cache key = `sha256(model_id + ":" + voice_id + ":" + text).slice(0, 16)`、`data/podcasts/cache/<hash>.mp3` に保存
+- 同じ {model_id, voice_id, text} は二度生成しない (台本微修正・リトライ時に既存資産再利用。model を変えると別 cache)
 - `--dry-run` を渡すと API 呼ばずに cache hit/miss だけ報告 (コスト発生なし)
 
 エラー:
@@ -329,6 +340,45 @@ curl -s "https://xiemenwaidao.github.io/x-likes-radio/feed.xml" | grep -E "<titl
 curl -sI "https://xiemenwaidao.github.io/x-likes-radio/audio/${SLUG}.mp3" | grep -iE "HTTP|content-length|accept-ranges"
 ```
 
+### Stage 10: 本体サイト (next-x-likes) へエピソード反映
+
+x-likes-radio に publish しただけでは本体サイト (`https://z.xiemen.me`) のカレンダー●・
+`/podcast` 一覧・永続プレイヤーには出ない。`build-episode-index.ts` が
+`x-likes-radio/_posts/*.md` の front matter を読んで `src/data/podcast-episodes.json` を
+再生成し、それを next-x-likes に commit + push して **Vercel デプロイ**で初めて反映される。
+
+```bash
+# 1. _posts/*.md → src/data/podcast-episodes.json を再生成 (next-x-likes のルートで実行)
+pnpm tsx src/scripts/podcast/build-episode-index.ts
+# stderr に "N エピソード → src/data/podcast-episodes.json" と各週が出る
+```
+
+```bash
+# 2. 差分があれば next-x-likes に commit + push
+#    ★ podcast-episodes.json は「データ更新」なので CLAUDE.md の DB 同期と同じく
+#      main へ直接 commit/push してよい (Vercel が main をデプロイ)。
+#      ただしコミット前に必ずユーザー確認 (運用ルール)。
+git add src/data/podcast-episodes.json
+git commit -m "🎙️ feat: ${SLUG} エピソードを本体 index に反映"
+git push origin main
+```
+
+- `./x-likes-radio/` が無い (Vercel build 等) と `build-episode-index.ts` は既存 json を
+  温存して warning を出すだけ。ローカルの本 skill 実行時のみ正しく再生成される
+- `podcast-episodes.json` に差分が無ければ (既反映済み) commit を skip
+- ブランチ運用: 本体機能コード (PR) は feat ブランチだが、**エピソード index は運用データ**
+  なので `data/likes.db` 同様 main 直 commit が一貫運用上正しい。現在のチェックアウトが
+  feat ブランチなら `git checkout main && git pull --ff-only` してから反映する
+
+反映確認 (推奨):
+
+```bash
+# Vercel デプロイ完了後
+curl -sL "https://z.xiemen.me/podcast" -o /dev/null -w "%{http_code}\n"
+# またはローカル: src/data/podcast-episodes.json に当該 slug が載っているか
+python3 -c "import json;d=json.load(open('src/data/podcast-episodes.json'));print([e['slug'] for e in d])"
+```
+
 ## 実行フロー (全 stage 実装済み)
 
 1. 引数を解釈して期間 (`from` / `to`) を確定
@@ -339,9 +389,12 @@ curl -sI "https://xiemenwaidao.github.io/x-likes-radio/audio/${SLUG}.mp3" | grep
 6. Stage 5: podcast-scriptwriter で脚本生成
 7. Stage 6: verify-script でコスト見積もり報告
 8. `--dry-run` ならここで終了
-9. Stage 7: synthesize-tts で TTS 合成 (eleven_v3、cache)
+9. Stage 7: synthesize-tts で TTS 合成 (**eleven_v3** がデフォルト、cache)
 10. Stage 8: mix-audio で mp3 完成 (間奏 boost + フェード)
 11. Stage 9: x-likes-radio があれば show notes 生成 + commit + push、無ければ skip して mp3 path 案内
+12. Stage 10: build-episode-index で本体 index 再生成 → next-x-likes に commit + push (Vercel 反映)
+
+各 commit (Stage 9 の x-likes-radio、Stage 10 の next-x-likes) の前に必ずユーザーへ確認する。
 
 ## エラー処理
 
@@ -349,3 +402,4 @@ curl -sI "https://xiemenwaidao.github.io/x-likes-radio/audio/${SLUG}.mp3" | grep
 - `./x-likes-radio/` が存在しない → Stage 2 以降に進む前に case で弾く
 - 期間内 0 件 → Stage 1 終了直後にユーザー報告して exit
 - ユーザーがペルソナ選択をキャンセル → ペルソナ確定なしで「中断しました」と報告
+- Stage 10 で `src/data/podcast-episodes.json` に差分が無い → 既反映済みとして commit を skip
