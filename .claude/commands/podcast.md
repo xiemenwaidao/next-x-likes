@@ -283,15 +283,19 @@ fi
 SIZE=$(stat -f%z "$OUT")
 DUR_SEC=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT")
 DUR_MMSS=$(python3 -c "s=int(float('$DUR_SEC')); print(f'{s//60:02d}:{s%60:02d}')")
+# RSS pubDate = 実際の公開日時 (振り返り対象週ではない)。Date.now() は使えないので JST 現在時刻を生成
+PUBLISH_DT=$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S +0900')
 ```
 
 `podcast-shownotes-writer` サブエージェントを起動 (PodcastScript・tweets・link cache・news・
-mp3 メタ・hosts を渡す)。出力: `x-likes-radio/_posts/{PERIOD_FROM}-{slug}.md` (Yattecast 形式)。
+mp3 メタ・hosts・**publish_datetime (`$PUBLISH_DT`)** を渡す)。出力: `x-likes-radio/_posts/{PUBLISH_DATE}-{slug}.md`
+(Yattecast 形式。ファイル名の日付プレフィックスも公開日 `$PUBLISH_DT` の日付部分を使う)。
 **`audio_file_path` には Stage 8.5 で決めた `$AUDIO_PATH` を渡す** (env 未設定なら `/audio/{slug}.mp3`、
 外部ストレージ移行後は R2/S3 の絶対 URL)。
 
 front matter: `actor_ids` / `audio_file_path: $AUDIO_PATH` / `audio_file_size` (bytes) /
-`date` (期間開始日 21:00:00 +0900) / `duration` ("MM:SS") / `layout: article` (★必須、post は存在しない) / `title` / `description`。
+`date: $PUBLISH_DT` (★実際の公開日時 = RSS pubDate。週の日付ではない) / `duration` ("MM:SS") /
+`layout: article` (★必須、post は存在しない) / `title` / `description`。
 body: 「## この回の内容」始まり (番組説明/出演者は layout が自動描画するので body で重複させない) +
 目次 + 言及ツイート (章別、@user → x.com URL) + 参照リンク + 関連ニュース + クレジット。
 

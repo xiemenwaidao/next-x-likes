@@ -88,7 +88,9 @@ description: "<1-2 文サマリ、120 字以内>"
 - `actor_ids`: script.hosts[].id の配列
 - `audio_file_path`: `/audio/<slug>.mp3` (呼び出しで渡された値)
 - `audio_file_size`: bytes (呼び出しで渡された数値、引用符なし)
-- `date`: 振り返り対象期間の **開始日** を使う (例: 2024-11-18)。時刻は 21:00:00 +0900 固定
+- `date`: **実際に公開する日時** (= RSS の pubDate)。呼び出し元から渡される `publish_datetime`
+  (例: `2026-05-29 21:00:00 +0900`) をそのまま使う。**振り返り対象週の日付ではない**
+  (週情報は title / description / 本文で表す)。これにより Apple/Spotify で正しく新着扱いされる
 - `duration`: "MM:SS" (呼び出しで渡された値、引用符あり)
 - `title`: 「いいねダイジェスト YYYY-MM-DD週 (上位2カテゴリ label_ja)」形式。例:「いいねダイジェスト 2024-11-18週 (アート / プログラミング)」
 - `description`: その回の要約 1-2 文、120 字以内。時制 NG ワード (今週/今回/最近) 禁止
