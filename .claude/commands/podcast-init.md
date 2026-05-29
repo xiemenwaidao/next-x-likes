@@ -75,8 +75,9 @@ gh repo clone "$GH_USER/x-likes-radio"
 ### 4. GitHub Pages 有効化
 
 ```bash
+# Yattecast の default branch は master なので master を指定する
 gh api "repos/$GH_USER/x-likes-radio/pages" -X POST \
-  -f 'source[branch]=main' \
+  -f 'source[branch]=master' \
   -f 'source[path]=/'
 ```
 
@@ -86,9 +87,9 @@ gh api "repos/$GH_USER/x-likes-radio/pages" -X POST \
 
 ```bash
 cd x-likes-radio
-git add _config.yml
-git commit -m "🔧 chore: 初期 config (x-likes radio)"
-git push
+git add _config.yml _posts/
+git commit -m "🔧 chore: 初期 config (集讚館ラジオ)"
+git push origin master   # Yattecast の default branch は master
 cd ..
 ```
 
