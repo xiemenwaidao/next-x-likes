@@ -37,6 +37,7 @@
     "podcast:tts": "tsx -r dotenv/config src/scripts/podcast/synthesize-tts.ts",
     "podcast:mix": "tsx src/scripts/podcast/mix-audio.ts",
     "podcast:upload-audio": "tsx -r dotenv/config src/scripts/podcast/upload-audio.ts",
+    "podcast:build-index": "tsx src/scripts/podcast/build-episode-index.ts",
     "prepare": "husky"
   },
   "dependencies": {
