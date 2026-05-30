@@ -221,3 +221,27 @@ Required for data sync operations:
 
 `HF_CACHE_DIR` (任意): transformers.js のモデルキャッシュ先。未指定なら
 `~/.cache/huggingface`。`pnpm ai:embed` および `pnpm ai:search` で使用。
+
+## Podcast 実行環境 (重要・/podcast を流す前に必読)
+
+ポッドキャスト生成 (`/podcast`) は **gitignore されたローカル専用資産**に依存する。
+これらは git 追跡外なので、Claude セッションが起動する使い捨て worktree
+(`.claude/worktrees/*`) には**存在しない**。過去に資産が worktree 上にしか無く、
+worktree 削除で消失する事故が起きた。
+
+**鉄則: podcast 生成は必ず main repo root から実行する。**
+
+- **作業ディレクトリ**: `/Users/kadowakimichinori/claude-dev/x-likes` (= main repo root)。
+  ここがセッションをまたいで永続する唯一の場所。worktree から呼ばれたら `cd` してくる。
+- **ブランチ**: main root は `main` に保つ (Stage 10 の index 反映が main 直 commit のため)。
+- **永続資産** (すべて main root 配下・gitignore 済み):
+  - `x-likes-radio/` — Yattecast fork の clone。無ければ
+    `gh repo clone xiemenwaidao/x-likes-radio` で再取得 (default branch は `master`)。
+  - `public/podcasts/bgm/bed.mp3` — BGM。実体 mp3 への symlink
+    (`ln -sfn <target>.mp3 bed.mp3`)。代替不可の実体ファイルなので消すな。
+  - `.env` の `ELEVENLABS_API_KEY` — TTS に必須。
+- **gitmoji の罠**: next-x-likes (本体) の commitlint は 🎙️ を許可しない
+  (`start-with-gitmoji` で弾かれる)。本体への podcast commit は **✨ feat:** を使う。
+  x-likes-radio 側は lint 無しなので 🎙️ のままで OK。
+- 起動時プリフライト: `[ -d x-likes-radio ] && [ -e public/podcasts/bgm/bed.mp3 ] &&
+  grep -q ELEVENLABS_API_KEY .env` が揃っているか確認してから Stage 1 へ進む。
