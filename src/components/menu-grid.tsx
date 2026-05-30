@@ -56,7 +56,7 @@ const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 'podcast',
-    title: '集讚館ラジオ',
+    title: '集讚館.fm',
     sub: '週まとめを聞きながら眺める',
     href: '/podcast',
     icon: <Headphones size={18} strokeWidth={1.75} />,

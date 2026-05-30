@@ -50,6 +50,8 @@ type Args = {
   outroPadSec: number;
   interSegmentPadSec: number;
   fadeOutSec: number;
+  chaptersOut: string | null; // 章目次 (start 秒) を書き出す JSON path
+  chaptersOnly: boolean; // 章目次だけ計算して ffmpeg encode をスキップ (既存回バックフィル用)
 };
 
 function parseArgs(): Args {
@@ -67,10 +69,14 @@ function parseArgs(): Args {
   let outroPadSec = 10;
   let interSegmentPadSec = 4;
   let fadeOutSec = 4; // 末尾フェードアウト秒 (ブツ切れ防止 + 余韻)
+  let chaptersOut: string | null = null;
+  let chaptersOnly = false;
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === '--script') scriptPath = argv[++i] ?? '';
     else if (argv[i] === '--tts-result') ttsResultPath = argv[++i] ?? '';
     else if (argv[i] === '--out') outPath = argv[++i] ?? '';
+    else if (argv[i] === '--chapters-out') chaptersOut = argv[++i] ?? null;
+    else if (argv[i] === '--chapters-only') chaptersOnly = true;
     else if (argv[i] === '--bgm') bgmPath = argv[++i] ?? '';
     else if (argv[i] === '--bgm-volume') bgmVolume = parseFloat(argv[++i] ?? '0.12');
     else if (argv[i] === '--interlude-volume') interludeVolume = parseFloat(argv[++i] ?? '0.25');
@@ -81,9 +87,10 @@ function parseArgs(): Args {
     else if (argv[i] === '--inter-segment-pad') interSegmentPadSec = parseFloat(argv[++i] ?? '4');
     else if (argv[i] === '--fade-out') fadeOutSec = parseFloat(argv[++i] ?? '4');
   }
-  if (!scriptPath || !ttsResultPath || !outPath) {
+  // --chapters-only のときは encode しないので --out 不要
+  if (!scriptPath || !ttsResultPath || (!outPath && !chaptersOnly)) {
     process.stderr.write(
-      'Usage: mix-audio.ts --script <path> --tts-result <path> --out <path> [--bgm <path>] [--bgm-volume 0.12] [--interlude-volume 0.25] [--no-bgm] [--keep-speech] [--intro-pad 5] [--outro-pad 10] [--inter-segment-pad 4] [--fade-out 4]\n',
+      'Usage: mix-audio.ts --script <path> --tts-result <path> --out <path> [--bgm <path>] [--bgm-volume 0.12] [--interlude-volume 0.25] [--no-bgm] [--keep-speech] [--intro-pad 5] [--outro-pad 10] [--inter-segment-pad 4] [--fade-out 4] [--chapters-out <path>] [--chapters-only]\n',
     );
     process.exit(1);
   }
@@ -100,6 +107,8 @@ function parseArgs(): Args {
     outroPadSec,
     interSegmentPadSec,
     fadeOutSec,
+    chaptersOut,
+    chaptersOnly,
   };
 }
 
@@ -207,6 +216,52 @@ function computeBoostIntervals(
     t += pad.outroPadSec;
   }
   return { intervals, totalSec: t };
+}
+
+type Chapter = { t: number; label: string };
+
+function chapterLabel(type: string | undefined, title: string | null | undefined): string {
+  if (type === 'intro') return 'オープニング';
+  if (type === 'outro') return 'エンディング';
+  // chapter: 先頭の "1. " 連番プレフィックスを除いて見出しだけにする
+  return (title ?? 'チャプター').replace(/^\s*\d+\.\s*/, '').trim() || 'チャプター';
+}
+
+// 各 segment の「最終 mp3 上での開始秒」を算出して章目次にする。
+// collectItems / computeBoostIntervals と同じタイムライン (実測 duration + pause + 章間 pad) を辿る。
+function computeChapters(script: PodcastScript, tts: TtsResult, pad: PadConfig): Chapter[] {
+  const chapters: Chapter[] = [];
+  const lastSegIdx = tts.segments.length - 1;
+  let t = pad.introPadSec > 0 ? pad.introPadSec : 0; // 先頭 intro pad
+  for (let si = 0; si < tts.segments.length; si++) {
+    const ttsSeg = tts.segments[si];
+    const scriptSeg = script.segments[si];
+    if (!scriptSeg) continue;
+    const valid: Array<{ path: string; pauseMs: number }> = [];
+    for (let li = 0; li < ttsSeg.lines.length; li++) {
+      const ttsLine = ttsSeg.lines[li];
+      const scriptLine = scriptSeg.lines[li];
+      if (!scriptLine) continue;
+      if (ttsLine.status === 'skipped' || ttsLine.status === 'error') continue;
+      if (!ttsLine.path || !fs.existsSync(ttsLine.path)) continue;
+      valid.push({ path: ttsLine.path, pauseMs: scriptLine.pause_after_ms ?? 200 });
+    }
+    if (valid.length === 0) continue;
+    // この segment の開始時刻 = 現在の t
+    chapters.push({ t: Math.round(t), label: chapterLabel(ttsSeg.type, ttsSeg.title) });
+    for (let k = 0; k < valid.length; k++) {
+      t += probeDurationSec(valid[k].path);
+      let pauseMs = valid[k].pauseMs;
+      // collectItems と同じく、非最終 segment の最終 line に章間 pad を上乗せ
+      if (k === valid.length - 1 && si < lastSegIdx && pad.interSegmentPadSec > 0) {
+        pauseMs += Math.round(pad.interSegmentPadSec * 1000);
+      }
+      t += pauseMs / 1000;
+    }
+  }
+  // 先頭 (オープニング) は冒頭 pad ごと頭出しできるよう 0 に丸める
+  if (chapters.length > 0) chapters[0].t = 0;
+  return chapters;
 }
 
 // Pass 1: 各 line mp3 を pause 付きで concat → speech.mp3
@@ -380,6 +435,20 @@ function main() {
     process.stderr.write('[mix] no valid lines to mix (all skipped/errored)\n');
     process.exit(1);
   }
+
+  // 章目次 (各 segment の開始秒) を算出
+  const chapters = computeChapters(script, tts, pad);
+  if (args.chaptersOut) {
+    fs.mkdirSync(path.dirname(args.chaptersOut), { recursive: true });
+    fs.writeFileSync(args.chaptersOut, JSON.stringify(chapters, null, 2));
+    process.stderr.write(`[mix] chapters → ${args.chaptersOut} (${chapters.length} 章)\n`);
+  }
+  if (args.chaptersOnly) {
+    // encode せず章目次だけ出して終了 (既存回バックフィル用)
+    process.stdout.write(JSON.stringify({ chapters }, null, 2));
+    process.stderr.write('[mix] chapters-only モード: encode をスキップして終了\n');
+    return;
+  }
   process.stderr.write(
     `[mix] script=${args.scriptPath} tts=${args.ttsResultPath} out=${args.outPath} items=${items.length} pad(intro=${pad.introPadSec}s outro=${pad.outroPadSec}s inter=${pad.interSegmentPadSec}s)\n`,
   );
@@ -441,6 +510,7 @@ function main() {
         size: stat.size,
         bgm: args.noBgm ? null : args.bgmPath,
         bgm_volume: args.noBgm ? null : args.bgmVolume,
+        chapters,
       },
       null,
       2,

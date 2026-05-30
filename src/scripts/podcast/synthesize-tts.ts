@@ -112,8 +112,10 @@ async function synthesizeWithRetry(text: string, voiceId: string, modelId: strin
       if (err.status === 401 || err.status === 403 || err.status === 404) {
         throw err;
       }
-      // 429 / 5xx は指数バックオフで再試行
-      if ((err.status === 429 || (err.status && err.status >= 500)) && attempt < RETRY_MAX) {
+      // 429 / 409 (already_running) / 5xx は指数バックオフで再試行。
+      // 409 は新規 voice 初回に並列アクセスが重なると返る一時エラーで、音声は生成されず
+      // 課金もされない (成功時のみ 1 回課金) ため、リトライしても TTS コストは増えない。
+      if ((err.status === 429 || err.status === 409 || (err.status && err.status >= 500)) && attempt < RETRY_MAX) {
         const wait = RETRY_BASE_MS * 2 ** (attempt - 1);
         process.stderr.write(`  retry ${attempt}/${RETRY_MAX - 1} after ${wait}ms (status=${err.status})\n`);
         await sleep(wait);

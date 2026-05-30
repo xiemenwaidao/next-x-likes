@@ -21,7 +21,7 @@ export function PodcastListClient() {
       <div className="zk-card" style={{ padding: '18px 18px' }}>
         <div className="flex items-center gap-2" style={{ marginBottom: 6 }}>
           <Headphones size={16} strokeWidth={1.75} style={{ color: 'oklch(78% 0.15 250)' }} />
-          <span className="zk-section-label">集讚館ラジオ</span>
+          <span className="zk-section-label">集讚館.fm</span>
         </div>
         <h1 style={{ fontSize: 22, fontWeight: 600, color: 'var(--text-0)', margin: 0, letterSpacing: '-0.01em' }}>
           いいねダイジェスト

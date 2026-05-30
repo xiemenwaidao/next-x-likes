@@ -5,9 +5,9 @@ import type { Metadata } from 'next';
 import { PodcastListClient } from '@/components/podcast-list-client';
 
 export const metadata: Metadata = {
-  title: '集讚館ラジオ | 集讚館',
+  title: '集讚館.fm | 集讚館',
   description:
-    'その週にいいねした投稿を、ウサギと猫の 2 人がゆるく振り返るポッドキャスト「集讚館ラジオ」のエピソード一覧。',
+    'その週にいいねした投稿を、動物キャラの親友たちがゆるく振り返るポッドキャスト「集讚館.fm」のエピソード一覧。',
 };
 
 export default function PodcastPage() {

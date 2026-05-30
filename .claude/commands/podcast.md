@@ -303,11 +303,17 @@ EP_NO=$(( $(ls x-likes-radio/_posts/*.md 2>/dev/null \
   | sed -E 's#.*/[0-9]{4}-[0-9]{2}-[0-9]{2}-([0-9]{4}-[0-9]{2}-[0-9]{2})_to_.*#\1#' \
   | awk -v f="$PERIOD_FROM" '$1 < f' | wc -l | tr -d ' ') + 1 ))
 echo "[publish] episode_number = $EP_NO"
+
+# ★ 章目次 (Stage 8 の mix が /tmp/podcast-mix-result.json に出力済み)
+CHAPTERS=$(jq -c '.chapters' /tmp/podcast-mix-result.json)
+echo "[publish] chapters = $CHAPTERS"
 ```
 
 `podcast-shownotes-writer` サブエージェントを起動 (PodcastScript・tweets・link cache・news・
-mp3 メタ・hosts・**publish_datetime (`$PUBLISH_DT`)**・**episode_number (`$EP_NO`)** を渡す)。
-タイトルは必ず「いいねダイジェスト {from}週 第${EP_NO}回 (上位2カテゴリ)」形式で統一。
+mp3 メタ・hosts・**publish_datetime (`$PUBLISH_DT`)**・**episode_number (`$EP_NO`)**・
+**chapters (`$CHAPTERS` = mix が出した `[{t,label}]`)** を渡す)。
+タイトルは必ず「いいねダイジェスト {from}週 第${EP_NO}回 (上位2カテゴリ)」形式で統一、
+front matter に `chapters:` も書かせる (article がクリック目次にする)。
 出力: `x-likes-radio/_posts/{PUBLISH_DATE}-{slug}.md`
 (Yattecast 形式。ファイル名の日付プレフィックスも公開日 `$PUBLISH_DT` の日付部分を使う)。
 **`audio_file_path` には Stage 8.5 で決めた `$AUDIO_PATH` を渡す** (env 未設定なら `/audio/{slug}.mp3`、

@@ -21,6 +21,7 @@ model: sonnet
 - news (`/tmp/podcast-news.json`) — 関連ニュース (任意)
 - mp3 のメタ (呼び出し prompt で `audio_file_path` / `audio_file_size` (bytes) / `duration` ("MM:SS") / `date` (YYYY-MM-DD) を渡される)
 - `episode_number` (呼び出し prompt で渡される。1 始まりの通し番号。タイトルの「第N回」に使う)
+- `chapters` (呼び出し prompt で渡される。mix-audio が出した `[{t, label}]`。front matter の `chapters:` にそのまま書く)
 - ホスト (`/tmp/podcast-selected-hosts.json`) — actor id
 
 カテゴリ label_ja が必要なら `src/data/categories.ts` を Read。
@@ -42,6 +43,10 @@ duration: "<MM:SS>"
 layout: article
 title: "<タイトル>"
 description: "<1-2 文サマリ、120 字以内>"
+chapters:
+  - { t: 0, label: "オープニング" }
+  - { t: <秒>, label: "<章ラベル>" }
+  - { t: <秒>, label: "エンディング" }
 ---
 
 ## この回の内容
@@ -93,6 +98,9 @@ description: "<1-2 文サマリ、120 字以内>"
   (例: `2026-05-29 21:00:00 +0900`) をそのまま使う。**振り返り対象週の日付ではない**
   (週情報は title / description / 本文で表す)。これにより Apple/Spotify で正しく新着扱いされる
 - `duration`: "MM:SS" (呼び出しで渡された値、引用符あり)
+- `chapters`: 呼び出しで渡された `[{t, label}]` を front matter に **1 行 1 章**で書く
+  (`  - { t: <秒>, label: "<ラベル>" }`)。article レイアウトがこれをクリック可能な目次にする。
+  渡されなければ `chapters:` 自体を省略する
 - `title`: **「いいねダイジェスト YYYY-MM-DD週 第N回 (上位2カテゴリの短縮ラベル)」形式**。
   - 「第N回」は呼び出し prompt で渡される `episode_number` を必ず入れる (全エピソードで統一)。
   - 上位2カテゴリは **label_ja の最初のトークン (「 / 」の前) だけ** を使い、2 つを「 / 」で連結する。
@@ -117,7 +125,9 @@ description: "<1-2 文サマリ、120 字以内>"
 - tweet_id ごとに、PodcastTweetBundle から username と summary_ja を引く
 - URL は `https://x.com/<username>/status/<tweet_id>` を組み立てる (username が取れないなら `https://x.com/i/status/<tweet_id>`)
 - 章ごとに `### <label_ja>` 見出しでグルーピング
-- 1 ツイート 1 行: `- **@username** — <summary_ja を 1 行に>`
+- **1 ツイート 1 行、@username を X 投稿への markdown リンクにする** (クリックで投稿に飛べるように):
+  `- **[@username](https://x.com/<username>/status/<tweet_id>)** — <summary_ja を 1 行に>`
+  (bare URL を行末に置く `→ https://...` 形式は kramdown でリンクにならないので不可)
 
 ### 参照リンク
 
