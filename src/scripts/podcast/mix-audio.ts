@@ -218,7 +218,8 @@ function computeBoostIntervals(
   return { intervals, totalSec: t };
 }
 
-type Chapter = { t: number; label: string };
+type ChapterTweet = { id: string; t: number };
+type Chapter = { t: number; label: string; tweets: ChapterTweet[] };
 
 function chapterLabel(type: string | undefined, title: string | null | undefined): string {
   if (type === 'intro') return 'オープニング';
@@ -237,19 +238,32 @@ function computeChapters(script: PodcastScript, tts: TtsResult, pad: PadConfig):
     const ttsSeg = tts.segments[si];
     const scriptSeg = script.segments[si];
     if (!scriptSeg) continue;
-    const valid: Array<{ path: string; pauseMs: number }> = [];
+    const valid: Array<{ path: string; pauseMs: number; tweetId?: string }> = [];
     for (let li = 0; li < ttsSeg.lines.length; li++) {
       const ttsLine = ttsSeg.lines[li];
       const scriptLine = scriptSeg.lines[li];
       if (!scriptLine) continue;
       if (ttsLine.status === 'skipped' || ttsLine.status === 'error') continue;
       if (!ttsLine.path || !fs.existsSync(ttsLine.path)) continue;
-      valid.push({ path: ttsLine.path, pauseMs: scriptLine.pause_after_ms ?? 200 });
+      valid.push({
+        path: ttsLine.path,
+        pauseMs: scriptLine.pause_after_ms ?? 200,
+        tweetId: scriptLine.source_tweet_id,
+      });
     }
     if (valid.length === 0) continue;
     // この segment の開始時刻 = 現在の t
-    chapters.push({ t: Math.round(t), label: chapterLabel(ttsSeg.type, ttsSeg.title) });
+    const chapterStart = Math.round(t);
+    // 章内で取り上げた各ツイートの「初出発話時刻」を集めてタイムラインにする
+    const tweets: ChapterTweet[] = [];
+    const seenTweets = new Set<string>();
     for (let k = 0; k < valid.length; k++) {
+      // この line の発話開始時刻 = 現在の t。初出 tweet ならその時刻を記録
+      const id = valid[k].tweetId;
+      if (id && !seenTweets.has(id)) {
+        seenTweets.add(id);
+        tweets.push({ id, t: Math.round(t) });
+      }
       t += probeDurationSec(valid[k].path);
       let pauseMs = valid[k].pauseMs;
       // collectItems と同じく、非最終 segment の最終 line に章間 pad を上乗せ
@@ -258,6 +272,7 @@ function computeChapters(script: PodcastScript, tts: TtsResult, pad: PadConfig):
       }
       t += pauseMs / 1000;
     }
+    chapters.push({ t: chapterStart, label: chapterLabel(ttsSeg.type, ttsSeg.title), tweets });
   }
   // 先頭 (オープニング) は冒頭 pad ごと頭出しできるよう 0 に丸める
   if (chapters.length > 0) chapters[0].t = 0;

@@ -311,9 +311,12 @@ echo "[publish] chapters = $CHAPTERS"
 
 `podcast-shownotes-writer` サブエージェントを起動 (PodcastScript・tweets・link cache・news・
 mp3 メタ・hosts・**publish_datetime (`$PUBLISH_DT`)**・**episode_number (`$EP_NO`)**・
-**chapters (`$CHAPTERS` = mix が出した `[{t,label}]`)** を渡す)。
+**chapters (`$CHAPTERS` = mix が出した `[{t, label, tweets: [{id, t}]}]` のネスト構造)** を渡す)。
 タイトルは必ず「いいねダイジェスト {from}週 第${EP_NO}回 (上位2カテゴリ)」形式で統一、
-front matter に `chapters:` も書かせる (article がクリック目次にする)。
+front matter に `chapters:` も書かせる。各章の `tweets` の `id` を @handle / X URL / 短い要約 に
+enrich したネスト構造で書かせ、article が「章 → ツイート」の 2 階層クリック目次にする
+(章の時刻 = audio seek、ツイートの時刻 = audio seek、@handle = X 投稿を別タブで開く)。
+**タイム無しの「### 目次」は body に書かせない** (この 2 階層 chapters が目次を兼ねるため重複させない)。
 出力: `x-likes-radio/_posts/{PUBLISH_DATE}-{slug}.md`
 (Yattecast 形式。ファイル名の日付プレフィックスも公開日 `$PUBLISH_DT` の日付部分を使う)。
 **`audio_file_path` には Stage 8.5 で決めた `$AUDIO_PATH` を渡す** (env 未設定なら `/audio/{slug}.mp3`、
