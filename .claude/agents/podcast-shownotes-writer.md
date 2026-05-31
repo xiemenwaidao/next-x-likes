@@ -23,7 +23,7 @@ model: sonnet
 - `episode_number` (呼び出し prompt で渡される。1 始まりの通し番号。タイトルの「第N回」に使う)
 - `chapters` (呼び出し prompt で渡される。mix-audio が出した `[{t, label, tweets: [{id, t}]}]`。
   各章の `tweets` は「その章で取り上げたツイートの tweet_id と発話開始秒」。front matter の
-  `chapters:` に id を @handle / X URL / 短い要約 へ enrich して書く。下記「front matter」参照)
+  `chapters:` の各 tweet を `id` + `username` + 短い要約 に enrich して書く。下記「front matter」参照)
 - ホスト (`/tmp/podcast-selected-hosts.json`) — actor id
 
 カテゴリ label_ja が必要なら `src/data/categories.ts` を Read。
@@ -47,7 +47,7 @@ title: "<タイトル>"
 description: "<1-2 文サマリ、120 字以内>"
 chapters:
   - { t: 0, label: "オープニング", tweets: [] }
-  - { t: <秒>, label: "<章ラベル>", tweets: [{ t: <秒>, handle: "<username>", url: "https://x.com/<username>/status/<tweet_id>", summary: "<20字前後の要約>" }] }
+  - { t: <秒>, label: "<章ラベル>", tweets: [{ id: "<tweet_id>", t: <秒>, username: "<username>", summary: "<20字前後の要約>" }] }
   - { t: <秒>, label: "エンディング", tweets: [] }
 ---
 
@@ -96,9 +96,10 @@ chapters:
 - `duration`: "MM:SS" (呼び出しで渡された値、引用符あり)
 - `chapters`: 呼び出しで渡された `[{t, label, tweets: [{id, t}]}]` を front matter に **1 行 1 章**で書く。
   各章の `tweets` の `id` (tweet_id) を PodcastTweetBundle で引いて enrich し、flow 形式で書く:
-  `  - { t: <秒>, label: "<ラベル>", tweets: [{ t: <秒>, handle: "<username>", url: "<X URL>", summary: "<要約>" }] }`
-  - `handle`: PodcastTweetBundle の username。取れなければ `handle: "i"` + url を `https://x.com/i/status/<tweet_id>`
-  - `url`: `https://x.com/<username>/status/<tweet_id>`
+  `  - { t: <秒>, label: "<ラベル>", tweets: [{ id: "<tweet_id>", t: <秒>, username: "<username>", summary: "<要約>" }] }`
+  - `id`: tweet_id (mix が渡した id をそのまま入れる)
+  - `username`: PodcastTweetBundle の username (取れなければ "i")。article 側が
+    `https://x.com/<username>/status/<id>` を組み立て、@username リンク + 時刻 seek にする
   - `summary`: summary_ja を **20 字前後の 1 フレーズ**に圧縮 (目次 1 行に収まる長さ)。改行 / `"` / `:` を含めない
   - `t`: mix が各ツイートに付けた秒をそのまま使う (章の `t` とは別の、ツイート初出時刻)
   - tweets が空の章 (intro / outro) は `tweets: []` と書く
