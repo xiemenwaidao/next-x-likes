@@ -203,12 +203,8 @@ function LazyTweetEmbed({
   return (
     <div ref={containerRef} style={{ minHeight: state === 'idle' || state === 'loading' ? 120 : 0 }}>
       {/* widgets.js が iframe を埋める対象。最終的にこのノードの中に
-          iframe が挿入される (widgets.js が我々の placeholder を replace する仕様)。
-          missing / error 時は (timeout 後に遅れて iframe が来ても) 見せないよう隠す。 */}
-      <div
-        ref={placeholderRef}
-        style={{ display: state === 'missing' || state === 'error' ? 'none' : undefined }}
-      />
+          iframe が挿入される (widgets.js が我々の placeholder を replace する仕様)。 */}
+      <div ref={placeholderRef} />
       {state === 'loading' && (
         <div
           style={{

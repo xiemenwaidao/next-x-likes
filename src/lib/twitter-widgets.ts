@@ -111,36 +111,13 @@ export function loadWidgets(): Promise<Twttr> {
 export async function createTweetEmbed(
   tweetId: string,
   container: HTMLElement,
-  options: {
-    theme?: 'dark' | 'light';
-    dnt?: boolean;
-    conversation?: 'none' | 'all';
-    /** これを過ぎても createTweet が解決しなければ null 扱い (notfound 表示へ)。0 で無効。 */
-    timeoutMs?: number;
-  } = {},
+  options: { theme?: 'dark' | 'light'; dnt?: boolean; conversation?: 'none' | 'all' } = {},
 ): Promise<HTMLElement | null> {
-  const { timeoutMs = 9000, ...rest } = options;
-
-  // widgets.js のロード〜createTweet までを 1 つの work にまとめる。
-  // 削除済み / 取得不能ツイートは createTweet が解決しないまま固まることがあり
-  // (= 永遠に "loading post…")、ロード失敗もありうるので timeout と race して
-  // null に倒し、呼び出し側で notfound 表示に分岐できるようにする。
-  const work = (async () => {
-    const twttr = await loadWidgets();
-    return twttr.widgets.createTweet(tweetId, container, {
-      theme: 'dark',
-      dnt: true,
-      conversation: 'all',
-      ...rest,
-    });
-  })().catch(() => null);
-
-  if (timeoutMs <= 0) return work;
-
-  return Promise.race([
-    work,
-    new Promise<HTMLElement | null>((resolve) => {
-      setTimeout(() => resolve(null), timeoutMs);
-    }),
-  ]);
+  const twttr = await loadWidgets();
+  return twttr.widgets.createTweet(tweetId, container, {
+    theme: 'dark',
+    dnt: true,
+    conversation: 'all',
+    ...options,
+  });
 }
