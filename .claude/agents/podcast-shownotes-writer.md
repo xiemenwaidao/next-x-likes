@@ -47,22 +47,13 @@ title: "<タイトル>"
 description: "<1-2 文サマリ、120 字以内>"
 chapters:
   - { t: 0, label: "オープニング", tweets: [] }
-  - { t: <秒>, label: "<章ラベル>", tweets: [{ id: "<tweet_id>", t: <秒>, username: "<username>", summary: "<20字前後の要約>" }] }
+  - { t: <秒>, label: "<章ラベル>", tweets: [{ id: "<tweet_id>", t: <秒>, username: "<username>", summary: "<summary_ja を省略せず全文>" }] }
   - { t: <秒>, label: "エンディング", tweets: [] }
 ---
 
 ## この回の内容
 
 <2-3 文で、この回がどんな週だったかの導入>
-
-## 言及したトピック
-
-### アート / 創作
-- **@username** — <ツイートの 1 行要約> → https://x.com/username/status/<tweet_id>
-- ...
-
-### プログラミング / 開発
-- ...
 
 ## 参照リンク
 
@@ -100,10 +91,12 @@ chapters:
   - `id`: tweet_id (mix が渡した id をそのまま入れる)
   - `username`: PodcastTweetBundle の username (取れなければ "i")。article 側が
     `https://x.com/<username>/status/<id>` を組み立て、@username リンク + 時刻 seek にする
-  - `summary`: summary_ja を **20 字前後の 1 フレーズ**に圧縮 (目次 1 行に収まる長さ)。改行 / `"` / `:` を含めない
+  - `summary`: **PodcastTweetBundle の summary_ja を省略せず全文**そのまま入れる (目次が複数行で
+    全文表示する。旧「## 言及したトピック」節は廃止し、要約はここに集約)。必ず二重引用符で囲む。
+    値に `"` が含まれる場合は 「 」 等に置換。改行は入れない (1 行の flow scalar に保つ)
   - `t`: mix が各ツイートに付けた秒をそのまま使う (章の `t` とは別の、ツイート初出時刻)
   - tweets が空の章 (intro / outro) は `tweets: []` と書く
-  - article レイアウトが「章 → ツイート」の 2 階層クリック目次にする (時刻 = audio seek、@handle = X 投稿を別タブ)
+  - article レイアウトが「章 → ツイート」の 2 階層クリック目次にする (時刻 = audio seek、@username = X 投稿を別タブ、要約は全文表示)
   - `chapters` 自体が渡されなければ `chapters:` を省略する。**タイム無しの「### 目次」は body に書かない**
     (この 2 階層 chapters が目次を兼ねるため。重複させない)
 - `title`: **「いいねダイジェスト YYYY-MM-DD週 第N回 (上位2カテゴリの短縮ラベル)」形式**。
@@ -122,18 +115,9 @@ chapters:
 
 - ❌ 番組説明や description の再掲を冒頭に置かない (layout の「内容紹介」と重複)
 - ❌ 出演者紹介を書かない (layout の「出演者」と重複)
-- ✅ body は `## この回の内容` から始める (導入 → 言及トピック → 参照リンク → ニュース → クレジット)。
-  タイム無しの「### 目次」は**書かない** (front matter chapters の章→ツイート 2 階層目次を layout が描画するため重複)
-
-### 言及したトピック
-
-- **script の各 chapter の line から `source_tweet_id` を集める** (重複排除)
-- tweet_id ごとに、PodcastTweetBundle から username と summary_ja を引く
-- URL は `https://x.com/<username>/status/<tweet_id>` を組み立てる (username が取れないなら `https://x.com/i/status/<tweet_id>`)
-- 章ごとに `### <label_ja>` 見出しでグルーピング
-- **1 ツイート 1 行、@username を X 投稿への markdown リンクにする** (クリックで投稿に飛べるように):
-  `- **[@username](https://x.com/<username>/status/<tweet_id>)** — <summary_ja を 1 行に>`
-  (bare URL を行末に置く `→ https://...` 形式は kramdown でリンクにならないので不可)
+- ✅ body は `## この回の内容` から始める (導入 → 参照リンク → ニュース → クレジット)。
+  タイム無しの「### 目次」も、ツイートを列挙する「## 言及したトピック」も**書かない**
+  (front matter chapters の章→ツイート 2 階層目次が、時刻 + @username + 全文要約を兼ねるため重複)
 
 ### 参照リンク
 
