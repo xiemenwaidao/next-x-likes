@@ -59,6 +59,15 @@ export const DEFAULT_HOSTS: PodcastPersona[] = [
     voice_label: 'Gorilla',
     primary_interests: ['tech-ai', 'programming', 'science-learning', 'news-society', 'product-business'],
   },
+  {
+    id: 'niwatori',
+    name: 'コケコッコ',
+    gender: 'male',
+    role: '明るく好奇心旺盛で、テンポよく合いの手を入れる元気な聞き役。難しい話題には「それってつまり？」と素朴に切り込んでリスナー目線の疑問を代弁する。自分の職業や属性は名乗らない。マウントを取らず、場を和ませる賑やかし役で、相方の話をぐいぐい引き出す親友キャラクター。表記はカタカナ「コケコッコ」固定 (TTS が確実に読む)',
+    voice_id: 'nMLAJvHm96aMWubKsf0q',
+    voice_label: 'Kokekokko',
+    primary_interests: ['culture-entertainment', 'lifestyle', 'gaming', 'news-society', 'product-business'],
+  },
 ];
 
 /** カテゴリ name → 「より得意な」ホストを返す。両者の interests に該当しなければ hosts[0] (ちひろ) を返す */
