@@ -203,21 +203,36 @@ function LazyTweetEmbed({
   return (
     <div ref={containerRef} style={{ minHeight: state === 'idle' || state === 'loading' ? 120 : 0 }}>
       {/* widgets.js が iframe を埋める対象。最終的にこのノードの中に
-          iframe が挿入される (widgets.js が我々の placeholder を replace する仕様)。 */}
-      <div ref={placeholderRef} />
+          iframe が挿入される (widgets.js が我々の placeholder を replace する仕様)。
+          missing / error 時は (timeout 後に遅れて iframe が来ても) 見せないよう隠す。 */}
+      <div
+        ref={placeholderRef}
+        style={{ display: state === 'missing' || state === 'error' ? 'none' : undefined }}
+      />
       {state === 'loading' && (
         <div
           style={{
             display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+            gap: 8,
             height: 120,
-            color: 'var(--text-3)',
-            fontSize: 11.5,
           }}
-          className="font-mono"
+          aria-live="polite"
         >
-          loading post…
+          {/* matrix-loader: SMIL アニメーション SVG。img なら確実にアニメする */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/matrix-loader.svg"
+            alt=""
+            width={52}
+            height={52}
+            style={{ display: 'block' }}
+          />
+          <span className="font-mono" style={{ color: 'var(--text-3)', fontSize: 11.5 }}>
+            loading post…
+          </span>
         </div>
       )}
       {state === 'missing' && (
