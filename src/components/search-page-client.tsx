@@ -201,6 +201,9 @@ export function SearchPageClient() {
   // 日付チップから別の日付に切り替えるとき用。assets が読まれた後は
   // 利用可能な日付のみ enable する Calendar を popover に出す。
   const [datePickerOpen, setDatePickerOpen] = useState(false);
+  // 日付ビューで下までスクロールしたときに出す浮遊カレンダー (別日付ジャンプ用)
+  const [floatingPickerOpen, setFloatingPickerOpen] = useState(false);
+  const [showDateFab, setShowDateFab] = useState(false);
   // podcast がある週の日付を ● マーク
   const podcastDateSet = useMemo(() => buildPodcastDateSet(), []);
   const changeDate = useCallback(
@@ -216,9 +219,26 @@ export function SearchPageClient() {
       sp.set('date', ymd);
       router.replace(`${pathname}?${sp.toString()}`);
       setDatePickerOpen(false);
+      setFloatingPickerOpen(false);
+      // 別の日付に切り替えたら、新しい日の先頭から見られるようトップへ戻す
+      if (typeof window !== 'undefined') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     },
     [router, pathname, searchParams],
   );
+
+  // 日付ビューで一定以上スクロールしたら、別日付ジャンプ用 FAB を出す
+  useEffect(() => {
+    if (!dateFilter) {
+      setShowDateFab(false);
+      return;
+    }
+    const onScroll = () => setShowDateFab(window.scrollY > 500);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [dateFilter]);
 
   // ---- iOS / iOS PWA 判定 (一度だけ) ----
   // iOS Safari / PWA は transformers.js (WASM + IndexedDB) が不安定で、
@@ -963,6 +983,56 @@ export function SearchPageClient() {
             </button>
           )}
         </>
+      )}
+
+      {/* 日付ビューで下までスクロールしたとき、トップに戻らず別日付へ飛べる FAB */}
+      {dateFilter && showDateFab && (
+        <Popover open={floatingPickerOpen} onOpenChange={setFloatingPickerOpen}>
+          <PopoverTrigger asChild>
+            <button
+              type="button"
+              aria-label="別の日付へ移動"
+              style={{
+                position: 'fixed',
+                right: 'max(16px, env(safe-area-inset-right))',
+                bottom: 'max(20px, env(safe-area-inset-bottom))',
+                zIndex: 50,
+                width: 52,
+                height: 52,
+                borderRadius: 999,
+                border: 0,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'var(--bg-2)',
+                color: 'var(--zk-accent)',
+                boxShadow: '0 6px 22px rgba(0,0,0,0.5), inset 0 0 0 1px var(--zk-accent-line)',
+              }}
+            >
+              <CalendarDays size={20} strokeWidth={1.9} />
+            </button>
+          </PopoverTrigger>
+          <PopoverContent align="end" side="top" className="w-auto p-2">
+            <Calendar
+              mode="single"
+              selected={dateFilterAsDate}
+              onSelect={changeDate}
+              modifiers={{ podcast: (date) => podcastDateSet.has(toYmd(date)) }}
+              modifiersClassNames={{ podcast: 'zk-day-podcast' }}
+              disabled={(date) => {
+                if (availableDateSet.size === 0) return false;
+                const ymd = `${date.getFullYear()}-${String(
+                  date.getMonth() + 1,
+                ).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+                return !availableDateSet.has(ymd);
+              }}
+              fromDate={fromDate}
+              toDate={toDate}
+              defaultMonth={dateFilterAsDate}
+            />
+          </PopoverContent>
+        </Popover>
       )}
     </div>
   );

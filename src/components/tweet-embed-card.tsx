@@ -209,15 +209,26 @@ function LazyTweetEmbed({
         <div
           style={{
             display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+            gap: 8,
             height: 120,
-            color: 'var(--text-3)',
-            fontSize: 11.5,
           }}
-          className="font-mono"
+          aria-live="polite"
         >
-          loading post…
+          {/* matrix-loader: SMIL アニメーション SVG。img なら確実にアニメする */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/matrix-loader.svg"
+            alt=""
+            width={52}
+            height={52}
+            style={{ display: 'block' }}
+          />
+          <span className="font-mono" style={{ color: 'var(--text-3)', fontSize: 11.5 }}>
+            loading post…
+          </span>
         </div>
       )}
       {state === 'missing' && (
