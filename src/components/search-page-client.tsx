@@ -985,54 +985,85 @@ export function SearchPageClient() {
         </>
       )}
 
-      {/* 日付ビューで下までスクロールしたとき、トップに戻らず別日付へ飛べる FAB */}
-      {dateFilter && showDateFab && (
-        <Popover open={floatingPickerOpen} onOpenChange={setFloatingPickerOpen}>
-          <PopoverTrigger asChild>
-            <button
-              type="button"
-              aria-label="別の日付へ移動"
-              style={{
-                position: 'fixed',
-                right: 'max(16px, env(safe-area-inset-right))',
-                bottom: 'max(20px, env(safe-area-inset-bottom))',
-                zIndex: 50,
-                width: 52,
-                height: 52,
-                borderRadius: 999,
-                border: 0,
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: 'var(--bg-2)',
-                color: 'var(--zk-accent)',
-                boxShadow: '0 6px 22px rgba(0,0,0,0.5), inset 0 0 0 1px var(--zk-accent-line)',
-              }}
-            >
-              <CalendarDays size={20} strokeWidth={1.9} />
-            </button>
-          </PopoverTrigger>
-          <PopoverContent align="end" side="top" className="w-auto p-2">
-            <Calendar
-              mode="single"
-              selected={dateFilterAsDate}
-              onSelect={changeDate}
-              modifiers={{ podcast: (date) => podcastDateSet.has(toYmd(date)) }}
-              modifiersClassNames={{ podcast: 'zk-day-podcast' }}
-              disabled={(date) => {
-                if (availableDateSet.size === 0) return false;
-                const ymd = `${date.getFullYear()}-${String(
-                  date.getMonth() + 1,
-                ).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-                return !availableDateSet.has(ymd);
-              }}
-              fromDate={fromDate}
-              toDate={toDate}
-              defaultMonth={dateFilterAsDate}
-            />
-          </PopoverContent>
-        </Popover>
+      {/* 日付ビューで下までスクロールしたとき、トップに戻らず別日付へ飛べる FAB。
+          ScrollTopButton と同じくコンテンツ列 (max-w 28rem) の右端に揃え、画面端には飛ばさない。
+          ScrollTopButton (bottom 20px / 高さ 40px) の上に重ならないよう +52px 持ち上げる。 */}
+      {dateFilter && (
+        <div
+          className="fixed z-50"
+          style={{
+            left: 0,
+            right: 0,
+            bottom: 'calc(max(20px, env(safe-area-inset-bottom)) + 52px)',
+            display: 'flex',
+            justifyContent: 'center',
+            pointerEvents: 'none',
+          }}
+        >
+          <div
+            style={{
+              width: '100%',
+              maxWidth: '28rem',
+              paddingInline: 16,
+              boxSizing: 'border-box',
+              display: 'flex',
+              justifyContent: 'flex-end',
+            }}
+          >
+            <Popover open={floatingPickerOpen} onOpenChange={setFloatingPickerOpen}>
+              <PopoverTrigger asChild>
+                <button
+                  type="button"
+                  aria-label="別の日付へ移動"
+                  style={{
+                    // 常時マウントしておき、表示/非表示は opacity+transform で滑らかに
+                    opacity: showDateFab ? 1 : 0,
+                    transform: showDateFab
+                      ? 'translateY(0) scale(1)'
+                      : 'translateY(10px) scale(0.8)',
+                    pointerEvents: showDateFab ? 'auto' : 'none',
+                    transition:
+                      'opacity 280ms cubic-bezier(0.22, 0.61, 0.36, 1), transform 280ms cubic-bezier(0.22, 0.61, 0.36, 1)',
+                    willChange: 'opacity, transform',
+                    width: 40,
+                    height: 40,
+                    borderRadius: 999,
+                    border: 0,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    background: 'var(--bg-2)',
+                    color: 'var(--zk-accent)',
+                    boxShadow:
+                      '0 8px 24px rgba(0,0,0,0.35), inset 0 0 0 0.5px var(--zk-accent-line)',
+                  }}
+                >
+                  <CalendarDays size={18} strokeWidth={1.9} />
+                </button>
+              </PopoverTrigger>
+              <PopoverContent align="end" side="top" className="w-auto p-2">
+                <Calendar
+                  mode="single"
+                  selected={dateFilterAsDate}
+                  onSelect={changeDate}
+                  modifiers={{ podcast: (date) => podcastDateSet.has(toYmd(date)) }}
+                  modifiersClassNames={{ podcast: 'zk-day-podcast' }}
+                  disabled={(date) => {
+                    if (availableDateSet.size === 0) return false;
+                    const ymd = `${date.getFullYear()}-${String(
+                      date.getMonth() + 1,
+                    ).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+                    return !availableDateSet.has(ymd);
+                  }}
+                  fromDate={fromDate}
+                  toDate={toDate}
+                  defaultMonth={dateFilterAsDate}
+                />
+              </PopoverContent>
+            </Popover>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -11,14 +11,16 @@ export const Header = () => {
   const pathname = usePathname();
   const onSearch = pathname?.startsWith('/search');
 
-  // scroll 検知: 8px 以上で `scrolled` を true にして、ヘッダー高さとロゴサイズを縮める。
-  // ヒステリシス (4px) を入れて、境界付近でカクカクしないようにしている。
+  // scroll 検知でヘッダー高さとロゴサイズを縮める。
+  // ★ヒステリシスのバンド幅は「縮小で生じる高さ変化 (56→44 = 12px)」より十分広く取る。
+  //   バンドが狭いと、縮小→scroll anchoring が scrollY を ~12px 補正→閾値を跨いで再展開
+  //   →また縮小… という振動 (ガタガタ) が起きるため。enter 40 / exit 12 で 28px のバンド。
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     let raf = 0;
     const update = () => {
       const y = window.scrollY;
-      setScrolled((prev) => (prev ? y > 4 : y > 8));
+      setScrolled((prev) => (prev ? y > 12 : y > 40));
       raf = 0;
     };
     const onScroll = () => {
@@ -60,8 +62,15 @@ export const Header = () => {
           className="zk-icon-btn"
           style={{ marginLeft: -8, width: 'auto', padding: '0 8px' }}
         >
-          <span className="flex items-baseline gap-1.5">
-            <LogoSVG width={scrolled ? 56 : 80} />
+          <span
+            className="flex items-baseline gap-1.5"
+            style={{
+              transformOrigin: 'left center',
+              transform: scrolled ? 'scale(0.7)' : 'scale(1)',
+              transition: 'transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1)',
+            }}
+          >
+            <LogoSVG width={80} />
           </span>
         </Link>
         <div className="flex-1" />
