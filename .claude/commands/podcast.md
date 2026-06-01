@@ -41,6 +41,14 @@ slug は `2025-01-01_to_2025-01-31` となり、タイトル/章立て/尺は St
 - BGM ファイルが `public/podcasts/bgm/bed.mp3` に置いてある (P6 以降。1 曲をエピソード全編で流す方式)。
   実運用では実体 mp3 を `public/podcasts/bgm/*.mp3` に複数置き、`bed.mp3` を symlink にする:
   `cd public/podcasts/bgm && ln -sfn <target>.mp3 bed.mp3`
+- **★ BGM ローテーション (10 エピソードごとに入れ替え) — この割当表が cross-session の正本**:
+  `bed.mp3` symlink を、今回の通し番号 (Stage 9 の `EP_NO` ロジックで算出) が属するブロックの BGM へ
+  Stage 8 mix の**前に**張り替える。`bgm/` は gitignore なので symlink 実体はローカルにしか無く、
+  新セッションでもこの表を見て張り替え状態を復元すること。
+  - 第 1 回〜第 10 回: `ローファイ少女は今日も寝不足_2.mp3`
+  - 第 11 回〜第 20 回: `2_23_AM_2.mp3`
+  - 第 21 回〜: **未定** → ユーザーに次の BGM を確認し、確定したらこの表に 1 行追記してから進める
+  張り替え: `cd public/podcasts/bgm && ln -sfn <target>.mp3 bed.mp3` (確認: `readlink bed.mp3`)
 - ffmpeg が `/opt/homebrew/bin/ffmpeg` 等で見える (P6 以降)
 
 ## 実装進捗 (このセッション時点)
@@ -232,6 +240,12 @@ podcast.md からは tsx を直接呼ぶ形に統一)
 出力 (`/tmp/podcast-tts-result.json`) は line ごとの hash と path を含み、Stage 8 mix が参照する。
 
 ### Stage 8: ffmpeg mix
+
+**★ mix の前に BGM ローテーションを確認**: 前提セクションの「BGM ローテーション」割当表を見て、
+今回の通し番号 (= Stage 9 の `EP_NO` ロジックで算出できる。10 エピソードごとに替える) が属する
+ブロックの BGM に `bed.mp3` が向いているか `readlink public/podcasts/bgm/bed.mp3` で確認し、
+違っていれば `cd public/podcasts/bgm && ln -sfn <target>.mp3 bed.mp3` で張り替えてから mix する。
+ブロック境界に到達して次の BGM が未定なら、mix 前にユーザーへ確認して割当表に追記する。
 
 mp3 出力先は x-likes-radio が clone 済みなら repo 配下、無ければ一時パス:
 

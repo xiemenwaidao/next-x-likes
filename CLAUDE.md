@@ -239,6 +239,9 @@ worktree 削除で消失する事故が起きた。
     `gh repo clone xiemenwaidao/x-likes-radio` で再取得 (default branch は `master`)。
   - `public/podcasts/bgm/bed.mp3` — BGM。実体 mp3 への symlink
     (`ln -sfn <target>.mp3 bed.mp3`)。代替不可の実体ファイルなので消すな。
+    **BGM は 10 エピソードごとにローテーション**: 第1〜10回=`ローファイ少女は今日も寝不足_2.mp3`、
+    第11〜20回=`2_23_AM_2.mp3`、第21回〜=未定 (要ユーザー確認)。mix 前に通し番号のブロックに
+    応じて symlink を張り替える。割当の正本は `.claude/commands/podcast.md` 前提セクション。
   - `.env` の `ELEVENLABS_API_KEY` — TTS に必須。
 - **gitmoji の罠**: next-x-likes (本体) の commitlint は 🎙️ を許可しない
   (`start-with-gitmoji` で弾かれる)。本体への podcast commit は **✨ feat:** を使う。
