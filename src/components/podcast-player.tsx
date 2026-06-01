@@ -44,6 +44,33 @@ export function PodcastPlayer() {
   } = usePodcastPlayer();
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const playerRef = useRef<HTMLDivElement | null>(null);
+
+  // mini プレイヤー表示中は、その高さぶんだけ画面下のフローティングボタン
+  // (scroll-top / 日付ジャンプ FAB) を上へ逃がすための CSS 変数を root に出す。
+  // プレイヤーは z-60 で同じ 28rem 列・bottom:12px に居座るため、これが無いと
+  // ボタンがプレイヤーバーの裏に隠れてしまう。expanded / 非再生時は 0。
+  useEffect(() => {
+    const root = document.documentElement;
+    if (!current || expanded) {
+      root.style.setProperty('--zk-player-offset', '0px');
+      return;
+    }
+    const apply = () => {
+      const h = playerRef.current?.offsetHeight ?? 64;
+      root.style.setProperty('--zk-player-offset', `${Math.round(h) + 12}px`);
+    };
+    const raf = requestAnimationFrame(apply);
+    return () => cancelAnimationFrame(raf);
+  }, [current, expanded]);
+
+  // unmount 時に確実に 0 へ戻す
+  useEffect(
+    () => () => {
+      document.documentElement.style.setProperty('--zk-player-offset', '0px');
+    },
+    [],
+  );
 
   // current が変わったら audio の src をセットして再生
   useEffect(() => {
@@ -115,7 +142,7 @@ export function PodcastPlayer() {
         onEnded={() => setPlaying(false)}
       />
 
-      <div className={`zk-player ${expanded ? 'zk-player-expanded' : ''}`} role="region" aria-label="ポッドキャストプレイヤー">
+      <div ref={playerRef} className={`zk-player ${expanded ? 'zk-player-expanded' : ''}`} role="region" aria-label="ポッドキャストプレイヤー">
         {/* 進捗バー (mini/expanded 共通、上辺) */}
         <div
           className="zk-player-progress"

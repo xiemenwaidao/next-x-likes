@@ -35,10 +35,13 @@ export const ScrollTopButton = () => {
       style={{
         left: 0,
         right: 0,
-        bottom: 'max(20px, env(safe-area-inset-bottom))',
+        // 永続ポッドキャストプレイヤー表示中はその高さぶん上へ逃がす (--zk-player-offset)
+        bottom:
+          'calc(max(20px, env(safe-area-inset-bottom)) + var(--zk-player-offset, 0px))',
         display: 'flex',
         justifyContent: 'center',
         pointerEvents: 'none',
+        transition: 'bottom 240ms cubic-bezier(0.22, 0.61, 0.36, 1)',
       }}
     >
       <div

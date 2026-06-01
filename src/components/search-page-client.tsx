@@ -994,10 +994,13 @@ export function SearchPageClient() {
           style={{
             left: 0,
             right: 0,
-            bottom: 'calc(max(20px, env(safe-area-inset-bottom)) + 52px)',
+            // ScrollTopButton (+52px) の上 + 永続プレイヤー表示中はさらに上へ逃がす
+            bottom:
+              'calc(max(20px, env(safe-area-inset-bottom)) + 52px + var(--zk-player-offset, 0px))',
             display: 'flex',
             justifyContent: 'center',
             pointerEvents: 'none',
+            transition: 'bottom 240ms cubic-bezier(0.22, 0.61, 0.36, 1)',
           }}
         >
           <div
