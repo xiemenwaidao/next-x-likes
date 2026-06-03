@@ -1,10 +1,56 @@
 import { join } from 'path';
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'fs';
+import {
+  readFileSync,
+  writeFileSync,
+  readdirSync,
+  mkdirSync,
+  statSync,
+} from 'fs';
 import type { DayJson, Like } from '../types/like';
 import { getTweetIdFromUrl } from '../lib/tweet-helper';
 import { promises as fs } from 'fs';
 import { parseISO } from 'date-fns';
 import { toZonedTime } from 'date-fns-tz';
+
+/**
+ * 既存の日別 JSON を全走査して、登録済み tweet_id の集合を作る。
+ *
+ * json:conv の重複チェックは元々「同じ日付ファイル内」しか見ておらず、
+ * remove-duplicate-tweets.ts は「全日付ファイル横断」で重複を 1 件に集約する。
+ * この非対称性のため、同一 tweet_id が複数の生データから別々の日付に振り分け
+ * られると、削除 → 次の conv で再生成、を毎回繰り返していた (issue #42)。
+ *
+ * conv 側でもグローバルに既存 tweet_id を把握し、どこかに存在する ID は二度と
+ * 追加しないことで、remove-duplicates と同じ「全体で 1 件」のポリシーに揃える。
+ */
+function collectExistingTweetIds(contentDir: string): Set<string> {
+  const ids = new Set<string>();
+  const walk = (dir: string) => {
+    let entries: string[];
+    try {
+      entries = readdirSync(dir);
+    } catch {
+      return; // ディレクトリが無い (初回) 場合は空集合
+    }
+    for (const entry of entries) {
+      const full = join(dir, entry);
+      if (statSync(full).isDirectory()) {
+        walk(full);
+      } else if (entry.endsWith('.json')) {
+        try {
+          const dayJson: DayJson = JSON.parse(readFileSync(full, 'utf-8'));
+          for (const tweet of dayJson.body ?? []) {
+            if (tweet.tweet_id) ids.add(tweet.tweet_id);
+          }
+        } catch {
+          // 壊れた JSON はスキップ
+        }
+      }
+    }
+  };
+  walk(contentDir);
+  return ids;
+}
 
 export async function processAndGenerateContent() {
   try {
@@ -15,6 +61,10 @@ export async function processAndGenerateContent() {
 
     // コンテンツディレクトリがない場合は作成
     mkdirSync(contentDir, { recursive: true });
+
+    // 全日付ファイル横断で既存 tweet_id を把握 (issue #42 の重複再生成対策)。
+    // 以降、いずれかの日付ファイルに既出の ID は追加しない。
+    const knownTweetIds = collectExistingTweetIds(contentDir);
 
     // tweets_v2ディレクトリがあるかチェック
     const tweetsV2Dir = join(dataDir, 'tweets_v2');
@@ -47,6 +97,13 @@ export async function processAndGenerateContent() {
         data.tweet_id = tweetId;
         data.private = data.private ?? false;
         data.notfound = data.notfound ?? false;
+
+        // 既にいずれかの日付ファイルに存在する tweet_id は追加しない
+        // (issue #42: 削除済み重複の再生成を防ぐ)
+        if (knownTweetIds.has(tweetId)) {
+          continue;
+        }
+        knownTweetIds.add(tweetId);
 
         // 不要な情報の削除
         if (data.embed_code) {
@@ -127,6 +184,13 @@ export async function processAndGenerateContent() {
         data.tweet_id = tweetId;
         data.private = false;
         data.notfound = false;
+
+        // 既にいずれかの日付ファイルに存在する tweet_id は追加しない
+        // (issue #42: 削除済み重複の再生成を防ぐ)
+        if (knownTweetIds.has(tweetId)) {
+          continue;
+        }
+        knownTweetIds.add(tweetId);
 
         // 不要な情報の削除
         if (data.embed_code) {
