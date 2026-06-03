@@ -37,17 +37,8 @@ export const Header = () => {
 
   return (
     <header
-      className="sticky top-0 z-30 w-full"
+      className="zk-glass-header sticky top-0 z-30 w-full"
       data-scrolled={scrolled ? '1' : '0'}
-      style={{
-        background: scrolled
-          ? 'oklch(13% 0.012 250 / 0.82)'
-          : 'oklch(15% 0.012 250 / 0.7)',
-        backdropFilter: 'blur(18px) saturate(160%)',
-        WebkitBackdropFilter: 'blur(18px) saturate(160%)',
-        borderBottom: '0.5px solid var(--line-soft)',
-        transition: 'background 200ms ease',
-      }}
     >
       <div
         className="col-28 flex items-center gap-2"
