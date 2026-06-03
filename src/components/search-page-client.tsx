@@ -1036,16 +1036,22 @@ export function SearchPageClient() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: 'var(--bg-2)',
+                    background: 'oklch(22% 0.012 250 / 0.55)',
+                    backdropFilter: 'blur(18px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(18px) saturate(180%)',
                     color: 'var(--zk-accent)',
                     boxShadow:
-                      '0 8px 24px rgba(0,0,0,0.35), inset 0 0 0 0.5px var(--zk-accent-line)',
+                      '0 8px 24px rgba(0,0,0,0.4), inset 0 0.5px 0 oklch(100% 0 0 / 0.18), inset 0 0 0 0.5px var(--zk-accent-line)',
                   }}
                 >
                   <CalendarDays size={18} strokeWidth={1.9} />
                 </button>
               </PopoverTrigger>
-              <PopoverContent align="end" side="top" className="w-auto p-2">
+              <PopoverContent
+                align="end"
+                side="top"
+                className="zk-glass-popover w-auto p-2"
+              >
                 <Calendar
                   mode="single"
                   selected={dateFilterAsDate}

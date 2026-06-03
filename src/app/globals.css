@@ -271,6 +271,145 @@ select {
   box-shadow: inset 0 0 0 0.5px var(--line-strong, var(--line-soft));
 }
 
+/* ============================================================
+   Liquid Glass header (iOS 26 風)
+   - base: 強めの blur + saturation で背後を屈折させる
+   - 上端の specular rim (白の極細ハイライト) と下端の hairline で
+     ガラス板の厚みを表現
+   - 上から下への光沢グラデーションで「光が乗った」面に見せる
+   - ::before は天面を斜めに走る柔らかい sheen (反射光)
+   - data-scrolled='1' で密度を上げ、浮遊感のある drop shadow を出す
+   ============================================================ */
+.zk-glass-header {
+  /* position は Tailwind の `sticky` (position: sticky) に委ねる。
+     ここで position: relative を指定すると sticky を上書きしてしまう。
+     sticky 自体が positioned なので ::before の absolute はこれ基準で効く。 */
+  isolation: isolate;
+  background:
+    linear-gradient(
+      180deg,
+      oklch(100% 0 0 / 0.06) 0%,
+      oklch(100% 0 0 / 0.015) 38%,
+      oklch(100% 0 0 / 0) 100%
+    ),
+    oklch(16% 0.012 250 / 0.3);
+  backdrop-filter: blur(20px) saturate(185%);
+  -webkit-backdrop-filter: blur(20px) saturate(185%);
+  box-shadow:
+    inset 0 0.5px 0 oklch(100% 0 0 / 0.14),
+    inset 0 -0.5px 0 var(--line-soft),
+    0 1px 0 oklch(0% 0 0 / 0.04);
+  transition:
+    background 220ms ease,
+    box-shadow 220ms ease,
+    backdrop-filter 220ms ease;
+}
+.zk-glass-header[data-scrolled='1'] {
+  background:
+    linear-gradient(
+      180deg,
+      oklch(100% 0 0 / 0.075) 0%,
+      oklch(100% 0 0 / 0.02) 45%,
+      oklch(100% 0 0 / 0) 100%
+    ),
+    oklch(13% 0.012 250 / 0.48);
+  backdrop-filter: blur(26px) saturate(195%);
+  -webkit-backdrop-filter: blur(26px) saturate(195%);
+  box-shadow:
+    inset 0 0.5px 0 oklch(100% 0 0 / 0.16),
+    inset 0 -0.5px 0 var(--line),
+    0 8px 28px oklch(0% 0 0 / 0.38);
+}
+/* 天面を斜めに走る反射光 (specular sheen)。左上が最も明るい楕円。 */
+.zk-glass-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 180% at 12% -40%,
+    oklch(100% 0 0 / 0.1) 0%,
+    oklch(100% 0 0 / 0.03) 30%,
+    transparent 60%
+  );
+  opacity: 0.9;
+}
+
+/* ガラス調 icon ボタン (header 内のホバーに厚みを足す) */
+.zk-glass-header .zk-icon-btn:hover {
+  background: oklch(100% 0 0 / 0.07);
+  color: var(--text-0);
+  box-shadow:
+    inset 0 0 0 0.5px oklch(100% 0 0 / 0.1),
+    inset 0 1px 0 oklch(100% 0 0 / 0.12);
+}
+
+/* --- PC 以上では「浮遊する島」化 ---
+   モバイルは全幅 edge-to-edge のまま。md (768px) からは本文と同じ 28rem 幅に
+   絞り、上端に隙間を空けて全周 border + drop shadow で浮かせる。 */
+@media (min-width: 768px) {
+  .zk-glass-header {
+    max-width: 28rem;
+    margin-inline: auto;
+    margin-top: 10px;
+    top: 10px; /* sticky 固定時の天面からの隙間 */
+    border-radius: 18px;
+    box-shadow:
+      inset 0 0.5px 0 oklch(100% 0 0 / 0.16),
+      inset 0 0 0 0.5px oklch(100% 0 0 / 0.08),
+      0 10px 32px oklch(0% 0 0 / 0.4);
+  }
+  .zk-glass-header[data-scrolled='1'] {
+    box-shadow:
+      inset 0 0.5px 0 oklch(100% 0 0 / 0.18),
+      inset 0 0 0 0.5px oklch(100% 0 0 / 0.1),
+      0 14px 40px oklch(0% 0 0 / 0.5);
+  }
+  /* 角丸に合わせて sheen も内側に収める */
+  .zk-glass-header::before {
+    border-radius: inherit;
+  }
+}
+
+/* ============================================================
+   Liquid Glass popover (フロートカレンダー等)
+   shadcn の bg-popover / border / shadow-md を上書きしてガラス化。
+   ============================================================ */
+.zk-glass-popover {
+  isolation: isolate;
+  background:
+    linear-gradient(
+      180deg,
+      oklch(100% 0 0 / 0.06) 0%,
+      oklch(100% 0 0 / 0.015) 42%,
+      oklch(100% 0 0 / 0) 100%
+    ),
+    oklch(18% 0.012 250 / 0.6);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 0.5px solid oklch(100% 0 0 / 0.12);
+  border-radius: 18px;
+  box-shadow:
+    inset 0 0.5px 0 oklch(100% 0 0 / 0.16),
+    0 16px 48px oklch(0% 0 0 / 0.5);
+  color: var(--text-1);
+}
+.zk-glass-popover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(
+    120% 160% at 15% -30%,
+    oklch(100% 0 0 / 0.1) 0%,
+    oklch(100% 0 0 / 0.03) 32%,
+    transparent 62%
+  );
+}
+
 /* Icon button */
 .zk-icon-btn {
   display: inline-flex;
