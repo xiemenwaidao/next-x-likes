@@ -2,10 +2,11 @@ export const dynamic = 'force-static';
 export const revalidate = false;
 
 import path from 'path';
-import { readdir } from 'fs/promises';
+import { readdir, readFile } from 'fs/promises';
 import { cache } from 'react';
 import { getDb } from '@/lib/db';
 import { HomeTabs } from '@/components/home-tabs';
+import type { GardenData, MonthStats } from '@/components/garden-top-banner';
 import type { DateInfo } from '@/types/like';
 
 const getAllDates = cache(async (): Promise<DateInfo[]> => {
@@ -142,11 +143,52 @@ const getHomeInsights = cache(async (): Promise<HomeInsightsData> => {
   return { last30, prev30, hotCategories, topUsers, monthly };
 });
 
+// 「讚の庭」バナー用の月別 stats。Actions が public/garden-stats.json を毎日更新する。
+// 無い / 壊れている場合は穏当なフォールバックで描画（ビルドは落とさない）。
+const getGardenData = cache(async (): Promise<GardenData> => {
+  const now = new Date();
+  const current = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+  const fallback: GardenData = {
+    current,
+    months: {
+      [current]: {
+        elapsedDays: now.getDate(),
+        totalLikes: 0,
+        categoryWeights: new Array(11).fill(0),
+      },
+    },
+  };
+  try {
+    const file = path.join(process.cwd(), 'public', 'garden-stats.json');
+    const parsed = JSON.parse(await readFile(file, 'utf-8'));
+    if (!parsed.months || typeof parsed.months !== 'object') return fallback;
+    const months: Record<string, MonthStats> = {};
+    for (const [ym, raw] of Object.entries<Record<string, unknown>>(
+      parsed.months,
+    )) {
+      months[ym] = {
+        elapsedDays: Number(raw.elapsedDays) || 1,
+        totalLikes: Number(raw.totalLikes) || 0,
+        categoryWeights: Array.isArray(raw.categoryWeights)
+          ? raw.categoryWeights.map(Number)
+          : new Array(11).fill(0),
+      };
+    }
+    return {
+      current: typeof parsed.current === 'string' ? parsed.current : current,
+      months,
+    };
+  } catch {
+    return fallback;
+  }
+});
+
 export default async function Home() {
-  const [allDates, categoryData, insights] = await Promise.all([
+  const [allDates, categoryData, insights, gardenData] = await Promise.all([
     getAllDates(),
     getCategoryCounts(),
     getHomeInsights(),
+    getGardenData(),
   ]);
 
   return (
@@ -155,6 +197,7 @@ export default async function Home() {
       categoryCounts={categoryData.counts}
       totalCount={categoryData.total}
       insights={insights}
+      gardenData={gardenData}
     />
   );
 }
