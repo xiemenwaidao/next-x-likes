@@ -90,6 +90,7 @@ export function HomeTabs({
       <GardenTopBanner
         stats={gardenStats}
         monthKey={gardenMonthKey}
+        isCurrent={gardenMonthKey === gardenData.current}
         canPrev={canGardenPrev}
         canNext={canGardenNext}
         onPrev={() => stepGardenMonth(-1)}

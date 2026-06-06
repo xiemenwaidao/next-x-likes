@@ -372,24 +372,34 @@ export default function ZanNoNiwa({
   );
 }
 
-/** 月末判定（大木⇄枯れ木）— バナーの文言に使う */
+/**
+ * 月の判定（大木⇄枯れ木）— バナーの文言に使う。
+ * @param complete その月が完了済みか（過去月 = true）。
+ *   true なら確定した結果（過去形）、false なら進行中の今月向けの予測表現を返す。
+ */
 export function verdict(
   elapsedDays: number,
   totalLikes: number,
+  complete = false,
 ): { label: string; color: string; vit: number } {
   const vit = clamp(
     totalLikes / Math.max(1, elapsedDays) / CFG.PACE_FOR_GREAT,
     0,
     1,
   );
+  if (complete) {
+    // 完了済みの過去月 — 確定した結果
+    if (vit >= 0.9) return { label: '大木 — 豊作の月', color: '#7fd6a0', vit };
+    if (vit >= 0.85) return { label: 'のびやかな大木', color: '#7fd6a0', vit };
+    if (vit >= 0.6) return { label: '健やかに茂った', color: '#bcd98a', vit };
+    if (vit >= 0.32) return { label: 'ほどほどの繁り', color: '#e8b84b', vit };
+    return { label: '枯れ木 — 不作の月', color: '#e08a5a', vit };
+  }
+  // 進行中の今月 — このペースで向かう先（予測）
   if (elapsedDays >= 28 && vit >= 0.9)
     return { label: '大木 — 今月は豊作', color: '#7fd6a0', vit };
   if (vit >= 0.85) return { label: 'のびやかな大木へ', color: '#7fd6a0', vit };
   if (vit >= 0.6) return { label: '健やかに茂る', color: '#bcd98a', vit };
   if (vit >= 0.32) return { label: 'ほどほどの繁り', color: '#e8b84b', vit };
-  return {
-    label: elapsedDays >= 28 ? '枯れ木 — 今月は不作' : '枯れ気味',
-    color: '#e08a5a',
-    vit,
-  };
+  return { label: '枯れ気味', color: '#e08a5a', vit };
 }
