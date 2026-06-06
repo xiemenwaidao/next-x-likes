@@ -5,7 +5,13 @@ import Link from 'next/link';
 import { CalendarDays, LayoutGrid, ArrowRight, Search as SearchIcon } from 'lucide-react';
 import { CalendarPicker } from './calendar-picker';
 import { HomeInsights } from './home-insights';
+import {
+  GardenTopBanner,
+  type GardenData,
+  type MonthStats,
+} from './garden-top-banner';
 import { CATEGORIES } from '@/data/categories';
+import { useCalendarStore } from '@/store/calendar-store';
 import type { DateInfo } from '@/types/like';
 import type { HomeInsightsData } from '@/app/page';
 
@@ -16,11 +22,13 @@ export function HomeTabs({
   categoryCounts,
   totalCount,
   insights,
+  gardenData,
 }: {
   allDates: DateInfo[];
   categoryCounts: CategoryCount[];
   totalCount: number;
   insights: HomeInsightsData;
+  gardenData: GardenData;
 }) {
   const [tab, setTab] = useState<'calendar' | 'categories'>('calendar');
   const thumbRef = useRef<HTMLDivElement | null>(null);
@@ -46,8 +54,48 @@ export function HomeTabs({
 
   const countMap = new Map(categoryCounts.map((c) => [c.name, c.count]));
 
+  // ── 讚の庭：カレンダーの表示月に連動して木を切り替える ──
+  const displayMonth = useCalendarStore((s) => s.displayMonth);
+  const setDisplayMonth = useCalendarStore((s) => s.setDisplayMonth);
+  const gardenMonthKey = displayMonth
+    ? `${displayMonth.getFullYear()}-${String(displayMonth.getMonth() + 1).padStart(2, '0')}`
+    : gardenData.current;
+
+  // 月送りの範囲：[最古のデータ月, 当月]
+  const earliestMonthKey =
+    Object.keys(gardenData.months).sort()[0] ?? gardenData.current;
+  const canGardenPrev = gardenMonthKey > earliestMonthKey;
+  const canGardenNext = gardenMonthKey < gardenData.current;
+  const stepGardenMonth = (delta: number) => {
+    const [y, m] = gardenMonthKey.split('-').map(Number);
+    setDisplayMonth(new Date(y, m - 1 + delta, 1));
+  };
+  const gardenStats: MonthStats = gardenData.months[gardenMonthKey] ?? {
+    // データの無い月：過去なら満成長の裸木、当月なら今日まで
+    elapsedDays:
+      gardenMonthKey >= gardenData.current
+        ? (gardenData.months[gardenData.current]?.elapsedDays ?? 1)
+        : new Date(
+            Number(gardenMonthKey.slice(0, 4)),
+            Number(gardenMonthKey.slice(5, 7)),
+            0,
+          ).getDate(),
+    totalLikes: 0,
+    categoryWeights: new Array(CATEGORIES.length).fill(0),
+  };
+
   return (
     <div className="col-28" style={{ padding: '20px 16px 60px', display: 'flex', flexDirection: 'column', gap: 24 }}>
+      {/* 讚の庭バナー — その月のいいねで育つ桜（カレンダーの表示月に連動） */}
+      <GardenTopBanner
+        stats={gardenStats}
+        monthKey={gardenMonthKey}
+        canPrev={canGardenPrev}
+        canNext={canGardenNext}
+        onPrev={() => stepGardenMonth(-1)}
+        onNext={() => stepGardenMonth(1)}
+      />
+
       {/* Hero stat */}
       <div className="flex flex-col gap-1.5" style={{ padding: '8px 2px 0' }}>
         <div className="zk-section-label">archive</div>

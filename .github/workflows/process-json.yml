@@ -65,6 +65,12 @@ jobs:
       - name: '📊 Build activity data'
         run: pnpm json:build-activity
 
+      - name: '🌳 Build garden stats'
+        # トップの「讚の庭」桜バナー用 (public/garden-stats.json)。
+        # totalLikes/elapsedDays は今 enrich した JSON から、カテゴリ別の花色比率は
+        # コミット済み data/likes.db から集計する。
+        run: pnpm json:build-garden
+
       # SQLite (data/likes.db) への取り込み・embedding 生成・サイトビルドは
       # ここでは行わない。ローカルで `pnpm db:migrate && pnpm ai:embed && pnpm build`
       # をまとめて流す運用 (溜まったときに手動)。
