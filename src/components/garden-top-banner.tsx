@@ -27,10 +27,11 @@ export interface GardenData {
   months: Record<string, MonthStats>;
 }
 
-/** '2026-06' → '6月' */
+/** '2026-06' → '26年6月' */
 function monthLabel(month: string): string {
-  const m = month.split('-')[1];
-  return m ? `${Number(m)}月` : '今月';
+  const [y, m] = month.split('-');
+  if (!y || !m) return '今月';
+  return `${y.slice(2)}年${Number(m)}月`;
 }
 
 /** カテゴリ割合の上位を取り出す */
