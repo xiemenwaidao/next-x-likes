@@ -94,6 +94,7 @@ function MonthNavButton({
 export function GardenTopBanner({
   stats,
   monthKey,
+  isCurrent,
   canPrev,
   canNext,
   onPrev,
@@ -101,12 +102,14 @@ export function GardenTopBanner({
 }: {
   stats: MonthStats;
   monthKey: string;
+  isCurrent: boolean;
   canPrev: boolean;
   canNext: boolean;
   onPrev: () => void;
   onNext: () => void;
 }) {
-  const v = verdict(stats.elapsedDays, stats.totalLikes);
+  // 過去月（完了済み）は確定結果、当月は進行中の予測表現
+  const v = verdict(stats.elapsedDays, stats.totalLikes, !isCurrent);
   const label = monthLabel(monthKey);
   const tops = topCategories(stats.categoryWeights, 3);
 
