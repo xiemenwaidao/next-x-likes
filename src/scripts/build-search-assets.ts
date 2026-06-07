@@ -4,8 +4,8 @@
  * 生成物 (すべて gzip 圧縮):
  *   public/data/search-index.json.gz   - MiniSearch シリアライズ済み FTS インデックス
  *   public/data/likes-meta.json.gz     - 検索結果の表示用メタ配列 (tweet_id 順)
- *   public/data/embeddings.bin.gz      - Float32Array を連結したバイナリ (N * 384 * 4 byte)
- *   public/data/embeddings-meta.json.gz - embeddings の並び順を表す tweet_id 配列
+ *   public/data/embeddings.bin.gz      - int8 量子化済みベクトルを連結したバイナリ (N * 384 * 1 byte)
+ *   public/data/embeddings-meta.json.gz - { dim, scale, quant, order } (order = 並び順の tweet_id 配列)
  *
  * Usage:
  *   pnpm tsx src/scripts/build-search-assets.ts
@@ -187,16 +187,49 @@ async function main() {
   console.log(`[embed] ${withEmbed.length}/${rows.length} 行が embedding 持ち`);
 
   if (withEmbed.length > 0) {
-    const totalBytes = withEmbed.length * EMBED_DIM * 4;
-    const buf = Buffer.allocUnsafe(totalBytes);
-    for (let i = 0; i < withEmbed.length; i++) {
-      const src = withEmbed[i].embedding!;
-      buf.set(src, i * EMBED_DIM * 4);
+    const N = withEmbed.length;
+    // 各行の Uint8Array(byteLength=384*4) を DataView で little-endian 読み出しして
+    // Float32Array に展開する (byteOffset 非整列でも安全)。
+    const floatRows: Float32Array[] = withEmbed.map((r) => {
+      const src = r.embedding!;
+      const dv = new DataView(src.buffer, src.byteOffset, src.byteLength);
+      const row = new Float32Array(EMBED_DIM);
+      for (let j = 0; j < EMBED_DIM; j++) row[j] = dv.getFloat32(j * 4, true);
+      return row;
+    });
+
+    // ===== int8 対称量子化 =====
+    // 全ベクトルの絶対値最大をグローバルスケールにする。
+    // 復元: float = q * (scale / 127)
+    let absMax = 0;
+    for (const row of floatRows) {
+      for (let j = 0; j < EMBED_DIM; j++) {
+        const a = Math.abs(row[j]);
+        if (a > absMax) absMax = a;
+      }
     }
-    await writeGz('embeddings.bin.gz', buf);
+    const scale = absMax > 0 ? absMax : 1;
+    const inv = 127 / scale;
+
+    const q = Buffer.allocUnsafe(N * EMBED_DIM); // int8 を Buffer に詰める (signed)
+    for (let i = 0; i < N; i++) {
+      const row = floatRows[i];
+      const base = i * EMBED_DIM;
+      for (let j = 0; j < EMBED_DIM; j++) {
+        let v = Math.round(row[j] * inv);
+        if (v > 127) v = 127;
+        else if (v < -127) v = -127;
+        q.writeInt8(v, base + j);
+      }
+    }
+    await writeGz('embeddings.bin.gz', q);
 
     const order = withEmbed.map((r) => r.tweet_id);
-    await writeGz('embeddings-meta.json.gz', JSON.stringify(order));
+    await writeGz(
+      'embeddings-meta.json.gz',
+      JSON.stringify({ dim: EMBED_DIM, scale, quant: 'int8', order }),
+    );
+    console.log(`[embed] int8 量子化: scale=${scale.toFixed(6)} N=${N} bytes=${N * EMBED_DIM}`);
   } else {
     console.log('[skip] embeddings.bin.gz: embedding が 0 行');
   }

@@ -59,6 +59,45 @@ async function fetchGzJson<T>(url: string): Promise<T> {
   return JSON.parse(new TextDecoder().decode(buf)) as T;
 }
 
+/** embeddings-meta.json の形式。
+ *  - 旧 (float32): tweet_id の配列をそのまま入れていた
+ *  - 新 (int8):   { dim, scale, quant:'int8', order } で量子化パラメータを持つ
+ */
+type EmbedMeta = string[] | { dim: number; scale: number; quant: string; order: string[] };
+
+/** embeddings.bin (バイナリ) と embeddings-meta を受け取り、
+ *  Float32Array (length = N*EMBED_DIM、L2 正規化済みベクトルを連結) と
+ *  並び順 order を返す。int8 量子化済みなら復元、旧 float32 ならそのまま。
+ */
+function decodeEmbeddings(bin: ArrayBuffer, meta: EmbedMeta): {
+  embeddings: Float32Array;
+  order: string[];
+} {
+  // 旧形式: meta が配列 = float32 がそのまま入っている
+  if (Array.isArray(meta)) {
+    const embeddings = new Float32Array(bin);
+    if (embeddings.length !== meta.length * EMBED_DIM) {
+      throw new Error(
+        `embeddings size mismatch: floats=${embeddings.length} expected=${meta.length * EMBED_DIM}`,
+      );
+    }
+    return { embeddings, order: meta };
+  }
+
+  // 新形式: int8 量子化。float = q * (scale / 127) で復元する
+  const { scale, order } = meta;
+  const q = new Int8Array(bin);
+  if (q.length !== order.length * EMBED_DIM) {
+    throw new Error(
+      `embeddings size mismatch (int8): bytes=${q.length} expected=${order.length * EMBED_DIM}`,
+    );
+  }
+  const f = scale / 127;
+  const embeddings = new Float32Array(q.length);
+  for (let i = 0; i < q.length; i++) embeddings[i] = q[i] * f;
+  return { embeddings, order };
+}
+
 function bigramTokenize(text: string): string[] {
   const tokens: string[] = [];
   const lower = text.toLowerCase();
@@ -116,18 +155,14 @@ export async function loadSearchAssets(opts?: {
   const embedIndexById = new Map<string, number>();
 
   if (opts?.withEmbeddings) {
-    const [bin, order] = await Promise.all([
+    const [bin, rawMeta] = await Promise.all([
       fetchGz(`${base}/embeddings.bin.gz`),
-      fetchGzJson<string[]>(`${base}/embeddings-meta.json.gz`),
+      fetchGzJson<EmbedMeta>(`${base}/embeddings-meta.json.gz`),
     ]);
-    embeddings = new Float32Array(bin);
-    embedOrder = order;
-    for (let i = 0; i < order.length; i++) embedIndexById.set(order[i], i);
-    if (embeddings.length !== order.length * EMBED_DIM) {
-      throw new Error(
-        `embeddings size mismatch: floats=${embeddings.length} expected=${order.length * EMBED_DIM}`,
-      );
-    }
+    const decoded = decodeEmbeddings(bin, rawMeta);
+    embeddings = decoded.embeddings;
+    embedOrder = decoded.order;
+    for (let i = 0; i < embedOrder.length; i++) embedIndexById.set(embedOrder[i], i);
   }
 
   return { miniSearch, meta, metaById, embeddings, embedOrder, embedIndexById };
@@ -143,19 +178,13 @@ export async function loadEmbeddingsAddon(
   if (assets.embeddings) return assets; // 既にロード済み
 
   const base = opts?.baseUrl ?? '/data';
-  const [bin, order] = await Promise.all([
+  const [bin, rawMeta] = await Promise.all([
     fetchGz(`${base}/embeddings.bin.gz`),
-    fetchGzJson<string[]>(`${base}/embeddings-meta.json.gz`),
+    fetchGzJson<EmbedMeta>(`${base}/embeddings-meta.json.gz`),
   ]);
-  const embeddings = new Float32Array(bin);
-  const embedOrder = order;
+  const { embeddings, order: embedOrder } = decodeEmbeddings(bin, rawMeta);
   const embedIndexById = new Map<string, number>();
-  for (let i = 0; i < order.length; i++) embedIndexById.set(order[i], i);
-  if (embeddings.length !== order.length * EMBED_DIM) {
-    throw new Error(
-      `embeddings size mismatch: floats=${embeddings.length} expected=${order.length * EMBED_DIM}`,
-    );
-  }
+  for (let i = 0; i < embedOrder.length; i++) embedIndexById.set(embedOrder[i], i);
   return {
     ...assets,
     embeddings,
