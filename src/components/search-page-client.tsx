@@ -15,7 +15,8 @@ import {
 } from 'lucide-react';
 import { CATEGORIES } from '@/data/categories';
 import {
-  loadSearchAssets,
+  loadMetaAssets,
+  loadFtsIndexAddon,
   loadEmbeddingsAddon,
   searchFts,
   searchSemantic,
@@ -54,6 +55,9 @@ export function SearchPageClient() {
   const [assets, setAssets] = useState<SearchAssets | null>(null);
   const [loadState, setLoadState] = useState<LoadState>('idle');
   const [loadError, setLoadError] = useState<string | null>(null);
+  // FTS 索引 (search-index.json.gz, ~2.9MB) の遅延ロード状態。
+  // メタ (loadState) とは別管理で、キーワードを打ったときに初めて読む。
+  const [ftsIndexState, setFtsIndexState] = useState<LoadState>('idle');
 
   // ---- 入力 / 絞り込み ----
   const [inputValue, setInputValue] = useState('');
@@ -284,11 +288,14 @@ export function SearchPageClient() {
     }
   }, []);
 
-  // ---- アセットロード ----
+  // ---- アセットロード (メタのみ。FTS 索引は遅延) ----
+  // /search を開いた瞬間は likes-meta (~1.7MB) だけ読む。これで日付絞り込み・
+  // カテゴリ閲覧・件数・カード描画は成立する。重い FTS 索引 (~2.9MB) は
+  // ユーザーがキーワードを打つまで読まない (下の遅延ロード effect)。
   useEffect(() => {
     let cancelled = false;
     setLoadState('loading');
-    loadSearchAssets({ withEmbeddings: false })
+    loadMetaAssets()
       .then((a) => {
         if (cancelled) return;
         setAssets(a);
@@ -305,6 +312,26 @@ export function SearchPageClient() {
     };
   }, []);
 
+  // ---- FTS 索引の遅延ロード ----
+  // ユーザーが何か入力し始めた瞬間 (= キーワード検索の意思) に search-index を
+  // 取得する。focus だけでは発火しない (ready 時の autoFocus で誤発火しないため)。
+  useEffect(() => {
+    if (loadState !== 'ready' || !assets) return;
+    if (ftsIndexState !== 'idle') return;
+    if (inputValue.trim().length === 0) return;
+    setFtsIndexState('loading');
+    loadFtsIndexAddon(assets)
+      .then((next) => {
+        // 他の addon (embeddings) と競合しても壊れないよう関数更新でマージ
+        setAssets((prev) => (prev ? { ...prev, miniSearch: next.miniSearch } : next));
+        setFtsIndexState('ready');
+      })
+      .catch((err) => {
+        console.error('[search] failed to load FTS index', err);
+        setFtsIndexState('error');
+      });
+  }, [inputValue, loadState, assets, ftsIndexState]);
+
   // ---- semantic bootstrap ----
   const startSemanticBootstrap = useCallback(() => {
     if (!assets || loadState !== 'ready') return;
@@ -312,7 +339,17 @@ export function SearchPageClient() {
       setEmbedAssetsState('loading');
       loadEmbeddingsAddon(assets)
         .then((next) => {
-          setAssets(next);
+          // FTS 索引の遅延ロードと競合しても壊れないよう関数更新でマージ
+          setAssets((prev) =>
+            prev
+              ? {
+                  ...prev,
+                  embeddings: next.embeddings,
+                  embedOrder: next.embedOrder,
+                  embedIndexById: next.embedIndexById,
+                }
+              : next,
+          );
           setEmbedAssetsState('ready');
         })
         .catch((err) => {
@@ -684,7 +721,7 @@ export function SearchPageClient() {
           style={{ marginLeft: 10 }}
           disabled={loadState !== 'ready'}
         />
-        {encodingState === 'loading' && (
+        {(encodingState === 'loading' || ftsIndexState === 'loading') && (
           <Loader2
             size={14}
             strokeWidth={1.75}
@@ -932,7 +969,14 @@ export function SearchPageClient() {
       {/* Results */}
       {loadState === 'ready' && (
         <>
-          {totalHits === 0 && (debouncedQuery || category || dateFilter) ? (
+          {totalHits === 0 && debouncedQuery && ftsIndexState === 'loading' ? (
+            <div className="zk-empty">
+              <div style={{ fontSize: 24, opacity: 0.4 }}>
+                <Loader2 size={20} strokeWidth={1.75} className="animate-spin" style={{ opacity: 0.6 }} />
+              </div>
+              <div style={{ fontSize: 12 }}>検索インデックスを準備中…</div>
+            </div>
+          ) : totalHits === 0 && (debouncedQuery || category || dateFilter) ? (
             <div className="zk-empty">
               <div style={{ fontSize: 24, opacity: 0.4 }}>—</div>
               <div style={{ fontSize: 12 }}>該当するいいねが見つかりませんでした</div>

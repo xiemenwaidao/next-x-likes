@@ -34,7 +34,9 @@ export type SearchHit = {
 };
 
 export type SearchAssets = {
-  miniSearch: MiniSearch;
+  // FTS インデックス。遅延ロード方式では「キーワードを打つまで未ロード」なので
+  // null を取りうる。null の間は searchFts が空配列を返す (= FTS スキップ)。
+  miniSearch: MiniSearch | null;
   meta: LikeMetaItem[];
   metaById: Map<string, LikeMetaItem>;
   embeddings: Float32Array | null; // length = N * EMBED_DIM
@@ -120,6 +122,59 @@ function bigramTokenize(text: string): string[] {
   return tokens;
 }
 
+/** シリアライズ済み索引から MiniSearch を復元する (設定はここに一元化)。 */
+function buildMiniSearch(serializedIndex: unknown): MiniSearch {
+  return MiniSearch.loadJS(serializedIndex as Parameters<typeof MiniSearch.loadJS>[0], {
+    idField: 'id',
+    fields: ['text', 'summary', 'username', 'tags', 'category'],
+    storeFields: [],
+    tokenize: bigramTokenize,
+    processTerm: (term) => term.toLowerCase(),
+    searchOptions: {
+      boost: { summary: 2, text: 1, tags: 1.5, username: 0.5 },
+      fuzzy: 0.2,
+      prefix: true,
+    },
+  });
+}
+
+/** メタ (likes-meta.json.gz, ~1.7MB) のみをロードする軽量ローダー。
+ *  これだけで日付絞り込み・カテゴリ閲覧・件数表示・カード描画は成立する。
+ *  FTS 索引 (search-index.json.gz, ~2.9MB) はロードしない (miniSearch=null)。
+ *  → /search を開いた瞬間のダウンロードを ~4.6MB から ~1.7MB に削減する。
+ */
+export async function loadMetaAssets(opts?: { baseUrl?: string }): Promise<SearchAssets> {
+  const base = opts?.baseUrl ?? '/data';
+  const meta = await fetchGzJson<LikeMetaItem[]>(`${base}/likes-meta.json.gz`);
+  const metaById = new Map<string, LikeMetaItem>();
+  for (const m of meta) metaById.set(m.i, m);
+  return {
+    miniSearch: null,
+    meta,
+    metaById,
+    embeddings: null,
+    embedOrder: [],
+    embedIndexById: new Map<string, number>(),
+  };
+}
+
+/** 既存の SearchAssets に FTS 索引 (search-index.json.gz) を後追いで読み込む。
+ *  キーワード検索 (FTS / Hybrid) を初めて使うときに呼ぶ。
+ *  戻り値は miniSearch をマージした新しい SearchAssets (元は変更しない)。
+ */
+export async function loadFtsIndexAddon(
+  assets: SearchAssets,
+  opts?: { baseUrl?: string },
+): Promise<SearchAssets> {
+  if (assets.miniSearch) return assets; // 既にロード済み
+  const base = opts?.baseUrl ?? '/data';
+  const serializedIndex = await fetchGzJson<unknown>(`${base}/search-index.json.gz`);
+  return { ...assets, miniSearch: buildMiniSearch(serializedIndex) };
+}
+
+/** メタ + FTS 索引 (+ 任意で embeddings) を一括ロードする従来ローダー。
+ *  遅延ロードを使わない呼び出し側 (CLI 等) 向けに残置。
+ */
 export async function loadSearchAssets(opts?: {
   withEmbeddings?: boolean;
   baseUrl?: string;
@@ -131,21 +186,7 @@ export async function loadSearchAssets(opts?: {
     fetchGzJson<LikeMetaItem[]>(`${base}/likes-meta.json.gz`),
   ]);
 
-  const miniSearch = MiniSearch.loadJS(
-    serializedIndex as Parameters<typeof MiniSearch.loadJS>[0],
-    {
-      idField: 'id',
-      fields: ['text', 'summary', 'username', 'tags', 'category'],
-      storeFields: [],
-      tokenize: bigramTokenize,
-      processTerm: (term) => term.toLowerCase(),
-      searchOptions: {
-        boost: { summary: 2, text: 1, tags: 1.5, username: 0.5 },
-        fuzzy: 0.2,
-        prefix: true,
-      },
-    },
-  );
+  const miniSearch = buildMiniSearch(serializedIndex);
 
   const metaById = new Map<string, LikeMetaItem>();
   for (const m of meta) metaById.set(m.i, m);
@@ -198,6 +239,7 @@ export function searchFts(
   query: string,
   opts?: { limit?: number; category?: string },
 ): SearchHit[] {
+  if (!assets.miniSearch) return []; // FTS 索引が未ロード (遅延ロード待ち)
   const limit = opts?.limit ?? 50;
   const filter = opts?.category
     ? (id: string) => {
