@@ -15,15 +15,25 @@ next-x-likes の「GitHub Actions の定時バッチでは実行されない、�
 
 - 作業ディレクトリはリポジトリルート (worktree でも OK)
 - main にいる必要はない (skill 内で切り替える)
-- 親 worktree `/Users/kadowakimichinori/claude-dev/x-likes/.eslintrc.json` が
-  ビルド時に lint をスキップさせる罠あり (step 6 で退避)
+- worktree から実行する場合、親階層 (main repo root) の `.eslintrc.json` が
+  ビルド時に lint をスキップさせる罠あり (step 6 で退避)。main repo root は PC ごとに
+  異なるのでハードコードせず `MAIN_ROOT=$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")`
+  で求める (現 PC では `/Users/dwk/dev/next-x-likes`)
+- worktree では `main` が main repo root 側で checkout 済みのため `git checkout main` は失敗する。
+  step 1 / step 7 の worktree 用手順を使う
+- 依存 (`node_modules`) が無ければ先に `pnpm install`。embedding モデル
+  (Xenova/multilingual-e5-small) は初回 `pnpm ai:embed` 時に `~/.cache/huggingface` へ自動 DL される
 
 ## 手順
 
 ### 1. main 取り込み
 
 ```bash
+# main repo root で実行している場合
 git checkout main && git pull --ff-only origin main
+
+# worktree で実行している場合 (作業ブランチを origin/main に追従させる)
+git fetch origin main && git merge --ff-only origin/main
 ```
 
 ### 2. 現状確認 (最初にユーザーに 1 行報告)
@@ -67,10 +77,12 @@ multilingual-e5-small で 384 次元を生成、SQLite に書き戻す。CPU で
 親 eslintrc の衝突を回避してビルド。**ビルドが失敗しても eslintrc は必ず戻す**:
 
 ```bash
-mv /Users/kadowakimichinori/claude-dev/x-likes/.eslintrc.json /tmp/parent-eslintrc.json.bak 2>/dev/null
+MAIN_ROOT=$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")
+IS_WORKTREE=$([ "$MAIN_ROOT" != "$(git rev-parse --show-toplevel)" ] && echo 1)
+[ -n "$IS_WORKTREE" ] && mv "$MAIN_ROOT/.eslintrc.json" /tmp/parent-eslintrc.json.bak 2>/dev/null
 pnpm build
 BUILD_EXIT=$?
-mv /tmp/parent-eslintrc.json.bak /Users/kadowakimichinori/claude-dev/x-likes/.eslintrc.json 2>/dev/null
+[ -n "$IS_WORKTREE" ] && mv /tmp/parent-eslintrc.json.bak "$MAIN_ROOT/.eslintrc.json" 2>/dev/null
 [ $BUILD_EXIT -ne 0 ] && echo "BUILD FAILED" && exit $BUILD_EXIT
 ```
 
@@ -89,7 +101,8 @@ git status data/likes.db
 ```bash
 git add data/likes.db
 git commit -m "🔧 chore: ローカル DB 同期 (+N 件、分類 + embedding)"
-git push origin main
+git push origin main          # main repo root の場合
+git push origin HEAD:main     # worktree の場合
 ```
 
 **コミット時の罠**:

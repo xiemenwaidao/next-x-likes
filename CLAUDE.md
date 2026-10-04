@@ -197,7 +197,8 @@ curl -sL "https://z.xiemen.me/data/likes-meta.json.gz" | gunzip | \
 弾く。本文では `pnpm db migrate` のようにコロンを抜くか、テキストを言い換える。
 
 **親 worktree との eslint 衝突**: `pnpm build` を流す前に `.eslintrc.json` が
-親階層 (`/Users/kadowakimichinori/claude-dev/x-likes/.eslintrc.json`) と衝突して
+親階層 (main repo root の `.eslintrc.json`。現 PC では `/Users/dwk/dev/next-x-likes/.eslintrc.json`、
+パスは `dirname "$(git rev-parse --path-format=absolute --git-common-dir)"` で求まる) と衝突して
 lint がスキップされることがある。Vercel と同条件で lint を回したい場合は
 親側を `mv` で一時退避し、build 後に戻す。push 前に必ずこの手順で lint 通過を確認する。
 
@@ -232,7 +233,8 @@ worktree 削除で消失する事故が起きた。
 
 **鉄則: podcast 生成は必ず main repo root から実行する。**
 
-- **作業ディレクトリ**: `/Users/kadowakimichinori/claude-dev/x-likes` (= main repo root)。
+- **作業ディレクトリ**: main repo root (現 PC では `/Users/dwk/dev/next-x-likes`。
+  `dirname "$(git rev-parse --path-format=absolute --git-common-dir)"` で求まる)。
   ここがセッションをまたいで永続する唯一の場所。worktree から呼ばれたら `cd` してくる。
 - **ブランチ**: main root は `main` に保つ (Stage 10 の index 反映が main 直 commit のため)。
 - **永続資産** (すべて main root 配下・gitignore 済み):
