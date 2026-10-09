@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Search as SearchIcon } from 'lucide-react';
 import { LogoSVG } from './logo-svg';
 import { MenuGrid } from './menu-grid';
+import { FOCUS_SEARCH_EVENT } from '@/lib/search-events';
 
 export const Header = () => {
   const pathname = usePathname();
@@ -74,6 +75,11 @@ export const Header = () => {
           aria-label="検索"
           className="zk-icon-btn"
           data-active={onSearch ? '1' : '0'}
+          onClick={() => {
+            // 同一パスへの遷移では検索ページが再マウントされないので、
+            // 検索 input への focus をイベントで依頼する
+            if (onSearch) window.dispatchEvent(new Event(FOCUS_SEARCH_EVENT));
+          }}
         >
           <SearchIcon size={17} strokeWidth={1.75} />
         </Link>

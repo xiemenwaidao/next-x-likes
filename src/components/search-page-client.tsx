@@ -25,6 +25,7 @@ import {
   type SearchHit,
 } from '@/lib/search-client';
 import { TweetEmbedCard } from '@/components/tweet-embed-card';
+import { FOCUS_SEARCH_EVENT } from '@/lib/search-events';
 import { PodcastWeekCard } from '@/components/podcast-week-card';
 import { buildPodcastDateSet, toYmd } from '@/lib/podcast-episodes';
 import { Calendar } from '@/components/ui/calendar';
@@ -98,15 +99,22 @@ export function SearchPageClient() {
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // 検索インデックスのロードが完了したら input に focus。
-  // autoFocus 属性は disabled な要素を focus できないので、ready 遷移で
-  // 明示的に focus し直す。これで「/search に着いたらすぐ打ち始められる」
-  // 体験になる。
+  // /search に着いた瞬間に input へ focus (ヘッダーの検索アイコンから来たとき
+  // すぐ打ち始められるように)。input はメタのロード中も有効にしてあり、
+  // ロード前に打った文字は ready 後にそのまま検索される。
+  // ロード完了を待ってから focus すると、クリック直後のタイミングを外れて
+  // モバイルでキーボードが開かないため、マウント時に即 focus する。
   useEffect(() => {
-    if (loadState === 'ready') {
-      inputRef.current?.focus();
-    }
-  }, [loadState]);
+    inputRef.current?.focus();
+  }, []);
+
+  // すでに /search にいる状態でヘッダーの検索アイコンが押されたとき
+  // (同一パスなので再マウントされない) にも focus する。
+  useEffect(() => {
+    const onFocusRequest = () => inputRef.current?.focus();
+    window.addEventListener(FOCUS_SEARCH_EVENT, onFocusRequest);
+    return () => window.removeEventListener(FOCUS_SEARCH_EVENT, onFocusRequest);
+  }, []);
 
   // X クリアボタンで入力を空にしたら、すぐ次の入力に移れるように focus を
   // input に戻す。
@@ -759,9 +767,11 @@ export function SearchPageClient() {
           onCompositionEnd={handleCompositionEnd}
           placeholder={placeholder}
           style={{ marginLeft: 10 }}
-          disabled={loadState !== 'ready'}
+          disabled={loadState === 'error'}
         />
-        {(encodingState === 'loading' || ftsIndexState === 'loading') && (
+        {(encodingState === 'loading' ||
+          ftsIndexState === 'loading' ||
+          (loadState === 'loading' && inputValue.length > 0)) && (
           <Loader2
             size={14}
             strokeWidth={1.75}
