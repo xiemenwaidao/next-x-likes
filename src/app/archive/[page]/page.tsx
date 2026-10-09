@@ -126,6 +126,7 @@ export default async function ArchivePageView({ params }: Props) {
                 sub_tags: [],
                 text: like.fullText ?? like.react_tweet_data?.text ?? '',
                 showScore: false,
+                unavailable: like.notfound === true || like.private === true,
               }}
             />
           );

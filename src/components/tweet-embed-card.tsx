@@ -27,6 +27,8 @@ export type TweetEmbedMeta = {
   summary_ja?: string | null;
   sub_tags?: string[];
   text?: string; // fallback (notfound 時にだけ small で出す可能性あり)
+  /** 取得時点で削除済み / 非公開と判明している (notfound / private)。widgets.js を呼ばない */
+  unavailable?: boolean;
   /** semantic 検索のスコア (0..1). 未指定なら表示しない */
   score?: number | null;
   /** matchedBy ラベル (fts / semantic / both). semantic 系のときに star を出す判断 */
@@ -96,7 +98,11 @@ export function TweetEmbedCard({ meta }: { meta: TweetEmbedMeta }) {
       </div>
 
       {/* official embed (lazy) */}
-      <LazyTweetEmbed tweetId={meta.tweet_id} username={meta.username} />
+      <LazyTweetEmbed
+        tweetId={meta.tweet_id}
+        username={meta.username}
+        unavailable={meta.unavailable}
+      />
 
       {/* footer: summary + tags */}
       {(meta.summary_ja || (meta.sub_tags && meta.sub_tags.length > 0)) && (
@@ -156,18 +162,22 @@ function Score({ value }: { value: number }) {
  * - IntersectionObserver で `containerRef` の可視を検知し、初回交差時に
  *   `createTweetEmbed` を呼ぶ。
  * - 取得不能 (削除済み等) は state を 'missing' にし、何も描画しない。
+ * - `unavailable` (データ上 notfound / private) なら widgets.js を呼ばず、
+ *   最初から 'missing' 表示にする (loading post… を出さない)。
  */
 function LazyTweetEmbed({
   tweetId,
   username,
+  unavailable,
 }: {
   tweetId: string;
   username: string;
+  unavailable?: boolean;
 }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const placeholderRef = useRef<HTMLDivElement | null>(null);
   const [state, setState] = useState<'idle' | 'loading' | 'ready' | 'missing' | 'error'>(
-    'idle',
+    unavailable ? 'missing' : 'idle',
   );
 
   useEffect(() => {
@@ -184,13 +194,10 @@ function LazyTweetEmbed({
           setState('loading');
           createTweetEmbed(tweetId, placeholderRef.current)
             .then((el) => {
-              if (!el) {
-                setState('missing');
-              } else {
-                setState('ready');
-              }
+              // 下の ResizeObserver で先に ready になっていたら上書きしない
+              setState((s) => (s === 'loading' ? (el ? 'ready' : 'missing') : s));
             })
-            .catch(() => setState('error'));
+            .catch(() => setState((s) => (s === 'loading' ? 'error' : s)));
           break;
         }
       },
@@ -199,6 +206,23 @@ function LazyTweetEmbed({
     observer.observe(target);
     return () => observer.disconnect();
   }, [tweetId, state]);
+
+  // 取り込み後に削除されたツイートは、widgets.js が iframe 内に X 公式の
+  // "Not found" を描画するのに createTweet の Promise が resolve しない。
+  // そのままだと loading post… が残り続けるので、埋め込み領域に高さが
+  // 付いた (= 何かが描画された) 時点で loading を解除する。
+  useEffect(() => {
+    if (state !== 'loading') return;
+    const el = placeholderRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => {
+      if (el.getBoundingClientRect().height > 0) {
+        setState((s) => (s === 'loading' ? 'ready' : s));
+      }
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [state]);
 
   return (
     <div ref={containerRef} style={{ minHeight: state === 'idle' || state === 'loading' ? 120 : 0 }}>
