@@ -237,7 +237,7 @@ export async function loadEmbeddingsAddon(
 export function searchFts(
   assets: SearchAssets,
   query: string,
-  opts?: { limit?: number; category?: string },
+  opts?: { limit?: number; category?: string; fuzzy?: boolean },
 ): SearchHit[] {
   if (!assets.miniSearch) return []; // FTS 索引が未ロード (遅延ロード待ち)
   const limit = opts?.limit ?? 50;
@@ -250,6 +250,9 @@ export function searchFts(
 
   const results = assets.miniSearch.search(query, {
     filter: filter ? (r) => filter(r.id as string) : undefined,
+    // fuzzy: false で 1 文字違い (claude → clause 等) を拾わない。日付順表示では
+    // 関連度の低いノイズが上に混ざるため呼び出し側で切る。
+    ...(opts?.fuzzy === false ? { fuzzy: false } : {}),
   });
 
   const hits: SearchHit[] = [];

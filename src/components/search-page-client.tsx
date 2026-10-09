@@ -49,6 +49,7 @@ const HISTORY_STABLE_MS = 1500;
 
 type LoadState = 'idle' | 'loading' | 'ready' | 'error';
 type Mode = 'fts' | 'semantic' | 'hybrid';
+type SortOrder = 'date' | 'relevance';
 
 export function SearchPageClient() {
   const searchParams = useSearchParams();
@@ -73,6 +74,10 @@ export function SearchPageClient() {
   // ---- モード ----
   const [mode, setMode] = useState<Mode>(SEMANTIC_SEARCH_ENABLED ? 'hybrid' : 'fts');
   const [hybridWeight, setHybridWeight] = useState(0.6);
+  // キーワード検索結果の並び順。既定は日付順 (新しい順)。
+  // semantic / hybrid はスコア上位 N 件を取る仕組みなので常に関連度順。
+  const [sortOrder, setSortOrder] = useState<SortOrder>('date');
+  const effectiveSort: SortOrder = mode === 'fts' ? sortOrder : 'relevance';
 
   // ---- 設定パネル ----
   const [showSettings, setShowSettings] = useState(false);
@@ -496,7 +501,15 @@ export function SearchPageClient() {
     }
 
     let baseHits: SearchHit[];
-    if (mode === 'fts') {
+    if (mode === 'fts' && effectiveSort === 'date') {
+      // 日付順: 関連度で上位を切らずに全ヒットを取り、liked_at の新しい順に並べる。
+      // fuzzy を切って 1 文字違いのノイズを除外する (prefix 一致は残す)。
+      baseHits = searchFts(assets, debouncedQuery, {
+        limit: Infinity,
+        category: category ?? undefined,
+        fuzzy: false,
+      }).sort((a, b) => (a.meta.l < b.meta.l ? 1 : a.meta.l > b.meta.l ? -1 : 0));
+    } else if (mode === 'fts') {
       baseHits = searchFts(assets, debouncedQuery, {
         limit: 1000,
         category: category ?? undefined,
@@ -524,7 +537,7 @@ export function SearchPageClient() {
       return baseHits.filter((h) => h.meta.l.slice(0, 10) === dateFilter).slice(0, 500);
     }
     return baseHits.slice(0, 500);
-  }, [assets, loadState, debouncedQuery, category, dateFilter, mode, queryVec, hybridWeight]);
+  }, [assets, loadState, debouncedQuery, category, dateFilter, mode, effectiveSort, queryVec, hybridWeight]);
 
   const visibleResults = results.slice(0, pageLimit);
   const totalHits = results.length;
@@ -543,7 +556,11 @@ export function SearchPageClient() {
       }
       return counts;
     }
-    const all = searchFts(assets, debouncedQuery, { limit: 2000 });
+    // 件数は結果リストと同じ条件で数える (日付順のときは fuzzy なし・全件)
+    const all =
+      effectiveSort === 'date'
+        ? searchFts(assets, debouncedQuery, { limit: Infinity, fuzzy: false })
+        : searchFts(assets, debouncedQuery, { limit: 2000 });
     for (const h of all) {
       const c = h.meta.c;
       if (!c) continue;
@@ -551,7 +568,7 @@ export function SearchPageClient() {
       counts.set(c, (counts.get(c) ?? 0) + 1);
     }
     return counts;
-  }, [assets, loadState, debouncedQuery, dateFilter]);
+  }, [assets, loadState, debouncedQuery, dateFilter, effectiveSort]);
 
   // ---- 入力ハンドラ ----
   const handleInputChange = useCallback(
@@ -972,7 +989,37 @@ export function SearchPageClient() {
             </>
           )}
           <span className="flex-1" />
-          {totalHits > 0 && <span className="font-mono">{dateFilter ? '日付順' : '関連度順'}</span>}
+          {totalHits > 0 &&
+            (debouncedQuery && mode === 'fts' ? (
+              // キーワード検索時のみ並び順を切替可能 (それ以外の一覧は常に日付順)
+              <span className="flex items-center gap-1 font-mono">
+                {(['date', 'relevance'] as const).map((o) => (
+                  <button
+                    key={o}
+                    type="button"
+                    onClick={() => {
+                      setSortOrder(o);
+                      setPageLimit(PAGE_SIZE);
+                    }}
+                    aria-pressed={sortOrder === o}
+                    style={{
+                      background: 'transparent',
+                      border: 0,
+                      padding: '2px 4px',
+                      fontSize: 11,
+                      cursor: 'pointer',
+                      color: sortOrder === o ? 'var(--text-1)' : 'var(--text-3)',
+                      textDecoration: sortOrder === o ? 'underline' : 'none',
+                      textUnderlineOffset: 3,
+                    }}
+                  >
+                    {o === 'date' ? '日付順' : '関連度順'}
+                  </button>
+                ))}
+              </span>
+            ) : (
+              <span className="font-mono">{debouncedQuery ? '関連度順' : '日付順'}</span>
+            ))}
         </div>
       )}
 
