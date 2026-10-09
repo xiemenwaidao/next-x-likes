@@ -53,12 +53,16 @@ export const Header = () => {
           className="zk-icon-btn"
           style={{ marginLeft: -8, width: 'auto', padding: '0 8px' }}
         >
+          {/* transform: scale はレイアウト幅を変えないため、縮小時に右側へ
+              80 - 56 = 24px の空欄が残る。幅も scale に合わせて同期させる。 */}
           <span
-            className="flex items-baseline gap-1.5"
+            className="block flex-shrink-0"
             style={{
+              width: scrolled ? 80 * 0.7 : 80,
               transformOrigin: 'left center',
               transform: scrolled ? 'scale(0.7)' : 'scale(1)',
-              transition: 'transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1)',
+              transition:
+                'transform 220ms cubic-bezier(0.22, 0.61, 0.36, 1), width 220ms cubic-bezier(0.22, 0.61, 0.36, 1)',
             }}
           >
             <LogoSVG width={80} />
