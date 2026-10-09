@@ -41,7 +41,7 @@ const MENU_ITEMS: MenuItem[] = [
   {
     id: 'search',
     title: '検索',
-    sub: 'キーワード・意味で全件横断',
+    sub: 'キーワードで全件横断',
     href: '/search',
     icon: <SearchIcon size={18} strokeWidth={1.75} />,
     match: (p) => p.startsWith('/search'),

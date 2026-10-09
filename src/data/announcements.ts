@@ -9,6 +9,15 @@ export interface Announcement {
 
 export const announcements: Announcement[] = [
   {
+    id: 'semantic-search-paused-2026-10-09',
+    icon: '⏸️',
+    title: '意味検索を一時停止',
+    description:
+      '意味検索 (semantic / hybrid) は端末に大きな AI モデルのダウンロードが必要なため、全端末で一旦非表示に。検索はキーワード (FTS) で利用できます。',
+    isNew: true,
+    date: '2026-10-09',
+  },
+  {
     id: 'reply-conversation-2026-05-28',
     icon: '💬',
     title: '返信ツイートで親も表示',

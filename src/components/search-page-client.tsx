@@ -35,6 +35,10 @@ import {
 } from '@/components/ui/popover';
 
 const PAGE_SIZE = 12;
+// 意味検索 (semantic / hybrid) の機能フラグ。ブラウザに 470MB のモデル
+// (multilingual-e5-small fp32) を DL させる必要があるため当面 false で非表示。
+// 実装は残してあるので true に戻せば onboarding / モード切替が復活する。
+const SEMANTIC_SEARCH_ENABLED = false;
 const ONBOARDING_KEY = 'zk_onboarding_dismissed_v1';
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const HISTORY_KEY = 'zk_search_history_v1';
@@ -67,7 +71,7 @@ export function SearchPageClient() {
   const [pageLimit, setPageLimit] = useState(PAGE_SIZE);
 
   // ---- モード ----
-  const [mode, setMode] = useState<Mode>('hybrid');
+  const [mode, setMode] = useState<Mode>(SEMANTIC_SEARCH_ENABLED ? 'hybrid' : 'fts');
   const [hybridWeight, setHybridWeight] = useState(0.6);
 
   // ---- 設定パネル ----
@@ -264,28 +268,44 @@ export function SearchPageClient() {
     }
   }, []);
 
+  // 意味検索を提供するか (機能フラグ off / iOS では FTS のみ)
+  const semanticAvailable = SEMANTIC_SEARCH_ENABLED && !isIosLike;
+
   // ---- localStorage から onboarding 状態 ----
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    if (isIosLike) {
+    if (!semanticAvailable) {
       setOnboardingState('hidden');
       return;
     }
+    let dismissed = false;
     try {
-      const dismissed = window.localStorage.getItem(ONBOARDING_KEY);
-      setOnboardingState(dismissed === '1' ? 'hidden' : 'idle');
-    } catch {
-      setOnboardingState('idle');
-    }
-  }, [isIosLike]);
-
-  const dismissOnboarding = useCallback(() => {
-    setOnboardingState('hidden');
-    try {
-      window.localStorage.setItem(ONBOARDING_KEY, '1');
+      dismissed = window.localStorage.getItem(ONBOARDING_KEY) === '1';
     } catch {
       /* noop */
     }
+    if (dismissed) {
+      setOnboardingState('hidden');
+      return;
+    }
+    setOnboardingState('idle');
+
+    // フラグ導入前 / 完了バナーを閉じずに離脱した等でフラグが無くても、
+    // モデルが既に Cache Storage にあれば DL 済みとみなして案内を出さない。
+    let cancelled = false;
+    isQueryModelCached().then((cached) => {
+      if (cancelled || !cached) return;
+      persistOnboardingDismissed();
+      setOnboardingState((s) => (s === 'idle' ? 'hidden' : s));
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [semanticAvailable]);
+
+  const dismissOnboarding = useCallback(() => {
+    setOnboardingState('hidden');
+    persistOnboardingDismissed();
   }, []);
 
   // ---- アセットロード (メタのみ。FTS 索引は遅延) ----
@@ -378,10 +398,11 @@ export function SearchPageClient() {
   }, [assets, loadState, embedAssetsState, embedderState]);
 
   useEffect(() => {
+    if (!semanticAvailable) return;
     if (mode === 'fts') return;
     if (loadState !== 'ready') return;
     if (onboardingState === 'hidden') startSemanticBootstrap();
-  }, [mode, loadState, onboardingState, startSemanticBootstrap]);
+  }, [semanticAvailable, mode, loadState, onboardingState, startSemanticBootstrap]);
 
   const handleStartDownload = useCallback(() => {
     setOnboardingState('downloading');
@@ -395,6 +416,8 @@ export function SearchPageClient() {
       embedAssetsState === 'ready'
     ) {
       setOnboardingState('ready');
+      // 完了バナーの ✕ を押さずに離脱しても、次回 DL 案内を再表示しない
+      persistOnboardingDismissed();
     }
   }, [onboardingState, embedderState, embedAssetsState]);
 
@@ -740,17 +763,22 @@ export function SearchPageClient() {
             <X size={12} strokeWidth={1.75} />
           </button>
         )}
-        <div style={{ width: 1, height: 18, background: 'var(--line-soft)', margin: '0 4px' }} />
-        <button
-          type="button"
-          className="zk-icon-btn"
-          style={{ width: 28, height: 28 }}
-          data-active={showSettings ? '1' : '0'}
-          onClick={() => setShowSettings((v) => !v)}
-          aria-label="検索の設定"
-        >
-          <GearIcon size={14} strokeWidth={1.5} />
-        </button>
+        {/* 設定シートの中身は意味検索関連のみなので、機能フラグ off なら歯車ごと隠す */}
+        {SEMANTIC_SEARCH_ENABLED && (
+          <>
+            <div style={{ width: 1, height: 18, background: 'var(--line-soft)', margin: '0 4px' }} />
+            <button
+              type="button"
+              className="zk-icon-btn"
+              style={{ width: 28, height: 28 }}
+              data-active={showSettings ? '1' : '0'}
+              onClick={() => setShowSettings((v) => !v)}
+              aria-label="検索の設定"
+            >
+              <GearIcon size={14} strokeWidth={1.5} />
+            </button>
+          </>
+        )}
       </div>
 
       {/* 検索履歴 — 入力欄が空のときだけ、検索 shell 直下に横並びで控えめに */}
@@ -794,7 +822,7 @@ export function SearchPageClient() {
       )}
 
       {/* Settings sheet */}
-      {showSettings && (
+      {SEMANTIC_SEARCH_ENABLED && showSettings && (
         <div className="zk-sheet">
           <div className="flex items-center justify-between" style={{ paddingBottom: 4, borderBottom: '0.5px solid var(--line-soft)', marginBottom: 2 }}>
             <div className="zk-section-label">search · advanced</div>
@@ -1120,6 +1148,34 @@ export function SearchPageClient() {
       )}
     </div>
   );
+}
+
+function persistOnboardingDismissed() {
+  try {
+    window.localStorage.setItem(ONBOARDING_KEY, '1');
+  } catch {
+    /* noop */
+  }
+}
+
+/**
+ * transformers.js が保存する Cache Storage ('transformers-cache') に
+ * multilingual-e5-small のファイルが既にあるか。query-embedder 本体
+ * (transformers.js) を import せずに判定するため、ここで直接見る。
+ */
+async function isQueryModelCached(): Promise<boolean> {
+  try {
+    if (typeof caches === 'undefined') return false;
+    if (!(await caches.has('transformers-cache'))) return false;
+    const cache = await caches.open('transformers-cache');
+    const keys = await cache.keys();
+    return keys.some(
+      (req) =>
+        req.url.includes('multilingual-e5-small') && req.url.includes('.onnx'),
+    );
+  } catch {
+    return false;
+  }
 }
 
 function OnboardingBanner({ onStart, onLater }: { onStart: () => void; onLater: () => void }) {
