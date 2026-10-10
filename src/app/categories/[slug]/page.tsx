@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { CATEGORIES, CATEGORY_BY_NAME, isValidCategory } from '@/data/categories';
 import { getDb } from '@/lib/db';
+import { VISIBLE_LIKES_SQL } from '@/data/hidden-users';
 import { CategoryPageClient } from './category-client';
 
 type Props = {
@@ -40,14 +41,14 @@ async function loadCategoryData(slug: string) {
   const db = getDb();
 
   const totalRes = await db.execute(
-    `SELECT COUNT(*) AS n FROM likes WHERE private = 0 AND notfound = 0`,
+    `SELECT COUNT(*) AS n FROM likes WHERE ${VISIBLE_LIKES_SQL}`,
   );
   const total = Number(totalRes.rows[0]?.n ?? 0);
 
   const countRes = await db.execute({
     sql: `SELECT COUNT(*) AS n
           FROM likes
-          WHERE private = 0 AND notfound = 0 AND parent_category = ?`,
+          WHERE ${VISIBLE_LIKES_SQL} AND parent_category = ?`,
     args: [slug],
   });
   const count = Number(countRes.rows[0]?.n ?? 0);
@@ -62,7 +63,7 @@ async function loadCategoryData(slug: string) {
     sql: `SELECT tweet_id, username, summary_ja, sub_tags,
                  CASE WHEN source = 'archive' THEN '' ELSE liked_at END AS liked_at
           FROM likes
-          WHERE private = 0 AND notfound = 0 AND parent_category = ?
+          WHERE ${VISIBLE_LIKES_SQL} AND parent_category = ?
           ORDER BY (source = 'archive'), liked_at DESC`,
     args: [slug],
   });

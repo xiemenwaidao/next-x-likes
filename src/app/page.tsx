@@ -5,12 +5,13 @@ import path from 'path';
 import { readFile } from 'fs/promises';
 import { cache } from 'react';
 import { getDb } from '@/lib/db';
+import { VISIBLE_LIKES_SQL } from '@/data/hidden-users';
 import { HomeTabs } from '@/components/home-tabs';
 import type { GardenData, MonthStats } from '@/components/garden-top-banner';
 import type { DateInfo } from '@/types/like';
 
 // カレンダーで押せる日付。検索ページ (/search?date=) と同じく SQLite の
-// 表示可能な行 (private = 0 AND notfound = 0) の JST 日付から作る。
+// 表示可能な行 (${VISIBLE_LIKES_SQL}) の JST 日付から作る。
 // 日別 JSON の有無で判定すると、GH Actions が JSON を追加してからローカル
 // 同期 (DB 取り込み) するまでの間、押せるのに検索結果が 0 件の日ができてしまう。
 // archive (旧エクスポート) はいいね日時が不明なので除外 (likes-meta でも l を空にしている)。
@@ -19,7 +20,7 @@ const getAllDates = cache(async (): Promise<DateInfo[]> => {
   const res = await db.execute(
     `SELECT DISTINCT date(liked_at, '+9 hours') AS d
        FROM likes
-      WHERE private = 0 AND notfound = 0 AND source != 'archive'`,
+      WHERE ${VISIBLE_LIKES_SQL} AND source != 'archive'`,
   );
   return res.rows.flatMap((r) => {
     const [year, month, day] = String(r.d ?? '').split('-');
@@ -37,7 +38,7 @@ const getCategoryCounts = cache(
     const res = await db.execute(
       `SELECT parent_category AS name, COUNT(*) AS n
        FROM likes
-       WHERE private = 0 AND notfound = 0 AND parent_category IS NOT NULL
+       WHERE ${VISIBLE_LIKES_SQL} AND parent_category IS NOT NULL
        GROUP BY parent_category`,
     );
     const counts = res.rows.map((r) => ({
@@ -45,7 +46,7 @@ const getCategoryCounts = cache(
       count: Number(r.n ?? 0),
     }));
     const totalRes = await db.execute(
-      `SELECT COUNT(*) AS n FROM likes WHERE private = 0 AND notfound = 0`,
+      `SELECT COUNT(*) AS n FROM likes WHERE ${VISIBLE_LIKES_SQL}`,
     );
     const total = Number(totalRes.rows[0]?.n ?? 0);
     return { counts, total };
@@ -72,12 +73,12 @@ const getHomeInsights = cache(async (): Promise<HomeInsightsData> => {
   const [last30Res, prev30Res] = await Promise.all([
     db.execute(
       `SELECT COUNT(*) AS n FROM likes
-       WHERE private = 0 AND notfound = 0
+       WHERE ${VISIBLE_LIKES_SQL}
          AND liked_at >= datetime('now', '-30 days')`,
     ),
     db.execute(
       `SELECT COUNT(*) AS n FROM likes
-       WHERE private = 0 AND notfound = 0
+       WHERE ${VISIBLE_LIKES_SQL}
          AND liked_at >= datetime('now', '-60 days')
          AND liked_at <  datetime('now', '-30 days')`,
     ),
@@ -89,7 +90,7 @@ const getHomeInsights = cache(async (): Promise<HomeInsightsData> => {
   const hotRes = await db.execute(
     `SELECT parent_category AS name, COUNT(*) AS n
      FROM likes
-     WHERE private = 0 AND notfound = 0
+     WHERE ${VISIBLE_LIKES_SQL}
        AND parent_category IS NOT NULL
        AND liked_at >= datetime('now', '-30 days')
      GROUP BY parent_category
@@ -105,7 +106,7 @@ const getHomeInsights = cache(async (): Promise<HomeInsightsData> => {
   const usersRes = await db.execute(
     `SELECT username, COUNT(*) AS n
      FROM likes
-     WHERE private = 0 AND notfound = 0
+     WHERE ${VISIBLE_LIKES_SQL}
        AND username != ''
        AND liked_at >= datetime('now', '-30 days')
      GROUP BY username
@@ -121,7 +122,7 @@ const getHomeInsights = cache(async (): Promise<HomeInsightsData> => {
   const monthlyRes = await db.execute(
     `SELECT strftime('%Y-%m', liked_at, '+9 hours') AS ym, COUNT(*) AS n
      FROM likes
-     WHERE private = 0 AND notfound = 0
+     WHERE ${VISIBLE_LIKES_SQL}
        AND liked_at >= datetime('now', '-6 months')
      GROUP BY ym
      ORDER BY ym ASC`,

@@ -32,6 +32,7 @@ import path from 'path';
 import { toZonedTime, format } from 'date-fns-tz';
 import { getDb } from '../lib/db';
 import { CATEGORY_NAMES } from '../data/categories';
+import { VISIBLE_LIKES_SQL } from '../data/hidden-users';
 
 const TZ = 'Asia/Tokyo';
 
@@ -101,7 +102,7 @@ async function loadCategoryWeightsByMonth(): Promise<Map<string, number[]>> {
               parent_category AS name,
               COUNT(*) AS n
        FROM likes
-       WHERE private = 0 AND notfound = 0
+       WHERE ${VISIBLE_LIKES_SQL}
          AND parent_category IS NOT NULL
          AND source = 'ifttt'
        GROUP BY ym, parent_category`,

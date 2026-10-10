@@ -16,6 +16,7 @@ import { gzip } from 'zlib';
 import { promisify } from 'util';
 import MiniSearch from 'minisearch';
 import { getDb } from '../lib/db';
+import { VISIBLE_LIKES_SQL } from '../data/hidden-users';
 
 const gzipAsync = promisify(gzip);
 const OUT_DIR = path.join(process.cwd(), 'public', 'data');
@@ -92,7 +93,7 @@ async function main() {
     `SELECT tweet_id, text, username, liked_at, source, private, notfound,
             parent_category, sub_tags, summary_ja, embedding
      FROM likes
-     WHERE private = 0 AND notfound = 0
+     WHERE ${VISIBLE_LIKES_SQL}
      ORDER BY (source = 'archive'), liked_at DESC`,
   );
 

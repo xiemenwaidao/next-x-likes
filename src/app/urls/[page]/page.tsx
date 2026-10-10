@@ -8,6 +8,7 @@ import { Calendar, ExternalLink, Link2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { UrlCardImage } from '@/components/url-card-image';
 import { Pagination } from '@/components/pagination';
+import { isHiddenUser } from '@/data/hidden-users';
 
 interface ExtractedUrl {
   tweet_id: string;
@@ -42,7 +43,8 @@ async function getUrlData(): Promise<ExtractedUrl[]> {
   try {
     const filePath = path.join(process.cwd(), 'src/content/url-index.json');
     const content = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(content);
+    const items: ExtractedUrl[] = JSON.parse(content);
+    return items.filter((item) => !isHiddenUser(item.username));
   } catch (error) {
     console.error('Error reading URL index:', error);
     return [];

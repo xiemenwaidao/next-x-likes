@@ -8,6 +8,7 @@
  * 出力: stdout に PodcastTweetBundle (JSON)。ログは stderr。
  */
 import { getDb } from '../../lib/db';
+import { VISIBLE_LIKES_SQL } from '../../data/hidden-users';
 import type { PeriodSpec, PodcastTweet, PodcastTweetBundle } from './types';
 
 type Args = {
@@ -120,7 +121,7 @@ async function main() {
   const res = await db.execute({
     sql: `SELECT tweet_id, username, text, summary_ja, parent_category, sub_tags, liked_at, raw_json
           FROM likes
-          WHERE private = 0 AND notfound = 0
+          WHERE ${VISIBLE_LIKES_SQL}
             AND liked_at >= ? AND liked_at <= ?
           ORDER BY liked_at ASC`,
     args: [fromStart, toEnd],
