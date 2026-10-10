@@ -18,6 +18,7 @@ import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import { CATEGORY_BY_NAME } from '@/data/categories';
 import { createTweetEmbed } from '@/lib/twitter-widgets';
+import { likedAtToJstYmd } from '@/lib/jst-date';
 
 export type TweetEmbedMeta = {
   tweet_id: string;
@@ -36,7 +37,7 @@ export type TweetEmbedMeta = {
 };
 
 export function TweetEmbedCard({ meta }: { meta: TweetEmbedMeta }) {
-  const date = meta.liked_at ? meta.liked_at.slice(0, 10) : '';
+  const date = meta.liked_at ? likedAtToJstYmd(meta.liked_at) : '';
   const cat = meta.category ? CATEGORY_BY_NAME[meta.category] : undefined;
   const hasScore =
     meta.showScore !== false &&

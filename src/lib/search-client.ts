@@ -11,6 +11,7 @@
  * 「ブラウザで transformers.js を動かす」「API ルート経由」を選択)。
  */
 import MiniSearch from 'minisearch';
+import { likedAtToJstYmd } from './jst-date';
 
 export const EMBED_DIM = 384;
 
@@ -18,7 +19,9 @@ export type LikeMetaItem = {
   i: string; // tweet_id
   u: string; // username
   t: string; // text snippet
-  l: string; // liked_at
+  l: string; // liked_at (UTC)
+  /** liked_at の JST 日付 (YYYY-MM-DD)。gz には含めず、ロード時に l から導出する */
+  d: string;
   c: string | null; // parent_category
   g: string[]; // sub_tags
   s: string | null; // summary_ja
@@ -147,7 +150,10 @@ export async function loadMetaAssets(opts?: { baseUrl?: string }): Promise<Searc
   const base = opts?.baseUrl ?? '/data';
   const meta = await fetchGzJson<LikeMetaItem[]>(`${base}/likes-meta.json.gz`);
   const metaById = new Map<string, LikeMetaItem>();
-  for (const m of meta) metaById.set(m.i, m);
+  for (const m of meta) {
+    m.d = likedAtToJstYmd(m.l);
+    metaById.set(m.i, m);
+  }
   return {
     miniSearch: null,
     meta,
@@ -189,7 +195,10 @@ export async function loadSearchAssets(opts?: {
   const miniSearch = buildMiniSearch(serializedIndex);
 
   const metaById = new Map<string, LikeMetaItem>();
-  for (const m of meta) metaById.set(m.i, m);
+  for (const m of meta) {
+    m.d = likedAtToJstYmd(m.l);
+    metaById.set(m.i, m);
+  }
 
   let embeddings: Float32Array | null = null;
   let embedOrder: string[] = [];

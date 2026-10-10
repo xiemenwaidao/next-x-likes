@@ -2,39 +2,29 @@ export const dynamic = 'force-static';
 export const revalidate = false;
 
 import path from 'path';
-import { readdir, readFile } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import { cache } from 'react';
 import { getDb } from '@/lib/db';
 import { HomeTabs } from '@/components/home-tabs';
 import type { GardenData, MonthStats } from '@/components/garden-top-banner';
 import type { DateInfo } from '@/types/like';
 
+// カレンダーで押せる日付。検索ページ (/search?date=) と同じく SQLite の
+// 表示可能な行 (private = 0 AND notfound = 0) の JST 日付から作る。
+// 日別 JSON の有無で判定すると、GH Actions が JSON を追加してからローカル
+// 同期 (DB 取り込み) するまでの間、押せるのに検索結果が 0 件の日ができてしまう。
 const getAllDates = cache(async (): Promise<DateInfo[]> => {
-  const contentPath = path.join(process.cwd(), 'src/content/likes');
-  const years = await readdir(contentPath);
-  const dates: DateInfo[] = [];
-
-  for (const year of years) {
-    const monthsPath = path.join(contentPath, year);
-    const months = await readdir(monthsPath);
-
-    for (const month of months) {
-      const daysPath = path.join(monthsPath, month);
-      const days = await readdir(daysPath);
-
-      for (const day of days) {
-        if (day.endsWith('.json')) {
-          dates.push({
-            year,
-            month: month.replace(/^0/, ''),
-            day: day.replace('.json', '').replace(/^0/, ''),
-          });
-        }
-      }
-    }
-  }
-
-  return dates;
+  const db = getDb();
+  const res = await db.execute(
+    `SELECT DISTINCT date(liked_at, '+9 hours') AS d
+       FROM likes
+      WHERE private = 0 AND notfound = 0`,
+  );
+  return res.rows.flatMap((r) => {
+    const [year, month, day] = String(r.d ?? '').split('-');
+    if (!year || !month || !day) return [];
+    return [{ year, month: month.replace(/^0/, ''), day: day.replace(/^0/, '') }];
+  });
 });
 
 const getCategoryCounts = cache(
@@ -128,7 +118,7 @@ const getHomeInsights = cache(async (): Promise<HomeInsightsData> => {
 
   // 直近 6 ヶ月の月別 (古い順)
   const monthlyRes = await db.execute(
-    `SELECT strftime('%Y-%m', liked_at) AS ym, COUNT(*) AS n
+    `SELECT strftime('%Y-%m', liked_at, '+9 hours') AS ym, COUNT(*) AS n
      FROM likes
      WHERE private = 0 AND notfound = 0
        AND liked_at >= datetime('now', '-6 months')

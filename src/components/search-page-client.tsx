@@ -487,7 +487,7 @@ export function SearchPageClient() {
     if (!debouncedQuery && !category && dateFilter) {
       const hits: SearchHit[] = [];
       for (const m of assets.meta) {
-        if (m.l.slice(0, 10) !== dateFilter) continue;
+        if (m.d !== dateFilter) continue;
         hits.push({ tweet_id: m.i, score: 0, matchedBy: 'fts', meta: m });
         if (hits.length >= 500) break;
       }
@@ -501,7 +501,7 @@ export function SearchPageClient() {
       const hits: SearchHit[] = [];
       for (const m of assets.meta) {
         if (m.c !== category) continue;
-        if (dateFilter && m.l.slice(0, 10) !== dateFilter) continue;
+        if (dateFilter && m.d !== dateFilter) continue;
         hits.push({ tweet_id: m.i, score: 0, matchedBy: 'fts', meta: m });
         if (hits.length >= 500) break;
       }
@@ -542,7 +542,7 @@ export function SearchPageClient() {
     }
 
     if (dateFilter) {
-      return baseHits.filter((h) => h.meta.l.slice(0, 10) === dateFilter).slice(0, 500);
+      return baseHits.filter((h) => h.meta.d === dateFilter).slice(0, 500);
     }
     return baseHits.slice(0, 500);
   }, [assets, loadState, debouncedQuery, category, dateFilter, mode, effectiveSort, queryVec, hybridWeight]);
@@ -559,7 +559,7 @@ export function SearchPageClient() {
     if (!debouncedQuery) {
       for (const m of assets.meta) {
         if (!m.c) continue;
-        if (dateFilter && m.l.slice(0, 10) !== dateFilter) continue;
+        if (dateFilter && m.d !== dateFilter) continue;
         counts.set(m.c, (counts.get(m.c) ?? 0) + 1);
       }
       return counts;
@@ -572,7 +572,7 @@ export function SearchPageClient() {
     for (const h of all) {
       const c = h.meta.c;
       if (!c) continue;
-      if (dateFilter && h.meta.l.slice(0, 10) !== dateFilter) continue;
+      if (dateFilter && h.meta.d !== dateFilter) continue;
       counts.set(c, (counts.get(c) ?? 0) + 1);
     }
     return counts;
@@ -623,7 +623,7 @@ export function SearchPageClient() {
     let maxMs = 0;
     for (const m of assets.meta) {
       if (m.p === 1 || m.n === 1) continue;
-      const ymd = (m.l || '').slice(0, 10);
+      const ymd = m.d;
       if (!ymd) continue;
       set.add(ymd);
       const t = Date.parse(ymd);
