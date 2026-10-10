@@ -93,7 +93,7 @@ async function main() {
             parent_category, sub_tags, summary_ja, embedding
      FROM likes
      WHERE private = 0 AND notfound = 0
-     ORDER BY liked_at DESC`,
+     ORDER BY (source = 'archive'), liked_at DESC`,
   );
 
   const rows: LikeRow[] = res.rows.map((r) => ({
@@ -171,7 +171,9 @@ async function main() {
       i: r.tweet_id,
       u: r.username,
       t: cleanText,
-      l: r.liked_at,
+      // archive (旧エクスポート) は実際のいいね日時が不明 (processedAt の仮置き)
+      // なので空にして、日付絞り込み・カレンダー・カード日付から外す
+      l: r.source === 'archive' ? '' : r.liked_at,
       c: r.parent_category,
       g: subs,
       s: r.summary_ja,

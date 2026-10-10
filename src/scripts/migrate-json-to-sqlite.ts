@@ -34,6 +34,40 @@ type ArchiveLike = {
   processedAt: string;
 };
 
+/** fetch-archive-tweets.ts が X CDN から補完した archive/pages/page-*.json の情報 */
+type ArchiveEnrichment = { username: string; private: boolean; notfound: boolean };
+
+async function loadArchiveEnrichment(
+  pagesDir: string,
+): Promise<Map<string, ArchiveEnrichment>> {
+  const map = new Map<string, ArchiveEnrichment>();
+  let files: string[];
+  try {
+    files = await fs.readdir(pagesDir);
+  } catch {
+    return map;
+  }
+  for (const f of files) {
+    if (!f.startsWith('page-') || !f.endsWith('.json')) continue;
+    const page = JSON.parse(await fs.readFile(path.join(pagesDir, f), 'utf-8')) as {
+      likes?: {
+        tweetId: string;
+        private?: boolean;
+        notfound?: boolean;
+        react_tweet_data?: { user?: { screen_name?: string } };
+      }[];
+    };
+    for (const l of page.likes ?? []) {
+      map.set(l.tweetId, {
+        username: l.react_tweet_data?.user?.screen_name ?? '',
+        private: l.private === true,
+        notfound: l.notfound === true,
+      });
+    }
+  }
+  return map;
+}
+
 async function walkJson(dir: string): Promise<string[]> {
   const out: string[] = [];
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -149,25 +183,40 @@ async function main() {
     const archiveRaw = await fs.readFile(archivePath, 'utf-8');
     const archive: ArchiveLike[] = JSON.parse(archiveRaw);
     console.log(`[scan] archive: ${archive.length} 件`);
+    // ユーザー名と private / notfound は archive-likes.json に無いので、
+    // X CDN で補完済みの pages/page-*.json から引く
+    const enrichment = await loadArchiveEnrichment(
+      path.join(cwd, 'src', 'content', 'archive', 'pages'),
+    );
     let archInserted = 0;
     for (const a of archive) {
       if (!a.tweetId) continue;
+      const e = enrichment.get(a.tweetId);
+      // liked_at: エクスポートには「いいねした日時」が無いため processedAt を
+      // 仮置きしている。日付系 UI (カレンダー / 日付絞り込み / カード日付) では
+      // source = 'archive' を除外 or 非表示にすること。
+      // 既存行は AI 分類列を保持したまま username / private / notfound だけ更新する
+      // (ifttt と tweet_id が衝突した場合は ifttt 側を優先して触らない)。
       buffer.push({
         sql: `INSERT INTO likes (
                 tweet_id, text, username, tweet_url, liked_at, created_at,
                 source, private, notfound, raw_json
               ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-              ON CONFLICT(tweet_id) DO NOTHING`,
+              ON CONFLICT(tweet_id) DO UPDATE SET
+                username = excluded.username,
+                private = excluded.private,
+                notfound = excluded.notfound
+              WHERE likes.source = 'archive'`,
         args: [
           a.tweetId,
           a.fullText ?? '',
-          '',
+          e?.username ?? '',
           a.expandedUrl ?? '',
           a.processedAt || new Date(0).toISOString(),
           null,
           'archive',
-          0,
-          0,
+          e?.private ? 1 : 0,
+          e?.notfound ? 1 : 0,
           '{}',
         ],
       });

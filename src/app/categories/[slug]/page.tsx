@@ -57,10 +57,13 @@ async function loadCategoryData(slug: string) {
   // 最大カテゴリの art-creative でも 3,558 件なので SSG 出力 / props サイズ
   // ともに許容範囲。クライアント側で PAGE_SIZE=20 のページング済み。
   const tweetsRes = await db.execute({
-    sql: `SELECT tweet_id, username, summary_ja, sub_tags, liked_at
+    // archive (旧エクスポート) はいいね日時が不明 (processedAt の仮置き) なので
+    // 日付を出さず末尾に並べる
+    sql: `SELECT tweet_id, username, summary_ja, sub_tags,
+                 CASE WHEN source = 'archive' THEN '' ELSE liked_at END AS liked_at
           FROM likes
           WHERE private = 0 AND notfound = 0 AND parent_category = ?
-          ORDER BY liked_at DESC`,
+          ORDER BY (source = 'archive'), liked_at DESC`,
     args: [slug],
   });
 

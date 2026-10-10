@@ -13,12 +13,13 @@ import type { DateInfo } from '@/types/like';
 // 表示可能な行 (private = 0 AND notfound = 0) の JST 日付から作る。
 // 日別 JSON の有無で判定すると、GH Actions が JSON を追加してからローカル
 // 同期 (DB 取り込み) するまでの間、押せるのに検索結果が 0 件の日ができてしまう。
+// archive (旧エクスポート) はいいね日時が不明なので除外 (likes-meta でも l を空にしている)。
 const getAllDates = cache(async (): Promise<DateInfo[]> => {
   const db = getDb();
   const res = await db.execute(
     `SELECT DISTINCT date(liked_at, '+9 hours') AS d
        FROM likes
-      WHERE private = 0 AND notfound = 0`,
+      WHERE private = 0 AND notfound = 0 AND source != 'archive'`,
   );
   return res.rows.flatMap((r) => {
     const [year, month, day] = String(r.d ?? '').split('-');
