@@ -19,6 +19,7 @@ import { ExternalLink } from 'lucide-react';
 import { CATEGORY_BY_NAME } from '@/data/categories';
 import { createTweetEmbed } from '@/lib/twitter-widgets';
 import { likedAtToJstYmd } from '@/lib/jst-date';
+import { ARCHIVE_DATE_LABEL } from '@/data/archive';
 
 export type TweetEmbedMeta = {
   tweet_id: string;
@@ -37,7 +38,8 @@ export type TweetEmbedMeta = {
 };
 
 export function TweetEmbedCard({ meta }: { meta: TweetEmbedMeta }) {
-  const date = meta.liked_at ? likedAtToJstYmd(meta.liked_at) : '';
+  // liked_at が空 = いいね日時が不明な旧 Twitter エクスポート由来 (archive)
+  const date = meta.liked_at ? likedAtToJstYmd(meta.liked_at) : ARCHIVE_DATE_LABEL;
   const cat = meta.category ? CATEGORY_BY_NAME[meta.category] : undefined;
   const hasScore =
     meta.showScore !== false &&
