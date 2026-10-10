@@ -20,6 +20,7 @@ import { CATEGORY_BY_NAME } from '@/data/categories';
 import { createTweetEmbed } from '@/lib/twitter-widgets';
 import { likedAtToJstYmd } from '@/lib/jst-date';
 import { ARCHIVE_DATE_LABEL } from '@/data/archive';
+import { ArticleSection } from './article-section';
 
 export type TweetEmbedMeta = {
   tweet_id: string;
@@ -106,6 +107,9 @@ export function TweetEmbedCard({ meta }: { meta: TweetEmbedMeta }) {
         username={meta.username}
         unavailable={meta.unavailable}
       />
+
+      {/* 記事 (X Articles) ツイートなら、タイトル / 要約を折りたたみで */}
+      {!meta.unavailable && <ArticleSection tweetId={meta.tweet_id} />}
 
       {/* footer: summary + tags */}
       {(meta.summary_ja || (meta.sub_tags && meta.sub_tags.length > 0)) && (

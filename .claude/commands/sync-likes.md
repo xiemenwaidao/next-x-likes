@@ -64,6 +64,19 @@ pnpm db:migrate
 - **100 件超**: ユーザーに `/loop next-x-likes Phase 2 一括分類タスク` の起動を提案して、
   この skill の残ステップ (5 以降) は **一旦止める**。分類が終わってから再度 `/sync-likes` を打ってもらう。
 
+### 4.5. X 記事 (Articles) の本文取得 + 要約 (新しい記事ツイートがあるときのみ)
+
+```bash
+pnpm db:fetch-articles
+sqlite3 data/likes.db "SELECT COUNT(*) FROM articles WHERE status='ok' AND summary_ja IS NULL;"
+```
+
+- `db:fetch-articles` は未取得の記事ツイート (引用含む) だけを FxTwitter API から取る (1 件 1 秒間隔)
+- 要約未作成が 1 件以上あれば `Agent` で `subagent_type: article-summarizer` を起動
+  (定義は `.claude/agents/article-summarizer.md`。`--shard 0 --shards 1`、結果ファイルは scratchpad 配下を指定)。
+  30 件を超える場合は shard を分けて並列起動してよい
+- サイトに出すのはタイトル / 冒頭プレビュー / 要約のみ。**本文 (body_text) はサイトに出さない** (著作権)
+
 ### 5. 未 embedding 行に embedding 付与 (no_embedding > 0 のときのみ)
 
 ```bash
@@ -86,7 +99,7 @@ BUILD_EXIT=$?
 [ $BUILD_EXIT -ne 0 ] && echo "BUILD FAILED" && exit $BUILD_EXIT
 ```
 
-- `pnpm build` 先頭の `build-search-assets.ts` で `public/data/*.gz` 4 個 (search-index / likes-meta / embeddings / embeddings-meta) が再生成される
+- `pnpm build` 先頭の `build-search-assets.ts` で `public/data/*.gz` 5 個 (search-index / likes-meta / embeddings / embeddings-meta / articles) が再生成される
 - lint エラーが出たら Vercel でも同じく落ちるので、ここで必ず修正してから先に進む
 - 470 ページ前後の static 生成が出れば成功
 
@@ -127,8 +140,9 @@ curl -sL "https://z.xiemen.me/data/likes-meta.json.gz" | gunzip | \
 
 - 現状 → 同期後の総件数差分 (+N 件)
 - 分類処理: N 件 → 残未分類 N 件
+- 記事: 本文取得 N 件 / 要約 N 件 (新規があった場合のみ)
 - embedding 付与: N 件 → 残未 embedding N 件
-- public/data/*.gz 再生成 (4 個)
+- public/data/*.gz 再生成 (5 個)
 - コミット hash (短形式) と push 完了
 - Vercel デプロイ待ち
 

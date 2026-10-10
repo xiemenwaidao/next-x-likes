@@ -237,7 +237,59 @@ async function main() {
     console.log('[skip] embeddings.bin.gz: embedding が 0 行');
   }
 
+  // ===== 4. 記事 (X Articles) の表示用メタ =====
+  // サイトにはタイトル / 冒頭プレビュー / 要約 / カバー画像だけを出す。
+  // 本文 (body_text) は著者の著作権上公開しないので含めない。
+  // カード側はクリックで展開したときに初めて中身を描画し、素の HTML には載らない。
+  await writeArticles(db);
+
   console.log('[done] search assets generated');
+}
+
+type ArticleItem = {
+  t: string; // title
+  p: string; // preview_text (X の syndication API でも出ている冒頭)
+  s: string | null; // summary_ja (本文から作った要約)
+  c: string | null; // cover image url
+  a: string; // 記事を持つツイートの ID (via='quote' なら引用先)
+  v: 'self' | 'quote';
+};
+
+async function writeArticles(db: ReturnType<typeof getDb>) {
+  let res;
+  try {
+    res = await db.execute(
+      `SELECT a.tweet_id, a.via, a.article_tweet_id, a.title, a.preview_text,
+              a.summary_ja, a.content_json
+         FROM articles a
+        WHERE a.status = 'ok'
+          AND a.tweet_id IN (SELECT tweet_id FROM likes WHERE ${VISIBLE_LIKES_SQL})`,
+    );
+  } catch (err) {
+    // articles テーブルが無い (002 マイグレーション未適用) 環境では空で出す
+    console.log(`[skip] articles: ${err instanceof Error ? err.message : String(err)}`);
+    res = { rows: [] as Record<string, unknown>[] };
+  }
+  const out: Record<string, ArticleItem> = {};
+  for (const r of res.rows) {
+    let cover: string | null = null;
+    try {
+      const c = JSON.parse(String(r.content_json ?? '{}'));
+      cover = c?.cover_media?.media_info?.original_img_url ?? null;
+    } catch {
+      /* noop */
+    }
+    out[String(r.tweet_id)] = {
+      t: String(r.title ?? ''),
+      p: String(r.preview_text ?? ''),
+      s: r.summary_ja ? String(r.summary_ja) : null,
+      c: cover,
+      a: String(r.article_tweet_id ?? r.tweet_id),
+      v: r.via === 'quote' ? 'quote' : 'self',
+    };
+  }
+  await writeGz('articles.json.gz', JSON.stringify(out));
+  console.log(`[articles] ${Object.keys(out).length} 件`);
 }
 
 main().catch((err) => {

@@ -33,11 +33,14 @@ pnpm json:fetch-archive         # Fetch tweet data for archive tweets
 # DB / 検索アセット / AI 関連 (手元で適宜実行)
 pnpm db:init                    # data/likes.db を初期化 (1 回のみ)
 pnpm db:migrate                 # src/content/likes/**/*.json → SQLite (idempotent upsert)
+pnpm db:fetch-articles          # X 記事ツイートの本文を FxTwitter API で取得 → articles テーブル (--refetch で再取得)
 pnpm ai:embed                   # 未 embedding 行に multilingual-e5-small で 384 次元生成
 pnpm ai:build-search            # SQLite → public/data/*.gz (search-index / meta / embeddings)
                                 # ※ pnpm build の先頭で自動チェーン実行される (Vercel も同様)
 pnpm ai:next-batch              # AI 分類サブエージェント用の未処理バッチを 50 件取得 (stdout JSON)
 pnpm ai:upsert-result           # サブエージェントの分類結果を SQLite に書き戻し
+pnpm ai:article-next-batch      # 記事要約サブエージェント (article-summarizer) 用の未要約記事を取得 (stdout JSON)
+pnpm ai:article-upsert          # 記事要約の結果を articles.summary_ja に書き戻し
 pnpm ai:fetch-media             # 画像主体ツイートのメディアを一時 DL (--clean で削除)
 pnpm ai:search "<query>"        # 検索ロジックの CLI デバッグ (FTS / Semantic / Hybrid)
 
