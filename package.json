@@ -47,7 +47,7 @@
   "dependencies": {
     "@huggingface/transformers": "^4.2.0",
     "@libsql/client": "^0.17.3",
-    "@next/third-parties": "^15.0.4",
+    "@next/third-parties": "^15.5.27",
     "@radix-ui/react-collapsible": "^1.1.21",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-popover": "^1.1.2",
@@ -59,7 +59,7 @@
     "date-fns-tz": "^3.2.0",
     "lucide-react": "^0.465.0",
     "minisearch": "^7.2.0",
-    "next": "15.5.21",
+    "next": "15.5.27",
     "next-view-transitions": "^0.3.4",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-day-picker": "8.10.1",
@@ -102,6 +102,16 @@
   "pnpm": {
     "neverBuiltDependencies": [
       "onnxruntime-node"
-    ]
+    ],
+    "overrides": {
+      "sharp": "^0.35.5",
+      "postcss@<8.5.23": "^8.5.23",
+      "source-map-js": "^1.2.2",
+      "adm-zip": "^0.6.1",
+      "fast-uri@>=3.0.0 <3.1.7": "^3.1.7",
+      "tmp@<0.2.6": "^0.2.6",
+      "brace-expansion@<1.1.21": "^1.1.21",
+      "brace-expansion@>=4.0.0 <5.0.12": "^5.0.12"
+    }
   }
 }
