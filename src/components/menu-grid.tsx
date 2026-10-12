@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import {
   Archive,
-  LinkIcon,
+  FileText,
   CircleHelp,
   Loader2,
   Search as SearchIcon,
@@ -55,6 +55,15 @@ const MENU_ITEMS: MenuItem[] = [
     match: (p) => p.startsWith('/categories'),
   },
   {
+    id: 'articles',
+    title: '記事',
+    sub: 'X の記事ツイートだけを一覧',
+    href: '/search?type=article',
+    icon: <FileText size={18} strokeWidth={1.75} />,
+    // /search と同じパスなので、アクティブ表示は「検索」側に任せる
+    match: () => false,
+  },
+  {
     id: 'podcast',
     title: '集讚館.fm',
     sub: '週まとめを聞きながら眺める',
@@ -70,14 +79,6 @@ const MENU_ITEMS: MenuItem[] = [
     icon: <Archive size={18} strokeWidth={1.75} />,
     match: (p) => p.startsWith('/archive'),
   },
-  {
-    id: 'urls',
-    title: 'URL 一覧',
-    sub: 'いいねしたツイートの外部リンク',
-    href: '/urls/1',
-    icon: <LinkIcon size={14} strokeWidth={1.75} />,
-    match: (p) => p.startsWith('/urls'),
-  },
 ];
 
 export function MenuGrid() {
@@ -88,7 +89,8 @@ export function MenuGrid() {
   const pathname = usePathname() ?? '/';
 
   useEffect(() => {
-    if (navigatingTo && pathname === navigatingTo) {
+    // href にクエリ (?tab= / ?type=) が付く項目もあるので、パス部分で到着を判定する
+    if (navigatingTo && pathname === navigatingTo.split('?')[0]) {
       setNavigatingTo(null);
       setOpen(false);
     }
@@ -100,6 +102,13 @@ export function MenuGrid() {
   ) => {
     e.preventDefault();
     if (pathname === href) {
+      setOpen(false);
+      return;
+    }
+    // 同じパスでクエリだけ違う (例: /search → /search?type=article) 場合は
+    // pathname が変わらず到着判定できないので、即遷移して閉じる
+    if (pathname === href.split('?')[0]) {
+      router.push(href);
       setOpen(false);
       return;
     }

@@ -118,6 +118,23 @@ async function main() {
 
   console.log(`[scan] ${rows.length} rows`);
 
+  // 記事ツイートは本文が URL だけなので、記事のタイトルと要約も検索対象に足す
+  // (本文 body_text は公開しない方針なので索引にも入れない)
+  const articleTextById = new Map<string, string>();
+  try {
+    const ar = await db.execute(
+      `SELECT tweet_id, title, summary_ja FROM articles WHERE status = 'ok'`,
+    );
+    for (const r of ar.rows) {
+      articleTextById.set(
+        String(r.tweet_id),
+        [r.title, r.summary_ja].filter(Boolean).map(String).join(' '),
+      );
+    }
+  } catch {
+    /* articles テーブル未作成の環境ではスキップ */
+  }
+
   // ===== 1. MiniSearch インデックス =====
   const searchDocs = rows.map((r) => {
     let subs: string[] = [];
@@ -130,9 +147,10 @@ async function main() {
       }
     }
     const cleanText = r.text.replace(/https?:\/\/\S+/g, '').trim();
+    const articleText = articleTextById.get(r.tweet_id);
     return {
       id: r.tweet_id,
-      text: cleanText,
+      text: articleText ? `${cleanText} ${articleText}` : cleanText,
       username: r.username,
       summary: r.summary_ja ?? '',
       tags: subs.join(' '),

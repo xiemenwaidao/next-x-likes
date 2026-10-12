@@ -12,7 +12,6 @@ export function Main({ children }: { children: ReactNode }) {
     pathname.startsWith('/search') ||
     pathname.startsWith('/categories') ||
     pathname.startsWith('/archive') ||
-    pathname.startsWith('/urls') ||
     pathname.startsWith('/podcast');
 
   if (isWideRoute) {

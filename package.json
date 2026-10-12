@@ -12,7 +12,6 @@
     "json:fetch-tweet": "tsx src/scripts/insert-tweet-to-json.ts",
     "json:build-index": "tsx src/scripts/build-tweet-index.ts",
     "json:build-search": "tsx src/scripts/build-search-index.ts",
-    "json:extract-urls": "tsx src/scripts/extract-urls.ts",
     "json:remove-duplicates": "tsx src/scripts/remove-duplicate-tweets.ts",
     "json:remove-raw-duplicates": "tsx src/scripts/remove-duplicate-raw-likes.ts",
     "json:build-activity": "tsx src/scripts/build-activity-data.ts",

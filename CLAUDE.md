@@ -22,7 +22,6 @@ pnpm json:dl                    # Sync new likes from AWS S3
 pnpm json:conv                  # Process raw data into daily collections
 pnpm json:fetch-tweet           # Enrich with full tweet data from X CDN (react-tweet/api を使用)
 pnpm json:build-index           # Build tweet ID index (他の json: スクリプトが依存)
-pnpm json:extract-urls          # Extract URLs from tweets for /urls page
 pnpm json:remove-duplicates     # Remove duplicate tweets from processed data
 pnpm json:remove-raw-duplicates # Remove duplicate files from raw S3 data
 pnpm json:build-activity        # Build activity data for recent activity graph
@@ -83,10 +82,10 @@ pnpm commit       # Create standardized commit with gitmoji
 
 ### Routes
 - `/` ホーム — Hero stat + タブ切替 (日付で / カテゴリで)
-- `/search` — FTS / Semantic / Hybrid 検索 (歯車内に詳細)、`?date=YYYY-MM-DD` 対応
+- `/search` — キーワード検索 (意味検索は機能フラグで一時非表示)、`?date=YYYY-MM-DD` /
+  `?type=article` (記事ツイートのみ) 対応
 - `/categories/[slug]` — 11 カテゴリの個別ページ (sub-tags 絞り込み)
 - `/archive/[page]` — 古いアーカイブ (旧 Twitter エクスポート由来) のページネーション
-- `/urls/[page]` — いいねツイートに含まれた外部 URL 一覧
 
 ### Key Components
 - **CalendarPicker**: Interactive calendar using Zustand state management。日付選択で
@@ -95,7 +94,7 @@ pnpm commit       # Create standardized commit with gitmoji
   カード。meta header (user / date / category / score) + 公式 embed + footer (summary
   + sub_tags) の 3 階層構造
 - **HomeTabs**: ホームの [日付で / カテゴリで] タブ切替
-- **MenuGrid**: ヘッダー右上の 3 点メニュー (Home / Search / カテゴリ / Archive / URLs / Help)
+- **MenuGrid**: ヘッダー右上の 3 点メニュー (Home / Search / カテゴリ / 記事 / Archive / Help)
 - **RecentActivityGraph**: 直近 7 日のアクティビティを shadcn/ui Chart で描画
 - **AnnouncementList**: Help 内のお知らせ (src/data/announcements.ts で管理)
 
@@ -149,7 +148,6 @@ pnpm json:conv            # 日別 JSON に整形
 pnpm json:remove-duplicates
 pnpm json:fetch-tweet     # X CDN syndication API で本文・メディアを enrich
 pnpm json:build-index     # tweet-index.json (他の json: スクリプトが依存)
-pnpm json:extract-urls    # /urls 用
 pnpm json:build-activity  # 直近 7 日のアクティビティグラフ用
 # → 変更があれば 🤖 chore: 自動処理によるJSONデータ更新 で commit & push
 ```

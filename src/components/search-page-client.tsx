@@ -12,6 +12,7 @@ import {
   CalendarDays,
   ChevronDown,
   History as HistoryIcon,
+  FileText,
 } from 'lucide-react';
 import { CATEGORIES } from '@/data/categories';
 import {
@@ -26,6 +27,7 @@ import {
 } from '@/lib/search-client';
 import { TweetEmbedCard } from '@/components/tweet-embed-card';
 import { FOCUS_SEARCH_EVENT } from '@/lib/search-events';
+import { loadArticles } from '@/lib/articles-client';
 import { PodcastWeekCard } from '@/components/podcast-week-card';
 import { buildPodcastDateSet, toYmd } from '@/lib/podcast-episodes';
 import { Calendar } from '@/components/ui/calendar';
@@ -70,6 +72,10 @@ export function SearchPageClient() {
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [category, setCategory] = useState<string | null>(null);
   const [dateFilter, setDateFilter] = useState<string | null>(null);
+  // 記事 (X Articles) ツイートのみに絞る (?type=article)。対象 ID は
+  // articles.json.gz (カードの記事アコーディオンと同じデータ) から得る。
+  const [articleOnly, setArticleOnly] = useState(false);
+  const [articleIds, setArticleIds] = useState<Set<string> | null>(null);
   const [pageLimit, setPageLimit] = useState(PAGE_SIZE);
 
   // ---- モード ----
@@ -208,6 +214,35 @@ export function SearchPageClient() {
       setDateFilter(null);
     }
   }, [searchParams]);
+
+  // ---- URL の ?type=article (記事のみ) ----
+  useEffect(() => {
+    setArticleOnly(searchParams?.get('type') === 'article');
+  }, [searchParams]);
+
+  // 記事 ID 一覧。フィルターの件数表示にも使うので最初に読む (~15KB)
+  useEffect(() => {
+    let cancelled = false;
+    loadArticles()
+      .then((map) => {
+        if (!cancelled) setArticleIds(new Set(map.keys()));
+      })
+      .catch((err) => console.error('[search] failed to load articles', err));
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const toggleArticleOnly = useCallback(() => {
+    const next = !articleOnly;
+    setArticleOnly(next);
+    setPageLimit(PAGE_SIZE);
+    const sp = new URLSearchParams(searchParams?.toString() ?? '');
+    if (next) sp.set('type', 'article');
+    else sp.delete('type');
+    const qs = sp.toString();
+    router.replace(qs ? `${pathname}?${qs}` : pathname);
+  }, [articleOnly, router, pathname, searchParams]);
 
   const clearDateFilter = useCallback(() => {
     setDateFilter(null);
@@ -483,25 +518,18 @@ export function SearchPageClient() {
   const results = useMemo<SearchHit[]>(() => {
     if (!assets || loadState !== 'ready') return [];
 
-    // date のみ指定 (クエリ・カテゴリなし)
-    if (!debouncedQuery && !category && dateFilter) {
+    // 記事のみ ON だが記事 ID 一覧がまだ読めていない間は空 (全件を一瞬出さない)
+    if (articleOnly && !articleIds) return [];
+    const articleOk = (id: string) => !articleOnly || !!articleIds?.has(id);
+
+    // キーワードなし: カテゴリ / 日付 / 記事のみ の絞り込みだけで一覧 (meta は新しい順)
+    if (!debouncedQuery) {
+      if (!category && !dateFilter && !articleOnly) return [];
       const hits: SearchHit[] = [];
       for (const m of assets.meta) {
-        if (m.d !== dateFilter) continue;
-        hits.push({ tweet_id: m.i, score: 0, matchedBy: 'fts', meta: m });
-        if (hits.length >= 500) break;
-      }
-      return hits;
-    }
-
-    if (!debouncedQuery && !category) return [];
-
-    // カテゴリのみ
-    if (!debouncedQuery && category) {
-      const hits: SearchHit[] = [];
-      for (const m of assets.meta) {
-        if (m.c !== category) continue;
+        if (category && m.c !== category) continue;
         if (dateFilter && m.d !== dateFilter) continue;
+        if (!articleOk(m.i)) continue;
         hits.push({ tweet_id: m.i, score: 0, matchedBy: 'fts', meta: m });
         if (hits.length >= 500) break;
       }
@@ -541,11 +569,10 @@ export function SearchPageClient() {
       });
     }
 
-    if (dateFilter) {
-      return baseHits.filter((h) => h.meta.d === dateFilter).slice(0, 500);
-    }
-    return baseHits.slice(0, 500);
-  }, [assets, loadState, debouncedQuery, category, dateFilter, mode, effectiveSort, queryVec, hybridWeight]);
+    return baseHits
+      .filter((h) => (!dateFilter || h.meta.d === dateFilter) && articleOk(h.meta.i))
+      .slice(0, 500);
+  }, [assets, loadState, debouncedQuery, category, dateFilter, articleOnly, articleIds, mode, effectiveSort, queryVec, hybridWeight]);
 
   const visibleResults = results.slice(0, pageLimit);
   const totalHits = results.length;
@@ -556,10 +583,12 @@ export function SearchPageClient() {
   const categoryCounts = useMemo(() => {
     if (!assets || loadState !== 'ready') return new Map<string, number>();
     const counts = new Map<string, number>();
+    const articleOk = (id: string) => !articleOnly || !!articleIds?.has(id);
     if (!debouncedQuery) {
       for (const m of assets.meta) {
         if (!m.c) continue;
         if (dateFilter && m.d !== dateFilter) continue;
+        if (!articleOk(m.i)) continue;
         counts.set(m.c, (counts.get(m.c) ?? 0) + 1);
       }
       return counts;
@@ -573,10 +602,11 @@ export function SearchPageClient() {
       const c = h.meta.c;
       if (!c) continue;
       if (dateFilter && h.meta.d !== dateFilter) continue;
+      if (!articleOk(h.meta.i)) continue;
       counts.set(c, (counts.get(c) ?? 0) + 1);
     }
     return counts;
-  }, [assets, loadState, debouncedQuery, dateFilter, effectiveSort]);
+  }, [assets, loadState, debouncedQuery, dateFilter, articleOnly, articleIds, effectiveSort]);
 
   // ---- 入力ハンドラ ----
   const handleInputChange = useCallback(
@@ -948,6 +978,23 @@ export function SearchPageClient() {
         </div>
       )}
 
+      {/* 記事のみフィルター (?type=article) */}
+      {loadState === 'ready' && articleIds && articleIds.size > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          <button
+            type="button"
+            className="zk-pill"
+            data-on={articleOnly ? '1' : '0'}
+            aria-pressed={articleOnly}
+            onClick={toggleArticleOnly}
+          >
+            <FileText size={12} strokeWidth={1.75} />
+            記事のみ
+            <span className="count">{articleIds.size.toLocaleString()}</span>
+          </button>
+        </div>
+      )}
+
       {/* カテゴリチップ */}
       {loadState === 'ready' && (
         <div className="flex flex-wrap gap-1.5" style={{ marginTop: 2 }}>
@@ -1061,7 +1108,7 @@ export function SearchPageClient() {
               </div>
               <div style={{ fontSize: 12 }}>検索インデックスを準備中…</div>
             </div>
-          ) : totalHits === 0 && (debouncedQuery || category || dateFilter) ? (
+          ) : totalHits === 0 && (debouncedQuery || category || dateFilter || articleOnly) ? (
             <div className="zk-empty">
               <div style={{ fontSize: 24, opacity: 0.4 }}>—</div>
               <div style={{ fontSize: 12 }}>該当するいいねが見つかりませんでした</div>
