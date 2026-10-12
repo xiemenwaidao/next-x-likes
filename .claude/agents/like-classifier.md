@@ -56,7 +56,8 @@ stdout に JSON 配列が出る。各要素:
   "media": [{"type": "photo", "thumb_url": "..."}],
   "quoted": { "text": "...", "username": "..." } | null,
   "card_title": "..." | null,
-  "card_description": "..." | null
+  "card_description": "..." | null,
+  "article": { "title": "...", "summary": "...", "via": "self" | "quote" } | null
 }
 ```
 
@@ -74,6 +75,11 @@ stdout に JSON 配列が出る。各要素:
 **テキスト主体** (`is_text_short = false` または `has_media = false`):
 - `text` (URL は文脈情報として読む) + `quoted` + `card_title/description` で判断
 - 画像のダウンロードは不要
+
+**X 記事ツイート** (`article` が null でない):
+- 記事ツイートは `text` が URL だけのことが多い。**`article.title` と `article.summary` (記事本文の要約) を主な判断材料**にする
+- `via = "quote"` は記事を引用したツイート。`text` (引用コメント) と記事の内容の両方を見る
+- `summary_ja` は「記事の内容」が分かるように書く (「リンクのみ」「情報不足」にしない)
 
 **画像主体** (`is_text_short = true && has_media = true`):
 - まず `text` から推測 → 自信があればそれで決める

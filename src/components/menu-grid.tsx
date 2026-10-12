@@ -57,7 +57,7 @@ const MENU_ITEMS: MenuItem[] = [
   {
     id: 'articles',
     title: '記事',
-    sub: 'X の記事ツイートだけを一覧',
+    sub: 'X の「記事」だけを一覧',
     href: '/search?type=article',
     icon: <FileText size={18} strokeWidth={1.75} />,
     // /search と同じパスなので、アクティブ表示は「検索」側に任せる

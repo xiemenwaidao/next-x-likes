@@ -11,6 +11,7 @@
  *     media: [{ type, thumb_url, expanded_url }],
  *     quoted: { text, username } | null,
  *     card_title: string | null,
+ *     article: { title, summary, via } | null,  // X 記事ツイート (articles テーブル) の場合
  *     card_description: string | null
  *   }, ...]
  *
@@ -66,6 +67,8 @@ type OutItem = {
   quoted: { text: string; username: string } | null;
   card_title: string | null;
   card_description: string | null;
+  /** X 記事 (Articles) ツイートなら記事のタイトルと要約。本文が URL だけなので分類はこれを主に使う */
+  article: { title: string; summary: string | null; via: string } | null;
 };
 
 function extractMedia(rawJson: unknown): MediaItem[] {
@@ -131,13 +134,15 @@ async function main() {
   const db = getDb();
 
   const res = await db.execute({
-    sql: `SELECT tweet_id, text, username, tweet_url, liked_at, source, raw_json
-          FROM likes
-          WHERE ai_updated_at IS NULL
-            AND manual_override = 0
-            AND private = 0
-            AND notfound = 0
-          ORDER BY liked_at DESC
+    sql: `SELECT l.tweet_id, l.text, l.username, l.tweet_url, l.liked_at, l.source, l.raw_json,
+                 a.title AS article_title, a.summary_ja AS article_summary, a.via AS article_via
+          FROM likes l
+          LEFT JOIN articles a ON a.tweet_id = l.tweet_id AND a.status = 'ok'
+          WHERE l.ai_updated_at IS NULL
+            AND l.manual_override = 0
+            AND l.private = 0
+            AND l.notfound = 0
+          ORDER BY l.liked_at DESC
           LIMIT ?`,
     args: [Math.ceil(args.limit * 1.5)], // 多めに取って media/text フィルタ後に limit で切る
   });
@@ -176,6 +181,13 @@ async function main() {
       quoted,
       card_title: cardTitle,
       card_description: cardDesc,
+      article: row.article_title
+        ? {
+            title: String(row.article_title),
+            summary: row.article_summary ? String(row.article_summary) : null,
+            via: String(row.article_via ?? 'self'),
+          }
+        : null,
     });
     if (out.length >= args.limit) break;
   }
