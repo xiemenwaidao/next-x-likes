@@ -116,7 +116,7 @@ export default async function ArchivePageView({ params }: Props) {
           </PopoverTrigger>
           <PopoverContent className="w-64 p-3">
             <p className="text-sm" style={{ color: 'var(--text-2)' }}>
-              2024年11月以前（本プロジェクト開始前）にいいねしたツイート一覧
+              2024年11月以前（本プロジェクト開始前）にいいねしたポスト一覧
             </p>
           </PopoverContent>
         </Popover>
@@ -154,7 +154,7 @@ export default async function ArchivePageView({ params }: Props) {
         {likes.length === 0 && (
           <div className="zk-empty">
             <div>—</div>
-            <div>このページにはツイートがありません</div>
+            <div>このページにはポストがありません</div>
           </div>
         )}
       </div>
