@@ -3,7 +3,9 @@
  * articles テーブルに保存する。
  *
  * - 対象: likes.raw_json に article (syndication API のタイトル / プレビュー) を
- *   持つ表示可能な行のうち、articles に status='ok' の行がまだ無いもの。
+ *   持つ表示可能な行のうち、まだ結果が確定していないもの。取得済み (ok)・
+ *   記事なしと判明 (no_article)・削除済み (HTTP 404) は再取得しない。
+ *   一時的なエラー (404 以外) だけは次回も取り直す。
  *   記事ツイート本体 (via='self') に加え、記事を引用したツイート (via='quote')
  *   も引用先の記事本文を保存する
  * - X CDN syndication API は記事本文を返さないため、非公式の FxTwitter
@@ -59,7 +61,15 @@ async function main() {
     `SELECT tweet_id, username FROM likes
       WHERE private = 0 AND notfound = 0
         AND raw_json LIKE '%"article"%'
-        ${refetch ? '' : `AND tweet_id NOT IN (SELECT tweet_id FROM articles WHERE status = 'ok')`}
+        ${
+          refetch
+            ? ''
+            : `AND tweet_id NOT IN (
+                 SELECT tweet_id FROM articles
+                  WHERE status IN ('ok', 'no_article')
+                     OR (status = 'error' AND error LIKE 'HTTP 404%')
+               )`
+        }
       ORDER BY liked_at DESC`,
   );
   console.log(`[scan] 対象 ${targets.rows.length} 件${refetch ? ' (refetch)' : ''}`);
