@@ -9,6 +9,15 @@ export interface Announcement {
 
 export const announcements: Announcement[] = [
   {
+    id: 'x-articles-2026-10-12',
+    icon: '📄',
+    title: 'X の「記事」を表示',
+    description:
+      '「記事」を含むポストのカードに、記事のタイトル・カバー・冒頭と AI 要約を折りたたみで表示 (全文は X で読めます)。メニューの「記事」から記事を含むポストだけを一覧でき、記事のタイトルや要約もキーワード検索の対象に。あわせて URL 一覧は廃止しました。',
+    isNew: true,
+    date: '2026-10-12',
+  },
+  {
     id: 'semantic-search-paused-2026-10-09',
     icon: '⏸️',
     title: '意味検索を一時停止',
