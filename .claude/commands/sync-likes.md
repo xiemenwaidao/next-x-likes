@@ -101,7 +101,7 @@ BUILD_EXIT=$?
 
 - `pnpm build` 先頭の `build-search-assets.ts` で `public/data/*.gz` 5 個 (search-index / likes-meta / embeddings / embeddings-meta / articles) が再生成される
 - lint エラーが出たら Vercel でも同じく落ちるので、ここで必ず修正してから先に進む
-- 470 ページ前後の static 生成が出れば成功
+- 390 ページ前後の static 生成が出れば成功 (内訳: `/archive/[page]` 370 + カテゴリ 11 + その他)
 
 ### 7. data/likes.db をコミット + push (差分があれば)
 
