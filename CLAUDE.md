@@ -137,7 +137,7 @@ pnpm dlx shadcn@latest add [component-name]
 
 データフローは 2 段階に分割している:
 
-### Stage 1: GitHub Actions (定時バッチ、毎日 20:00 UTC)
+### Stage 1: GitHub Actions (定時バッチ、毎日 20:17 UTC)
 
 `.github/workflows/process-json.yml` で実行される。S3 → JSON → repo commit までを完結。
 SQLite (data/likes.db) には触らない。
